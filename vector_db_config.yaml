@@ -5,18 +5,17 @@ database:
   collection_name: "mecademic_chunks"
 
 embeddings:
-  # BGE-M3 for document chunks
+  # BGE-M3 for all chunks (unified model for better consistency)
   document_model:
     name: "BAAI/bge-m3"
     batch_size: 32
-    device: "auto"  # auto/cpu/cuda
+    device: "cpu"  # cpu/cuda
   
-  # StarCoder2-15B for code chunks  
+  # Use same model for code to avoid compatibility issues
   code_model:
-    name: "bigcode/starcoder2-15b"
-    batch_size: 16  # Smaller batch for larger model
-    device: "auto"  # auto/cpu/cuda
-    trust_remote_code: true
+    name: "BAAI/bge-m3"
+    batch_size: 16
+    device: "cpu"  # cpu/cuda
 
 ingestion:
   source_directory: "./processed/semantic_chunks"
