@@ -1,0 +1,105 @@
+{
+  "timestamp": "2025-07-29T04:48:54",
+  "semantic_chunks_validation": {
+    "total_files": 2,
+    "total_chunks": 23,
+    "token_statistics": {
+      "count": 23,
+      "mean": 662.2173913043479,
+      "median": 698.0,
+      "std": 116.22764638630112,
+      "min": 240,
+      "max": 700,
+      "target_range_compliance": 0.9130434782608695
+    },
+    "chunk_coherence": {},
+    "file_details": [
+      {
+        "file": "mcs500_mecaportal_manual_semantic_chunks.jsonl",
+        "chunks": 14,
+        "token_range": [
+          240,
+          700
+        ],
+        "avg_tokens": 665.2142857142857,
+        "issues": [
+          "Chunk 13: Low token count (240)"
+        ]
+      },
+      {
+        "file": "mvk01_module_manual_semantic_chunks.jsonl",
+        "chunks": 9,
+        "token_range": [
+          337,
+          700
+        ],
+        "avg_tokens": 657.5555555555555,
+        "issues": []
+      }
+    ],
+    "quality_issues": [],
+    "sentence_statistics": {
+      "mean": 19.043478260869566,
+      "median": 18.0,
+      "min": 4,
+      "max": 37
+    }
+  },
+  "code_chunks_validation": {
+    "total_files": 105,
+    "total_chunks": 2216,
+    "size_statistics": {
+      "count": 2216,
+      "mean": 535.9165162454874,
+      "median": 318.5,
+      "std": 814.8315565215837,
+      "min": 9,
+      "max": 10845
+    },
+    "language_distribution": {
+      "python": 2122,
+      "csharp": 14,
+      "javascript": 45,
+      "c": 35
+    },
+    "chunk_type_distribution": {
+      "import": 417,
+      "class": 195,
+      "method": 1376,
+      "function": 175,
+      "other": 39,
+      "function_part": 14
+    },
+    "hash_uniqueness": {
+      "total_hashes": 2216,
+      "unique_hashes": 1740,
+      "uniqueness_ratio": 0.7851985559566786,
+      "duplicates": 476
+    },
+    "quality_issues": [
+      "Very small chunk: meca_samples:Demo_Glove_Box/Application/mainApp.py:89ed1aae8d33",
+      "Very small chunk: meca_samples:Demo_Glove_Box/Application/mainApp.py:c307405b3f5d",
+      "Very small chunk: meca_samples:Demo_Microscope/Application/mainApp.py:89ed1aae8d33",
+      "Very small chunk: meca_samples:meca500-accessories/simulations/robodk-setup/setup.py:89ed1aae8d33",
+      "Very small chunk: meca_samples:mecademicpy/mecademicpy/robot_classes.py:c307405b3f5d",
+      "Very small chunk: meca_samples:mecademicpy/mecademicpy/tools.py:89ed1aae8d33",
+      "Very small chunk: meca_samples:mecademicpy/mecademicpy/tools.py:c307405b3f5d",
+      "Very small chunk: meca_samples:mecademicpy/tests/robot_test.py:89ed1aae8d33",
+      "Very small chunk: meca_samples:mecademicpy/tests/robot_test.py:c307405b3f5d",
+      "Very small chunk: meca_samples:sample-programs/Python/HandGuiding/robot_common.py:c307405b3f5d",
+      "Very small chunk: meca_samples:sample-programs/Python/HandGuiding/robot_logger.py:89ed1aae8d33",
+      "Very small chunk: meca_samples:sample-programs/Python/PythonUI/robot_common.py:c307405b3f5d",
+      "Very small chunk: meca_samples:sample-programs/Python/PythonUI/robot_logger.py:89ed1aae8d33"
+    ]
+  },
+  "comparison_results": null,
+  "summary": {
+    "total_chunks_validated": 2239,
+    "total_files_validated": 107,
+    "overall_quality": "Good"
+  },
+  "recommendations": [
+    "High token count variance detected - review chunking algorithm",
+    "Address 13 code chunk quality issues"
+  ]
+}

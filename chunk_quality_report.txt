@@ -1,0 +1,26 @@
+Semantic Chunking Quality Report
+========================================
+
+Generated: 2025-07-29T04:48:54
+
+Total chunks validated: 2239
+Total files validated: 107
+Overall quality: Good
+
+Document Chunks:
+  Files: 2
+  Chunks: 23
+  Token range compliance: 91.30%
+  Mean tokens: 662.2
+  Token range: 240-700
+
+Code Chunks:
+  Files: 105
+  Chunks: 2216
+  Mean size: 535.9 bytes
+  Size range: 9-10845
+  Languages: {'python': 2122, 'csharp': 14, 'javascript': 45, 'c': 35}
+
+Recommendations:
+  1. High token count variance detected - review chunking algorithm
+  2. Address 13 code chunk quality issues
