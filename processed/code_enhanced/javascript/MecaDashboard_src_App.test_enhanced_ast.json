@@ -1,0 +1,59 @@
+[
+  {
+    "snippet": "import { render, screen } from '@testing-library/react';",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 56,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 56,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/App.test.js",
+    "normalized_path": "MecaDashboard/src/App.test.js"
+  },
+  {
+    "snippet": "import App from './App';",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 57,
+    "end_byte": 81,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 24,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/App.test.js",
+    "normalized_path": "MecaDashboard/src/App.test.js"
+  },
+  {
+    "snippet": "test('renders learn react link', () => {\n  render(<App />);\n  const linkElement = screen.getByText(/learn react/i);\n  expect(linkElement).toBeInTheDocument();\n});",
+    "span": [
+      4,
+      8
+    ],
+    "start_byte": 83,
+    "end_byte": 245,
+    "node_type": "expression_statement",
+    "chunk_type": "other",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 162,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/App.test.js",
+    "normalized_path": "MecaDashboard/src/App.test.js"
+  }
+]

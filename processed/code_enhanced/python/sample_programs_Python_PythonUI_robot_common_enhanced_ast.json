@@ -1,0 +1,932 @@
+[
+  {
+    "snippet": "import threading",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 23,
+    "end_byte": 39,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "threading",
+    "qualified_name": "threading",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 16,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "import queue",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 40,
+    "end_byte": 52,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "queue",
+    "qualified_name": "queue",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 12,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "import re",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 53,
+    "end_byte": 62,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "re",
+    "qualified_name": "re",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 9,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class MecademicException(Exception):\n    \"\"\"Base exception class for Mecademic-related exceptions.\n\n    \"\"\"",
+    "span": [
+      14,
+      18
+    ],
+    "start_byte": 213,
+    "end_byte": 329,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MecademicException",
+    "qualified_name": "MecademicException",
+    "docstring": "Base exception class for Mecademic-related exceptions.",
+    "chunk_size_bytes": 107,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class InvalidStateError(MecademicException):\n    \"\"\"The internal state of the instance is invalid.\n\n    \"\"\"",
+    "span": [
+      21,
+      25
+    ],
+    "start_byte": 332,
+    "end_byte": 448,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "InvalidStateError",
+    "qualified_name": "InvalidStateError",
+    "docstring": "The internal state of the instance is invalid.",
+    "chunk_size_bytes": 107,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class CommunicationError(MecademicException):\n    \"\"\"There is a communication issue with the robot.\n\n    \"\"\"",
+    "span": [
+      28,
+      32
+    ],
+    "start_byte": 451,
+    "end_byte": 568,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "CommunicationError",
+    "qualified_name": "CommunicationError",
+    "docstring": "There is a communication issue with the robot.",
+    "chunk_size_bytes": 108,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class DisconnectError(MecademicException):\n    \"\"\"A non-nominal disconnection has occurred.\n\n    \"\"\"",
+    "span": [
+      35,
+      39
+    ],
+    "start_byte": 571,
+    "end_byte": 680,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "DisconnectError",
+    "qualified_name": "DisconnectError",
+    "docstring": "A non-nominal disconnection has occurred.",
+    "chunk_size_bytes": 100,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class InterruptException(MecademicException):\n    \"\"\"An event has encountered an error. Perhaps it will never be set.\n\n    \"\"\"",
+    "span": [
+      42,
+      46
+    ],
+    "start_byte": 683,
+    "end_byte": 818,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "InterruptException",
+    "qualified_name": "InterruptException",
+    "docstring": "An event has encountered an error. Perhaps it will never be set.",
+    "chunk_size_bytes": 126,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class InterruptableEvent:\n    \"\"\"Extend default event class to also be able to unblock and raise an exception.\n\n    Attributes\n    ----------\n    id : int or None\n        Id for event.\n    _event : event object\n        A standard event-type object.\n    _lock : lock object\n        Used to ensure atomic operations.\n    _interrupted : boolean\n        If true, event is in an error state.\n\n    \"\"\"",
+    "span": [
+      49,
+      174
+    ],
+    "start_byte": 821,
+    "end_byte": 4165,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent",
+    "docstring": "Extend default event class to also be able to unblock and raise an exception.\n\n    Attributes\n    ----------\n    id : int or None\n        Id for event.\n    _event : event object\n        A standard event-type object.\n    _lock : lock object\n        Used to ensure atomic operations.\n    _interrupted : boolean\n        If true, event is in an error state.",
+    "chunk_size_bytes": 395,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __init__(self, id=None, data=None):\n        self._id = id\n        self._data = data\n        self._event = threading.Event()\n        self._lock = threading.Lock()\n        self._interrupted = False",
+    "span": [
+      65,
+      70
+    ],
+    "start_byte": 1222,
+    "end_byte": 1421,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, id=None, data=None)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 199,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def wait(self, timeout=None):\n        \"\"\"Block until event is set or should raise an exception.\n\n        Attributes\n        ----------\n        timeout : float\n            Maximum duration to wait in seconds.\n\n        Return\n        ------\n        success : boolean\n            False if event timed out, true otherwise.\n\n        \"\"\"\n        success = self._event.wait(timeout=timeout)\n        if self._interrupted:\n            raise InterruptException('Event received exception, possibly because event will never be triggered.')\n        return success",
+    "span": [
+      72,
+      89
+    ],
+    "start_byte": 1427,
+    "end_byte": 1977,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "wait",
+    "signature": "wait(self, timeout=None)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.wait",
+    "docstring": "Block until event is set or should raise an exception.\n\n        Attributes\n        ----------\n        timeout : float\n            Maximum duration to wait in seconds.\n\n        Return\n        ------\n        success : boolean\n            False if event timed out, true otherwise.",
+    "chunk_size_bytes": 550,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def wait_for_data(self, timeout=None):\n        \"\"\"Block until event is set or should raise an exception.\n\n        Attributes\n        ----------\n        timeout : float\n            Maximum duration to wait in seconds.\n\n        Return\n        ------\n        data : object\n            Return the data object.\n\n        \"\"\"\n        success = self._event.wait(timeout=timeout)\n        if self._interrupted:\n            raise InterruptException('Event received exception, possibly because event will never be triggered.')\n        elif not success:\n            raise InterruptException('Event timed out.')\n        else:\n            return self._data",
+    "span": [
+      91,
+      111
+    ],
+    "start_byte": 1983,
+    "end_byte": 2624,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "wait_for_data",
+    "signature": "wait_for_data(self, timeout=None)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.wait_for_data",
+    "docstring": "Block until event is set or should raise an exception.\n\n        Attributes\n        ----------\n        timeout : float\n            Maximum duration to wait in seconds.\n\n        Return\n        ------\n        data : object\n            Return the data object.",
+    "chunk_size_bytes": 641,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def set(self, data=None):\n        \"\"\"Set the event and unblock all waits. Optionally modify data before setting.\n\n        \"\"\"\n        with self._lock:\n            self._data = data\n            self._event.set()",
+    "span": [
+      113,
+      119
+    ],
+    "start_byte": 2630,
+    "end_byte": 2840,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set",
+    "signature": "set(self, data=None)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.set",
+    "docstring": "Set the event and unblock all waits. Optionally modify data before setting.",
+    "chunk_size_bytes": 210,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def abort(self):\n        \"\"\"Unblock any waits and raise an exception.\n\n        \"\"\"\n        with self._lock:\n            if not self._event.is_set():\n                self._interrupted = True\n                self._event.set()",
+    "span": [
+      121,
+      128
+    ],
+    "start_byte": 2846,
+    "end_byte": 3069,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "abort",
+    "signature": "abort(self)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.abort",
+    "docstring": "Unblock any waits and raise an exception.",
+    "chunk_size_bytes": 223,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def clear(self):\n        \"\"\"Reset the event to its initial state.\n\n        \"\"\"\n        with self._lock:\n            self._interrupted = False\n            self._event.clear()",
+    "span": [
+      130,
+      136
+    ],
+    "start_byte": 3075,
+    "end_byte": 3248,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "clear",
+    "signature": "clear(self)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.clear",
+    "docstring": "Reset the event to its initial state.",
+    "chunk_size_bytes": 173,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def is_set(self):\n        \"\"\"Checks if the event is set.\n\n        Return\n        ------\n        boolean\n            False if event is not set or instance should '_interrupted'. True otherwise.\n\n        \"\"\"\n        with self._lock:\n            if self._interrupted:\n                return False\n            else:\n                return self._event.is_set()",
+    "span": [
+      138,
+      151
+    ],
+    "start_byte": 3254,
+    "end_byte": 3609,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "is_set",
+    "signature": "is_set(self)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.is_set",
+    "docstring": "Checks if the event is set.\n\n        Return\n        ------\n        boolean\n            False if event is not set or instance should '_interrupted'. True otherwise.",
+    "chunk_size_bytes": 355,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def clear_abort(self):\n        \"\"\"Clears the abort.\n\n        \"\"\"\n        with self._lock:\n            if self._interrupted:\n                self._interrupted = False\n                self._event.clear()",
+    "span": [
+      153,
+      160
+    ],
+    "start_byte": 3615,
+    "end_byte": 3816,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "clear_abort",
+    "signature": "clear_abort(self)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.clear_abort",
+    "docstring": "Clears the abort.",
+    "chunk_size_bytes": 201,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def id(self):\n        \"\"\"Make id a read-only property since it should not be changed after instantiation.\n\n        \"\"\"\n        return self._id",
+    "span": [
+      163,
+      167
+    ],
+    "start_byte": 3836,
+    "end_byte": 3978,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "id",
+    "signature": "id(self)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.id",
+    "docstring": "Make id a read-only property since it should not be changed after instantiation.",
+    "chunk_size_bytes": 142,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def data(self):\n        \"\"\"Make data a read-only property and enforce that it is only assignable at construction or using set().\n\n        \"\"\"\n        return self._data",
+    "span": [
+      170,
+      174
+    ],
+    "start_byte": 3998,
+    "end_byte": 4165,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "data",
+    "signature": "data(self)",
+    "parent_class": "InterruptableEvent",
+    "qualified_name": "InterruptableEvent.data",
+    "docstring": "Make data a read-only property and enforce that it is only assignable at construction or using set().",
+    "chunk_size_bytes": 167,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class TimestampedData:\n    \"\"\" Class for storing timestamped data.\n\n    Attributes\n    ----------\n    timestamp : number-like\n        Timestamp associated with data.\n    data : object\n        Data to be stored.\n\n    \"\"\"",
+    "span": [
+      177,
+      272
+    ],
+    "start_byte": 4168,
+    "end_byte": 6560,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "TimestampedData",
+    "qualified_name": "TimestampedData",
+    "docstring": "Class for storing timestamped data.\n\n    Attributes\n    ----------\n    timestamp : number-like\n        Timestamp associated with data.\n    data : object\n        Data to be stored.",
+    "chunk_size_bytes": 219,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __init__(self, timestamp, data):\n        self.timestamp = timestamp\n        self.data = data",
+    "span": [
+      189,
+      191
+    ],
+    "start_byte": 4393,
+    "end_byte": 4489,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, timestamp, data)",
+    "parent_class": "TimestampedData",
+    "qualified_name": "TimestampedData.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 96,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def update_from_csv(self, input_string):\n        \"\"\"Update from comma-separated string, only if timestamp is newer.\n\n        Parameters\n        ----------\n        input_string : string\n            Comma-separated string. First value is timestamp, rest is data.\n\n        \"\"\"\n        floats = string_to_floats(input_string)\n\n        if (len(floats) - 1) != len(self.data):\n            raise ValueError('Cannot update TimestampedData with incompatible data.')\n\n        if floats[0] > self.timestamp:\n            self.timestamp = floats[0]\n            self.data = floats[1:]",
+    "span": [
+      193,
+      209
+    ],
+    "start_byte": 4495,
+    "end_byte": 5065,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "update_from_csv",
+    "signature": "update_from_csv(self, input_string)",
+    "parent_class": "TimestampedData",
+    "qualified_name": "TimestampedData.update_from_csv",
+    "docstring": "Update from comma-separated string, only if timestamp is newer.\n\n        Parameters\n        ----------\n        input_string : string\n            Comma-separated string. First value is timestamp, rest is data.",
+    "chunk_size_bytes": 570,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def update_from_data(self, timestamp, data):\n        \"\"\"Update with data if timestamp is newer.\n\n        Parameters\n        ----------\n        timestamp : number-like\n            Timestamp associated with data.\n        data : object\n            Data to be stored if timestamp is newer.\n\n        \"\"\"\n        if timestamp > self.timestamp:\n            self.timestamp = timestamp\n            self.data = data",
+    "span": [
+      211,
+      224
+    ],
+    "start_byte": 5071,
+    "end_byte": 5476,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "update_from_data",
+    "signature": "update_from_data(self, timestamp, data)",
+    "parent_class": "TimestampedData",
+    "qualified_name": "TimestampedData.update_from_data",
+    "docstring": "Update with data if timestamp is newer.\n\n        Parameters\n        ----------\n        timestamp : number-like\n            Timestamp associated with data.\n        data : object\n            Data to be stored if timestamp is newer.",
+    "chunk_size_bytes": 405,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def zeros(cls, length):\n        \"\"\" Construct empty TimestampedData object of specified length.\n\n        Parameters\n        ----------\n        length : int\n            Length of data to construct.\n\n        Return\n        ------\n        TimestampedData object\n\n        \"\"\"\n        return cls(0, [0.] * length)",
+    "span": [
+      227,
+      240
+    ],
+    "start_byte": 5499,
+    "end_byte": 5807,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "zeros",
+    "signature": "zeros(cls, length)",
+    "parent_class": "TimestampedData",
+    "qualified_name": "TimestampedData.zeros",
+    "docstring": "Construct empty TimestampedData object of specified length.\n\n        Parameters\n        ----------\n        length : int\n            Length of data to construct.\n\n        Return\n        ------\n        TimestampedData object",
+    "chunk_size_bytes": 308,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __eq__(self, other):\n        \"\"\" Return true if other object has identical timestamp and data.\n\n        Parameters\n        ----------\n        other : object\n            Object to compare against.\n\n        Return\n        ------\n        bool\n            True if objects have same timestamp and data.\n\n        \"\"\"\n        return other.timestamp == self.timestamp and other.data == self.data",
+    "span": [
+      242,
+      256
+    ],
+    "start_byte": 5813,
+    "end_byte": 6204,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__eq__",
+    "signature": "__eq__(self, other)",
+    "parent_class": "TimestampedData",
+    "qualified_name": "TimestampedData.__eq__",
+    "docstring": "Return true if other object has identical timestamp and data.\n\n        Parameters\n        ----------\n        other : object\n            Object to compare against.\n\n        Return\n        ------\n        bool\n            True if objects have same timestamp and data.",
+    "chunk_size_bytes": 391,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __ne__(self, other):\n        \"\"\" Return true if other object has different timestamp or data.\n\n        Parameters\n        ----------\n        other : object\n            Object to compare against.\n\n        Return\n        ------\n        bool\n            True if objects have different timestamp or data.\n\n        \"\"\"\n        return not self == other",
+    "span": [
+      258,
+      272
+    ],
+    "start_byte": 6210,
+    "end_byte": 6560,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__ne__",
+    "signature": "__ne__(self, other)",
+    "parent_class": "TimestampedData",
+    "qualified_name": "TimestampedData.__ne__",
+    "docstring": "Return true if other object has different timestamp or data.\n\n        Parameters\n        ----------\n        other : object\n            Object to compare against.\n\n        Return\n        ------\n        bool\n            True if objects have different timestamp or data.",
+    "chunk_size_bytes": 350,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class Message:\n    \"\"\"Class for storing a response message from a Mecademic robot.\n\n    Attributes\n    ----------\n    id : integer\n        The id of the message, representing the type of message.\n    data : string\n        The raw payoad of the message.\n\n    \"\"\"",
+    "span": [
+      275,
+      315
+    ],
+    "start_byte": 6563,
+    "end_byte": 7650,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Message",
+    "qualified_name": "Message",
+    "docstring": "Class for storing a response message from a Mecademic robot.\n\n    Attributes\n    ----------\n    id : integer\n        The id of the message, representing the type of message.\n    data : string\n        The raw payoad of the message.",
+    "chunk_size_bytes": 261,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __init__(self, id, data):\n        self.id = id\n        self.data = data",
+    "span": [
+      287,
+      289
+    ],
+    "start_byte": 6830,
+    "end_byte": 6905,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, id, data)",
+    "parent_class": "Message",
+    "qualified_name": "Message.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 75,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __repr__(self):\n        return \"Message with id={}, data={}\".format(self.id, self.data)",
+    "span": [
+      291,
+      292
+    ],
+    "start_byte": 6911,
+    "end_byte": 7002,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__repr__",
+    "signature": "__repr__(self)",
+    "parent_class": "Message",
+    "qualified_name": "Message.__repr__",
+    "docstring": null,
+    "chunk_size_bytes": 91,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def from_string(cls, input):\n        \"\"\"Construct message object from raw string input.\n\n        Parameters\n        ----------\n        input : string\n            Input string to convert to message.\n\n        \"\"\"\n        id_start = input.find('[') + 1\n        id_end = input.find(']', id_start)\n        id = int(input[id_start:id_end])\n        # Find next square brackets (contains data).\n        data_start = input.find('[', id_end) + 1\n        data_end = input.find(']', data_start)\n\n        data = ''\n        if data_start != -1 and data_end != -1:\n            data = input[data_start:data_end]\n\n        return cls(id, data)",
+    "span": [
+      295,
+      315
+    ],
+    "start_byte": 7025,
+    "end_byte": 7650,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "from_string",
+    "signature": "from_string(cls, input)",
+    "parent_class": "Message",
+    "qualified_name": "Message.from_string",
+    "docstring": "Construct message object from raw string input.\n\n        Parameters\n        ----------\n        input : string\n            Input string to convert to message.",
+    "chunk_size_bytes": 625,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class RobotInfo:\n    \"\"\"Class for storing metadata about a robot.\n\n    Attributes\n    ----------\n    model : string\n        Model of robot.\n    revision : int\n        Robot revision.\n    is_virtual : bool\n        True if is a virtual robot.\n    fw_major_rev : int\n        Major firmware revision number.\n    fw_minor_rev : int\n        Minor firmware revision number.\n    fw_patch_num : int\n        Firmware patch number.\n    serial : string\n        Serial identifier of robot.\n    rt_message_capable : bool\n        True if robot is capable of sending real-time monitoring messages.\n    num_joints : int\n        Number of joints on the robot.\n\n    \"\"\"",
+    "span": [
+      318,
+      392
+    ],
+    "start_byte": 7653,
+    "end_byte": 10120,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RobotInfo",
+    "qualified_name": "RobotInfo",
+    "docstring": "Class for storing metadata about a robot.\n\n    Attributes\n    ----------\n    model : string\n        Model of robot.\n    revision : int\n        Robot revision.\n    is_virtual : bool\n        True if is a virtual robot.\n    fw_major_rev : int\n        Major firmware revision number.\n    fw_minor_rev : int\n        Minor firmware revision number.\n    fw_patch_num : int\n        Firmware patch number.\n    serial : string\n        Serial identifier of robot.\n    rt_message_capable : bool\n        True if robot is capable of sending real-time monitoring messages.\n    num_joints : int\n        Number of joints on the robot.",
+    "chunk_size_bytes": 650,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __init__(self,\n                 model=None,\n                 revision=None,\n                 is_virtual=None,\n                 fw_major_rev=None,\n                 fw_minor_rev=None,\n                 fw_patch_num=None,\n                 serial=None):\n        self.model = model\n        self.revision = revision\n        self.is_virtual = is_virtual\n        self.fw_major_rev = fw_major_rev\n        self.fw_minor_rev = fw_minor_rev\n        self.fw_patch_num = fw_patch_num\n        self.serial = serial\n        self.rt_message_capable = False\n\n        if self.model == 'Meca500':\n            self.num_joints = 6\n        elif self.mode == 'scara':\n            self.num_joints = 4\n        elif self.model == None:\n            self.num_joints = 1\n        else:\n            raise ValueError('Invalid robot model: {}'.format(self.model))",
+    "span": [
+      344,
+      368
+    ],
+    "start_byte": 8309,
+    "end_byte": 9140,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self,\n                 model=None,\n                 revision=None,\n                 is_virtual=None,\n                 fw_major_rev=None,\n                 fw_minor_rev=None,\n                 fw_patch_num=None,\n                 serial=None)",
+    "parent_class": "RobotInfo",
+    "qualified_name": "RobotInfo.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 831,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def from_command_response_string(cls, input_string):\n        \"\"\"Generate robot state from standard robot response string.\n\n        String format should be \"Connected to {model} R{revision}{-virtual} v{fw_major_num}.{fw_minor_num}.{patch_num}\"\n\n        Parameters\n        ----------\n        input_string : string\n            Input string to be parsed.\n\n        \"\"\"\n        robot_info_regex = re.compile(r'Connected to (\\b.*\\b) R(\\d)(-virtual)? v(\\d+)\\.(\\d+)\\.(\\d+)')\n        try:\n            matches = robot_info_regex.match(input_string).groups()\n            return cls(model=matches[0],\n                       revision=int(matches[1]),\n                       is_virtual=(matches[2] != None),\n                       fw_major_rev=int(matches[3]),\n                       fw_minor_rev=int(matches[4]),\n                       fw_patch_num=int(matches[5]))\n        except:\n            raise ValueError('Could not parse robot info string {}'.format(input_string))",
+    "span": [
+      371,
+      392
+    ],
+    "start_byte": 9163,
+    "end_byte": 10120,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "from_command_response_string",
+    "signature": "from_command_response_string(cls, input_string)",
+    "parent_class": "RobotInfo",
+    "qualified_name": "RobotInfo.from_command_response_string",
+    "docstring": "Generate robot state from standard robot response string.\n\n        String format should be \"Connected to {model} R{revision}{-virtual} v{fw_major_num}.{fw_minor_num}.{patch_num}\"\n\n        Parameters\n        ----------\n        input_string : string\n            Input string to be parsed.",
+    "chunk_size_bytes": 957,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class RobotState:\n    \"\"\"Class for storing the internal state of a generic Mecademic robot.\n\n    Note that the recency and availability of the states which are not 'status fields' depends on the monitoring\n    interval and which monitoring events are enabled. Monitoring events can be configured using SetMonitoringInterval()\n    and SetRealTimeMonitoring().\n\n    Attributes\n    ----------\n    target_joint_positions : TimestampedData\n        Controller desired joint positions in degrees [theta_1...6], includes timestamp.\n    target_end_effector_pose : TimestampedData\n        Controller desired end effector pose [x, y, z, alpha, beta, gamma], includes timestamp.\n\n    target_joint_velocity : TimestampedData\n        Controller desired joint velocity in degrees/second [theta_dot_1...6], includes timestamp.\n    target_end_effector_velocity : TimestampedData\n        Controller desired end effector velocity with timestamp. Linear values in mm/s, angular in deg/s.\n        [linear_velocity_vector x, y, z, angular_velocity_vector omega-x, omega-y, omega-z]\n    target_joint_configurations : TimestampedData\n        Controller joint configuration that corresponds to desired joint positions.\n    target_last_joint_turn : TimestampedData\n        Controller last joint turn number that corresponds to desired joint positions.\n\n    drive_joint_positions : TimestampedData\n        Drive-measured joint positions in degrees [theta_1...6], includes timestamp.\n    drive_end_effector_pose : TimestampedData\n        Drive-measured end effector pose [x, y, z, alpha, beta, gamma], includes timestamp.\n\n    drive_joint_velocity : TimestampedData\n        Drive-measured joint velocity in degrees/second [theta_dot_1...6], includes timestamp.\n    drive_joint_torque_ratio : TimestampedData\n        Drive-measured torque ratio as a percent of maximum [torque_1...6], includes timestamp.\n    drive_end_effector_velocity : TimestampedData\n        Drive-measured end effector velocity with timestamp. Linear values in mm/s, angular in deg/s.\n        [linear_velocity_vector x, y, z, angular_velocity_vector omega-x, omega-y, omega-z]\n\n    drive_joint_configurations : TimestampedData\n        Controller joint configuration that corresponds to drives-measured joint positions.\n    drive_last_joint_turn : TimestampedData\n        Controller last joint turn number that corresponds to drives-measured joint positions.\n\n    accelerometer : TimestampedData\n        Raw accelerometer measurements [accelerometer_id, x, y, z]. 16000 = 1g.\n\n    activation_state : boolean\n        True if the robot is activated.\n    homing_state : boolean\n        True if the robot is homed.\n    simulation_mode : boolean\n        True if the robot is in simulation-only mode.\n    error_status : boolean\n        True if the robot is in error.\n    pause_motion_status : boolean\n        True if motion is currently paused.\n    end_of_block_status : boolean\n        True if robot is not moving and motion queue is empty.\n\n    \"\"\"",
+    "span": [
+      395,
+      487
+    ],
+    "start_byte": 10123,
+    "end_byte": 14933,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RobotState",
+    "qualified_name": "RobotState",
+    "docstring": "Class for storing the internal state of a generic Mecademic robot.\n\n    Note that the recency and availability of the states which are not 'status fields' depends on the monitoring\n    interval and which monitoring events are enabled. Monitoring events can be configured using SetMonitoringInterval()\n    and SetRealTimeMonitoring().\n\n    Attributes\n    ----------\n    target_joint_positions : TimestampedData\n        Controller desired joint positions in degrees [theta_1...6], includes timestamp.\n    target_end_effector_pose : TimestampedData\n        Controller desired end effector pose [x, y, z, alpha, beta, gamma], includes timestamp.\n\n    target_joint_velocity : TimestampedData\n        Controller desired joint velocity in degrees/second [theta_dot_1...6], includes timestamp.\n    target_end_effector_velocity : TimestampedData\n        Controller desired end effector velocity with timestamp. Linear values in mm/s, angular in deg/s.\n        [linear_velocity_vector x, y, z, angular_velocity_vector omega-x, omega-y, omega-z]\n    target_joint_configurations : TimestampedData\n        Controller joint configuration that corresponds to desired joint positions.\n    target_last_joint_turn : TimestampedData\n        Controller last joint turn number that corresponds to desired joint positions.\n\n    drive_joint_positions : TimestampedData\n        Drive-measured joint positions in degrees [theta_1...6], includes timestamp.\n    drive_end_effector_pose : TimestampedData\n        Drive-measured end effector pose [x, y, z, alpha, beta, gamma], includes timestamp.\n\n    drive_joint_velocity : TimestampedData\n        Drive-measured joint velocity in degrees/second [theta_dot_1...6], includes timestamp.\n    drive_joint_torque_ratio : TimestampedData\n        Drive-measured torque ratio as a percent of maximum [torque_1...6], includes timestamp.\n    drive_end_effector_velocity : TimestampedData\n        Drive-measured end effector velocity with timestamp. Linear values in mm/s, angular in deg/s.\n        [linear_velocity_vector x, y, z, angular_velocity_vector omega-x, omega-y, omega-z]\n\n    drive_joint_configurations : TimestampedData\n        Controller joint configuration that corresponds to drives-measured joint positions.\n    drive_last_joint_turn : TimestampedData\n        Controller last joint turn number that corresponds to drives-measured joint positions.\n\n    accelerometer : TimestampedData\n        Raw accelerometer measurements [accelerometer_id, x, y, z]. 16000 = 1g.\n\n    activation_state : boolean\n        True if the robot is activated.\n    homing_state : boolean\n        True if the robot is homed.\n    simulation_mode : boolean\n        True if the robot is in simulation-only mode.\n    error_status : boolean\n        True if the robot is in error.\n    pause_motion_status : boolean\n        True if motion is currently paused.\n    end_of_block_status : boolean\n        True if robot is not moving and motion queue is empty.",
+    "chunk_size_bytes": 2986,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __init__(self, num_joints):\n        self.target_joint_positions = TimestampedData.zeros(num_joints)  # microseconds timestamp, degrees\n        self.target_end_effector_pose = TimestampedData.zeros(6)  # microseconds timestamp, mm and degrees\n\n        self.target_joint_velocity = TimestampedData.zeros(num_joints)  # microseconds timestamp, degrees/second\n        self.target_end_effector_velocity = TimestampedData.zeros(6)  # microseconds timestamp, mm/s and deg/s\n\n        self.target_joint_configurations = TimestampedData.zeros(3)\n        self.target_last_joint_turn = TimestampedData.zeros(1)\n\n        self.drive_joint_positions = TimestampedData.zeros(num_joints)  # microseconds timestamp, degrees\n        self.drive_end_effector_pose = TimestampedData.zeros(6)  # microseconds timestamp, mm and degrees\n\n        self.drive_joint_velocity = TimestampedData.zeros(num_joints)  # microseconds timestamp, degrees/second\n        self.drive_joint_torque_ratio = TimestampedData.zeros(num_joints)  # microseconds timestamp, percent of maximum\n        self.drive_end_effector_velocity = TimestampedData.zeros(6)  # microseconds timestamp, mm/s and deg/s\n\n        self.drive_joint_configurations = TimestampedData.zeros(3)\n        self.drive_last_joint_turn = TimestampedData.zeros(1)\n\n        # Contains dictionary of accelerometers stored in the robot indexed by joint number.\n        # For example, Meca500 currently only reports the accelerometer in joint 5.\n        self.accelerometer = dict()  # 16000 = 1g\n\n        self.max_queue_size = 0\n\n        # The following are status fields.\n        self.activation_state = False\n        self.homing_state = False\n        self.simulation_mode = False\n        self.error_status = False\n        self.pause_motion_status = False\n        self.end_of_block_status = False",
+    "span": [
+      455,
+      487
+    ],
+    "start_byte": 13115,
+    "end_byte": 14933,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, num_joints)",
+    "parent_class": "RobotState",
+    "qualified_name": "RobotState.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 1818,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class RobotEvents:\n    \"\"\"Class for storing possible status events for the generic Mecademic robot.\n\n    Attributes\n    ----------\n    on_connected : event\n        Set if robot is connected.\n    on_disconnected : event\n        Set if robot is disconnected.\n    on_status_updated : event\n        Set if robot status is updated.\n    on_activated : event\n        Set if robot is activated.\n    on_deactivated : event\n        Set if robot is deactivated.\n    on_homed : event\n        Set if robot is homed.\n    on_error : event\n        Set if robot is in error.\n    on_error_reset : event\n        Set if robot error has been reset.\n    on_p_stop : event\n        Set if robot receives pstop.\n    on_pstop_reset : event\n        Set if pstop is reset.\n    on_motion_paused : event\n        Set if robot motion is paused.\n    on_motion_resumed : event\n        Set if robot motion is not paused.\n    on_motion_cleared : event\n        Set if there are no pending ClearMotion commands.\n    on_activate_sim : event\n        Set if robot is in sim mode.\n    on_deactivate_sim : event\n        Set if robot is not in sim mode.\n    on_conf_updated : event\n        Set if robot configuration has been updated.\n    on_conf_turn_updated : event\n        Set if last joint turn number has been updated.\n    on_joints_updated : event\n        Set if joint angles has been updated.\n    on_pose_updated : event\n        Set if robot pose has been updated.\n    on_brakes_activated : event\n        Set if brakes are activated.\n    on_brakes_deactivated : event\n        Set if brakes are deactivated.\n    on_offline_program_started : event\n        Set if there has been a change in the offline program state.\n    on_end_of_block : event\n        Set if end of block has been reached.\n\n    \"\"\"",
+    "span": [
+      490,
+      613
+    ],
+    "start_byte": 14936,
+    "end_byte": 18913,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RobotEvents",
+    "qualified_name": "RobotEvents",
+    "docstring": "Class for storing possible status events for the generic Mecademic robot.\n\n    Attributes\n    ----------\n    on_connected : event\n        Set if robot is connected.\n    on_disconnected : event\n        Set if robot is disconnected.\n    on_status_updated : event\n        Set if robot status is updated.\n    on_activated : event\n        Set if robot is activated.\n    on_deactivated : event\n        Set if robot is deactivated.\n    on_homed : event\n        Set if robot is homed.\n    on_error : event\n        Set if robot is in error.\n    on_error_reset : event\n        Set if robot error has been reset.\n    on_p_stop : event\n        Set if robot receives pstop.\n    on_pstop_reset : event\n        Set if pstop is reset.\n    on_motion_paused : event\n        Set if robot motion is paused.\n    on_motion_resumed : event\n        Set if robot motion is not paused.\n    on_motion_cleared : event\n        Set if there are no pending ClearMotion commands.\n    on_activate_sim : event\n        Set if robot is in sim mode.\n    on_deactivate_sim : event\n        Set if robot is not in sim mode.\n    on_conf_updated : event\n        Set if robot configuration has been updated.\n    on_conf_turn_updated : event\n        Set if last joint turn number has been updated.\n    on_joints_updated : event\n        Set if joint angles has been updated.\n    on_pose_updated : event\n        Set if robot pose has been updated.\n    on_brakes_activated : event\n        Set if brakes are activated.\n    on_brakes_deactivated : event\n        Set if brakes are deactivated.\n    on_offline_program_started : event\n        Set if there has been a change in the offline program state.\n    on_end_of_block : event\n        Set if end of block has been reached.",
+    "chunk_size_bytes": 1760,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __init__(self):\n        self.on_connected = InterruptableEvent()\n        self.on_disconnected = InterruptableEvent()\n\n        self.on_status_updated = InterruptableEvent()\n\n        self.on_activated = InterruptableEvent()\n        self.on_deactivated = InterruptableEvent()\n\n        self.on_homed = InterruptableEvent()\n\n        self.on_error = InterruptableEvent()\n        self.on_error_reset = InterruptableEvent()\n        self.on_p_stop = InterruptableEvent()\n        self.on_p_stop_reset = InterruptableEvent()\n\n        self.on_motion_paused = InterruptableEvent()\n        self.on_motion_resumed = InterruptableEvent()\n        self.on_motion_cleared = InterruptableEvent()\n\n        self.on_activate_sim = InterruptableEvent()\n        self.on_deactivate_sim = InterruptableEvent()\n\n        self.on_conf_updated = InterruptableEvent()\n        self.on_conf_turn_updated = InterruptableEvent()\n        self.on_joints_updated = InterruptableEvent()\n        self.on_pose_updated = InterruptableEvent()\n\n        self.on_brakes_activated = InterruptableEvent()\n        self.on_brakes_deactivated = InterruptableEvent()\n\n        self.on_offline_program_started = InterruptableEvent()\n\n        self.on_end_of_block = InterruptableEvent()\n\n        self.on_disconnected.set()\n        self.on_deactivated.set()\n        self.on_error_reset.set()\n        self.on_p_stop_reset.set()\n        self.on_motion_resumed.set()\n        self.on_deactivate_sim.set()\n\n        self.on_status_updated.set()\n        self.on_conf_updated.set()\n        self.on_conf_turn_updated.set()\n        self.on_joints_updated.set()\n        self.on_pose_updated.set()\n        self.on_brakes_activated.set()",
+    "span": [
+      544,
+      591
+    ],
+    "start_byte": 16702,
+    "end_byte": 18373,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self)",
+    "parent_class": "RobotEvents",
+    "qualified_name": "RobotEvents.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 1671,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def clear_all(self):\n        \"\"\"Clear all events.\n\n        \"\"\"\n        for attr in self.__dict__:\n            self.__dict__[attr].clear()",
+    "span": [
+      593,
+      598
+    ],
+    "start_byte": 18379,
+    "end_byte": 18516,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "clear_all",
+    "signature": "clear_all(self)",
+    "parent_class": "RobotEvents",
+    "qualified_name": "RobotEvents.clear_all",
+    "docstring": "Clear all events.",
+    "chunk_size_bytes": 137,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def abort_all_except_on_connected(self):\n        \"\"\"Abort all events, except for on_connected.\n\n        \"\"\"\n        for attr in self.__dict__:\n            if attr != 'on_connected':\n                self.__dict__[attr].abort()",
+    "span": [
+      600,
+      606
+    ],
+    "start_byte": 18522,
+    "end_byte": 18747,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "abort_all_except_on_connected",
+    "signature": "abort_all_except_on_connected(self)",
+    "parent_class": "RobotEvents",
+    "qualified_name": "RobotEvents.abort_all_except_on_connected",
+    "docstring": "Abort all events, except for on_connected.",
+    "chunk_size_bytes": 225,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def clear_abort_all(self):\n        \"\"\"Clear aborts for all events.\n\n        \"\"\"\n        for attr in self.__dict__:\n            self.__dict__[attr].clear_abort()",
+    "span": [
+      608,
+      613
+    ],
+    "start_byte": 18753,
+    "end_byte": 18913,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "clear_abort_all",
+    "signature": "clear_abort_all(self)",
+    "parent_class": "RobotEvents",
+    "qualified_name": "RobotEvents.clear_abort_all",
+    "docstring": "Clear aborts for all events.",
+    "chunk_size_bytes": 160,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class RobotCallbacks:\n    \"\"\"Class for storing possible status events for the generic Mecademic robot.\n\n    Attributes\n    ----------\n        on_connected : function object\n            Function to be called once connected.\n        on_disconnected : function object\n            Function to be called once disconnected.\n        on_status_updated : function object\n            Function to be called once status is updated.\n        on_activated : function object\n            Function to be called once activated.\n        on_deactivated : function object\n            Function to be called once deactivated.\n        on_homed : function object\n            Function to be called once homing is complete.\n        on_error : function object\n            Function to be called if robot enters an error state.\n        on_error_reset : function object\n            Function to be called once error is reset.\n        on_p_stop : function object\n            Function to be called if PStop is activated.\n        on_p_stop_reset : function object\n            Function to be called if PStop is reset.\n        on_motion_paused : function object\n            Function to be called once motion is paused.\n        on_motion_cleared : function object\n            Function to be called once motion is cleared.\n        on_motion_resumed : function object\n            Function to be called once motion is resumed.\n        on_checkpoint_reached : function object\n            Function to be called if a checkpoint is reached.\n        on_activate_sim : function object\n            Function to be called once sim mode is activated.\n        on_deactivate_sim : function object\n            Function to be called once sim mode is deactivated.\n        on_command_message : function object\n            Function to be called each time a command response is received.\n        on_monitor_message : function object\n            Function to be called each time a monitor response is received.\n        on_offline_program_state : function object\n            Function to be called each time an offline program starts or fails to start.\n    \"\"\"",
+    "span": [
+      616,
+      689
+    ],
+    "start_byte": 18916,
+    "end_byte": 21732,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RobotCallbacks",
+    "qualified_name": "RobotCallbacks",
+    "docstring": "Class for storing possible status events for the generic Mecademic robot.\n\n    Attributes\n    ----------\n        on_connected : function object\n            Function to be called once connected.\n        on_disconnected : function object\n            Function to be called once disconnected.\n        on_status_updated : function object\n            Function to be called once status is updated.\n        on_activated : function object\n            Function to be called once activated.\n        on_deactivated : function object\n            Function to be called once deactivated.\n        on_homed : function object\n            Function to be called once homing is complete.\n        on_error : function object\n            Function to be called if robot enters an error state.\n        on_error_reset : function object\n            Function to be called once error is reset.\n        on_p_stop : function object\n            Function to be called if PStop is activated.\n        on_p_stop_reset : function object\n            Function to be called if PStop is reset.\n        on_motion_paused : function object\n            Function to be called once motion is paused.\n        on_motion_cleared : function object\n            Function to be called once motion is cleared.\n        on_motion_resumed : function object\n            Function to be called once motion is resumed.\n        on_checkpoint_reached : function object\n            Function to be called if a checkpoint is reached.\n        on_activate_sim : function object\n            Function to be called once sim mode is activated.\n        on_deactivate_sim : function object\n            Function to be called once sim mode is deactivated.\n        on_command_message : function object\n            Function to be called each time a command response is received.\n        on_monitor_message : function object\n            Function to be called each time a monitor response is received.\n        on_offline_program_state : function object\n            Function to be called each time an offline program starts or fails to start.",
+    "chunk_size_bytes": 2096,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __init__(self):\n        self.on_connected = None\n        self.on_disconnected = None\n\n        self.on_status_updated = None\n\n        self.on_activated = None\n        self.on_deactivated = None\n\n        self.on_homed = None\n\n        self.on_error = None\n        self.on_error_reset = None\n        self.on_p_stop = None\n        self.on_p_stop_reset = None\n\n        self.on_motion_paused = None\n        self.on_motion_cleared = None\n        self.on_motion_resumed = None\n\n        self.on_checkpoint_reached = None\n\n        self.on_activate_sim = None\n        self.on_deactivate_sim = None\n\n        self.on_command_message = None\n        self.on_monitor_message = None\n\n        self.on_offline_program_state = None",
+    "span": [
+      661,
+      689
+    ],
+    "start_byte": 21018,
+    "end_byte": 21732,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self)",
+    "parent_class": "RobotCallbacks",
+    "qualified_name": "RobotCallbacks.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 714,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "class CallbackQueue():\n    \"\"\"Queue class for storing triggered callbacks. Only registered callbacks are added to the queue.\n\n    Attributes\n    ----------\n    _queue : queue\n        Queue to use to store callback names and associated data.\n    _registered_callbacks : set\n        Set of names of registered callbacks.\n\n    \"\"\"",
+    "span": [
+      692,
+      747
+    ],
+    "start_byte": 21735,
+    "end_byte": 23309,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "CallbackQueue",
+    "qualified_name": "CallbackQueue",
+    "docstring": "Queue class for storing triggered callbacks. Only registered callbacks are added to the queue.\n\n    Attributes\n    ----------\n    _queue : queue\n        Queue to use to store callback names and associated data.\n    _registered_callbacks : set\n        Set of names of registered callbacks.",
+    "chunk_size_bytes": 327,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def __init__(self, robot_callbacks):\n        self._queue = queue.Queue()\n        self._registered_callbacks = set()\n\n        for attr in robot_callbacks.__dict__:\n            if robot_callbacks.__dict__[attr] != None:\n                self._registered_callbacks.add(attr)",
+    "span": [
+      704,
+      710
+    ],
+    "start_byte": 22068,
+    "end_byte": 22338,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot_callbacks)",
+    "parent_class": "CallbackQueue",
+    "qualified_name": "CallbackQueue.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 270,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def qsize(self):\n        \"\"\"Returns the queue size.\n\n        \"\"\"\n        return self._queue.qsize()",
+    "span": [
+      712,
+      716
+    ],
+    "start_byte": 22344,
+    "end_byte": 22443,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "qsize",
+    "signature": "qsize(self)",
+    "parent_class": "CallbackQueue",
+    "qualified_name": "CallbackQueue.qsize",
+    "docstring": "Returns the queue size.",
+    "chunk_size_bytes": 99,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def put(self, callback_name, data=None):\n        \"\"\"Put the callback name and associated data into the queue if is registered.\n\n        Parameters\n        ----------\n        callback_name : str\n            Name of callback.\n        data : any object type\n            Associated data.\n\n        \"\"\"\n        if callback_name in self._registered_callbacks or callback_name == TERMINATE:\n            self._queue.put((callback_name, data))",
+    "span": [
+      718,
+      730
+    ],
+    "start_byte": 22449,
+    "end_byte": 22882,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "put",
+    "signature": "put(self, callback_name, data=None)",
+    "parent_class": "CallbackQueue",
+    "qualified_name": "CallbackQueue.put",
+    "docstring": "Put the callback name and associated data into the queue if is registered.\n\n        Parameters\n        ----------\n        callback_name : str\n            Name of callback.\n        data : any object type\n            Associated data.",
+    "chunk_size_bytes": 433,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def get(self, block=False, timeout=None):\n        \"\"\"Get the next callback in the queue.\n\n        Parameters\n        ----------\n        block : bool\n            Block on next available callback if true.\n        timeout : float\n            Maximum time to wait on a callback.\n\n        Returns\n        -------\n        tuple of callback name and data\n\n        \"\"\"\n        return self._queue.get(block=block, timeout=timeout)",
+    "span": [
+      732,
+      747
+    ],
+    "start_byte": 22888,
+    "end_byte": 23309,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get",
+    "signature": "get(self, block=False, timeout=None)",
+    "parent_class": "CallbackQueue",
+    "qualified_name": "CallbackQueue.get",
+    "docstring": "Get the next callback in the queue.\n\n        Parameters\n        ----------\n        block : bool\n            Block on next available callback if true.\n        timeout : float\n            Maximum time to wait on a callback.\n\n        Returns\n        -------\n        tuple of callback name and data",
+    "chunk_size_bytes": 421,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  },
+  {
+    "snippet": "def string_to_floats(input_string):\n    \"\"\"Convert comma-separated floats in string form to list of floats.\n\n    Parameters\n    ----------\n    input_string : string\n        Comma-separated floats values encoded as a string.\n\n    Returns\n    -------\n    list of floats\n        Returns converted list of floats.\n\n    \"\"\"\n    return [float(x) for x in input_string.split(',')]",
+    "span": [
+      750,
+      764
+    ],
+    "start_byte": 23312,
+    "end_byte": 23685,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "string_to_floats",
+    "qualified_name": "string_to_floats",
+    "signature": "string_to_floats(input_string)",
+    "docstring": "Convert comma-separated floats in string form to list of floats.\n\n    Parameters\n    ----------\n    input_string : string\n        Comma-separated floats values encoded as a string.\n\n    Returns\n    -------\n    list of floats\n        Returns converted list of floats.",
+    "chunk_size_bytes": 373,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_common.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_common.py"
+  }
+]

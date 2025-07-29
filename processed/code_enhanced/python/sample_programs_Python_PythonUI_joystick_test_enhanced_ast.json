@@ -1,0 +1,40 @@
+[
+  {
+    "snippet": "import joystick as jst",
+    "span": [
+      188,
+      188
+    ],
+    "start_byte": 5803,
+    "end_byte": 5825,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "joystick as jst",
+    "qualified_name": "joystick as jst",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 22,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/joystick_test.py",
+    "normalized_path": "sample-programs/Python/PythonUI/joystick_test.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      189,
+      189
+    ],
+    "start_byte": 5826,
+    "end_byte": 5848,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sleep",
+    "qualified_name": "sleep",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 22,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/joystick_test.py",
+    "normalized_path": "sample-programs/Python/PythonUI/joystick_test.py"
+  }
+]

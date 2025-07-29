@@ -1,0 +1,2267 @@
+[
+  {
+    "snippet": "import logging",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 23,
+    "end_byte": 37,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "logging",
+    "qualified_name": "logging",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 14,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "import ipaddress",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 38,
+    "end_byte": 54,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "ipaddress",
+    "qualified_name": "ipaddress",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 16,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 55,
+    "end_byte": 66,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "import socket",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 67,
+    "end_byte": 80,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "socket",
+    "qualified_name": "socket",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 13,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "import threading",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 81,
+    "end_byte": 97,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "threading",
+    "qualified_name": "threading",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 16,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "import queue",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 98,
+    "end_byte": 110,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "queue",
+    "qualified_name": "queue",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 12,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "import functools",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 111,
+    "end_byte": 127,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "functools",
+    "qualified_name": "functools",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 16,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "import copy",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 128,
+    "end_byte": 139,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "copy",
+    "qualified_name": "copy",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "import contextlib",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 140,
+    "end_byte": 157,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "contextlib",
+    "qualified_name": "contextlib",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 17,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "from mx_robot_def import *",
+    "span": [
+      12,
+      12
+    ],
+    "start_byte": 159,
+    "end_byte": 185,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 26,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "from robot_common import *",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 186,
+    "end_byte": 212,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 26,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "from robot_logger import *",
+    "span": [
+      14,
+      14
+    ],
+    "start_byte": 213,
+    "end_byte": 239,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 26,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def disconnect_on_exception(func):\n    \"\"\"Decorator to call disconnect if an exception is raised. Needs to be declared outside of class.\n\n    Attributes\n    ----------\n    func : function object\n        Function to wrap.\n\n    \"\"\"\n\n    @functools.wraps(func)\n    def wrap(self, *args, **kwargs):\n        try:\n            return func(self, *args, **kwargs)\n        except BaseException as e:\n            if self._disconnect_on_exception:\n                self.Disconnect()\n                raise DisconnectError('Automatically disconnected as a result of exception, '\n                                      'set \\'disconnect_on_exception\\' to False to disable.') from e\n            else:\n                raise e\n\n    return wrap",
+    "span": [
+      17,
+      39
+    ],
+    "start_byte": 242,
+    "end_byte": 965,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "disconnect_on_exception",
+    "qualified_name": "disconnect_on_exception",
+    "signature": "disconnect_on_exception(func)",
+    "docstring": "Decorator to call disconnect if an exception is raised. Needs to be declared outside of class.\n\n    Attributes\n    ----------\n    func : function object\n        Function to wrap.",
+    "chunk_size_bytes": 723,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "class Robot:\n    \"\"\"Class for controlling a generic Mecademic robot.\n\n    Attributes\n    ----------\n    _address : string\n        The IP address associated to the Mecademic Robot.\n    _command_socket : socket object\n        Socket connecting to the command port of the physical Mecademic robot.\n    _monitor_socket : socket object\n        Socket connecting to the monitor port of the physical Mecademic robot.\n\n    _command_rx_thread : thread handle\n        Thread used to receive messages from the command port.\n    _command_rx_queue : queue\n        Queue used to temporarily store messages from the command port.\n    _command_tx_thread : thread handle\n        Thread used to transmit messages to the command port.\n    _command_tx_queue : queue\n        Queue used to temporarily store commands to be sent to the command port.\n    _monitor_rx_thread : thread handle\n        Thread used to receive messages from the monitor port.\n    _monitor_rx_queue : queue\n        Queue used to temporarily store messages from the monitor port.\n\n    _command_response_handler_thread : thread handle\n        Thread used to read messages from the command response queue.\n    _monitor_handler_thread : thread handle\n        Thread used to read messages from the monitor queue.\n\n    _main_lock : recursive lock object\n        Used to protect internal state of the robot object.\n\n    _robot_state : RobotState object\n        Stores most current robot state.\n    _robot_events : RobotEvents object\n        Stores events related to the robot state.\n\n    _robot_callbacks : RobotCallbacks instance\n        Stores user-defined callback functions.\n    _callback_queue : queue\n        Queue storing triggered callbacks.\n    _callback_thread : thread handle\n        Callbacks will run in this thread if so configured.\n\n    _user_checkpoints : dictionary\n        Stores checkpoints set or expected by user.\n    _internal_checkpoints : dictionary\n        Stores checkpoints set internally by the Robot class.\n    _internal_checkpoint_counter : int\n        Stores the next available checkpoint id for internal checkpoints.\n\n    _enable_synchronous_mode : boolean\n        If enabled, commands block until action is completed.\n\n    _clear_motion_requests : int\n        Number of pending ClearMotion requests.\n\n    logger : logger object\n        Logger used throughout class.\n\n    default_timeout : float\n        Default timeout to use for blocking operations.\n\n    \"\"\"",
+    "span": [
+      42,
+      2290
+    ],
+    "start_byte": 968,
+    "end_byte": 81680,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Robot",
+    "qualified_name": "Robot",
+    "docstring": "Class for controlling a generic Mecademic robot.\n\n    Attributes\n    ----------\n    _address : string\n        The IP address associated to the Mecademic Robot.\n    _command_socket : socket object\n        Socket connecting to the command port of the physical Mecademic robot.\n    _monitor_socket : socket object\n        Socket connecting to the monitor port of the physical Mecademic robot.\n\n    _command_rx_thread : thread handle\n        Thread used to receive messages from the command port.\n    _command_rx_queue : queue\n        Queue used to temporarily store messages from the command port.\n    _command_tx_thread : thread handle\n        Thread used to transmit messages to the command port.\n    _command_tx_queue : queue\n        Queue used to temporarily store commands to be sent to the command port.\n    _monitor_rx_thread : thread handle\n        Thread used to receive messages from the monitor port.\n    _monitor_rx_queue : queue\n        Queue used to temporarily store messages from the monitor port.\n\n    _command_response_handler_thread : thread handle\n        Thread used to read messages from the command response queue.\n    _monitor_handler_thread : thread handle\n        Thread used to read messages from the monitor queue.\n\n    _main_lock : recursive lock object\n        Used to protect internal state of the robot object.\n\n    _robot_state : RobotState object\n        Stores most current robot state.\n    _robot_events : RobotEvents object\n        Stores events related to the robot state.\n\n    _robot_callbacks : RobotCallbacks instance\n        Stores user-defined callback functions.\n    _callback_queue : queue\n        Queue storing triggered callbacks.\n    _callback_thread : thread handle\n        Callbacks will run in this thread if so configured.\n\n    _user_checkpoints : dictionary\n        Stores checkpoints set or expected by user.\n    _internal_checkpoints : dictionary\n        Stores checkpoints set internally by the Robot class.\n    _internal_checkpoint_counter : int\n        Stores the next available checkpoint id for internal checkpoints.\n\n    _enable_synchronous_mode : boolean\n        If enabled, commands block until action is completed.\n\n    _clear_motion_requests : int\n        Number of pending ClearMotion requests.\n\n    logger : logger object\n        Logger used throughout class.\n\n    default_timeout : float\n        Default timeout to use for blocking operations.",
+    "chunk_size_bytes": 2437,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def __init__(self):\n        \"\"\"Constructor for an instance of the Controller class.\n\n        \"\"\"\n        self._is_initialized = False\n\n        self._address = None\n\n        self._command_socket = None\n        self._monitor_socket = None\n\n        self._command_rx_thread = None\n        self._command_tx_thread = None\n        self._monitor_rx_thread = None\n\n        self._command_response_handler_thread = None\n        self._monitor_handler_thread = None\n\n        self._main_lock = threading.RLock()\n\n        self._robot_callbacks = RobotCallbacks()\n        self._callback_queue = CallbackQueue(self._robot_callbacks)\n        self._callback_thread = None\n\n        self._robot_info = None\n        self._robot_state = None\n        self._robot_events = RobotEvents()\n\n        self._file_logger = None\n\n        self._reset_disconnect_attributes()\n\n        self._enable_synchronous_mode = None\n        self._disconnect_on_exception = None\n\n        self._offline_mode = None\n        self._monitor_mode = None\n\n        self.logger = logging.getLogger(__name__)\n        self.default_timeout = 10\n\n        self._is_initialized = True",
+    "span": [
+      108,
+      149
+    ],
+    "start_byte": 3411,
+    "end_byte": 4533,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.__init__",
+    "docstring": "Constructor for an instance of the Controller class.",
+    "chunk_size_bytes": 1122,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def __del__(self):\n        # Only attempt to disconnect if the object was initialized.\n        if self._is_initialized:\n            self.Disconnect()\n            self.UnregisterCallbacks()",
+    "span": [
+      151,
+      155
+    ],
+    "start_byte": 4539,
+    "end_byte": 4727,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__del__",
+    "signature": "__del__(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.__del__",
+    "docstring": null,
+    "chunk_size_bytes": 188,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _reset_disconnect_attributes(self):\n        self._command_rx_queue = queue.Queue()\n        self._command_tx_queue = queue.Queue()\n        self._monitor_rx_queue = queue.Queue()\n        self._custom_response_events = list()\n\n        self._user_checkpoints = dict()\n        self._internal_checkpoints = dict()\n        self._internal_checkpoint_counter = MX_CHECKPOINT_ID_MAX + 1\n\n        self._clear_motion_requests = 0",
+    "span": [
+      157,
+      167
+    ],
+    "start_byte": 4733,
+    "end_byte": 5154,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_reset_disconnect_attributes",
+    "signature": "_reset_disconnect_attributes(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._reset_disconnect_attributes",
+    "docstring": null,
+    "chunk_size_bytes": 421,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _deactivate_on_exception(func, command_socket, *args, **kwargs):\n        \"\"\"Wrap input function to send deactivate signal to command_socket on exception.\n\n        Parameters\n        ----------\n        func : function handle\n            Function to execute.\n\n        command_socket : socket\n            Socket to send the deactivate command to.\n\n        \"\"\"\n        try:\n            return func(*args, **kwargs)\n        except BaseException as e:\n            if command_socket:\n                command_socket.sendall(b'DeactivateRobot\\0')\n            raise e",
+    "span": [
+      174,
+      191
+    ],
+    "start_byte": 5381,
+    "end_byte": 5942,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_deactivate_on_exception",
+    "signature": "_deactivate_on_exception(func, command_socket, *args, **kwargs)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._deactivate_on_exception",
+    "docstring": "Wrap input function to send deactivate signal to command_socket on exception.\n\n        Parameters\n        ----------\n        func : function handle\n            Function to execute.\n\n        command_socket : socket\n            Socket to send the deactivate command to.",
+    "chunk_size_bytes": 561,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _handle_socket_rx(robot_socket, rx_queue):\n        \"\"\"Handle received data on the socket.\n\n        Parameters\n        ----------\n        robot_socket : socket\n            Socket to use for receiving data.\n\n        rx_queue : queue\n            Thread-safe queue to push complete messages onto.\n\n        \"\"\"\n        remainder = ''\n        while True:\n            # Wait for a message from the robot.\n            try:\n                robot_socket.setblocking(True)\n                raw_responses = robot_socket.recv(1024)\n            except (ConnectionAbortedError, BrokenPipeError):\n                return\n\n            # Socket has been closed.\n            if raw_responses == b'':\n                return\n\n            responses = raw_responses.decode('ascii').split('\\0')\n\n            # Add the remainder from the previous message if necessary.\n            if remainder != '':\n                responses[0] = remainder + responses[0]\n\n            # Set the remainder as the last response (which is '' if complete).\n            remainder = responses[-1]\n\n            # Put all responses into the queue.\n            for response in responses[:-1]:\n                rx_queue.put(Message.from_string(response))",
+    "span": [
+      194,
+      230
+    ],
+    "start_byte": 5966,
+    "end_byte": 7171,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_handle_socket_rx",
+    "signature": "_handle_socket_rx(robot_socket, rx_queue)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._handle_socket_rx",
+    "docstring": "Handle received data on the socket.\n\n        Parameters\n        ----------\n        robot_socket : socket\n            Socket to use for receiving data.\n\n        rx_queue : queue\n            Thread-safe queue to push complete messages onto.",
+    "chunk_size_bytes": 1205,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _handle_socket_tx(robot_socket, tx_queue):\n        \"\"\"Handle sending data on the socket.\n\n        Parameters\n        ----------\n        robot_socket : socket\n            Socket to use for sending data.\n\n        tx_queue : queue\n            Thread-safe queue to get messages from.\n\n        \"\"\"\n        while True:\n            # Wait for a command to be available from the queue.\n            command = tx_queue.get(block=True)\n\n            # Terminate thread if requested, otherwise send the command.\n            if command == TERMINATE:\n                return\n            else:\n                robot_socket.sendall((command + '\\0').encode('ascii'))",
+    "span": [
+      233,
+      253
+    ],
+    "start_byte": 7195,
+    "end_byte": 7846,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_handle_socket_tx",
+    "signature": "_handle_socket_tx(robot_socket, tx_queue)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._handle_socket_tx",
+    "docstring": "Handle sending data on the socket.\n\n        Parameters\n        ----------\n        robot_socket : socket\n            Socket to use for sending data.\n\n        tx_queue : queue\n            Thread-safe queue to get messages from.",
+    "chunk_size_bytes": 651,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _connect_socket(logger, address, port):\n        \"\"\"Connects to an arbitrary socket.\n\n        Parameters\n        ----------\n        logger : logger instance\n            Logger to use.\n        address : string\n            Address to use.\n        port : int\n            Port number to use.\n\n        Returns\n        -------\n        new_socket : socket object\n            Successfully-connected socket object.\n\n        \"\"\"\n        logger.debug('Attempting to connect to %s:%s', address, port)\n\n        # Create socket and attempt connection.\n        new_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n        new_socket.settimeout(0.1)  # 100ms\n        try:\n            new_socket.connect((address, port))\n        except:\n            logger.error('Unable to connect to %s:%s.', address, port)\n            return None\n\n        logger.debug('Connected to %s:%s.', address, port)\n        return new_socket",
+    "span": [
+      256,
+      286
+    ],
+    "start_byte": 7870,
+    "end_byte": 8783,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_connect_socket",
+    "signature": "_connect_socket(logger, address, port)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._connect_socket",
+    "docstring": "Connects to an arbitrary socket.\n\n        Parameters\n        ----------\n        logger : logger instance\n            Logger to use.\n        address : string\n            Address to use.\n        port : int\n            Port number to use.\n\n        Returns\n        -------\n        new_socket : socket object\n            Successfully-connected socket object.",
+    "chunk_size_bytes": 913,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _handle_callbacks(logger, callback_queue, callbacks, timeout=None):\n        \"\"\"Runs callbacks found in callback_queue.\n\n        Parameters\n        ----------\n        logger : logger instance\n            Logger to use.\n        callback_queue : queue\n            Stores triggered callbacks.\n        callbacks : RobotCallbacks instance\n            Stores user-defined callback functions.\n        timeout : float or None\n            If none, block forever on empty queue, if 0, don't block, else block with timeout.\n        \"\"\"\n        block_on_empty = (timeout != 0)\n\n        while True:\n            # If we are not blocking on empty, return if empty.\n            if not block_on_empty and callback_queue.qsize() == 0:\n                return\n\n            callback_name, data = callback_queue.get(block=block_on_empty, timeout=timeout)\n\n            if callback_name == TERMINATE:\n                return\n\n            callback_function = callbacks.__dict__[callback_name]\n            if callback_function != None:\n                if data != None:\n                    callback_function(data)\n                else:\n                    callback_function()",
+    "span": [
+      289,
+      320
+    ],
+    "start_byte": 8807,
+    "end_byte": 9957,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_handle_callbacks",
+    "signature": "_handle_callbacks(logger, callback_queue, callbacks, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._handle_callbacks",
+    "docstring": "Runs callbacks found in callback_queue.\n\n        Parameters\n        ----------\n        logger : logger instance\n            Logger to use.\n        callback_queue : queue\n            Stores triggered callbacks.\n        callbacks : RobotCallbacks instance\n            Stores user-defined callback functions.\n        timeout : float or None\n            If none, block forever on empty queue, if 0, don't block, else block with timeout.",
+    "chunk_size_bytes": 1150,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _check_monitor_threads(self):\n        \"\"\"Check that the threads which handle robot monitor messages are alive.\n\n        Attempt to disconnect from the robot if not.\n\n        \"\"\"\n\n        if not (self._monitor_handler_thread and self._monitor_handler_thread.is_alive()):\n            self.Disconnect()\n            raise InvalidStateError('Monitor response handler thread has unexpectedly terminated.')\n\n        if self._offline_mode:  # Do not check rx threads in offline mode.\n            return\n\n        if not (self._monitor_rx_thread and self._monitor_rx_thread.is_alive()):\n            self.Disconnect()\n            raise InvalidStateError('Monitor rx thread has unexpectedly terminated.')",
+    "span": [
+      326,
+      342
+    ],
+    "start_byte": 10167,
+    "end_byte": 10863,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_check_monitor_threads",
+    "signature": "_check_monitor_threads(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._check_monitor_threads",
+    "docstring": "Check that the threads which handle robot monitor messages are alive.\n\n        Attempt to disconnect from the robot if not.",
+    "chunk_size_bytes": 696,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _check_command_threads(self):\n        \"\"\"Check that the threads which handle robot command messages are alive.\n\n        Attempt to disconnect from the robot if not.\n\n        \"\"\"\n\n        if not (self._command_response_handler_thread and self._command_response_handler_thread.is_alive()):\n            self.Disconnect()\n            raise InvalidStateError('No command response handler thread, are you in monitor mode?')\n\n        if self._offline_mode:  # Do not check rx threads in offline mode.\n            return\n\n        if not (self._command_rx_thread and self._command_rx_thread.is_alive()):\n            self.Disconnect()\n            raise InvalidStateError('No command rx thread, are you in monitor mode?')\n\n        # If tx thread is down, attempt to directly send deactivate command to the robot.\n        if not (self._command_tx_thread and self._command_tx_thread.is_alive()):\n            self._command_socket.sendall(b'DeactivateRobot\\0')\n            self.Disconnect()\n            raise InvalidStateError('No command tx thread, are you in monitor mode?')",
+    "span": [
+      344,
+      366
+    ],
+    "start_byte": 10869,
+    "end_byte": 11934,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_check_command_threads",
+    "signature": "_check_command_threads(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._check_command_threads",
+    "docstring": "Check that the threads which handle robot command messages are alive.\n\n        Attempt to disconnect from the robot if not.",
+    "chunk_size_bytes": 1065,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _check_internal_states(self):\n        \"\"\"Check that the threads which handle robot messages are alive.\n\n        Attempt to disconnect from the robot if not.\n\n        \"\"\"\n        if self._monitor_mode:\n            raise InvalidStateError('Cannot send command while in monitoring mode.')\n        else:\n            self._check_command_threads()\n\n        self._check_monitor_threads()",
+    "span": [
+      368,
+      379
+    ],
+    "start_byte": 11940,
+    "end_byte": 12324,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_check_internal_states",
+    "signature": "_check_internal_states(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._check_internal_states",
+    "docstring": "Check that the threads which handle robot messages are alive.\n\n        Attempt to disconnect from the robot if not.",
+    "chunk_size_bytes": 384,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _send_command(self, command, arg_list=None):\n        \"\"\"Assembles and sends the command string to the Mecademic robot.\n\n        Parameters\n        ----------\n        command : string\n            Command name to send to the Mecademic robot.\n        arg_list : list\n            List of arguments the command requires.\n\n        \"\"\"\n\n        # Assemble arguments into a string and concatenate to end of command.\n        if arg_list:\n            command = command + '(' + ','.join([str(x) for x in arg_list]) + ')'\n\n        # Put command into tx queue.\n        self._command_tx_queue.put(command)\n\n        # If logging is enabled, send command to logger.\n        if self._file_logger:\n            self._file_logger.command_queue.put(command)",
+    "span": [
+      381,
+      402
+    ],
+    "start_byte": 12330,
+    "end_byte": 13070,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_send_command",
+    "signature": "_send_command(self, command, arg_list=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._send_command",
+    "docstring": "Assembles and sends the command string to the Mecademic robot.\n\n        Parameters\n        ----------\n        command : string\n            Command name to send to the Mecademic robot.\n        arg_list : list\n            List of arguments the command requires.",
+    "chunk_size_bytes": 740,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _launch_thread(self, *, target, args):\n        \"\"\"Establish the threads responsible for reading/sending messages using the sockets.\n\n        Parameters\n        ----------\n        func : function handle\n            Function to run using new thread.\n        args : argument list\n            Arguments to be passed to func.\n\n        Return\n        ------\n        thread handle\n            Handle for newly-launched thread.\n\n        \"\"\"\n        # We use the _deactivate_on_exception function which wraps func around try...except and disconnects on error.\n        # The first argument is the actual function to be executed, the second is the command socket.\n        thread = threading.Thread(target=self._deactivate_on_exception, args=(\n            target,\n            self._command_socket,\n            *args,\n        ))\n        thread.start()\n        return thread",
+    "span": [
+      404,
+      428
+    ],
+    "start_byte": 13076,
+    "end_byte": 13940,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_launch_thread",
+    "signature": "_launch_thread(self, *, target, args)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._launch_thread",
+    "docstring": "Establish the threads responsible for reading/sending messages using the sockets.\n\n        Parameters\n        ----------\n        func : function handle\n            Function to run using new thread.\n        args : argument list\n            Arguments to be passed to func.\n\n        Return\n        ------\n        thread handle\n            Handle for newly-launched thread.",
+    "chunk_size_bytes": 864,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _initialize_command_socket(self):\n        \"\"\"Establish the command socket and the associated thread.\n\n        \"\"\"\n        if self._offline_mode:\n            return\n\n        if self._command_socket is not None:\n            raise InvalidStateError('Cannot connect since existing command socket exists.')\n\n        try:\n            self._command_socket = self._connect_socket(self.logger, self._address, MX_ROBOT_TCP_PORT_CONTROL)\n\n            if self._command_socket is None:\n                raise CommunicationError('Command socket could not be created. Is the IP address correct?')\n\n            # Create rx thread for command socket communication.\n            self._command_rx_thread = self._launch_thread(target=self._handle_socket_rx,\n                                                          args=(self._command_socket, self._command_rx_queue))\n\n            # Create tx thread for command socket communication.\n            self._command_tx_thread = self._launch_thread(target=self._handle_socket_tx,\n                                                          args=(self._command_socket, self._command_tx_queue))\n\n        except:\n            # Clean up threads and connections on error.\n            self.Disconnect()\n            raise",
+    "span": [
+      430,
+      457
+    ],
+    "start_byte": 13946,
+    "end_byte": 15184,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_initialize_command_socket",
+    "signature": "_initialize_command_socket(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._initialize_command_socket",
+    "docstring": "Establish the command socket and the associated thread.",
+    "chunk_size_bytes": 1238,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _initialize_monitoring_socket(self):\n        \"\"\"Establish the monitoring socket and the associated thread.\n\n        \"\"\"\n        if self._offline_mode:\n            return\n\n        if self._monitor_socket is not None:\n            raise InvalidStateError('Cannot connect since existing monitor socket exists.')\n\n        try:\n            self._monitor_socket = self._connect_socket(self.logger, self._address, MX_ROBOT_TCP_PORT_FEED)\n\n            if self._monitor_socket is None:\n                raise CommunicationError('Monitor socket could not be created. Is the IP address correct?')\n\n            # Create rx thread for monitor socket communication.\n            self._monitor_rx_thread = self._launch_thread(target=self._handle_socket_rx,\n                                                          args=(self._monitor_socket, self._monitor_rx_queue))\n\n        except:\n            # Clean up threads and connections on error.\n            self.Disconnect()\n            raise",
+    "span": [
+      459,
+      482
+    ],
+    "start_byte": 15190,
+    "end_byte": 16165,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_initialize_monitoring_socket",
+    "signature": "_initialize_monitoring_socket(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._initialize_monitoring_socket",
+    "docstring": "Establish the monitoring socket and the associated thread.",
+    "chunk_size_bytes": 975,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _receive_welcome_message(self, message_queue):\n        \"\"\"Receive and parse a welcome message in order to set _robot_info and _robot_state.\n\n        Parameters\n        ----------\n        message_queue : queue\n            The welcome message will be fetched from this queue.\n\n        \"\"\"\n\n        try:\n            response = message_queue.get(block=True, timeout=self.default_timeout)\n        except queue.Empty:\n            self.logger.error('No response received within timeout interval.')\n            self.Disconnect()\n            raise CommunicationError('No response received within timeout interval.')\n        except BaseException:\n            self.Disconnect()\n            raise\n\n        # Check that response is appropriate.\n        if response.id != MX_ST_CONNECTED:\n            self.logger.error('Connection error: {}'.format(response))\n            self.Disconnect()\n            raise CommunicationError('Connection error: {}'.format(response))\n\n        # Attempt to parse robot return data.\n        self._robot_info = RobotInfo.from_command_response_string(response.data)\n\n        self._robot_state = RobotState(self._robot_info.num_joints)",
+    "span": [
+      484,
+      513
+    ],
+    "start_byte": 16171,
+    "end_byte": 17325,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_receive_welcome_message",
+    "signature": "_receive_welcome_message(self, message_queue)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._receive_welcome_message",
+    "docstring": "Receive and parse a welcome message in order to set _robot_info and _robot_state.\n\n        Parameters\n        ----------\n        message_queue : queue\n            The welcome message will be fetched from this queue.",
+    "chunk_size_bytes": 1154,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _initialize_command_connection(self):\n        \"\"\"Attempt to connect to the command port of the Mecademic Robot.\n\n        \"\"\"\n        self._receive_welcome_message(self._command_rx_queue)\n\n        self._command_response_handler_thread = self._launch_thread(target=self._command_response_handler, args=())",
+    "span": [
+      515,
+      521
+    ],
+    "start_byte": 17331,
+    "end_byte": 17638,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_initialize_command_connection",
+    "signature": "_initialize_command_connection(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._initialize_command_connection",
+    "docstring": "Attempt to connect to the command port of the Mecademic Robot.",
+    "chunk_size_bytes": 307,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _initialize_monitoring_connection(self):\n        \"\"\"Attempt to connect to the monitor port of the Mecademic Robot.\n\n        Returns\n        -------\n        status : boolean\n            Returns the status of the connection, true for success, false for failure.\n\n        \"\"\"\n\n        if self._monitor_mode:\n            self._receive_welcome_message(self._monitor_rx_queue)\n\n        self._monitor_handler_thread = self._launch_thread(target=self._monitor_handler, args=())\n\n        return",
+    "span": [
+      523,
+      538
+    ],
+    "start_byte": 17644,
+    "end_byte": 18133,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_initialize_monitoring_connection",
+    "signature": "_initialize_monitoring_connection(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._initialize_monitoring_connection",
+    "docstring": "Attempt to connect to the monitor port of the Mecademic Robot.\n\n        Returns\n        -------\n        status : boolean\n            Returns the status of the connection, true for success, false for failure.",
+    "chunk_size_bytes": 489,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _shut_down_queue_threads(self):\n        \"\"\"Attempt to gracefully shut down threads which read from queues.\n\n        \"\"\"\n        # Join threads which wait on a queue by sending terminate to the queue.\n        # Don't acquire _main_lock since these threads require _main_lock to finish processing.\n        if self._command_tx_thread is not None:\n            try:\n                self._command_tx_queue.put(TERMINATE)\n            except Exception as e:\n                self.logger.error('Error shutting down tx thread. ' + str(e))\n            self._command_tx_thread.join(timeout=self.default_timeout)\n            self._command_tx_thread = None\n\n        if self._command_response_handler_thread is not None:\n            try:\n                self._command_rx_queue.put(TERMINATE)\n            except Exception as e:\n                self.logger.error('Error shutting down command response handler thread. ' + str(e))\n            self._command_response_handler_thread.join(timeout=self.default_timeout)\n            self._command_response_handler_thread = None\n\n        if self._monitor_handler_thread is not None:\n            try:\n                self._monitor_rx_queue.put(TERMINATE)\n            except Exception as e:\n                self.logger.error('Error shutting down monitor handler thread. ' + str(e))\n            self._monitor_handler_thread.join(timeout=self.default_timeout)\n            self._monitor_handler_thread = None",
+    "span": [
+      540,
+      568
+    ],
+    "start_byte": 18139,
+    "end_byte": 19570,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_shut_down_queue_threads",
+    "signature": "_shut_down_queue_threads(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._shut_down_queue_threads",
+    "docstring": "Attempt to gracefully shut down threads which read from queues.",
+    "chunk_size_bytes": 1431,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _shut_down_socket_threads(self):\n        \"\"\"Attempt to gracefully shut down threads which read from sockets.\n\n        \"\"\"\n        with self._main_lock:\n            # Shutdown socket to terminate the rx threads.\n            if self._command_socket is not None:\n                try:\n                    self._command_socket.shutdown(socket.SHUT_RDWR)\n                except Exception as e:\n                    self.logger.error('Error shutting down command socket. ' + str(e))\n\n            if self._monitor_socket is not None:\n                try:\n                    self._monitor_socket.shutdown(socket.SHUT_RDWR)\n                except Exception as e:\n                    self.logger.error('Error shutting down monitor socket. ' + str(e))\n\n            # Join threads which wait on a socket.\n            if self._command_rx_thread is not None:\n                self._command_rx_thread.join(timeout=self.default_timeout)\n                self._command_rx_thread = None\n\n            if self._monitor_rx_thread is not None:\n                self._monitor_rx_thread.join(timeout=self.default_timeout)\n                self._monitor_rx_thread = None",
+    "span": [
+      570,
+      595
+    ],
+    "start_byte": 19576,
+    "end_byte": 20720,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_shut_down_socket_threads",
+    "signature": "_shut_down_socket_threads(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._shut_down_socket_threads",
+    "docstring": "Attempt to gracefully shut down threads which read from sockets.",
+    "chunk_size_bytes": 1144,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _set_checkpoint_internal(self):\n        \"\"\"Set a checkpoint for internal use using the next available internal id.\n\n        Return\n        ------\n        Checkpoint object\n            Object to use to wait for the checkpoint.\n\n        \"\"\"\n        with self._main_lock:\n            checkpoint_id = self._internal_checkpoint_counter\n\n            # Increment internal checkpoint counter.\n            self._internal_checkpoint_counter += 1\n            if self._internal_checkpoint_counter > CHECKPOINT_ID_MAX_PRIVATE:\n                self._internal_checkpoint_counter.value = MX_CHECKPOINT_ID_MAX + 1\n\n            return self._set_checkpoint_impl(checkpoint_id)",
+    "span": [
+      597,
+      614
+    ],
+    "start_byte": 20726,
+    "end_byte": 21387,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_set_checkpoint_internal",
+    "signature": "_set_checkpoint_internal(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._set_checkpoint_internal",
+    "docstring": "Set a checkpoint for internal use using the next available internal id.\n\n        Return\n        ------\n        Checkpoint object\n            Object to use to wait for the checkpoint.",
+    "chunk_size_bytes": 661,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _set_checkpoint_impl(self, n, send_to_robot=True):\n        \"\"\"Create a checkpoint object which can be used to wait for the checkpoint id to be received from the robot.\n\n        Checkpoints are implemented as a dictionary of lists, to support repeated checkpoints (which are discouraged),\n        and also to support expecting external checkpoints. Particularly so that ExpectExternalCheckpoints could be\n        called in any arbitrary order.\n\n        Returning an event object for the user to wait on also prevents activated checkpoints from being 'missed' by the\n        API, and prevents issues around waiting for checkpoints which may never arrive.\n\n        Parameters\n        ----------\n        n : int\n            Id of checkpoint.\n        send_to_robot : bool\n            If true, send the SetCheckpoint command to the robot.\n\n        Return\n        ------\n        Checkpoint object\n            Object to use to wait for the checkpoint.\n\n        \"\"\"\n        with self._main_lock:\n            if not isinstance(n, int):\n                raise TypeError('Please provide an integer checkpoint id.')\n\n            # Find the correct dictionary to store checkpoint.\n            if MX_CHECKPOINT_ID_MIN <= n <= MX_CHECKPOINT_ID_MAX:\n                checkpoints_dict = self._user_checkpoints\n            elif MX_CHECKPOINT_ID_MAX < n <= CHECKPOINT_ID_MAX_PRIVATE:\n                checkpoints_dict = self._internal_checkpoints\n            else:\n                raise ValueError\n\n            self.logger.debug('Setting checkpoint %s', n)\n\n            if n not in checkpoints_dict:\n                checkpoints_dict[n] = list()\n            event = InterruptableEvent(n)\n            checkpoints_dict[n].append(event)\n\n            if send_to_robot:\n                self._send_command('SetCheckpoint', [n])\n\n            return event",
+    "span": [
+      616,
+      661
+    ],
+    "start_byte": 21393,
+    "end_byte": 23220,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_set_checkpoint_impl",
+    "signature": "_set_checkpoint_impl(self, n, send_to_robot=True)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._set_checkpoint_impl",
+    "docstring": "Create a checkpoint object which can be used to wait for the checkpoint id to be received from the robot.\n\n        Checkpoints are implemented as a dictionary of lists, to support repeated checkpoints (which are discouraged),\n        and also to support expecting external checkpoints. Particularly so that ExpectExternalCheckpoints could be\n        called in any arbitrary order.\n\n        Returning an event object for the user to wait on also prevents activated checkpoints from being 'missed' by the\n        API, and prevents issues around waiting for checkpoints which may never arrive.\n\n        Parameters\n        ----------\n        n : int\n            Id of checkpoint.\n        send_to_robot : bool\n            If true, send the SetCheckpoint command to the robot.\n\n        Return\n        ------\n        Checkpoint object\n            Object to use to wait for the checkpoint.",
+    "chunk_size_bytes": 1827,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _invalidate_checkpoints(self):\n        '''Unblock all waiting checkpoints and have them throw InterruptException.\n\n        '''\n\n        for checkpoints_dict in [self._internal_checkpoints, self._user_checkpoints]:\n            for key, checkpoints_list in checkpoints_dict.items():\n                for event in checkpoints_list:\n                    event.abort()\n            checkpoints_dict.clear()\n\n        self._internal_checkpoint_counter = MX_CHECKPOINT_ID_MAX + 1",
+    "span": [
+      663,
+      674
+    ],
+    "start_byte": 23226,
+    "end_byte": 23698,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_invalidate_checkpoints",
+    "signature": "_invalidate_checkpoints(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._invalidate_checkpoints",
+    "docstring": "Unblock all waiting checkpoints and have them throw InterruptException.",
+    "chunk_size_bytes": 472,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _send_motion_command(self, command, arg_list=None):\n        \"\"\"Send generic motion command with support for synchronous mode and locking.\n\n        Parameters\n        ----------\n        command : string\n            The command to send.\n        args : list\n            List of arguments to be sent.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command(command, arg_list)\n            if self._enable_synchronous_mode:\n                checkpoint = self._set_checkpoint_internal()\n\n        if self._enable_synchronous_mode:\n            checkpoint.wait()",
+    "span": [
+      676,
+      694
+    ],
+    "start_byte": 23704,
+    "end_byte": 24319,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_send_motion_command",
+    "signature": "_send_motion_command(self, command, arg_list=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._send_motion_command",
+    "docstring": "Send generic motion command with support for synchronous mode and locking.\n\n        Parameters\n        ----------\n        command : string\n            The command to send.\n        args : list\n            List of arguments to be sent.",
+    "chunk_size_bytes": 615,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _monitor_handler(self):\n        \"\"\"Handle messages from the monitoring port of the robot.\n\n        \"\"\"\n        # Variables to hold joint positions and poses while waiting for timestamp.\n        joint_positions = None\n        end_effector_pose = None\n        joint_configuration = None\n        last_joint_turn = None\n\n        while True:\n            # Wait for a message in the queue.\n            response = self._monitor_rx_queue.get(block=True)\n\n            # Terminate thread if requested.\n            if response == TERMINATE:\n                return\n\n            self._callback_queue.put('on_monitor_message', response)\n\n            queue_size = self._monitor_rx_queue.qsize()\n            if queue_size > self._robot_state.max_queue_size:\n                self._robot_state.max_queue_size = queue_size\n\n            with self._main_lock:\n\n                # Temporarily save data if rt messages will be availble to add timestamps.\n                # Note that if robot platform isn't RT message capable, the update occurs in _handle_common_messages.\n                if response.id == MX_ST_GET_JOINTS and self._robot_info.rt_message_capable:\n                    joint_positions = string_to_floats(response.data)\n                elif response.id == MX_ST_GET_POSE and self._robot_info.rt_message_capable:\n                    end_effector_pose = string_to_floats(response.data)\n                elif response.id == MX_ST_GET_CONF and self._robot_info.rt_message_capable:\n                    joint_configuration = string_to_floats(response.data)\n                elif response.id == MX_ST_GET_CONF_TURN and self._robot_info.rt_message_capable:\n                    last_joint_turn = string_to_floats(response.data)\n\n                if response.id == MX_ST_RT_CYCLE_END:\n                    if not self._robot_info.rt_message_capable:\n                        self._robot_info.rt_message_capable = True\n                    timestamp = float(response.data)\n\n                    # Update the legacy joint and pose messages with timestamps.\n                    if joint_positions:\n                        self._robot_state.target_joint_positions.update_from_data(timestamp, joint_positions)\n                        joint_positions = None\n                    if end_effector_pose:\n                        self._robot_state.target_end_effector_pose.update_from_data(timestamp, end_effector_pose)\n                        end_effector_pose = None\n                    if joint_configuration:\n                        self._robot_state.target_joint_configurations.update_from_data(timestamp, joint_configuration)\n                        joint_configuration = None\n                    if last_joint_turn:\n                        self._robot_state.target_last_joint_turn.update_from_data(timestamp, last_joint_turn)\n                        last_joint_turn = None\n\n                    # If logging is active, log the current state.\n                    if self._file_logger != None:\n                        self._file_logger.write_fields(timestamp, self._robot_state)\n\n                else:\n                    self._handle_common_messages(response, is_command_response=False)\n\n                    # On non-rt monitoring capable platforms, no CYCLE_END event is sent, so use system time.\n                    # GET_JOINTS and GET_POSE is still sent every cycle, so log RobotState when GET_POSE is received.\n                    if response.id == MX_ST_GET_POSE and not self._robot_info.rt_message_capable:\n                        if self._file_logger != None:\n                            # Log time in microseconds to be consistent with real-time logging timestamp.\n                            self._file_logger.write_fields(time.time_ns() / 1000, self._robot_state)",
+    "span": [
+      696,
+      764
+    ],
+    "start_byte": 24325,
+    "end_byte": 28070,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_monitor_handler",
+    "signature": "_monitor_handler(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._monitor_handler",
+    "docstring": "Handle messages from the monitoring port of the robot.",
+    "chunk_size_bytes": 3745,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _command_response_handler(self):\n        \"\"\"Handle received messages on the command socket.\n\n        \"\"\"\n        while True:\n            # Wait for a response to be available from the queue.\n            response = self._command_rx_queue.get(block=True)\n\n            # Terminate thread if requested.\n            if response == TERMINATE:\n                return\n\n            self._callback_queue.put('on_command_message', response)\n\n            with self._main_lock:\n\n                # Find and handle custom response event.\n                matched_events = (event for event in self._custom_response_events if response.id in event.data)\n                for event in matched_events:\n                    event.set(data=response)\n                    self._custom_response_events.remove(event)\n\n                if response.id == MX_ST_CHECKPOINT_REACHED:\n                    self._handle_checkpoint_response(response)\n\n                elif response.id == MX_ST_CLEAR_MOTION:\n                    if self._clear_motion_requests <= 1:\n                        self._clear_motion_requests = 0\n                        self._robot_events.on_motion_cleared.set()\n                        self._callback_queue.put('on_motion_cleared')\n                    else:\n                        self._clear_motion_requests -= 1\n\n                elif response.id == MX_ST_PSTOP:\n                    if bool(int(response.data)):\n                        self._robot_events.on_p_stop_reset.clear()\n                        self._robot_events.on_p_stop.set()\n                        self._callback_queue.put('on_p_stop')\n                    else:\n                        self._robot_events.on_p_stop.clear()\n                        self._robot_events.on_p_stop_reset.set()\n                        self._callback_queue.put('on_p_stop_reset')\n\n                elif response.id == MX_ST_BRAKES_ON:\n                    self._robot_events.on_brakes_deactivated.clear()\n                    self._robot_events.on_brakes_activated.set()\n\n                elif response.id == MX_ST_BRAKES_OFF:\n                    self._robot_events.on_brakes_activated.clear()\n                    self._robot_events.on_brakes_deactivated.set()\n\n                elif response.id == MX_ST_OFFLINE_START:\n                    self._robot_events.on_offline_program_started.set()\n                    self._callback_queue.put('on_offline_program_state')\n\n                elif response.id == MX_ST_NO_OFFLINE_SAVED:\n                    self._robot_events.on_offline_program_started.abort()\n\n                else:\n                    self._handle_common_messages(response, is_command_response=True)",
+    "span": [
+      766,
+      825
+    ],
+    "start_byte": 28076,
+    "end_byte": 30711,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_command_response_handler",
+    "signature": "_command_response_handler(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._command_response_handler",
+    "docstring": "Handle received messages on the command socket.",
+    "chunk_size_bytes": 2635,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _handle_common_messages(self, response, is_command_response=False):\n        \"\"\"Handle response messages which are received on the command and monitor port, and are processed the same way.\n\n        Parameters\n        ----------\n        response : Message object\n            Robot status response to parse and handle.\n\n        \"\"\"\n        if response.id == MX_ST_GET_STATUS_ROBOT:\n            self._handle_robot_status_response(response)\n\n        # Only update using legacy messages if robot is not capable of rt messages.\n        elif response.id == MX_ST_GET_JOINTS and not self._robot_info.rt_message_capable:\n            self._robot_state.target_joint_positions = TimestampedData(0, string_to_floats(response.data))\n            if is_command_response:\n                self._robot_events.on_joints_updated.set()\n\n        elif response.id == MX_ST_GET_POSE and not self._robot_info.rt_message_capable:\n            self._robot_state.target_end_effector_pose = TimestampedData(0, string_to_floats(response.data))\n            if is_command_response:\n                self._robot_events.on_pose_updated.set()\n\n        elif response.id == MX_ST_GET_CONF and not self._robot_info.rt_message_capable:\n            self._robot_state.target_joint_configurations = TimestampedData(0, string_to_floats(response.data))\n            if is_command_response:\n                self._robot_events.on_conf_updated.set()\n\n        elif response.id == MX_ST_GET_CONF_TURN and not self._robot_info.rt_message_capable:\n            self._robot_state.target_last_joint_turn = TimestampedData(0, string_to_floats(response.data))\n            if is_command_response:\n                self._robot_events.on_conf_turn_updated.set()\n\n        elif response.id == MX_ST_RT_NC_JOINT_POS:\n            self._robot_state.target_joint_positions.update_from_csv(response.data)\n            if is_command_response:\n                self._robot_events.on_joints_updated.set()\n\n        elif response.id == MX_ST_RT_NC_CART_POS:\n            self._robot_state.target_end_effector_pose.update_from_csv(response.data)\n            if is_command_response:\n                self._robot_events.on_pose_updated.set()\n\n        elif response.id == MX_ST_RT_NC_JOINT_POS:\n            self._robot_state.target_joint_positions.update_from_csv(response.data)\n        elif response.id == MX_ST_RT_NC_CART_POS:\n            self._robot_state.target_end_effector_pose.update_from_csv(response.data)\n        elif response.id == MX_ST_RT_NC_JOINT_VEL:\n            self._robot_state.target_joint_velocity.update_from_csv(response.data)\n        elif response.id == MX_ST_RT_NC_CART_VEL:\n            self._robot_state.target_end_effector_velocity.update_from_csv(response.data)\n\n        elif response.id == MX_ST_RT_NC_CONF:\n            self._robot_state.target_joint_configurations.update_from_csv(response.data)\n        elif response.id == MX_ST_RT_NC_CONF_TURN:\n            self._robot_state.target_last_joint_turn.update_from_csv(response.data)\n\n        elif response.id == MX_ST_RT_DRIVE_JOINT_POS:\n            self._robot_state.drive_joint_positions.update_from_csv(response.data)\n        elif response.id == MX_ST_RT_DRIVE_CART_POS:\n            self._robot_state.drive_end_effector_pose.update_from_csv(response.data)\n        elif response.id == MX_ST_RT_DRIVE_JOINT_VEL:\n            self._robot_state.drive_joint_velocity.update_from_csv(response.data)\n        elif response.id == MX_ST_RT_DRIVE_JOINT_TORQ:\n            self._robot_state.drive_joint_torque_ratio.update_from_csv(response.data)\n        elif response.id == MX_ST_RT_DRIVE_CART_VEL:\n            self._robot_state.drive_end_effector_velocity.update_from_csv(response.data)\n\n        elif response.id == MX_ST_RT_DRIVE_CONF:\n            self._robot_state.drive_joint_configurations.update_from_csv(response.data)\n        elif response.id == MX_ST_RT_DRIVE_CONF_TURN:\n            self._robot_state.drive_last_joint_turn.update_from_csv(response.data)\n\n        elif response.id == MX_ST_RT_ACCELEROMETER:\n            # The data is stored as [timestamp, index, {measurements...}]\n            timestamp, index, *measurements = string_to_floats(response.data)\n            # Record accelerometer measurement only if newer.\n            if (index not in self._robot_state.accelerometer\n                    or timestamp > self._robot_state.accelerometer[index].timestamp):\n                self._robot_state.accelerometer[index] = TimestampedData(timestamp, measurements)",
+    "span": [
+      827,
+      906
+    ],
+    "start_byte": 30717,
+    "end_byte": 35177,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_handle_common_messages",
+    "signature": "_handle_common_messages(self, response, is_command_response=False)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._handle_common_messages",
+    "docstring": "Handle response messages which are received on the command and monitor port, and are processed the same way.\n\n        Parameters\n        ----------\n        response : Message object\n            Robot status response to parse and handle.",
+    "chunk_size_bytes": 4460,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _handle_robot_status_response(self, response):\n        \"\"\"Parse robot status response and update status fields and events.\n\n        Parameters\n        ----------\n        response : Message object\n            Robot status response to parse and handle.\n\n        \"\"\"\n        assert response.id == MX_ST_GET_STATUS_ROBOT\n        status_flags = [bool(int(x)) for x in response.data.split(',')]\n\n        if self._robot_state.activation_state != status_flags[0]:\n            if status_flags[0]:\n                self._robot_events.on_deactivated.clear()\n                self._robot_events.on_activated.set()\n                self._robot_events.on_brakes_activated.clear()\n                self._robot_events.on_brakes_deactivated.set()\n                self._callback_queue.put('on_activated')\n            else:\n                self._robot_events.on_activated.clear()\n                self._robot_events.on_deactivated.set()\n                self._robot_events.on_brakes_deactivated.clear()\n                self._robot_events.on_brakes_activated.set()\n                self._callback_queue.put('on_deactivated')\n            self._robot_state.activation_state = status_flags[0]\n\n        if self._robot_state.homing_state != status_flags[1]:\n            if status_flags[1]:\n                self._robot_events.on_homed.set()\n                self._callback_queue.put('on_homed')\n            else:\n                self._robot_events.on_homed.clear()\n            self._robot_state.homing_state = status_flags[1]\n\n        if self._robot_state.simulation_mode != status_flags[2]:\n            if status_flags[2]:\n                self._robot_events.on_deactivate_sim.clear()\n                self._robot_events.on_activate_sim.set()\n                self._callback_queue.put('on_activate_sim')\n            else:\n                self._robot_events.on_activate_sim.clear()\n                self._robot_events.on_deactivate_sim.set()\n                self._callback_queue.put('on_deactivate_sim')\n            self._robot_state.simulation_mode = status_flags[2]\n\n        if self._robot_state.error_status != status_flags[3]:\n            if status_flags[3]:\n                self._invalidate_checkpoints()\n                self._robot_events.on_error.set()\n                self._robot_events.abort_all_except_on_connected()\n                self._robot_events.on_error_reset.clear()\n                self._callback_queue.put('on_error')\n            else:\n                self._robot_events.clear_abort_all()\n                self._robot_events.on_error.clear()\n                self._robot_events.on_error_reset.set()\n                self._callback_queue.put('on_error_reset')\n            self._robot_state.error_status = status_flags[3]\n\n        if self._robot_state.pause_motion_status != status_flags[4]:\n            if status_flags[4]:\n                self._robot_events.on_motion_resumed.clear()\n                self._robot_events.on_motion_paused.set()\n                self._callback_queue.put('on_motion_paused')\n            else:\n                self._robot_events.on_motion_paused.clear()\n                self._robot_events.on_motion_resumed.set()\n                self._callback_queue.put('on_motion_resumed')\n            self._robot_state.pause_motion_status = status_flags[4]\n\n        if self._robot_state.end_of_block_status != status_flags[5]:\n            if status_flags[5]:\n                self._robot_events.on_end_of_block.set()\n            else:\n                self._robot_events.on_end_of_block.clear()\n            self._robot_state.end_of_block_status = status_flags[5]\n\n        self._robot_events.on_status_updated.set()\n        self._callback_queue.put('on_status_updated')",
+    "span": [
+      908,
+      987
+    ],
+    "start_byte": 35183,
+    "end_byte": 38844,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_handle_robot_status_response",
+    "signature": "_handle_robot_status_response(self, response)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._handle_robot_status_response",
+    "docstring": "Parse robot status response and update status fields and events.\n\n        Parameters\n        ----------\n        response : Message object\n            Robot status response to parse and handle.",
+    "chunk_size_bytes": 3661,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def _handle_checkpoint_response(self, response):\n        \"\"\"Handle the checkpoint message from the robot, set the appropriate events, etc.\n\n        Parameters\n        ----------\n        response : Message object\n            Response message which includes the received checkpoint id.\n\n        \"\"\"\n        assert response.id == MX_ST_CHECKPOINT_REACHED\n        checkpoint_id = int(response.data)\n\n        # Check user checkpoints.\n        if checkpoint_id in self._user_checkpoints and self._user_checkpoints[checkpoint_id]:\n            self._user_checkpoints[checkpoint_id].pop(0).set()\n            # If list corresponding to checkpoint id is empty, remove the key from the dict.\n            if not self._user_checkpoints[checkpoint_id]:\n                self._user_checkpoints.pop(checkpoint_id)\n            # If there are events are waiting on 'any checkpoint', set them all.\n            if '*' in self._internal_checkpoints and self._internal_checkpoints['*']:\n                for event in self._internal_checkpoints.pop('*'):\n                    event.set()\n            # Enque the on_checkpoint_reached callback.\n            self._callback_queue.put('on_checkpoint_reached', checkpoint_id)\n\n        # Check internal checkpoints.\n        elif checkpoint_id in self._internal_checkpoints and self._internal_checkpoints[checkpoint_id]:\n            self._internal_checkpoints[checkpoint_id].pop(0).set()\n            # If list corresponding to checkpoint id is empty, remove the key from the dict.\n            if not self._internal_checkpoints[checkpoint_id]:\n                self._internal_checkpoints.pop(checkpoint_id)\n        else:\n            self.logger.warning('Received un-tracked checkpoint. Please use ExpectExternalCheckpoint() to track.')",
+    "span": [
+      989,
+      1021
+    ],
+    "start_byte": 38850,
+    "end_byte": 40599,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_handle_checkpoint_response",
+    "signature": "_handle_checkpoint_response(self, response)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot._handle_checkpoint_response",
+    "docstring": "Handle the checkpoint message from the robot, set the appropriate events, etc.\n\n        Parameters\n        ----------\n        response : Message object\n            Response message which includes the received checkpoint id.",
+    "chunk_size_bytes": 1749,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def RegisterCallbacks(self, callbacks, run_callbacks_in_separate_thread):\n        \"\"\"Register callback functions to be executed.\n\n        Parameters\n        ----------\n        callbacks : RobotCallbacks object\n            Object containing all callback functions.\n        run_callbacks_in_separate_thread : bool\n            If true, callbacks are run automatically in thread. If false, RunCallbacks must be used.\n            **Running callbacks in a separate thread means the user application MUST BE THREAD SAFE!**\n        \"\"\"\n        # Check that callbacks are an instance of the appropriate class.\n        if not isinstance(callbacks, RobotCallbacks):\n            raise TypeError('Callbacks object is not the appropriate class.')\n\n        if self._monitor_handler_thread or self._command_response_handler_thread:\n            raise InvalidStateError('Callbacks cannot be set if already connected.')\n\n        self._callback_queue = CallbackQueue(callbacks)\n\n        self._robot_callbacks = callbacks\n        if run_callbacks_in_separate_thread:\n            self._callback_thread = threading.Thread(target=self._handle_callbacks,\n                                                     args=(\n                                                         self.logger,\n                                                         self._callback_queue,\n                                                         self._robot_callbacks,\n                                                     ))\n            self._callback_thread.start()",
+    "span": [
+      1029,
+      1057
+    ],
+    "start_byte": 40915,
+    "end_byte": 42431,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "RegisterCallbacks",
+    "signature": "RegisterCallbacks(self, callbacks, run_callbacks_in_separate_thread)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.RegisterCallbacks",
+    "docstring": "Register callback functions to be executed.\n\n        Parameters\n        ----------\n        callbacks : RobotCallbacks object\n            Object containing all callback functions.\n        run_callbacks_in_separate_thread : bool\n            If true, callbacks are run automatically in thread. If false, RunCallbacks must be used.\n            **Running callbacks in a separate thread means the user application MUST BE THREAD SAFE!**",
+    "chunk_size_bytes": 1516,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def UnregisterCallbacks(self):\n        \"\"\"Unregister callback functions and terminate callback handler thread if applicable.\n\n        \"\"\"\n        if self._callback_thread:\n            self._callback_queue.put(TERMINATE)\n            self._callback_thread.join(timeout=self.default_timeout)\n\n        self._robot_callbacks = RobotCallbacks()\n        self._callback_queue = CallbackQueue(self._robot_callbacks)\n        self._callback_thread = None",
+    "span": [
+      1059,
+      1069
+    ],
+    "start_byte": 42437,
+    "end_byte": 42880,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "UnregisterCallbacks",
+    "signature": "UnregisterCallbacks(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.UnregisterCallbacks",
+    "docstring": "Unregister callback functions and terminate callback handler thread if applicable.",
+    "chunk_size_bytes": 443,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def RunCallbacks(self):\n        \"\"\"Run all triggered callback functions.\n\n        \"\"\"\n        if self._callback_thread:\n            raise InvalidStateError(\n                'Cannot call RunCallbacks since callback handler is already running in separate thread.')\n\n        # Setting timeout=0 means we don't block on an empty queue.\n        self._handle_callbacks(self.logger, self._callback_queue, self._robot_callbacks, timeout=0)",
+    "span": [
+      1071,
+      1080
+    ],
+    "start_byte": 42886,
+    "end_byte": 43317,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "RunCallbacks",
+    "signature": "RunCallbacks(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.RunCallbacks",
+    "docstring": "Run all triggered callback functions.",
+    "chunk_size_bytes": 431,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def Connect(\n        self,\n        address=MX_DEFAULT_ROBOT_IP,\n        enable_synchronous_mode=False,\n        disconnect_on_exception=True,\n        monitor_mode=False,\n        offline_mode=False,\n    ):\n        \"\"\"Attempt to connect to a physical Mecademic Robot.\n\n        Parameters\n        ----------\n        address : string\n            The IP address associated to the Mecademic Robot.\n        enable_synchronous_mode : bool\n            If true, each command will wait until previous is done executing.\n        disconnect_on_exception : bool\n            If true, will attempt to disconnect from the robot on exception from api call.\n        monitor_mode : bool\n            If true, command connection will not be established.\n        offline_mode : bool\n            If true, socket connections are not created, only used for testing.\n\n        \"\"\"\n        with self._main_lock:\n\n            # Check that the ip address is valid and set address.\n            if not isinstance(address, str):\n                raise TypeError('Invalid IP address.')\n            ipaddress.ip_address(address)\n            self._address = address\n\n            self._enable_synchronous_mode = enable_synchronous_mode\n            self._disconnect_on_exception = disconnect_on_exception\n\n            self._offline_mode = offline_mode\n            self._monitor_mode = monitor_mode\n\n            if not self._monitor_mode:\n                self._initialize_command_socket()\n                self._initialize_command_connection()\n\n            self._initialize_monitoring_socket()\n            self._initialize_monitoring_connection()\n\n            self._robot_events.clear_all()\n\n            self._robot_events.on_deactivated.set()\n            self._robot_events.on_error_reset.set()\n            self._robot_events.on_p_stop_reset.set()\n            self._robot_events.on_motion_resumed.set()\n            self._robot_events.on_brakes_activated.set()\n\n            self._robot_events.on_status_updated.set()\n            self._robot_events.on_conf_updated.set()\n            self._robot_events.on_conf_turn_updated.set()\n            self._robot_events.on_joints_updated.set()\n            self._robot_events.on_pose_updated.set()\n\n            self._robot_events.on_connected.set()\n            self._callback_queue.put('on_connected')\n\n        # Fetching the serial number must occur outside main_lock.\n        if not self._monitor_mode:\n            serial_response = self.SendCustomCommand('GetRobotSerial', expected_responses=[MX_ST_GET_ROBOT_SERIAL])\n            serial_response_message = serial_response.wait_for_data(timeout=self.default_timeout)\n            self._robot_info.serial = serial_response_message.data",
+    "span": [
+      1084,
+      1150
+    ],
+    "start_byte": 43357,
+    "end_byte": 46037,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "Connect",
+    "signature": "Connect(\n        self,\n        address=MX_DEFAULT_ROBOT_IP,\n        enable_synchronous_mode=False,\n        disconnect_on_exception=True,\n        monitor_mode=False,\n        offline_mode=False,\n    )",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.Connect",
+    "docstring": "Attempt to connect to a physical Mecademic Robot.\n\n        Parameters\n        ----------\n        address : string\n            The IP address associated to the Mecademic Robot.\n        enable_synchronous_mode : bool\n            If true, each command will wait until previous is done executing.\n        disconnect_on_exception : bool\n            If true, will attempt to disconnect from the robot on exception from api call.\n        monitor_mode : bool\n            If true, command connection will not be established.\n        offline_mode : bool\n            If true, socket connections are not created, only used for testing.",
+    "chunk_size_bytes": 2680,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def Disconnect(self):\n        \"\"\"Disconnects Mecademic Robot object from the physical Mecademic robot.\n\n        \"\"\"\n        self.logger.debug('Disconnecting from the robot.')\n\n        # Don't acquire _main_lock while shutting down queues to avoid deadlock.\n        self._shut_down_queue_threads()\n\n        with self._main_lock:\n            self._shut_down_socket_threads()\n\n            # Invalidate checkpoints.\n            self._invalidate_checkpoints()\n\n            # Reset attributes which should not persist after disconnect.\n            self._reset_disconnect_attributes()\n\n            # Finally, close sockets.\n            if self._command_socket is not None:\n                try:\n                    self._command_socket.close()\n                except Exception as e:\n                    self.logger.error('Error closing command socket. ' + str(e))\n                self._command_socket = None\n            if self._monitor_socket is not None:\n                try:\n                    self._monitor_socket.close()\n                except Exception as e:\n                    self.logger.error('Error closing monitor socket. ' + str(e))\n                self._monitor_socket = None\n\n            self._robot_events.on_connected.clear()\n            self._robot_events.on_disconnected.set()\n            self._callback_queue.put('on_disconnected')\n\n            self._robot_events.abort_all_except_on_connected()",
+    "span": [
+      1152,
+      1188
+    ],
+    "start_byte": 46043,
+    "end_byte": 47451,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "Disconnect",
+    "signature": "Disconnect(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.Disconnect",
+    "docstring": "Disconnects Mecademic Robot object from the physical Mecademic robot.",
+    "chunk_size_bytes": 1408,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def ActivateRobot(self):\n        \"\"\"Activate the robot.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('ActivateRobot')\n\n        if self._enable_synchronous_mode:\n            self.WaitActivated()",
+    "span": [
+      1191,
+      1200
+    ],
+    "start_byte": 47486,
+    "end_byte": 47750,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ActivateRobot",
+    "signature": "ActivateRobot(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.ActivateRobot",
+    "docstring": "Activate the robot.",
+    "chunk_size_bytes": 264,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def Home(self):\n        \"\"\"Home the robot.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('Home')\n\n        if self._enable_synchronous_mode:\n            self.WaitHomed()",
+    "span": [
+      1203,
+      1212
+    ],
+    "start_byte": 47785,
+    "end_byte": 48023,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "Home",
+    "signature": "Home(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.Home",
+    "docstring": "Home the robot.",
+    "chunk_size_bytes": 238,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def ActivateAndHome(self):\n        \"\"\"Utility function that combines activate and home.\n\n        \"\"\"\n        self.ActivateRobot()\n        self.Home()",
+    "span": [
+      1215,
+      1220
+    ],
+    "start_byte": 48058,
+    "end_byte": 48207,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ActivateAndHome",
+    "signature": "ActivateAndHome(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.ActivateAndHome",
+    "docstring": "Utility function that combines activate and home.",
+    "chunk_size_bytes": 149,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def PauseMotion(self):\n        \"\"\"Immediately pause robot motion.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('PauseMotion')\n\n        if self._enable_synchronous_mode:\n            self._robot_events.on_motion_paused.wait(timeout=self.default_timeout)",
+    "span": [
+      1223,
+      1232
+    ],
+    "start_byte": 48242,
+    "end_byte": 48564,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "PauseMotion",
+    "signature": "PauseMotion(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.PauseMotion",
+    "docstring": "Immediately pause robot motion.",
+    "chunk_size_bytes": 322,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def ResumeMotion(self):\n        \"\"\"Un-pause robot motion.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('ResumeMotion')\n\n        if self._enable_synchronous_mode:\n            self.WaitMotionResumed(timeout=self.default_timeout)",
+    "span": [
+      1235,
+      1244
+    ],
+    "start_byte": 48599,
+    "end_byte": 48896,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ResumeMotion",
+    "signature": "ResumeMotion(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.ResumeMotion",
+    "docstring": "Un-pause robot motion.",
+    "chunk_size_bytes": 297,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def DeactivateRobot(self):\n        \"\"\"Deactivate the robot.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('DeactivateRobot')\n\n        if self._enable_synchronous_mode:\n            self.WaitDeactivated()",
+    "span": [
+      1247,
+      1256
+    ],
+    "start_byte": 48931,
+    "end_byte": 49203,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "DeactivateRobot",
+    "signature": "DeactivateRobot(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.DeactivateRobot",
+    "docstring": "Deactivate the robot.",
+    "chunk_size_bytes": 272,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def ClearMotion(self):\n        \"\"\"Clear the motion queue, includes implicit PauseMotion command.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n\n            # Increment the number of pending ClearMotion requests.\n            self._clear_motion_requests += 1\n            self._robot_events.on_motion_cleared.clear()\n\n            self._send_command('ClearMotion')\n\n            # Clearing the motion queue also requires clearing checkpoints, as the robot will not send them anymore.\n            self._invalidate_checkpoints()\n\n        if self._enable_synchronous_mode:\n            self.WaitMotionCleared(timeout=self.default_timeout)",
+    "span": [
+      1259,
+      1276
+    ],
+    "start_byte": 49238,
+    "end_byte": 49906,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ClearMotion",
+    "signature": "ClearMotion(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.ClearMotion",
+    "docstring": "Clear the motion queue, includes implicit PauseMotion command.",
+    "chunk_size_bytes": 668,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MoveJoints(self, *args):\n        \"\"\"Move the robot by specifying each joint's target angular position.\n\n        Parameters\n        ----------\n        joint_1...joint_n : float\n            Desired joint angles in degrees.\n\n        \"\"\"\n        if len(args) != self._robot_info.num_joints:\n            raise ValueError('Incorrect number of joints sent to command.')\n\n        self._send_motion_command('MoveJoints', args)",
+    "span": [
+      1279,
+      1291
+    ],
+    "start_byte": 49941,
+    "end_byte": 50362,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MoveJoints",
+    "signature": "MoveJoints(self, *args)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MoveJoints",
+    "docstring": "Move the robot by specifying each joint's target angular position.\n\n        Parameters\n        ----------\n        joint_1...joint_n : float\n            Desired joint angles in degrees.",
+    "chunk_size_bytes": 421,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MoveJointsRel(self, *args):\n        \"\"\"Move the robot relative to current position by specifying each joint's offset angular position.\n\n        Parameters\n        ----------\n        joint_1...joint_n : float\n            Desired joint angles offsets in degrees.\n\n        \"\"\"\n        if len(args) != self._robot_info.num_joints:\n            raise ValueError('Incorrect number of joints sent to command.')\n\n        self._send_motion_command('MoveJointsRel', args)",
+    "span": [
+      1294,
+      1306
+    ],
+    "start_byte": 50397,
+    "end_byte": 50861,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MoveJointsRel",
+    "signature": "MoveJointsRel(self, *args)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MoveJointsRel",
+    "docstring": "Move the robot relative to current position by specifying each joint's offset angular position.\n\n        Parameters\n        ----------\n        joint_1...joint_n : float\n            Desired joint angles offsets in degrees.",
+    "chunk_size_bytes": 464,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MoveJointsVel(self, *args):\n        \"\"\"Moves joints to at desired velocities.\n\n        Parameters\n        ----------\n        joint_1...joint_n : float\n            Desired joint velocities in degrees per second.\n\n        \"\"\"\n        if len(args) != self._robot_info.num_joints:\n            raise ValueError('Incorrect number of joints sent to command.')\n\n        self._send_motion_command('MoveJointsVel', args)",
+    "span": [
+      1309,
+      1321
+    ],
+    "start_byte": 50896,
+    "end_byte": 51310,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MoveJointsVel",
+    "signature": "MoveJointsVel(self, *args)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MoveJointsVel",
+    "docstring": "Moves joints to at desired velocities.\n\n        Parameters\n        ----------\n        joint_1...joint_n : float\n            Desired joint velocities in degrees per second.",
+    "chunk_size_bytes": 414,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MovePose(self, x, y, z, alpha, beta, gamma):\n        \"\"\"Move robot's tool to an absolute Cartesian position (non-linear move, but all joints arrive simultaneously).\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired end effector coordinates in mm.\n        alpha, beta, gamma\n            Desired end effector orientation in degrees.\n\n        \"\"\"\n        self._send_motion_command('MovePose', [x, y, z, alpha, beta, gamma])",
+    "span": [
+      1324,
+      1335
+    ],
+    "start_byte": 51345,
+    "end_byte": 51802,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MovePose",
+    "signature": "MovePose(self, x, y, z, alpha, beta, gamma)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MovePose",
+    "docstring": "Move robot's tool to an absolute Cartesian position (non-linear move, but all joints arrive simultaneously).\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired end effector coordinates in mm.\n        alpha, beta, gamma\n            Desired end effector orientation in degrees.",
+    "chunk_size_bytes": 457,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MoveLin(self, x, y, z, alpha, beta, gamma):\n        \"\"\"Linearly move robot's tool to an absolute Cartesian position.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired end effector coordinates in mm.\n        alpha, beta, gamma\n            Desired end effector orientation in degrees.\n\n        \"\"\"\n        self._send_motion_command('MoveLin', [x, y, z, alpha, beta, gamma])",
+    "span": [
+      1338,
+      1349
+    ],
+    "start_byte": 51837,
+    "end_byte": 52245,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MoveLin",
+    "signature": "MoveLin(self, x, y, z, alpha, beta, gamma)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MoveLin",
+    "docstring": "Linearly move robot's tool to an absolute Cartesian position.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired end effector coordinates in mm.\n        alpha, beta, gamma\n            Desired end effector orientation in degrees.",
+    "chunk_size_bytes": 408,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MoveLinRelTRF(self, x, y, z, alpha, beta, gamma):\n        \"\"\"Linearly move robot's tool to a Cartesian position relative to current TRF position.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired displacement in mm.\n        alpha, beta, gamma\n            Desired orientation change in deg.\n\n        \"\"\"\n        self._send_motion_command('MoveLinRelTRF', [x, y, z, alpha, beta, gamma])",
+    "span": [
+      1352,
+      1363
+    ],
+    "start_byte": 52280,
+    "end_byte": 52701,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MoveLinRelTRF",
+    "signature": "MoveLinRelTRF(self, x, y, z, alpha, beta, gamma)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MoveLinRelTRF",
+    "docstring": "Linearly move robot's tool to a Cartesian position relative to current TRF position.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired displacement in mm.\n        alpha, beta, gamma\n            Desired orientation change in deg.",
+    "chunk_size_bytes": 421,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MoveLinRelWRF(self, x, y, z, alpha, beta, gamma):\n        \"\"\"Linearly move robot's tool to a Cartesian position relative to a reference frame that has the same\n        orientation.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired displacement in mm.\n        alpha, beta, gamma\n            Desired orientation change in deg.\n\n        \"\"\"\n        self._send_motion_command('MoveLinRelWRF', [x, y, z, alpha, beta, gamma])",
+    "span": [
+      1366,
+      1378
+    ],
+    "start_byte": 52736,
+    "end_byte": 53192,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MoveLinRelWRF",
+    "signature": "MoveLinRelWRF(self, x, y, z, alpha, beta, gamma)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MoveLinRelWRF",
+    "docstring": "Linearly move robot's tool to a Cartesian position relative to a reference frame that has the same\n        orientation.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired displacement in mm.\n        alpha, beta, gamma\n            Desired orientation change in deg.",
+    "chunk_size_bytes": 456,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MoveLinVelTRF(self, x, y, z, alpha, beta, gamma):\n        \"\"\"Move robot's by Cartesian velocity relative to the TRF.\n\n           Joints will move for a time controlled by velocity timeout (SetVelTimeout).\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired velocity in mm/s.\n        alpha, beta, gamma\n            Desired angular velocity in degrees/s.\n\n        \"\"\"\n        self._send_motion_command('MoveLinVelTRF', [x, y, z, alpha, beta, gamma])",
+    "span": [
+      1381,
+      1394
+    ],
+    "start_byte": 53227,
+    "end_byte": 53709,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MoveLinVelTRF",
+    "signature": "MoveLinVelTRF(self, x, y, z, alpha, beta, gamma)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MoveLinVelTRF",
+    "docstring": "Move robot's by Cartesian velocity relative to the TRF.\n\n           Joints will move for a time controlled by velocity timeout (SetVelTimeout).\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired velocity in mm/s.\n        alpha, beta, gamma\n            Desired angular velocity in degrees/s.",
+    "chunk_size_bytes": 482,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MoveLinVelWRF(self, x, y, z, alpha, beta, gamma):\n        \"\"\"Move robot's by Cartesian velocity relative to the WRF.\n\n           Joints will move for a time controlled by velocity timeout (SetVelTimeout).\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired velocity in mm/s.\n        alpha, beta, gamma\n            Desired angular velocity in degrees/s.\n\n        \"\"\"\n        self._send_motion_command('MoveLinVelWRF', [x, y, z, alpha, beta, gamma])",
+    "span": [
+      1397,
+      1410
+    ],
+    "start_byte": 53744,
+    "end_byte": 54226,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MoveLinVelWRF",
+    "signature": "MoveLinVelWRF(self, x, y, z, alpha, beta, gamma)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MoveLinVelWRF",
+    "docstring": "Move robot's by Cartesian velocity relative to the WRF.\n\n           Joints will move for a time controlled by velocity timeout (SetVelTimeout).\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired velocity in mm/s.\n        alpha, beta, gamma\n            Desired angular velocity in degrees/s.",
+    "chunk_size_bytes": 482,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetVelTimeout(self, t):\n        \"\"\"Maximum time the robot will continue to move after a velocity move command was sent.\n\n        (Can be stopped earlier by sending a velocity command with 0 velocity values.)\n\n        Parameters\n        ----------\n        t : float\n            Desired duration for velocity-mode motion commands.\n\n        \"\"\"\n        self._send_motion_command('SetVelTimeout', [t])",
+    "span": [
+      1413,
+      1424
+    ],
+    "start_byte": 54261,
+    "end_byte": 54662,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetVelTimeout",
+    "signature": "SetVelTimeout(self, t)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetVelTimeout",
+    "docstring": "Maximum time the robot will continue to move after a velocity move command was sent.\n\n        (Can be stopped earlier by sending a velocity command with 0 velocity values.)\n\n        Parameters\n        ----------\n        t : float\n            Desired duration for velocity-mode motion commands.",
+    "chunk_size_bytes": 401,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetConf(self, shoulder, elbow, wrist):\n        \"\"\"Manually set inverse kinematics options (and disable auto-conf).\n\n        Parameters\n        ----------\n        shoulder : +1 or -1\n            Shoulder inverse kinematics parameter.\n        elbow : +1 or -1\n            Elbow inverse kinematics parameter.\n        wrist : +1 or -1\n            Wrist inverse kinematics parameter.\n\n        \"\"\"\n        self._send_motion_command('SetConf', [shoulder, elbow, wrist])",
+    "span": [
+      1427,
+      1440
+    ],
+    "start_byte": 54697,
+    "end_byte": 55163,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetConf",
+    "signature": "SetConf(self, shoulder, elbow, wrist)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetConf",
+    "docstring": "Manually set inverse kinematics options (and disable auto-conf).\n\n        Parameters\n        ----------\n        shoulder : +1 or -1\n            Shoulder inverse kinematics parameter.\n        elbow : +1 or -1\n            Elbow inverse kinematics parameter.\n        wrist : +1 or -1\n            Wrist inverse kinematics parameter.",
+    "chunk_size_bytes": 466,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetAutoConf(self, e):\n        \"\"\"Enable or disable auto-conf (automatic selection of inverse kinematics options).\n\n        Parameters\n        ----------\n        e : boolean\n            If true, robot will automatically choose the best configuation for the desired pose.\n\n        \"\"\"\n        self._send_motion_command('SetAutoConf', [int(e)])",
+    "span": [
+      1443,
+      1452
+    ],
+    "start_byte": 55198,
+    "end_byte": 55543,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetAutoConf",
+    "signature": "SetAutoConf(self, e)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetAutoConf",
+    "docstring": "Enable or disable auto-conf (automatic selection of inverse kinematics options).\n\n        Parameters\n        ----------\n        e : boolean\n            If true, robot will automatically choose the best configuation for the desired pose.",
+    "chunk_size_bytes": 345,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetConfTurn(self, n):\n        \"\"\"Manually set the last joint turn configuration parameter.\n\n        Parameters\n        ----------\n        n : integer\n            The turn number for joint 6.\n\n        \"\"\"\n        self._send_motion_command('SetConfTurn', [n])",
+    "span": [
+      1455,
+      1464
+    ],
+    "start_byte": 55578,
+    "end_byte": 55839,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetConfTurn",
+    "signature": "SetConfTurn(self, n)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetConfTurn",
+    "docstring": "Manually set the last joint turn configuration parameter.\n\n        Parameters\n        ----------\n        n : integer\n            The turn number for joint 6.",
+    "chunk_size_bytes": 261,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetAutoConfTurn(self, e):\n        \"\"\"Enable or disable auto-conf (automatic selection of inverse kinematics options) for joint 6..\n\n        Parameters\n        ----------\n        e : boolean\n            If true, robot will automatically choose the best configuation for the desired pose.\n\n        \"\"\"\n        self._send_motion_command('SetAutoConfTurn', [int(e)])",
+    "span": [
+      1467,
+      1476
+    ],
+    "start_byte": 55874,
+    "end_byte": 56240,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetAutoConfTurn",
+    "signature": "SetAutoConfTurn(self, e)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetAutoConfTurn",
+    "docstring": "Enable or disable auto-conf (automatic selection of inverse kinematics options) for joint 6..\n\n        Parameters\n        ----------\n        e : boolean\n            If true, robot will automatically choose the best configuation for the desired pose.",
+    "chunk_size_bytes": 366,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetBlending(self, p):\n        \"\"\"Set percentage of blending between consecutive movements in the same mode (velocity or cartesian).\n\n        Note: There can't be blending between joint mode and Cartesian mode moves.\n\n        Parameters\n        ----------\n        p : float\n            Percentage blending between actions.\n\n        \"\"\"\n        self._send_motion_command('SetBlending', [p])",
+    "span": [
+      1479,
+      1490
+    ],
+    "start_byte": 56275,
+    "end_byte": 56667,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetBlending",
+    "signature": "SetBlending(self, p)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetBlending",
+    "docstring": "Set percentage of blending between consecutive movements in the same mode (velocity or cartesian).\n\n        Note: There can't be blending between joint mode and Cartesian mode moves.\n\n        Parameters\n        ----------\n        p : float\n            Percentage blending between actions.",
+    "chunk_size_bytes": 392,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetCartAcc(self, p):\n        \"\"\"Set target acceleration (linear and angular) during MoveLin commands.\n\n        Parameters\n        ----------\n        p : float\n            Percentage of maximum acceleration.\n\n        \"\"\"\n        self._send_motion_command('SetCartAcc', [p])",
+    "span": [
+      1493,
+      1502
+    ],
+    "start_byte": 56702,
+    "end_byte": 56978,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetCartAcc",
+    "signature": "SetCartAcc(self, p)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetCartAcc",
+    "docstring": "Set target acceleration (linear and angular) during MoveLin commands.\n\n        Parameters\n        ----------\n        p : float\n            Percentage of maximum acceleration.",
+    "chunk_size_bytes": 276,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetCartAngVel(self, w):\n        \"\"\"Set maximum angular velocity during MoveLin commands.\n\n        Parameters\n        ----------\n        p : float\n            Maximum angular velocity in deg/s.\n\n        \"\"\"\n        self._send_motion_command('SetCartAngVel', [w])",
+    "span": [
+      1505,
+      1514
+    ],
+    "start_byte": 57013,
+    "end_byte": 57278,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetCartAngVel",
+    "signature": "SetCartAngVel(self, w)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetCartAngVel",
+    "docstring": "Set maximum angular velocity during MoveLin commands.\n\n        Parameters\n        ----------\n        p : float\n            Maximum angular velocity in deg/s.",
+    "chunk_size_bytes": 265,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetCartLinVel(self, w):\n        \"\"\"Set maximum linear velocity during MoveLin commands.\n\n        Note: Actual linear velocity may be lower if necessary to avoid exceeding maximum angular velocity.\n\n        Parameters\n        ----------\n        p : float\n            Maximum angular velocity in deg/s.\n\n        \"\"\"\n        self._send_motion_command('SetCartLinVel', [w])",
+    "span": [
+      1517,
+      1528
+    ],
+    "start_byte": 57313,
+    "end_byte": 57686,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetCartLinVel",
+    "signature": "SetCartLinVel(self, w)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetCartLinVel",
+    "docstring": "Set maximum linear velocity during MoveLin commands.\n\n        Note: Actual linear velocity may be lower if necessary to avoid exceeding maximum angular velocity.\n\n        Parameters\n        ----------\n        p : float\n            Maximum angular velocity in deg/s.",
+    "chunk_size_bytes": 373,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def GripperOpen(self):\n        \"\"\"Open the gripper.\n\n        \"\"\"\n        self._send_motion_command('GripperOpen')",
+    "span": [
+      1531,
+      1535
+    ],
+    "start_byte": 57721,
+    "end_byte": 57834,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "GripperOpen",
+    "signature": "GripperOpen(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.GripperOpen",
+    "docstring": "Open the gripper.",
+    "chunk_size_bytes": 113,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def GripperClose(self):\n        \"\"\"Close the gripper.\n\n        \"\"\"\n        self._send_motion_command('GripperClose')",
+    "span": [
+      1538,
+      1542
+    ],
+    "start_byte": 57869,
+    "end_byte": 57985,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "GripperClose",
+    "signature": "GripperClose(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.GripperClose",
+    "docstring": "Close the gripper.",
+    "chunk_size_bytes": 116,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def MoveGripper(self, state=GRIPPER_OPEN):\n        \"\"\"Open or close the gripper.\n\n        Corresponds to text API calls \"GripperOpen\" / \"GripperClose\".\n\n        Parameters\n        ----------\n        state : boolean\n            Open or close the gripper (GRIPPER_OPEN or GRIPPER_CLOSE)\n\n        \"\"\"\n        if state:\n            self.GripperOpen()\n        else:\n            self.GripperClose()",
+    "span": [
+      1545,
+      1559
+    ],
+    "start_byte": 58020,
+    "end_byte": 58412,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "MoveGripper",
+    "signature": "MoveGripper(self, state=GRIPPER_OPEN)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.MoveGripper",
+    "docstring": "Open or close the gripper.\n\n        Corresponds to text API calls \"GripperOpen\" / \"GripperClose\".\n\n        Parameters\n        ----------\n        state : boolean\n            Open or close the gripper (GRIPPER_OPEN or GRIPPER_CLOSE)",
+    "chunk_size_bytes": 392,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetGripperForce(self, p):\n        \"\"\"Set the gripper's force in percent.\n\n        Parameters\n        ----------\n        p : float\n            The desired force in percent.\n\n        \"\"\"\n        self._send_motion_command('SetGripperForce', [p])",
+    "span": [
+      1562,
+      1571
+    ],
+    "start_byte": 58447,
+    "end_byte": 58693,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetGripperForce",
+    "signature": "SetGripperForce(self, p)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetGripperForce",
+    "docstring": "Set the gripper's force in percent.\n\n        Parameters\n        ----------\n        p : float\n            The desired force in percent.",
+    "chunk_size_bytes": 246,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetGripperVel(self, p):\n        \"\"\"Set the gripper's velocity in percent.\n\n        Parameters\n        ----------\n        p : float\n            The desired velocity in percent.\n\n        \"\"\"\n        self._send_motion_command('SetGripperVel', [p])",
+    "span": [
+      1574,
+      1583
+    ],
+    "start_byte": 58728,
+    "end_byte": 58976,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetGripperVel",
+    "signature": "SetGripperVel(self, p)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetGripperVel",
+    "docstring": "Set the gripper's velocity in percent.\n\n        Parameters\n        ----------\n        p : float\n            The desired velocity in percent.",
+    "chunk_size_bytes": 248,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetJointAcc(self, p):\n        \"\"\"Set target joint acceleration during MoveJoints commands.\n\n        Parameters\n        ----------\n        p : float\n            Target acceleration, in percent.\n\n        \"\"\"\n        self._send_motion_command('SetJointAcc', [p])",
+    "span": [
+      1586,
+      1595
+    ],
+    "start_byte": 59011,
+    "end_byte": 59274,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetJointAcc",
+    "signature": "SetJointAcc(self, p)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetJointAcc",
+    "docstring": "Set target joint acceleration during MoveJoints commands.\n\n        Parameters\n        ----------\n        p : float\n            Target acceleration, in percent.",
+    "chunk_size_bytes": 263,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetJointVel(self, p):\n        \"\"\"Set target joint velocity during MoveJoints commands.\n\n        Parameters\n        ----------\n        p : float\n            Target joint velocity, in percent.\n\n        \"\"\"\n        self._send_motion_command('SetJointVel', [p])",
+    "span": [
+      1598,
+      1607
+    ],
+    "start_byte": 59309,
+    "end_byte": 59570,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetJointVel",
+    "signature": "SetJointVel(self, p)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetJointVel",
+    "docstring": "Set target joint velocity during MoveJoints commands.\n\n        Parameters\n        ----------\n        p : float\n            Target joint velocity, in percent.",
+    "chunk_size_bytes": 261,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetTRF(self, x, y, z, alpha, beta, gamma):\n        \"\"\"Set the TRF (tool reference frame) Cartesian position.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired reference coordinates in mm.\n        alpha, beta, gamma\n            Desired reference orientation in degrees.\n\n        \"\"\"\n        self._send_motion_command('SetTRF', [x, y, z, alpha, beta, gamma])",
+    "span": [
+      1610,
+      1621
+    ],
+    "start_byte": 59605,
+    "end_byte": 59998,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetTRF",
+    "signature": "SetTRF(self, x, y, z, alpha, beta, gamma)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetTRF",
+    "docstring": "Set the TRF (tool reference frame) Cartesian position.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired reference coordinates in mm.\n        alpha, beta, gamma\n            Desired reference orientation in degrees.",
+    "chunk_size_bytes": 393,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetWRF(self, x, y, z, alpha, beta, gamma):\n        \"\"\"Set the WRF (world reference frame) Cartesian position.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired reference coordinates in mm.\n        alpha, beta, gamma\n            Desired reference orientation in degrees.\n\n        \"\"\"\n        self._send_motion_command('SetWRF', [x, y, z, alpha, beta, gamma])",
+    "span": [
+      1624,
+      1635
+    ],
+    "start_byte": 60033,
+    "end_byte": 60427,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetWRF",
+    "signature": "SetWRF(self, x, y, z, alpha, beta, gamma)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetWRF",
+    "docstring": "Set the WRF (world reference frame) Cartesian position.\n\n        Parameters\n        ----------\n        x, y, z : float\n            Desired reference coordinates in mm.\n        alpha, beta, gamma\n            Desired reference orientation in degrees.",
+    "chunk_size_bytes": 394,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetCheckpoint(self, n):\n        \"\"\"Set checkpoint with desired id.\n\n        Parameters\n        ----------\n        n : int\n            Desired checkpoint id.\n\n        Return\n        ------\n        Checkpoint object\n            Object to use to wait for the checkpoint.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            assert MX_CHECKPOINT_ID_MIN <= n <= MX_CHECKPOINT_ID_MAX\n            return self._set_checkpoint_impl(n)",
+    "span": [
+      1638,
+      1655
+    ],
+    "start_byte": 60462,
+    "end_byte": 60935,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetCheckpoint",
+    "signature": "SetCheckpoint(self, n)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetCheckpoint",
+    "docstring": "Set checkpoint with desired id.\n\n        Parameters\n        ----------\n        n : int\n            Desired checkpoint id.\n\n        Return\n        ------\n        Checkpoint object\n            Object to use to wait for the checkpoint.",
+    "chunk_size_bytes": 473,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def ExpectExternalCheckpoint(self, n):\n        \"\"\"Expect the robot to receive a checkpoint with given id (e.g. from saved program).\n\n        Parameters\n        ----------\n        n : int\n            Id of expected checkpoint.\n\n        Return\n        ------\n        Checkpoint object\n            Object to use to wait for the checkpoint.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            assert MX_CHECKPOINT_ID_MIN <= n <= MX_CHECKPOINT_ID_MAX\n            return self._set_checkpoint_impl(n, send_to_robot=False)",
+    "span": [
+      1658,
+      1675
+    ],
+    "start_byte": 60970,
+    "end_byte": 61529,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ExpectExternalCheckpoint",
+    "signature": "ExpectExternalCheckpoint(self, n)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.ExpectExternalCheckpoint",
+    "docstring": "Expect the robot to receive a checkpoint with given id (e.g. from saved program).\n\n        Parameters\n        ----------\n        n : int\n            Id of expected checkpoint.\n\n        Return\n        ------\n        Checkpoint object\n            Object to use to wait for the checkpoint.",
+    "chunk_size_bytes": 559,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitForAnyCheckpoint(self, timeout=None):\n        \"\"\"Pause program execution until any checkpoint has been received from the robot.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the checkpoint (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            if '*' not in self._internal_checkpoints:\n                self._internal_checkpoints['*'] = list()\n            event = InterruptableEvent()\n            self._internal_checkpoints['*'].append(event)\n\n        return event.wait(timeout=timeout)",
+    "span": [
+      1678,
+      1699
+    ],
+    "start_byte": 61564,
+    "end_byte": 62281,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitForAnyCheckpoint",
+    "signature": "WaitForAnyCheckpoint(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitForAnyCheckpoint",
+    "docstring": "Pause program execution until any checkpoint has been received from the robot.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the checkpoint (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 717,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitConnected(self, timeout=None):\n        \"\"\"Pause program execution until robot is disconnected.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n        return self._robot_events.on_connected.wait(timeout=timeout)",
+    "span": [
+      1702,
+      1716
+    ],
+    "start_byte": 62316,
+    "end_byte": 62738,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitConnected",
+    "signature": "WaitConnected(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitConnected",
+    "docstring": "Pause program execution until robot is disconnected.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 422,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitDisconnected(self, timeout=None):\n        \"\"\"Pause program execution until the robot is disconnected.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n        return self._robot_events.on_disconnected.wait(timeout=timeout)",
+    "span": [
+      1719,
+      1733
+    ],
+    "start_byte": 62773,
+    "end_byte": 63205,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitDisconnected",
+    "signature": "WaitDisconnected(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitDisconnected",
+    "docstring": "Pause program execution until the robot is disconnected.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 432,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitActivated(self, timeout=None):\n        \"\"\"Pause program execution until the robot is activated.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n        return self._robot_events.on_activated.wait(timeout=timeout)",
+    "span": [
+      1736,
+      1750
+    ],
+    "start_byte": 63240,
+    "end_byte": 63663,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitActivated",
+    "signature": "WaitActivated(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitActivated",
+    "docstring": "Pause program execution until the robot is activated.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 423,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitDeactivated(self, timeout=None):\n        \"\"\"Pause program execution until the robot is deactivated.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n        return self._robot_events.on_deactivated.wait(timeout=timeout)",
+    "span": [
+      1753,
+      1767
+    ],
+    "start_byte": 63698,
+    "end_byte": 64127,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitDeactivated",
+    "signature": "WaitDeactivated(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitDeactivated",
+    "docstring": "Pause program execution until the robot is deactivated.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 429,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitHomed(self, timeout=None):\n        \"\"\"Pause program execution until the robot is homed.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n        return self._robot_events.on_homed.wait(timeout=timeout)",
+    "span": [
+      1770,
+      1784
+    ],
+    "start_byte": 64162,
+    "end_byte": 64573,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitHomed",
+    "signature": "WaitHomed(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitHomed",
+    "docstring": "Pause program execution until the robot is homed.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 411,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitMotionResumed(self, timeout=None):\n        \"\"\"Pause program execution until the robot motion is resumed.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n        return self._robot_events.on_motion_resumed.wait(timeout=timeout)",
+    "span": [
+      1787,
+      1801
+    ],
+    "start_byte": 64608,
+    "end_byte": 65045,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitMotionResumed",
+    "signature": "WaitMotionResumed(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitMotionResumed",
+    "docstring": "Pause program execution until the robot motion is resumed.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 437,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitMotionPaused(self, timeout=None):\n        \"\"\"Pause program execution until the robot motion is paused.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n        return self._robot_events.on_motion_paused.wait(timeout=timeout)",
+    "span": [
+      1804,
+      1818
+    ],
+    "start_byte": 65080,
+    "end_byte": 65514,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitMotionPaused",
+    "signature": "WaitMotionPaused(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitMotionPaused",
+    "docstring": "Pause program execution until the robot motion is paused.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 434,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitMotionCleared(self, timeout=None):\n        \"\"\"Pause program execution until all pending request to clear motion have been acknowledged.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n\n        return self._robot_events.on_motion_cleared.wait(timeout=timeout)",
+    "span": [
+      1821,
+      1836
+    ],
+    "start_byte": 65549,
+    "end_byte": 66018,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitMotionCleared",
+    "signature": "WaitMotionCleared(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitMotionCleared",
+    "docstring": "Pause program execution until all pending request to clear motion have been acknowledged.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 469,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def WaitIdle(self, timeout=None):\n        \"\"\"Pause program execution until robot is idle.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.\n\n        \"\"\"\n        checkpoint = self._set_checkpoint_internal()\n\n        start_time = time.time()\n        if not checkpoint.wait(timeout=timeout):\n            return False\n        end_time = time.time()\n\n        if timeout:\n            remaining_timeout = timeout - (end_time - start_time)\n        else:\n            remaining_timeout = None\n\n        return self._robot_events.on_end_of_block.wait(timeout=remaining_timeout)",
+    "span": [
+      1839,
+      1865
+    ],
+    "start_byte": 66053,
+    "end_byte": 66806,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "WaitIdle",
+    "signature": "WaitIdle(self, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.WaitIdle",
+    "docstring": "Pause program execution until robot is idle.\n\n        Parameters\n        ----------\n        timeout : float\n            Maximum time to spend waiting for the event (in seconds).\n\n        Return\n        ------\n        boolean\n            True if wait was successful, false otherwise.",
+    "chunk_size_bytes": 753,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def ResetError(self):\n        \"\"\"Attempt to reset robot error.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('ResetError')\n\n        if self._enable_synchronous_mode:\n            self._robot_events.on_error_reset.wait()",
+    "span": [
+      1868,
+      1877
+    ],
+    "start_byte": 66841,
+    "end_byte": 67129,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ResetError",
+    "signature": "ResetError(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.ResetError",
+    "docstring": "Attempt to reset robot error.",
+    "chunk_size_bytes": 288,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def ResetPStop(self):\n        \"\"\"Attempt to reset robot pstop.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('ResetPStop')\n\n        if self._enable_synchronous_mode:\n            self._robot_events.on_p_stop_reset.wait()",
+    "span": [
+      1880,
+      1889
+    ],
+    "start_byte": 67164,
+    "end_byte": 67453,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ResetPStop",
+    "signature": "ResetPStop(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.ResetPStop",
+    "docstring": "Attempt to reset robot pstop.",
+    "chunk_size_bytes": 289,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def Delay(self, t):\n        \"\"\"Set a delay between motion commands.\n\n        Parameters\n        ----------\n        t : float\n            Desired pause duration in seconds.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            if not self._robot_events.on_homed.is_set():\n                raise InvalidStateError('This command requires robot to be homed.')\n            self._send_command('Delay', [t])\n            if self._enable_synchronous_mode:\n                checkpoint = self._set_checkpoint_internal()\n\n        if self._enable_synchronous_mode:\n            checkpoint.wait()",
+    "span": [
+      1892,
+      1910
+    ],
+    "start_byte": 67488,
+    "end_byte": 68110,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "Delay",
+    "signature": "Delay(self, t)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.Delay",
+    "docstring": "Set a delay between motion commands.\n\n        Parameters\n        ----------\n        t : float\n            Desired pause duration in seconds.",
+    "chunk_size_bytes": 622,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SendCustomCommand(self, command, expected_responses=None):\n        \"\"\"Send custom command to robot.\n\n        Parameters\n        ----------\n        command : str\n            Desired custom command.\n\n        expected_responses : None or list of ints.\n            If not none, wait for and return one of the expected responses.\n\n        Return\n        ------\n        If expected_responses is not None, return an event. The user can use\n        event.wait_for_data() to wait for and get the response message.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n\n            if expected_responses:\n                event_with_data = InterruptableEvent(data=expected_responses)\n                self._custom_response_events.append(event_with_data)\n\n            self._send_command(command)\n\n        if expected_responses:\n            return event_with_data",
+    "span": [
+      1913,
+      1940
+    ],
+    "start_byte": 68145,
+    "end_byte": 69029,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SendCustomCommand",
+    "signature": "SendCustomCommand(self, command, expected_responses=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SendCustomCommand",
+    "docstring": "Send custom command to robot.\n\n        Parameters\n        ----------\n        command : str\n            Desired custom command.\n\n        expected_responses : None or list of ints.\n            If not none, wait for and return one of the expected responses.\n\n        Return\n        ------\n        If expected_responses is not None, return an event. The user can use\n        event.wait_for_data() to wait for and get the response message.",
+    "chunk_size_bytes": 884,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def StartOfflineProgram(self, n, timeout=None):\n        \"\"\"Start an offline program.\n\n        Offline programs need to be recorded using the robot's Web Portal (or text API).\n        This API can only start an already recorded offline program.\n        Callback on_offline_program_state will indicate when program is started or not.\n\n        Parameters\n        ----------\n        n : int\n            Id of offline program to start.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._robot_events.on_offline_program_started.clear()\n\n            self._send_command('StartProgram', [n])\n\n        if self._enable_synchronous_mode:\n            try:\n                self._robot_events.on_offline_program_started.wait(timeout=timeout)\n            except InterruptException:\n                raise InvalidStateError('Offline program start not confirmed. Does program {} exist?'.format(n))",
+    "span": [
+      1943,
+      1966
+    ],
+    "start_byte": 69064,
+    "end_byte": 69994,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "StartOfflineProgram",
+    "signature": "StartOfflineProgram(self, n, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.StartOfflineProgram",
+    "docstring": "Start an offline program.\n\n        Offline programs need to be recorded using the robot's Web Portal (or text API).\n        This API can only start an already recorded offline program.\n        Callback on_offline_program_state will indicate when program is started or not.\n\n        Parameters\n        ----------\n        n : int\n            Id of offline program to start.",
+    "chunk_size_bytes": 930,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def GetJoints(self, include_timestamp=False, synchronous_update=False, timeout=None):\n        \"\"\"Returns the current joint positions of the robot.\n\n        Uses RT commands if possible, otherwise uses legacy versions.\n\n        Parameters\n        ----------\n        include_timestamp : bool\n            If true, return a TimestampedData object, otherwise just return joints angles.\n        synchronous_update : bool\n            If true, requests updated joints positions and waits for response, else uses last known positions.\n        timeout : float\n            Maximum time in second to wait for forced update.\n\n        Return\n        ------\n        TimestampedData or list of floats\n            Returns joint positions in degrees.\n\n        \"\"\"\n        if synchronous_update:\n            with self._main_lock:\n                self._check_internal_states()\n                if self._robot_events.on_joints_updated.is_set():\n                    self._robot_events.on_joints_updated.clear()\n                    if self._robot_info.rt_message_capable:\n                        self._send_command('GetRtJointPos')\n                    else:\n                        self._send_command('GetJoints')\n\n            if not self._robot_events.on_joints_updated.wait(timeout=timeout):\n                raise TimeoutError\n\n        with self._main_lock:\n            if include_timestamp:\n                if not self._robot_info.rt_message_capable:\n                    raise InvalidStateError('Cannot provide timestamp with current robot firmware or model.')\n                else:\n                    return copy.deepcopy(self._robot_state.target_joint_positions)\n\n            return copy.deepcopy(self._robot_state.target_joint_positions.data)",
+    "span": [
+      1971,
+      2011
+    ],
+    "start_byte": 70059,
+    "end_byte": 71784,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "GetJoints",
+    "signature": "GetJoints(self, include_timestamp=False, synchronous_update=False, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.GetJoints",
+    "docstring": "Returns the current joint positions of the robot.\n\n        Uses RT commands if possible, otherwise uses legacy versions.\n\n        Parameters\n        ----------\n        include_timestamp : bool\n            If true, return a TimestampedData object, otherwise just return joints angles.\n        synchronous_update : bool\n            If true, requests updated joints positions and waits for response, else uses last known positions.\n        timeout : float\n            Maximum time in second to wait for forced update.\n\n        Return\n        ------\n        TimestampedData or list of floats\n            Returns joint positions in degrees.",
+    "chunk_size_bytes": 1725,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def GetPose(self, include_timestamp=False, synchronous_update=False, timeout=None):\n        \"\"\"Returns the current end-effector pose of the robot. WARNING: NOT UNIQUE.\n\n        Parameters\n        ----------\n        include_timestamp : bool\n            If true, return a TimestampedData object, otherwise just return joints angles.\n        synchronous_update : bool\n            If true, requests updated pose and waits for response, else uses last know pose.\n        timeout : float\n            Maximum time in second to wait for forced update.\n\n        Return\n        ------\n        TimestampedData or list of floats\n            Returns end-effector pose [x, y, z, alpha, beta, gamma].\n\n        \"\"\"\n\n        if synchronous_update:\n            with self._main_lock:\n                self._check_internal_states()\n                if self._robot_events.on_pose_updated.is_set():\n                    self._robot_events.on_pose_updated.clear()\n                    if self._robot_info.rt_message_capable:\n                        self._send_command('GetRtCartPos')\n                    else:\n                        self._send_command('GetPose')\n\n            if not self._robot_events.on_pose_updated.wait(timeout=timeout):\n                raise TimeoutError\n\n        with self._main_lock:\n            if include_timestamp:\n                if not self._robot_info.rt_message_capable:\n                    raise InvalidStateError('Cannot provide timestamp with current robot firmware or model.')\n                else:\n                    return copy.deepcopy(self._robot_state.target_end_effector_pose)\n\n            return copy.deepcopy(self._robot_state.target_end_effector_pose.data)",
+    "span": [
+      2014,
+      2053
+    ],
+    "start_byte": 71819,
+    "end_byte": 73493,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "GetPose",
+    "signature": "GetPose(self, include_timestamp=False, synchronous_update=False, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.GetPose",
+    "docstring": "Returns the current end-effector pose of the robot. WARNING: NOT UNIQUE.\n\n        Parameters\n        ----------\n        include_timestamp : bool\n            If true, return a TimestampedData object, otherwise just return joints angles.\n        synchronous_update : bool\n            If true, requests updated pose and waits for response, else uses last know pose.\n        timeout : float\n            Maximum time in second to wait for forced update.\n\n        Return\n        ------\n        TimestampedData or list of floats\n            Returns end-effector pose [x, y, z, alpha, beta, gamma].",
+    "chunk_size_bytes": 1674,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def GetConf(self, include_timestamp=False, synchronous_update=False, timeout=None):\n        \"\"\"Get robot's current (physical) inverse-kinematics configuration.\n\n        Returns\n        -------\n        list of ints (timestmap optional)\n            Configuration status of robot.\n\n        \"\"\"\n        if synchronous_update:\n            with self._main_lock:\n                self._check_internal_states()\n                if self._robot_events.on_conf_updated.is_set():\n                    self._robot_events.on_conf_updated.clear()\n                    if self._robot_info.rt_message_capable:\n                        self._send_command('GetRtConf')\n                    else:\n                        self._send_command('GetConf')\n\n            if not self._robot_events.on_conf_updated.wait(timeout=timeout):\n                raise TimeoutError\n\n        with self._main_lock:\n            if include_timestamp:\n                if not self._robot_info.rt_message_capable:\n                    raise InvalidStateError('Cannot provide timestamp with current robot firmware or model.')\n                else:\n                    return copy.deepcopy(self._robot_state.target_joint_configurations)\n\n            return copy.deepcopy(self._robot_state.target_joint_configurations.data)",
+    "span": [
+      2056,
+      2085
+    ],
+    "start_byte": 73528,
+    "end_byte": 74796,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "GetConf",
+    "signature": "GetConf(self, include_timestamp=False, synchronous_update=False, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.GetConf",
+    "docstring": "Get robot's current (physical) inverse-kinematics configuration.\n\n        Returns\n        -------\n        list of ints (timestmap optional)\n            Configuration status of robot.",
+    "chunk_size_bytes": 1268,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def GetConfTurn(self, include_timestamp=False, synchronous_update=False, timeout=None):\n        \"\"\"Get robot's current (physical) last-joint turn number.\n\n        Returns\n        -------\n        int (timestamp optional)\n            Turn number of last joint.\n\n        \"\"\"\n        if synchronous_update:\n            with self._main_lock:\n                self._check_internal_states()\n                if self._robot_events.on_conf_turn_updated.is_set():\n                    self._robot_events.on_conf_turn_updated.clear()\n                    if self._robot_info.rt_message_capable:\n                        self._send_command('GetRtConfTurn')\n                    else:\n                        self._send_command('GetConfTurn')\n\n            if not self._robot_events.on_conf_turn_updated.wait(timeout=timeout):\n                raise TimeoutError\n\n        with self._main_lock:\n            if include_timestamp:\n                if not self._robot_info.rt_message_capable:\n                    raise InvalidStateError('Cannot provide timestamp with current robot firmware or model.')\n                else:\n                    return copy.deepcopy(self._robot_state.target_last_joint_turn)\n\n            return copy.deepcopy(self._robot_state.target_last_joint_turn.data[0])",
+    "span": [
+      2088,
+      2117
+    ],
+    "start_byte": 74831,
+    "end_byte": 76096,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "GetConfTurn",
+    "signature": "GetConfTurn(self, include_timestamp=False, synchronous_update=False, timeout=None)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.GetConfTurn",
+    "docstring": "Get robot's current (physical) last-joint turn number.\n\n        Returns\n        -------\n        int (timestamp optional)\n            Turn number of last joint.",
+    "chunk_size_bytes": 1265,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetMonitoringInterval(self, t):\n        \"\"\"Sets the rate at which the monitoring port sends data.\n\n        Parameters\n        ----------\n        t : float\n            Monitoring interval duration in seconds.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('SetMonitoringInterval', [t])",
+    "span": [
+      2120,
+      2131
+    ],
+    "start_byte": 76131,
+    "end_byte": 76488,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetMonitoringInterval",
+    "signature": "SetMonitoringInterval(self, t)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetMonitoringInterval",
+    "docstring": "Sets the rate at which the monitoring port sends data.\n\n        Parameters\n        ----------\n        t : float\n            Monitoring interval duration in seconds.",
+    "chunk_size_bytes": 357,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetRealTimeMonitoring(self, events):\n        \"\"\"Configure which real-time monitoring events to enable.\n\n        Parameters\n        ----------\n        args : list of event IDs\n            List of event IDs to enable. For instance: events=[MX_ST_RT_NC_JOINT_POS, MX_ST_RT_NC_CART_POS] enables the\n            target joint positions and target end effector pose messages. Can also use events='all' to enable all.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            if isinstance(events, list):\n                self._send_command('SetRealTimeMonitoring', events)\n            else:\n                self._send_command('SetRealTimeMonitoring', [events])",
+    "span": [
+      2134,
+      2149
+    ],
+    "start_byte": 76523,
+    "end_byte": 77218,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetRealTimeMonitoring",
+    "signature": "SetRealTimeMonitoring(self, events)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetRealTimeMonitoring",
+    "docstring": "Configure which real-time monitoring events to enable.\n\n        Parameters\n        ----------\n        args : list of event IDs\n            List of event IDs to enable. For instance: events=[MX_ST_RT_NC_JOINT_POS, MX_ST_RT_NC_CART_POS] enables the\n            target joint positions and target end effector pose messages. Can also use events='all' to enable all.",
+    "chunk_size_bytes": 695,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def SetRTC(self, t):\n        \"\"\"Sets the rate at which the monitoring port sends data.\n\n        Parameters\n        ----------\n        t : int\n            Unix epoch time (seconds since 00:00:00 UTC Jan 1, 1970).\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('SetRTC', [t])",
+    "span": [
+      2152,
+      2163
+    ],
+    "start_byte": 77253,
+    "end_byte": 77595,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "SetRTC",
+    "signature": "SetRTC(self, t)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.SetRTC",
+    "docstring": "Sets the rate at which the monitoring port sends data.\n\n        Parameters\n        ----------\n        t : int\n            Unix epoch time (seconds since 00:00:00 UTC Jan 1, 1970).",
+    "chunk_size_bytes": 342,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def ActivateSim(self):\n        \"\"\"Enables simulation mode. Motors don't move, but commands will be processed.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('ActivateSim')",
+    "span": [
+      2166,
+      2172
+    ],
+    "start_byte": 77630,
+    "end_byte": 77870,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ActivateSim",
+    "signature": "ActivateSim(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.ActivateSim",
+    "docstring": "Enables simulation mode. Motors don't move, but commands will be processed.",
+    "chunk_size_bytes": 240,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def DeactivateSim(self):\n        \"\"\"Disables simulation mode. Motors don't move, but commands will be processed.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            self._send_command('DeactivateSim')",
+    "span": [
+      2175,
+      2181
+    ],
+    "start_byte": 77905,
+    "end_byte": 78150,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "DeactivateSim",
+    "signature": "DeactivateSim(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.DeactivateSim",
+    "docstring": "Disables simulation mode. Motors don't move, but commands will be processed.",
+    "chunk_size_bytes": 245,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def ActivateBrakes(self, activated=True):\n        \"\"\"Enable/disable the brakes. These commands are only available when the robot is deactivated.\n\n        By default, brakes are enabled until robot is activated (brakes are automatically disabled upon activation).\n        Corresponds to text API calls \"BrakesOn\" / \"BrakesOff\".\n\n        Parameters\n        ----------\n        activated : bool\n            Engage brakes if true, otherwise disengage brakes.\n\n        \"\"\"\n        with self._main_lock:\n            self._check_internal_states()\n            if activated:\n                self._send_command('BrakesOn')\n            else:\n                self._send_command('BrakesOff')\n\n        if self._enable_synchronous_mode:\n            if activated:\n                self._robot_events.on_brakes_activated.wait()\n            else:\n                self._robot_events.on_brakes_deactivated.wait()",
+    "span": [
+      2184,
+      2207
+    ],
+    "start_byte": 78185,
+    "end_byte": 79075,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ActivateBrakes",
+    "signature": "ActivateBrakes(self, activated=True)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.ActivateBrakes",
+    "docstring": "Enable/disable the brakes. These commands are only available when the robot is deactivated.\n\n        By default, brakes are enabled until robot is activated (brakes are automatically disabled upon activation).\n        Corresponds to text API calls \"BrakesOn\" / \"BrakesOff\".\n\n        Parameters\n        ----------\n        activated : bool\n            Engage brakes if true, otherwise disengage brakes.",
+    "chunk_size_bytes": 890,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def GetRobotInfo(self):\n        \"\"\"Return a copy of the known robot information.\n\n        Return\n        ------\n        RobotInfo\n            Object containing robot information.\n\n        \"\"\"\n        with self._main_lock:\n            return copy.deepcopy(self._robot_info)",
+    "span": [
+      2209,
+      2219
+    ],
+    "start_byte": 79081,
+    "end_byte": 79353,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "GetRobotInfo",
+    "signature": "GetRobotInfo(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.GetRobotInfo",
+    "docstring": "Return a copy of the known robot information.\n\n        Return\n        ------\n        RobotInfo\n            Object containing robot information.",
+    "chunk_size_bytes": 272,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def GetRobotState(self):\n        \"\"\"Return a copy of the current robot state.\n\n        Return\n        ------\n        RobotState\n            Object containing the current robot state.\n\n        \"\"\"\n        with self._main_lock:\n            return copy.deepcopy(self._robot_state)",
+    "span": [
+      2221,
+      2231
+    ],
+    "start_byte": 79359,
+    "end_byte": 79636,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "GetRobotState",
+    "signature": "GetRobotState(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.GetRobotState",
+    "docstring": "Return a copy of the current robot state.\n\n        Return\n        ------\n        RobotState\n            Object containing the current robot state.",
+    "chunk_size_bytes": 277,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def StartLogging(self, file_path=None, fields=None, record_time=True):\n        \"\"\"Start logging robot state to file.\n\n        Fields logged are controlled by SetRealtimeMonitoring(). Logging frequency is set by SetMonitoringInterval().\n        By default, will wait until robot is idle before logging.\n\n        Parameters\n        ----------\n        file_path : string or None\n            File path to saved log.\n\n        fields : list of strings or None\n            List of fields to log. Taken from RobotState attributes. None means log all compatible fields.\n\n        record_time : bool\n            If true, current date and time will be recorded in file.\n\n        \"\"\"\n        if self._file_logger != None:\n            raise InvalidStateError('Another file logging operation is in progress.')\n\n        self._file_logger = CSVFileLogger(self._robot_info,\n                                          self._robot_state,\n                                          fields,\n                                          file_path,\n                                          record_time=record_time)",
+    "span": [
+      2233,
+      2258
+    ],
+    "start_byte": 79642,
+    "end_byte": 80728,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "StartLogging",
+    "signature": "StartLogging(self, file_path=None, fields=None, record_time=True)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.StartLogging",
+    "docstring": "Start logging robot state to file.\n\n        Fields logged are controlled by SetRealtimeMonitoring(). Logging frequency is set by SetMonitoringInterval().\n        By default, will wait until robot is idle before logging.\n\n        Parameters\n        ----------\n        file_path : string or None\n            File path to saved log.\n\n        fields : list of strings or None\n            List of fields to log. Taken from RobotState attributes. None means log all compatible fields.\n\n        record_time : bool\n            If true, current date and time will be recorded in file.",
+    "chunk_size_bytes": 1086,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def EndLogging(self):\n        \"\"\"Stop logging robot state to file.\n\n        \"\"\"\n        if self._file_logger == None:\n            raise InvalidStateError('No existing logger to stop.')\n\n        self._file_logger.end_log()\n        self._file_logger = None",
+    "span": [
+      2260,
+      2268
+    ],
+    "start_byte": 80734,
+    "end_byte": 80988,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "EndLogging",
+    "signature": "EndLogging(self)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.EndLogging",
+    "docstring": "Stop logging robot state to file.",
+    "chunk_size_bytes": 254,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  },
+  {
+    "snippet": "def FileLogger(self, file_path=None, fields=None, record_time=True):\n        \"\"\"Contextmanager interface for file logger.\n\n        Parameters\n        ----------\n        file_path : string or None\n            File path to saved log.\n\n        fields : list of strings or None\n            List of fields to log. Taken from RobotState attributes. None means log all compatible fields.\n\n        record_time : bool\n            If true, current date and time will be recorded in file.\n\n        \"\"\"\n        self.StartLogging(file_path=file_path, fields=fields, record_time=record_time)\n        try:\n            yield\n        finally:\n            self.EndLogging()",
+    "span": [
+      2271,
+      2290
+    ],
+    "start_byte": 81025,
+    "end_byte": 81680,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "FileLogger",
+    "signature": "FileLogger(self, file_path=None, fields=None, record_time=True)",
+    "parent_class": "Robot",
+    "qualified_name": "Robot.FileLogger",
+    "docstring": "Contextmanager interface for file logger.\n\n        Parameters\n        ----------\n        file_path : string or None\n            File path to saved log.\n\n        fields : list of strings or None\n            List of fields to log. Taken from RobotState attributes. None means log all compatible fields.\n\n        record_time : bool\n            If true, current date and time will be recorded in file.",
+    "chunk_size_bytes": 655,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/robot.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/robot.py"
+  }
+]

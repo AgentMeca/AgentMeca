@@ -1,0 +1,97 @@
+[
+  {
+    "snippet": "import robot from './imgs/robotic-arm.png'",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 42,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 42,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/RobotCard/RobotCard.js",
+    "normalized_path": "MecaDashboard/src/components/RobotCard/RobotCard.js"
+  },
+  {
+    "snippet": "import styles from './RobotCard.module.css'",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 43,
+    "end_byte": 86,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 43,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/RobotCard/RobotCard.js",
+    "normalized_path": "MecaDashboard/src/components/RobotCard/RobotCard.js"
+  },
+  {
+    "snippet": "import React, { useState, useEffect } from 'react'",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 87,
+    "end_byte": 137,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 50,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/RobotCard/RobotCard.js",
+    "normalized_path": "MecaDashboard/src/components/RobotCard/RobotCard.js"
+  },
+  {
+    "snippet": "import StatusBar from '../StatusBar/StatusBar'",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 138,
+    "end_byte": 184,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 46,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/RobotCard/RobotCard.js",
+    "normalized_path": "MecaDashboard/src/components/RobotCard/RobotCard.js"
+  },
+  {
+    "snippet": "export default function RobotCard(props) {\n    const [robotState, setRobotState] = useState({\n        \"Connection\": true,\n        \"Activated\": false,\n        \"Homed\": false,\n        \"Error\": false,\n    })\n\n\n    useEffect(() => {\n        if (props.connect) {\n            const interval = setInterval(async () => {\n                const response = await fetch(`/getStatus?ip=${props.ipaddress}`)\n                const status = await response.json()\n                setRobotState(prevRobotState => {\n                    return {\n                        'Connection': true,\n                        'Activated': status.Activated,\n                        'Homed': status.Homed,\n                        'Error': status.Error,\n                    }\n                })\n            }, 1000)\n        }\n    }, [])\n\n    function removeCard() {\n        props.deleteCard(props.ipaddress)\n    }\n\n\n    return (\n        <div className={styles.robotcard}>\n            <button className={styles.closebutton} onClick={removeCard}>X</button>\n            <div className={styles.titles}>\n                <h1 className={styles.title}>\n                    {props.name}\n                </h1>\n                <a href={`http://${props.ipaddress}`} target='_blank' className={styles.ipaddress}>{props.ipaddress}</a>\n            </div>\n            {/* <button onClick={onClickHandle}>Click me</button> */}\n            <img src={robot} alt='Robot Logo' className={styles.robotlogo}></img>\n            <StatusBar robotState={robotState} />\n        </div>\n    )\n}",
+    "span": [
+      6,
+      51
+    ],
+    "start_byte": 186,
+    "end_byte": 1715,
+    "node_type": "export_statement",
+    "chunk_type": "other",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 1529,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/RobotCard/RobotCard.js",
+    "normalized_path": "MecaDashboard/src/components/RobotCard/RobotCard.js"
+  }
+]

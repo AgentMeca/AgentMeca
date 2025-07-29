@@ -1,0 +1,154 @@
+[
+  {
+    "snippet": "from typing import Type",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 23,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Type",
+    "qualified_name": "Type",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 23,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/ftMonitor.py",
+    "normalized_path": "RAMInsertion/ftMonitor.py"
+  },
+  {
+    "snippet": "from NetFT import Sensor",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 24,
+    "end_byte": 48,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Sensor",
+    "qualified_name": "Sensor",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 24,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/ftMonitor.py",
+    "normalized_path": "RAMInsertion/ftMonitor.py"
+  },
+  {
+    "snippet": "import matplotlib.pyplot as plt",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 49,
+    "end_byte": 80,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "matplotlib.pyplot as plt",
+    "qualified_name": "matplotlib.pyplot as plt",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 31,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/ftMonitor.py",
+    "normalized_path": "RAMInsertion/ftMonitor.py"
+  },
+  {
+    "snippet": "import matplotlib.animation as animation",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 81,
+    "end_byte": 121,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "matplotlib.animation as animation",
+    "qualified_name": "matplotlib.animation as animation",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 40,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/ftMonitor.py",
+    "normalized_path": "RAMInsertion/ftMonitor.py"
+  },
+  {
+    "snippet": "from matplotlib import style",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 122,
+    "end_byte": 150,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "style",
+    "qualified_name": "style",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 28,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/ftMonitor.py",
+    "normalized_path": "RAMInsertion/ftMonitor.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 151,
+    "end_byte": 173,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sleep",
+    "qualified_name": "sleep",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 22,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/ftMonitor.py",
+    "normalized_path": "RAMInsertion/ftMonitor.py"
+  },
+  {
+    "snippet": "import csv",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 174,
+    "end_byte": 184,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "csv",
+    "qualified_name": "csv",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 10,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/ftMonitor.py",
+    "normalized_path": "RAMInsertion/ftMonitor.py"
+  },
+  {
+    "snippet": "def animate(i, ax, x_val: list, y_val: list, sensor: Sensor):\n    if not isinstance(sensor, Sensor):\n        raise(TypeError)\n    fz = sensor.getForce()[2]*(-1.0)\n    x_val.append(x_val[-1]+0.01)\n    y_val.append(fz)\n\n    x_val_disp = x_val[-100:]\n    y_val_disp = y_val[-100:]\n\n    ax.clear()\n    ax.plot(x_val_disp, y_val_disp)",
+    "span": [
+      10,
+      21
+    ],
+    "start_byte": 187,
+    "end_byte": 516,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "animate",
+    "qualified_name": "animate",
+    "signature": "animate(i, ax, x_val: list, y_val: list, sensor: Sensor)",
+    "docstring": null,
+    "chunk_size_bytes": 329,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/ftMonitor.py",
+    "normalized_path": "RAMInsertion/ftMonitor.py"
+  }
+]

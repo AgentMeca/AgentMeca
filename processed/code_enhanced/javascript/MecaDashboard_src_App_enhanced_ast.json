@@ -1,0 +1,116 @@
+[
+  {
+    "snippet": "import logo from './logo.svg';",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 30,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 30,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/App.js",
+    "normalized_path": "MecaDashboard/src/App.js"
+  },
+  {
+    "snippet": "import './App.css';",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 31,
+    "end_byte": 50,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 19,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/App.js",
+    "normalized_path": "MecaDashboard/src/App.js"
+  },
+  {
+    "snippet": "import CardHolder from './components/CardHolder/CardHolder';",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 51,
+    "end_byte": 111,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 60,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/App.js",
+    "normalized_path": "MecaDashboard/src/App.js"
+  },
+  {
+    "snippet": "import NavBar from './components/NavBar/NavBar';",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 112,
+    "end_byte": 160,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 48,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/App.js",
+    "normalized_path": "MecaDashboard/src/App.js"
+  },
+  {
+    "snippet": "function App() {\n  return (\n    <div className=\"App\">\n      <NavBar />\n      <CardHolder connect={true} />\n    </div>\n  );\n}",
+    "span": [
+      6,
+      13
+    ],
+    "start_byte": 162,
+    "end_byte": 286,
+    "node_type": "function_declaration",
+    "chunk_type": "function",
+    "language": "javascript",
+    "name": "App",
+    "qualified_name": "App",
+    "signature": "App",
+    "docstring": null,
+    "chunk_size_bytes": 124,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/App.js",
+    "normalized_path": "MecaDashboard/src/App.js"
+  },
+  {
+    "snippet": "export default App;",
+    "span": [
+      15,
+      15
+    ],
+    "start_byte": 288,
+    "end_byte": 307,
+    "node_type": "export_statement",
+    "chunk_type": "other",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 19,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/App.js",
+    "normalized_path": "MecaDashboard/src/App.js"
+  }
+]

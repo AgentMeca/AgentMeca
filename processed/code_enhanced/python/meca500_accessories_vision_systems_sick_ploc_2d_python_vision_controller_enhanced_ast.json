@@ -1,0 +1,395 @@
+[
+  {
+    "snippet": "import socket",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 404,
+    "end_byte": 417,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "socket",
+    "qualified_name": "socket",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 13,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      14,
+      14
+    ],
+    "start_byte": 418,
+    "end_byte": 429,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "import sys",
+    "span": [
+      15,
+      15
+    ],
+    "start_byte": 430,
+    "end_byte": 440,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sys",
+    "qualified_name": "sys",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 10,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "from typing import List, Tuple, Optional, Dict, Any",
+    "span": [
+      16,
+      16
+    ],
+    "start_byte": 441,
+    "end_byte": 492,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "List",
+    "qualified_name": "List",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 51,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "class VisionController:\n    \"\"\"\n    TCP/IP Communication interface for SICK PLOC 2D Vision System.\n    \n    This class provides methods for connecting to the PLOC 2D system, executing vision jobs,\n    and retrieving part location and orientation data. It handles socket communication,\n    error management, and data parsing.\n    \n    Attributes:\n        ip_address (str): IP address of the PLOC 2D system\n        port (int): TCP port for communication (default: system dependent)\n        timeout (float): Socket timeout in seconds\n        socket (socket.socket): TCP socket connection\n        connected (bool): Connection status flag\n        debug (bool): Enable debug output for troubleshooting\n    \"\"\"",
+    "span": [
+      19,
+      412
+    ],
+    "start_byte": 495,
+    "end_byte": 13926,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "VisionController",
+    "qualified_name": "VisionController",
+    "docstring": "TCP/IP Communication interface for SICK PLOC 2D Vision System.\n    \n    This class provides methods for connecting to the PLOC 2D system, executing vision jobs,\n    and retrieving part location and orientation data. It handles socket communication,\n    error management, and data parsing.\n    \n    Attributes:\n        ip_address (str): IP address of the PLOC 2D system\n        port (int): TCP port for communication (default: system dependent)\n        timeout (float): Socket timeout in seconds\n        socket (socket.socket): TCP socket connection\n        connected (bool): Connection status flag\n        debug (bool): Enable debug output for troubleshooting",
+    "chunk_size_bytes": 703,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def __init__(self, ip_address: str, port: int = 2005, timeout: float = 5.0, debug: bool = False):\n        \"\"\"\n        Initialize VisionController with network parameters.\n        \n        Args:\n            ip_address (str): IP address of the SICK PLOC 2D system\n            port (int): TCP port for communication (default: 2005)\n            timeout (float): Socket timeout in seconds (default: 5.0)\n            debug (bool): Enable debug output (default: False)\n        \"\"\"\n        self.ip_address = ip_address\n        self.port = port\n        self.timeout = timeout\n        self.socket = None\n        self.connected = False\n        self.debug = debug\n        \n        if self.debug:\n            print(f\"VisionController initialized for {ip_address}:{port}\")",
+    "span": [
+      36,
+      54
+    ],
+    "start_byte": 1208,
+    "end_byte": 1966,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, ip_address: str, port: int = 2005, timeout: float = 5.0, debug: bool = False)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.__init__",
+    "docstring": "Initialize VisionController with network parameters.\n        \n        Args:\n            ip_address (str): IP address of the SICK PLOC 2D system\n            port (int): TCP port for communication (default: 2005)\n            timeout (float): Socket timeout in seconds (default: 5.0)\n            debug (bool): Enable debug output (default: False)",
+    "chunk_size_bytes": 758,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def connect(self) -> bool:\n        \"\"\"\n        Establish TCP connection to the SICK PLOC 2D system.\n        \n        Returns:\n            bool: True if connection successful, False otherwise\n            \n        Raises:\n            ConnectionError: If connection cannot be established\n        \"\"\"\n        try:\n            if self.connected:\n                self.disconnect()\n            \n            self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n            self.socket.settimeout(self.timeout)\n            self.socket.connect((self.ip_address, self.port))\n            self.connected = True\n            \n            if self.debug:\n                print(f\"Connected to PLOC 2D at {self.ip_address}:{self.port}\")\n            \n            return True\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Connection failed: {e}\")\n            self.connected = False\n            return False",
+    "span": [
+      56,
+      84
+    ],
+    "start_byte": 1976,
+    "end_byte": 2921,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "connect",
+    "signature": "connect(self)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.connect",
+    "docstring": "Establish TCP connection to the SICK PLOC 2D system.\n        \n        Returns:\n            bool: True if connection successful, False otherwise\n            \n        Raises:\n            ConnectionError: If connection cannot be established",
+    "chunk_size_bytes": 945,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def disconnect(self) -> None:\n        \"\"\"\n        Close TCP connection to the SICK PLOC 2D system.\n        \"\"\"\n        try:\n            if self.socket:\n                self.socket.close()\n                self.socket = None\n            self.connected = False\n            \n            if self.debug:\n                print(\"Disconnected from PLOC 2D\")\n                \n        except Exception as e:\n            if self.debug:\n                print(f\"Disconnect error: {e}\")",
+    "span": [
+      86,
+      101
+    ],
+    "start_byte": 2931,
+    "end_byte": 3402,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "disconnect",
+    "signature": "disconnect(self)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.disconnect",
+    "docstring": "Close TCP connection to the SICK PLOC 2D system.",
+    "chunk_size_bytes": 471,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def _send_command(self, command: str) -> Optional[str]:\n        \"\"\"\n        Send command to PLOC 2D system and receive response.\n        \n        Args:\n            command (str): Command string to send\n            \n        Returns:\n            Optional[str]: Response string from system, None if failed\n        \"\"\"\n        if not self.connected:\n            if self.debug:\n                print(\"Not connected to PLOC 2D system\")\n            return None\n        \n        try:\n            # Send command\n            command_bytes = command.encode('utf-8') + b'\\r\\n'\n            self.socket.send(command_bytes)\n            \n            if self.debug:\n                print(f\"Sent command: {command}\")\n            \n            # Receive response\n            response = self.socket.recv(1024).decode('utf-8').strip()\n            \n            if self.debug:\n                print(f\"Received response: {response}\")\n            \n            return response\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Command send/receive error: {e}\")\n            return None",
+    "span": [
+      103,
+      137
+    ],
+    "start_byte": 3412,
+    "end_byte": 4514,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_send_command",
+    "signature": "_send_command(self, command: str)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController._send_command",
+    "docstring": "Send command to PLOC 2D system and receive response.\n        \n        Args:\n            command (str): Command string to send\n            \n        Returns:\n            Optional[str]: Response string from system, None if failed",
+    "chunk_size_bytes": 1102,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def get_system_status(self) -> Dict[str, Any]:\n        \"\"\"\n        Get system status information from PLOC 2D.\n        \n        Returns:\n            Dict[str, Any]: Status information including error codes and system state\n        \"\"\"\n        status = {\n            'connected': self.connected,\n            'error_code': None,\n            'system_ready': False,\n            'last_job_result': None\n        }\n        \n        if not self.connected:\n            return status\n        \n        try:\n            # Request system status (implementation depends on PLOC 2D protocol)\n            response = self._send_command(\"STATUS\")\n            if response:\n                # Parse response based on PLOC 2D protocol\n                status['system_ready'] = True\n                status['last_job_result'] = response\n                \n        except Exception as e:\n            if self.debug:\n                print(f\"Status check error: {e}\")\n            status['error_code'] = str(e)\n        \n        return status",
+    "span": [
+      139,
+      169
+    ],
+    "start_byte": 4524,
+    "end_byte": 5533,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_system_status",
+    "signature": "get_system_status(self)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.get_system_status",
+    "docstring": "Get system status information from PLOC 2D.\n        \n        Returns:\n            Dict[str, Any]: Status information including error codes and system state",
+    "chunk_size_bytes": 1009,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def locate(self, job_id: int = 1) -> Optional[List[Dict[str, float]]]:\n        \"\"\"\n        Execute vision job and return all detected parts.\n        \n        Args:\n            job_id (int): Vision job ID to execute (default: 1)\n            \n        Returns:\n            Optional[List[Dict[str, float]]]: List of detected parts with coordinates\n                Each part dict contains: {'x': float, 'y': float, 'z': float, 'rz': float}\n                Returns None if job execution failed\n        \"\"\"\n        if not self.connected:\n            if self.debug:\n                print(\"Not connected to PLOC 2D system\")\n            return None\n        \n        try:\n            # Execute vision job\n            command = f\"LOCATE {job_id}\"\n            response = self._send_command(command)\n            \n            if response is None:\n                return None\n            \n            # Parse response to extract part coordinates\n            parts = self._parse_locate_response(response)\n            \n            if self.debug:\n                print(f\"Located {len(parts)} parts\")\n            \n            return parts\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Locate operation error: {e}\")\n            return None",
+    "span": [
+      171,
+      207
+    ],
+    "start_byte": 5543,
+    "end_byte": 6810,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "locate",
+    "signature": "locate(self, job_id: int = 1)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.locate",
+    "docstring": "Execute vision job and return all detected parts.\n        \n        Args:\n            job_id (int): Vision job ID to execute (default: 1)\n            \n        Returns:\n            Optional[List[Dict[str, float]]]: List of detected parts with coordinates\n                Each part dict contains: {'x': float, 'y': float, 'z': float, 'rz': float}\n                Returns None if job execution failed",
+    "chunk_size_bytes": 1267,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def locate_by_index(self, job_id: int, part_index: int) -> Optional[Dict[str, float]]:\n        \"\"\"\n        Get specific part data by index from vision job results.\n        \n        Args:\n            job_id (int): Vision job ID\n            part_index (int): Index of part to retrieve (1-based)\n            \n        Returns:\n            Optional[Dict[str, float]]: Part coordinates and orientation\n                Dict contains: {'x': float, 'y': float, 'z': float, 'rz': float}\n                Returns None if part not found or job failed\n        \"\"\"\n        if not self.connected:\n            if self.debug:\n                print(\"Not connected to PLOC 2D system\")\n            return None\n        \n        try:\n            # Get specific part by index\n            command = f\"GET_PART {job_id} {part_index}\"\n            response = self._send_command(command)\n            \n            if response is None:\n                return None\n            \n            # Parse single part response\n            part_data = self._parse_part_response(response)\n            \n            if self.debug and part_data:\n                print(f\"Part {part_index}: x={part_data['x']:.2f}, y={part_data['y']:.2f}, rz={part_data['rz']:.2f}\")\n            \n            return part_data\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Locate by index error: {e}\")\n            return None",
+    "span": [
+      209,
+      246
+    ],
+    "start_byte": 6820,
+    "end_byte": 8228,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "locate_by_index",
+    "signature": "locate_by_index(self, job_id: int, part_index: int)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.locate_by_index",
+    "docstring": "Get specific part data by index from vision job results.\n        \n        Args:\n            job_id (int): Vision job ID\n            part_index (int): Index of part to retrieve (1-based)\n            \n        Returns:\n            Optional[Dict[str, float]]: Part coordinates and orientation\n                Dict contains: {'x': float, 'y': float, 'z': float, 'rz': float}\n                Returns None if part not found or job failed",
+    "chunk_size_bytes": 1408,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def get_part_count(self, job_id: int) -> Optional[int]:\n        \"\"\"\n        Get number of parts detected in the last vision job execution.\n        \n        Args:\n            job_id (int): Vision job ID to query\n            \n        Returns:\n            Optional[int]: Number of detected parts, None if query failed\n        \"\"\"\n        if not self.connected:\n            if self.debug:\n                print(\"Not connected to PLOC 2D system\")\n            return None\n        \n        try:\n            command = f\"COUNT {job_id}\"\n            response = self._send_command(command)\n            \n            if response is None:\n                return None\n            \n            # Parse count from response\n            try:\n                count = int(response.split()[-1])  # Assume count is last number in response\n                if self.debug:\n                    print(f\"Part count for job {job_id}: {count}\")\n                return count\n            except (ValueError, IndexError):\n                if self.debug:\n                    print(f\"Could not parse count from response: {response}\")\n                return None\n                \n        except Exception as e:\n            if self.debug:\n                print(f\"Get count error: {e}\")\n            return None",
+    "span": [
+      248,
+      284
+    ],
+    "start_byte": 8238,
+    "end_byte": 9508,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_part_count",
+    "signature": "get_part_count(self, job_id: int)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.get_part_count",
+    "docstring": "Get number of parts detected in the last vision job execution.\n        \n        Args:\n            job_id (int): Vision job ID to query\n            \n        Returns:\n            Optional[int]: Number of detected parts, None if query failed",
+    "chunk_size_bytes": 1270,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def _parse_locate_response(self, response: str) -> List[Dict[str, float]]:\n        \"\"\"\n        Parse LOCATE command response to extract part coordinates.\n        \n        Args:\n            response (str): Raw response from PLOC 2D system\n            \n        Returns:\n            List[Dict[str, float]]: List of part coordinate dictionaries\n        \"\"\"\n        parts = []\n        \n        try:\n            # Example parsing - actual format depends on PLOC 2D protocol\n            lines = response.strip().split('\\n')\n            \n            for line in lines:\n                if line.startswith('PART'):\n                    # Parse part data: \"PART 1: X=100.5 Y=200.3 Z=0.0 RZ=45.2\"\n                    parts_data = line.split(':')[1].strip()\n                    coords = {}\n                    \n                    for coord in parts_data.split():\n                        if '=' in coord:\n                            key, value = coord.split('=')\n                            coords[key.lower()] = float(value)\n                    \n                    if 'x' in coords and 'y' in coords:\n                        part = {\n                            'x': coords.get('x', 0.0),\n                            'y': coords.get('y', 0.0),\n                            'z': coords.get('z', 0.0),\n                            'rz': coords.get('rz', 0.0)\n                        }\n                        parts.append(part)\n                        \n        except Exception as e:\n            if self.debug:\n                print(f\"Parse error: {e}\")\n        \n        return parts",
+    "span": [
+      286,
+      326
+    ],
+    "start_byte": 9518,
+    "end_byte": 11085,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_parse_locate_response",
+    "signature": "_parse_locate_response(self, response: str)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController._parse_locate_response",
+    "docstring": "Parse LOCATE command response to extract part coordinates.\n        \n        Args:\n            response (str): Raw response from PLOC 2D system\n            \n        Returns:\n            List[Dict[str, float]]: List of part coordinate dictionaries",
+    "chunk_size_bytes": 1567,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def _parse_part_response(self, response: str) -> Optional[Dict[str, float]]:\n        \"\"\"\n        Parse single part response to extract coordinates.\n        \n        Args:\n            response (str): Raw response from PLOC 2D system\n            \n        Returns:\n            Optional[Dict[str, float]]: Part coordinates, None if parsing failed\n        \"\"\"\n        try:\n            # Example parsing for single part response\n            if 'X=' in response and 'Y=' in response:\n                coords = {}\n                \n                for coord in response.split():\n                    if '=' in coord:\n                        key, value = coord.split('=')\n                        coords[key.lower()] = float(value)\n                \n                return {\n                    'x': coords.get('x', 0.0),\n                    'y': coords.get('y', 0.0),\n                    'z': coords.get('z', 0.0),\n                    'rz': coords.get('rz', 0.0)\n                }\n                \n        except Exception as e:\n            if self.debug:\n                print(f\"Parse part response error: {e}\")\n        \n        return None",
+    "span": [
+      328,
+      359
+    ],
+    "start_byte": 11095,
+    "end_byte": 12223,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_parse_part_response",
+    "signature": "_parse_part_response(self, response: str)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController._parse_part_response",
+    "docstring": "Parse single part response to extract coordinates.\n        \n        Args:\n            response (str): Raw response from PLOC 2D system\n            \n        Returns:\n            Optional[Dict[str, float]]: Part coordinates, None if parsing failed",
+    "chunk_size_bytes": 1128,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def set_job_parameters(self, job_id: int, parameters: Dict[str, Any]) -> bool:\n        \"\"\"\n        Configure vision job parameters.\n        \n        Args:\n            job_id (int): Vision job ID to configure\n            parameters (Dict[str, Any]): Job parameters to set\n            \n        Returns:\n            bool: True if configuration successful, False otherwise\n        \"\"\"\n        if not self.connected:\n            if self.debug:\n                print(\"Not connected to PLOC 2D system\")\n            return False\n        \n        try:\n            # Implementation depends on PLOC 2D configuration protocol\n            for param, value in parameters.items():\n                command = f\"SET_PARAM {job_id} {param} {value}\"\n                response = self._send_command(command)\n                \n                if response is None or \"ERROR\" in response.upper():\n                    if self.debug:\n                        print(f\"Failed to set parameter {param}={value}\")\n                    return False\n            \n            if self.debug:\n                print(f\"Job {job_id} parameters configured successfully\")\n            \n            return True\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Set parameters error: {e}\")\n            return False",
+    "span": [
+      361,
+      396
+    ],
+    "start_byte": 12233,
+    "end_byte": 13543,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set_job_parameters",
+    "signature": "set_job_parameters(self, job_id: int, parameters: Dict[str, Any])",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.set_job_parameters",
+    "docstring": "Configure vision job parameters.\n        \n        Args:\n            job_id (int): Vision job ID to configure\n            parameters (Dict[str, Any]): Job parameters to set\n            \n        Returns:\n            bool: True if configuration successful, False otherwise",
+    "chunk_size_bytes": 1310,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def __enter__(self):\n        \"\"\"Context manager entry.\"\"\"\n        self.connect()\n        return self",
+    "span": [
+      398,
+      401
+    ],
+    "start_byte": 13553,
+    "end_byte": 13653,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__enter__",
+    "signature": "__enter__(self)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.__enter__",
+    "docstring": "Context manager entry.",
+    "chunk_size_bytes": 100,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def __exit__(self, exc_type, exc_val, exc_tb):\n        \"\"\"Context manager exit.\"\"\"\n        self.disconnect()",
+    "span": [
+      403,
+      405
+    ],
+    "start_byte": 13663,
+    "end_byte": 13771,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__exit__",
+    "signature": "__exit__(self, exc_type, exc_val, exc_tb)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.__exit__",
+    "docstring": "Context manager exit.",
+    "chunk_size_bytes": 108,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def __del__(self):\n        \"\"\"Destructor to ensure socket cleanup.\"\"\"\n        try:\n            self.disconnect()\n        except:\n            pass",
+    "span": [
+      407,
+      412
+    ],
+    "start_byte": 13781,
+    "end_byte": 13926,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__del__",
+    "signature": "__del__(self)",
+    "parent_class": "VisionController",
+    "qualified_name": "VisionController.__del__",
+    "docstring": "Destructor to ensure socket cleanup.",
+    "chunk_size_bytes": 145,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  },
+  {
+    "snippet": "def test_vision_controller(ip_address: str = \"192.168.0.1\"):\n    \"\"\"\n    Test function demonstrating VisionController usage.\n    \n    Args:\n        ip_address (str): IP address of PLOC 2D system\n    \"\"\"\n    print(f\"Testing VisionController with {ip_address}\")\n    \n    # Create controller instance\n    vision = VisionController(ip_address, debug=True)\n    \n    try:\n        # Test connection\n        if not vision.connect():\n            print(\"Failed to connect to vision system\")\n            return\n        \n        # Test system status\n        status = vision.get_system_status()\n        print(f\"System status: {status}\")\n        \n        # Test part location\n        parts = vision.locate(job_id=1)\n        if parts:\n            print(f\"Found {len(parts)} parts:\")\n            for i, part in enumerate(parts, 1):\n                print(f\"  Part {i}: x={part['x']:.2f}, y={part['y']:.2f}, rz={part['rz']:.2f}\")\n        else:\n            print(\"No parts found or locate failed\")\n        \n        # Test part count\n        count = vision.get_part_count(1)\n        print(f\"Part count: {count}\")\n        \n        # Test specific part retrieval\n        if count and count > 0:\n            first_part = vision.locate_by_index(1, 1)\n            if first_part:\n                print(f\"First part details: {first_part}\")\n        \n    finally:\n        vision.disconnect()",
+    "span": [
+      416,
+      458
+    ],
+    "start_byte": 13967,
+    "end_byte": 15329,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "test_vision_controller",
+    "qualified_name": "test_vision_controller",
+    "signature": "test_vision_controller(ip_address: str = \"192.168.0.1\")",
+    "docstring": "Test function demonstrating VisionController usage.\n    \n    Args:\n        ip_address (str): IP address of PLOC 2D system",
+    "chunk_size_bytes": 1362,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_controller.py"
+  }
+]

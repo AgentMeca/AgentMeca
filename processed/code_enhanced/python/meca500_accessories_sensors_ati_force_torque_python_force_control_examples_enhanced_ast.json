@@ -1,0 +1,467 @@
+[
+  {
+    "snippet": "import time",
+    "span": [
+      19,
+      19
+    ],
+    "start_byte": 527,
+    "end_byte": 538,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "import math",
+    "span": [
+      20,
+      20
+    ],
+    "start_byte": 539,
+    "end_byte": 550,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "math",
+    "qualified_name": "math",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "from typing import List, Tuple, Optional",
+    "span": [
+      21,
+      21
+    ],
+    "start_byte": 551,
+    "end_byte": 591,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "List",
+    "qualified_name": "List",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 40,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "from netft_sensor import NetFTSensor",
+    "span": [
+      22,
+      22
+    ],
+    "start_byte": 592,
+    "end_byte": 628,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "NetFTSensor",
+    "qualified_name": "NetFTSensor",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 36,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "class ForceController:\n    \"\"\"\n    Force control system for Meca500 robot with ATI sensors.\n    \n    Provides high-level force control functions for common applications\n    including surface approach, constant force operations, and compliance.\n    \"\"\"",
+    "span": [
+      32,
+      143
+    ],
+    "start_byte": 841,
+    "end_byte": 4647,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "ForceController",
+    "qualified_name": "ForceController",
+    "docstring": "Force control system for Meca500 robot with ATI sensors.\n    \n    Provides high-level force control functions for common applications\n    including surface approach, constant force operations, and compliance.",
+    "chunk_size_bytes": 251,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "def __init__(self, robot_ip: str, sensor_ip: str):\n        \"\"\"\n        Initialize force controller.\n        \n        Args:\n            robot_ip (str): IP address of Meca500 robot\n            sensor_ip (str): IP address of ATI sensor\n        \"\"\"\n        self.robot_ip = robot_ip\n        self.sensor_ip = sensor_ip\n        \n        # Initialize components\n        self.robot = None\n        self.sensor = None\n        \n        # Control parameters\n        self.max_velocity = 10.0  # mm/s\n        self.force_threshold = 0.5  # N\n        self.control_frequency = 50  # Hz\n        \n        # Safety limits\n        self.max_force = 50.0  # N\n        self.max_torque = 5.0  # Nm\n        \n        # Control state\n        self.emergency_stop = False",
+    "span": [
+      40,
+      65
+    ],
+    "start_byte": 1102,
+    "end_byte": 1842,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot_ip: str, sensor_ip: str)",
+    "parent_class": "ForceController",
+    "qualified_name": "ForceController.__init__",
+    "docstring": "Initialize force controller.\n        \n        Args:\n            robot_ip (str): IP address of Meca500 robot\n            sensor_ip (str): IP address of ATI sensor",
+    "chunk_size_bytes": 740,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "def connect(self) -> bool:\n        \"\"\"\n        Connect to robot and sensor.\n        \n        Returns:\n            bool: True if both connections successful\n        \"\"\"\n        try:\n            # Connect to robot\n            if MECADEMIC_AVAILABLE:\n                self.robot = Robot()\n                self.robot.Connect(self.robot_ip)\n                self.robot.ActivateRobot()\n                self.robot.Home()\n                \n                # Set velocity control parameters\n                self.robot.SetVelTimeout(0.05)  # 50ms timeout\n                print(f\"✓ Connected to robot at {self.robot_ip}\")\n            \n            # Connect to sensor\n            self.sensor = NetFTSensor(self.sensor_ip)\n            if self.sensor.connect():\n                self.sensor.start_streaming(1000)\n                time.sleep(1)  # Allow stabilization\n                self.sensor.set_bias()\n                print(f\"✓ Connected to sensor at {self.sensor_ip}\")\n                return True\n            else:\n                print(\"✗ Failed to connect to sensor\")\n                return False\n                \n        except Exception as e:\n            print(f\"Connection error: {e}\")\n            return False\n    \n",
+    "span": [
+      67,
+      100
+    ],
+    "start_byte": 1856,
+    "end_byte": 3063,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "connect",
+    "signature": "connect(self)",
+    "parent_class": "ForceController",
+    "qualified_name": "ForceController.connect",
+    "docstring": "Connect to robot and sensor.\n        \n        Returns:\n            bool: True if both connections successful",
+    "chunk_size_bytes": 1213,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "sconnect(self):\n        \"\"\"Disconnect from robot and sensor.\"\"\"\n        if self.sensor:\n            self.sensor.disconnect()\n        \n        if self.robot and MECADEMIC_AVAILABLE:\n            self.robot.MoveVelTrf([0, 0, 0, 0, 0, 0])  # Stop movement\n            self.robot.DeactivateRobot()\n            self.robot.Disconnect()\n        \n        print(\"Disconnected from robot and sensor\")\n    \n",
+    "span": [
+      102,
+      112
+    ],
+    "start_byte": 3073,
+    "end_byte": 3468,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "nect(self)",
+    "signature": "nect(self):\n    ",
+    "parent_class": "ForceController",
+    "qualified_name": "ForceController.nect(self)",
+    "docstring": "connect from robot and sensor.\"\"\"",
+    "chunk_size_bytes": 395,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "eck_safety_limits(self) -> bool:\n        \"\"\"\n        Check if current forces are within safety limits.\n        \n        Returns:\n            bool: True if safe, False if limits exceeded\n        \"\"\"\n        force_data = self.sensor.get_force()\n        \n        # Check force limits\n        force_magnitude = math.sqrt(sum(f*f for f in force_data[:3]))\n        if force_magnitude > self.max_force:\n            print(f\"Force limit exceeded: {force_magnitude:.2f} N > {self.max_force} N\")\n            return False\n        \n        # Check torque limits\n        torque_magnitude = math.sqrt(sum(t*t for t in force_data[3:]))\n        if torque_magnitude > self.max_torque:\n            print(f\"Torque limit exceeded: {torque_magnitude:.3f} Nm > {self.max_torque} Nm\")\n            return False\n        \n        return True\n    \n",
+    "span": [
+      114,
+      135
+    ],
+    "start_byte": 3478,
+    "end_byte": 4298,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "safety_limits(self)",
+    "signature": "safety_limits(self) -> bo",
+    "parent_class": "ForceController",
+    "qualified_name": "ForceController.safety_limits(self)",
+    "docstring": "Check if current forces are within safety limits.\n        \n        Returns:\n            bool: True if safe, False if limits exceeded\n        \"\"\"",
+    "chunk_size_bytes": 820,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "ergency_stop_check(self):\n        \"\"\"Emergency stop if safety limits exceeded.\"\"\"\n        if not self.check_safety_limits():\n            self.emergency_stop = True\n            if self.robot and MECADEMIC_AVAILABLE:\n                self.robot.MoveVelTrf([0, 0, 0, 0, 0, 0])\n            print(\"EMERGENCY STOP: Safety limits exceeded!\")\n\n\ncla",
+    "span": [
+      137,
+      143
+    ],
+    "start_byte": 4308,
+    "end_byte": 4647,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ncy_stop_check(self)",
+    "signature": "ncy_stop_check(self):\n    ",
+    "parent_class": "ForceController",
+    "qualified_name": "ForceController.ncy_stop_check(self)",
+    "docstring": "rgency stop if safety limits exceeded.\"\"\"",
+    "chunk_size_bytes": 339,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "SurfaceApproach(ForceController):\n    \"\"\"\n    Force-controlled surface approach operations.\n    \n    Slowly approach a surface until contact force is detected,\n    useful for automated contact operations and surface detection.\n    \"\"\"",
+    "span": [
+      146,
+      221
+    ],
+    "start_byte": 4650,
+    "end_byte": 7622,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "eApproach(Force",
+    "qualified_name": "eApproach(Force",
+    "docstring": "Force-controlled surface approach operations.\n    \n    Slowly approach a surface until contact force is detected,\n    useful for automated contact operations and surface detection.\n    \"\"\"",
+    "chunk_size_bytes": 234,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "proach_surface_z(self, target_force: float = 5.0, \n                          approach_velocity: float = 2.0,\n                          max_distance: float = 50.0) -> bool:\n        \"\"\"\n        Approach surface in Z direction until target force is reached.\n        \n        Args:\n            target_force (float): Target contact force in Newtons\n            approach_velocity (float): Approach velocity in mm/s\n            max_distance (float): Maximum approach distance in mm\n            \n        Returns:\n            bool: True if surface contact achieved, False if failed\n        \"\"\"\n        if not (self.robot and self.sensor and MECADEMIC_AVAILABLE):\n            print(\"Robot and sensor must be connected\")\n            return False\n        \n        print(f\"Starting surface approach: target force = {target_force:.1f} N\")\n        \n        start_time = time.time()\n        distance_traveled = 0.0\n        \n        try:\n            while distance_traveled < max_distance and not self.emergency_stop:\n                # Get current force\n                force_data = self.sensor.get_force()\n                current_force = abs(force_data[2])  # Z-axis force\n                \n                # Check safety limits\n                self.emergency_stop_check()\n                if self.emergency_stop:\n                    break\n                \n                # Check if target force reached\n                if current_force >= target_force:\n                    # Stop movement\n                    self.robot.MoveVelTrf([0, 0, 0, 0, 0, 0])\n                    print(f\"✓ Surface contact achieved: {current_force:.2f} N\")\n                    return True\n                \n                # Continue approach\n                velocity = [0, 0, -approach_velocity, 0, 0, 0]  # Move down\n                self.robot.MoveVelTrf(velocity)\n                \n                # Update distance traveled\n                dt = 1.0 / self.control_frequency\n                distance_traveled += approach_velocity * dt\n                \n                # Display progress\n                print(f\"Force: {current_force:5.2f} N, Distance: {distance_traveled:5.1f} mm\", end='\\r')\n                \n                time.sleep(dt)\n            \n            # Stop movement\n            self.robot.MoveVelTrf([0, 0, 0, 0, 0, 0])\n            \n            if distance_traveled >= max_distance:\n                print(f\"\\n✗ Maximum approach distance reached: {max_distance} mm\")\n                return False\n            \n            return False\n            \n        except Exception as e:\n            print(f\"\\nSurface approach error: {e}\")\n            if self.robot:\n                self.robot.MoveVelTrf([0, 0, 0, 0, 0, 0])\n            return False\n\n\nclass C",
+    "span": [
+      154,
+      221
+    ],
+    "start_byte": 4900,
+    "end_byte": 7622,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ch_surface_z(self,",
+    "signature": "ch_surface_z(self, target_force: float = 5.0, \n                          approach_velocity: float = 2.0,\n                          max_distance: float = 50.0) -> bo",
+    "parent_class": "eApproach(Force",
+    "qualified_name": "eApproach(Force.ch_surface_z(self,",
+    "docstring": "Approach surface in Z direction until target force is reached.\n        \n        Args:\n            target_force (float): Target contact force in Newtons\n            approach_velocity (float): Approach velocity in mm/s\n            max_distance (float): Maximum approach distance in mm\n            \n        Returns:\n            bool: True if surface contact achieved, False if failed\n        \"\"\"",
+    "chunk_size_bytes": 2726,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "tantForceControl(ForceController):\n    \"\"\"\n    Constant force control for polishing and grinding operations.\n    \n    Maintains constant contact force while following a trajectory,\n    compensating for surface variations and tool wear.\n    \"\"\"",
+    "span": [
+      224,
+      398
+    ],
+    "start_byte": 7625,
+    "end_byte": 14203,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "rceControl(ForceCont",
+    "qualified_name": "rceControl(ForceCont",
+    "docstring": "nstant force control for polishing and grinding operations.\n    \n    Maintains constant contact force while following a trajectory,\n    compensating for surface variations and tool wear.\n    \"\"\"",
+    "chunk_size_bytes": 243,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "__(self, robot_ip: str, sensor_ip: str):\n        super().__init__(robot_ip, sensor_ip)\n        \n        # PID controller parameters for force control\n        self.kp_force = 0.5   # Proportional gain\n        self.ki_force = 0.01  # Integral gain  \n        self.kd_force = 0.05  # Derivative gain\n        \n        # PID state variables\n        self.force_error_integral = 0.0\n        self.previous_force_error = 0.0\n    \n    ",
+    "span": [
+      232,
+      242
+    ],
+    "start_byte": 7888,
+    "end_byte": 8312,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "elf, rob",
+    "signature": "elf, robot_ip: str, sensor_ip: str):\n        ",
+    "parent_class": "rceControl(ForceCont",
+    "qualified_name": "rceControl(ForceCont.elf, rob",
+    "docstring": null,
+    "chunk_size_bytes": 424,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "nt_force_polishing(self, target_force: float = 10.0,\n                               polishing_trajectory: List[List[float]] = None,\n                               lateral_velocity: float = 5.0) -> bool:\n        \"\"\"\n        Perform constant force polishing operation.\n        \n        Args:\n            target_force (float): Target polishing force in Newtons\n            polishing_trajectory (List): List of [x, y] positions for polishing path\n            lateral_velocity (float): Lateral movement velocity in mm/s\n            \n        Returns:\n            bool: True if polishing completed successfully\n        \"\"\"\n        if not polishing_trajectory:\n            # Default linear polishing path\n            polishing_trajectory = [[i, 0] for i in range(0, 100, 5)]\n        \n        print(f\"Starting constant force polishing: target force = {target_force:.1f} N\")\n        \n        try:\n            for i, position in enumerate(polishing_trajectory):\n                if self.emergency_stop:\n                    break\n                \n                print(f\"Polishing point {i+1}/{len(polishing_trajectory)}: ({position[0]:.1f}, {position[1]:.1f})\")\n                \n                # Move to lateral position (maintain Z force control)\n                if not self._move_with_force_control(position[0], position[1], \n                                                   target_force, lateral_velocity):\n                    print(f\"Failed to reach position {position}\")\n                    return False\n                \n                # Dwell time for polishing action\n                self._maintain_force(target_force, duration=2.0)\n            \n            print(\"✓ Polishing operation completed\")\n            return True\n            \n        except Exception as e:\n            print(f\"Polishing error: {e}\")\n            return False\n    \n    de",
+    "span": [
+      244,
+      285
+    ],
+    "start_byte": 8322,
+    "end_byte": 10167,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "orce_polishing(self, tar",
+    "signature": "orce_polishing(self, target_force: float = 10.0,\n                               polishing_trajectory: List[List[float]] = None,\n                               lateral_velocity: float = 5.0) -> bool:\n",
+    "parent_class": "rceControl(ForceCont",
+    "qualified_name": "rceControl(ForceCont.orce_polishing(self, tar",
+    "docstring": "Perform constant force polishing operation.\n        \n        Args:\n            target_force (float): Target polishing force in Newtons\n            polishing_trajectory (List): List of [x, y] positions for polishing path\n            lateral_velocity (float): Lateral movement velocity in mm/s\n            \n        Returns:\n            bool: True if polishing completed successfully\n        \"\"\"\n        i",
+    "chunk_size_bytes": 1847,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "th_force_control(self, target_x: float, target_y: float,\n                               target_force: float, lateral_velocity: float) -> bool:\n        \"\"\"\n        Move to target X,Y position while maintaining Z force.\n        \n        Args:\n            target_x (float): Target X position in mm\n            target_y (float): Target Y position in mm  \n            target_force (float): Target Z force in Newtons\n            lateral_velocity (float): Lateral movement velocity in mm/s\n            \n        Returns:\n            bool: True if position reached successfully\n        \"\"\"\n        if not (self.robot and self.sensor and MECADEMIC_AVAILABLE):\n            return False\n        \n        # Get current position\n        current_pose = self.robot.GetPose()\n        current_x, current_y = current_pose[0], current_pose[1]\n        \n        # Calculate movement vector\n        dx = target_x - current_x\n        dy = target_y - current_y\n        distance = math.sqrt(dx*dx + dy*dy)\n        \n        if distance < 1.0:  # Already at target\n            return True\n        \n        # Normalize movement direction\n        vx = (dx / distance) * lateral_velocity\n        vy = (dy / distance) * lateral_velocity\n        \n        start_time = time.time()\n        movement_time = distance / lateral_velocity\n        \n        while time.time() - start_time < movement_time and not self.emergency_stop:\n            # Force control in Z direction\n            force_data = self.sensor.get_force()\n            current_force = abs(force_data[2])  # Z-axis force\n            \n            # PID force control\n            vz = self._calculate_force_correction(current_force, target_force)\n            \n            # Apply combined velocity command\n            velocity = [vx, vy, vz, 0, 0, 0]\n            self.robot.MoveVelTrf(velocity)\n            \n            # Safety check\n            self.emergency_stop_check()\n            \n            time.sleep(1.0 / self.control_frequency)\n        \n        # Stop movement\n        self.robot.MoveVelTrf([0, 0, 0, 0, 0, 0])\n        return True\n    \n    de",
+    "span": [
+      287,
+      342
+    ],
+    "start_byte": 10177,
+    "end_byte": 12256,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "orce_control(self, targe",
+    "signature": "orce_control(self, target_x: float, target_y: float,\n                               target_force: float, lateral_velocity: float) -> bool:\n  ",
+    "parent_class": "rceControl(ForceCont",
+    "qualified_name": "rceControl(ForceCont.orce_control(self, targe",
+    "docstring": "Move to target X,Y position while maintaining Z force.\n        \n        Args:\n            target_x (float): Target X position in mm\n            target_y (float): Target Y position in mm  \n            target_force (float): Target Z force in Newtons\n            lateral_velocity (float): Lateral movement velocity in mm/s\n            \n        Returns:\n            bool: True if position reached successfully\n        \"\"\"\n        if",
+    "chunk_size_bytes": 2079,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "n_force(self, target_force: float, duration: float = 2.0):\n        \"\"\"\n        Maintain constant force for specified duration.\n        \n        Args:\n            target_force (float): Target force in Newtons\n            duration (float): Duration to maintain force in seconds\n        \"\"\"\n        start_time = time.time()\n        \n        while time.time() - start_time < duration and not self.emergency_stop:\n            force_data = self.sensor.get_force()\n            current_force = abs(force_data[2])\n            \n            # Force correction\n            vz = self._calculate_force_correction(current_force, target_force)\n            \n            # Apply Z velocity only\n            velocity = [0, 0, vz, 0, 0, 0]\n            self.robot.MoveVelTrf(velocity)\n            \n            # Safety check\n            self.emergency_stop_check()\n            \n            time.sleep(1.0 / self.control_frequency)\n    \n    de",
+    "span": [
+      344,
+      368
+    ],
+    "start_byte": 12266,
+    "end_byte": 13187,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "rce(self, targe",
+    "signature": "rce(self, target_force: float, duration: float = 2.0):\n        \"\"",
+    "parent_class": "rceControl(ForceCont",
+    "qualified_name": "rceControl(ForceCont.rce(self, targe",
+    "docstring": "Maintain constant force for specified duration.\n        \n        Args:\n            target_force (float): Target force in Newtons\n            duration (float): Duration to maintain force in seconds\n        \"\"\"\n        sta",
+    "chunk_size_bytes": 921,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "te_force_correction(self, current_force: float, target_force: float) -> float:\n        \"\"\"\n        Calculate velocity correction using PID control.\n        \n        Args:\n            current_force (float): Current measured force\n            target_force (float): Target force setpoint\n            \n        Returns:\n            float: Z velocity correction in mm/s\n        \"\"\"\n        # PID control for force\n        error = target_force - current_force\n        \n        # Integral term\n        self.force_error_integral += error\n        \n        # Derivative term\n        error_derivative = error - self.previous_force_error\n        self.previous_force_error = error\n        \n        # PID output\n        output = (self.kp_force * error + \n                 self.ki_force * self.force_error_integral +\n                 self.kd_force * error_derivative)\n        \n        # Limit output velocity\n        max_correction = 5.0  # mm/s\n        return max(-max_correction, min(max_correction, output))\n\n\nclass For",
+    "span": [
+      370,
+      398
+    ],
+    "start_byte": 13197,
+    "end_byte": 14203,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "orce_correction(self, curre",
+    "signature": "orce_correction(self, current_force: float, target_force: float) -> float:\n ",
+    "parent_class": "rceControl(ForceCont",
+    "qualified_name": "rceControl(ForceCont.orce_correction(self, curre",
+    "docstring": "Calculate velocity correction using PID control.\n        \n        Args:\n            current_force (float): Current measured force\n            target_force (float): Target force setpoint\n            \n        Returns:\n            float: Z velocity correction in mm/s\n        \"\"\"\n        # P",
+    "chunk_size_bytes": 1006,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "uidedInsertion(ForceController):\n    \"\"\"\n    Force-guided insertion operations for assembly tasks.\n    \n    Provides compliant insertion with force and torque monitoring\n    for peg-in-hole and similar assembly operations.\n    \"\"\"",
+    "span": [
+      401,
+      495
+    ],
+    "start_byte": 14206,
+    "end_byte": 17924,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "nsertion(ForceContro",
+    "qualified_name": "nsertion(ForceContro",
+    "docstring": "e-guided insertion operations for assembly tasks.\n    \n    Provides compliant insertion with force and torque monitoring\n    for peg-in-hole and similar assembly operations.\n    \"\"\"\n    \n    de",
+    "chunk_size_bytes": 230,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "t_insertion(self, insertion_depth: float = 20.0,\n                          max_insertion_force: float = 20.0,\n                          max_lateral_force: float = 5.0) -> bool:\n        \"\"\"\n        Perform compliant insertion with force monitoring.\n        \n        Args:\n            insertion_depth (float): Target insertion depth in mm\n            max_insertion_force (float): Maximum allowable insertion force\n            max_lateral_force (float): Maximum allowable lateral force\n            \n        Returns:\n            bool: True if insertion completed successfully\n        \"\"\"\n        print(f\"Starting compliant insertion: depth = {insertion_depth:.1f} mm\")\n        \n        if not (self.robot and self.sensor and MECADEMIC_AVAILABLE):\n            return False\n        \n        insertion_velocity = 1.0  # mm/s - slow for compliance\n        depth_achieved = 0.0\n        \n        try:\n            while depth_achieved < insertion_depth and not self.emergency_stop:\n                force_data = self.sensor.get_force()\n                \n                # Monitor forces\n                fz = abs(force_data[2])  # Insertion force\n                fx, fy = abs(force_data[0]), abs(force_data[1])  # Lateral forces\n                \n                # Check force limits\n                if fz > max_insertion_force:\n                    print(f\"Insertion force exceeded: {fz:.2f} N\")\n                    break\n                \n                if fx > max_lateral_force or fy > max_lateral_force:\n                    print(f\"Lateral force exceeded: Fx={fx:.2f}, Fy={fy:.2f} N\")\n                    # Apply lateral compliance\n                    self._apply_lateral_compliance(force_data)\n                \n                # Continue insertion\n                velocity = [0, 0, -insertion_velocity, 0, 0, 0]\n                self.robot.MoveVelTrf(velocity)\n                \n                # Update depth\n                depth_achieved += insertion_velocity / self.control_frequency\n                \n                print(f\"Depth: {depth_achieved:5.1f} mm, Force: Fz={fz:5.2f} N\", end='\\r')\n                \n                time.sleep(1.0 / self.control_frequency)\n            \n            # Stop movement\n            self.robot.MoveVelTrf([0, 0, 0, 0, 0, 0])\n            \n            if depth_achieved >= insertion_depth:\n                print(f\"\\n✓ Insertion completed: {depth_achieved:.1f} mm\")\n                return True\n            else:\n                print(f\"\\n✗ Insertion stopped early: {depth_achieved:.1f} mm\")\n                return False\n                \n        except Exception as e:\n            print(f\"\\nInsertion error: {e}\")\n            if self.robot:\n                self.robot.MoveVelTrf([0, 0, 0, 0, 0, 0])\n            return False\n    \n    def _a",
+    "span": [
+      409,
+      474
+    ],
+    "start_byte": 14458,
+    "end_byte": 17221,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "sertion(self, inser",
+    "signature": "sertion(self, insertion_depth: float = 20.0,\n                          max_insertion_force: float = 20.0,\n                          max_lateral_force: float = 5.0) -> bool:\n  ",
+    "parent_class": "nsertion(ForceContro",
+    "qualified_name": "nsertion(ForceContro.sertion(self, inser",
+    "docstring": "Perform compliant insertion with force monitoring.\n        \n        Args:\n            insertion_depth (float): Target insertion depth in mm\n            max_insertion_force (float): Maximum allowable insertion force\n            max_lateral_force (float): Maximum allowable lateral force\n            \n        Returns:\n            bool: True if insertion completed successfully\n        \"\"\"\n        pri",
+    "chunk_size_bytes": 2767,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "al_compliance(self, force_data: List[float]):\n        \"\"\"\n        Apply lateral compliance based on force feedback.\n        \n        Args:\n            force_data (List[float]): Current force/torque readings\n        \"\"\"\n        # Compliance gains\n        compliance_gain = 0.1  # mm/s per Newton\n        \n        # Calculate lateral velocity corrections\n        vx = -force_data[0] * compliance_gain  # Opposite to force direction\n        vy = -force_data[1] * compliance_gain\n        \n        # Apply lateral compliance movement\n        velocity = [vx, vy, 0, 0, 0, 0]\n        self.robot.MoveVelTrf(velocity)\n        \n        # Brief compliance movement\n        time.sleep(0.1)\n\n\n# Example usa",
+    "span": [
+      476,
+      495
+    ],
+    "start_byte": 17231,
+    "end_byte": 17924,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "ompliance(self, force_dat",
+    "signature": "ompliance(self, force_data: List[float]):\n        \"\"\"\n  ",
+    "parent_class": "nsertion(ForceContro",
+    "qualified_name": "nsertion(ForceContro.ompliance(self, force_dat",
+    "docstring": "y lateral compliance based on force feedback.\n        \n        Args:\n            force_data (List[float]): Current force/torque readings\n        \"\"\"\n        # Compl",
+    "chunk_size_bytes": 693,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "_approach():\n    \"\"\"Demonstration of surface approach functionality.\"\"\"\n    robot_ip = \"192.168.0.100\"\n    sensor_ip = \"192.168.1.100\"\n    \n    print(\"=== Surface Approach Demo ===\")\n    \n    approach = SurfaceApproach(robot_ip, sensor_ip)\n    \n    if approach.connect():\n        # Perform surface approach\n        success = approach.approach_surface_z(target_force=5.0, \n                                            approach_velocity=2.0)\n        \n        if success:\n            print(\"Surface approach completed successfully\")\n        else:\n            print(\"Surface approach failed\")\n        \n        approach.disconnect()\n    else:\n        print(\"Failed to connect to robot and sensor\")\n\n\ndef demo_cons",
+    "span": [
+      499,
+      520
+    ],
+    "start_byte": 17971,
+    "end_byte": 18678,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "roach():\n    \"\"\"Demon",
+    "qualified_name": "roach():\n    \"\"\"Demon",
+    "signature": "roach():\n    \"\"\"Demonst",
+    "docstring": "of surface approach functionality.\"\"\"\n    robot_ip =",
+    "chunk_size_bytes": 707,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "t_force_polishing():\n    \"\"\"Demonstration of constant force polishing.\"\"\"\n    robot_ip = \"192.168.0.100\"\n    sensor_ip = \"192.168.1.100\"\n    \n    print(\"=== Constant Force Polishing Demo ===\")\n    \n    polisher = ConstantForceControl(robot_ip, sensor_ip)\n    \n    if polisher.connect():\n        # Define polishing path\n        polishing_path = [\n            [0, 0], [10, 0], [20, 0], [30, 0],\n            [30, 10], [20, 10], [10, 10], [0, 10]\n        ]\n        \n        # Perform polishing operation\n        success = polisher.constant_force_polishing(target_force=8.0,\n                                                   polishing_trajectory=polishing_path,\n                                                   lateral_velocity=3.0)\n        \n        if success:\n            print(\"Polishing operation completed successfully\")\n        else:\n            print(\"Polishing operation failed\")\n        \n        polisher.disconnect()\n    else:\n        print(\"Failed to connect to robot and sensor\")\n\n\ndef demo_comp",
+    "span": [
+      523,
+      551
+    ],
+    "start_byte": 18681,
+    "end_byte": 19686,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "rce_polishing():\n    \"\"\"Demon",
+    "qualified_name": "rce_polishing():\n    \"\"\"Demon",
+    "signature": "rce_polishing():\n    \"\"\"Demonst",
+    "docstring": "of constant force polishing.\"\"\"\n    robot_ip =",
+    "chunk_size_bytes": 1005,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  },
+  {
+    "snippet": "nt_insertion():\n    \"\"\"Demonstration of compliant insertion.\"\"\"\n    robot_ip = \"192.168.0.100\"\n    sensor_ip = \"192.168.1.100\"\n    \n    print(\"=== Compliant Insertion Demo ===\")\n    \n    inserter = ForceGuidedInsertion(robot_ip, sensor_ip)\n    \n    if inserter.connect():\n        # Perform insertion\n        success = inserter.compliant_insertion(insertion_depth=15.0,\n                                              max_insertion_force=15.0,\n                                              max_lateral_force=3.0)\n        \n        if success:\n            print(\"Insertion completed successfully\")\n        else:\n            print(\"Insertion failed\")\n        \n        inserter.disconnect()\n    else:\n        print(\"Failed to connect to robot and sensor\")\n\n\nif __name__ =",
+    "span": [
+      554,
+      576
+    ],
+    "start_byte": 19689,
+    "end_byte": 20453,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "nsertion():\n    \"\"\"Demon",
+    "qualified_name": "nsertion():\n    \"\"\"Demon",
+    "signature": "nsertion():\n    \"\"\"Demonst",
+    "docstring": "of compliant insertion.\"\"\"\n    robot_ip =",
+    "chunk_size_bytes": 764,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py",
+    "normalized_path": "meca500-accessories/sensors/ati-force-torque/python/force_control_examples.py"
+  }
+]

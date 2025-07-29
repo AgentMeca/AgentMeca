@@ -1,0 +1,97 @@
+[
+  {
+    "snippet": "import React from 'react'",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 25,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 25,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/NavBar/NavBar.js",
+    "normalized_path": "MecaDashboard/src/components/NavBar/NavBar.js"
+  },
+  {
+    "snippet": "import styles from './NavBar.module.css'",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 26,
+    "end_byte": 66,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 40,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/NavBar/NavBar.js",
+    "normalized_path": "MecaDashboard/src/components/NavBar/NavBar.js"
+  },
+  {
+    "snippet": "import lilogo from './imgs/lilogo.png'",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 67,
+    "end_byte": 105,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 38,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/NavBar/NavBar.js",
+    "normalized_path": "MecaDashboard/src/components/NavBar/NavBar.js"
+  },
+  {
+    "snippet": "import twitterlogo from './imgs/twitterlogo.png'",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 106,
+    "end_byte": 154,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 48,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/NavBar/NavBar.js",
+    "normalized_path": "MecaDashboard/src/components/NavBar/NavBar.js"
+  },
+  {
+    "snippet": "export default function NavBar() {\n    return (\n        <div className={styles.navbar}>\n            <a href='https://www.mecademic.com/' target=\"_blank\"><img className={styles.logo} src='https://cdn.mecademic.com/uploads/img-tiny/mecademic-logo.png' alt='Logo' /></a>\n            <div className={styles.links}>\n                <a href='https://www.mecademic.com/en/downloads#meca500-robot-arm' target='_blank'>Documentation</a>\n                <a href='https://support.mecademic.com/support/home' target='_blank'>Support</a>\n            </div>\n            <div className={styles.socials}>\n                <a><img className={styles.lilogo} src={lilogo} /></a>\n                <a><img className={styles.twitterlogo} src={twitterlogo} /></a>\n            </div>\n        </div>\n    )\n}",
+    "span": [
+      6,
+      20
+    ],
+    "start_byte": 156,
+    "end_byte": 936,
+    "node_type": "export_statement",
+    "chunk_type": "other",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 780,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/NavBar/NavBar.js",
+    "normalized_path": "MecaDashboard/src/components/NavBar/NavBar.js"
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "snippet": "import os",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 23,
+    "end_byte": 32,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "os",
+    "qualified_name": "os",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 9,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_logger.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_logger.py"
+  },
+  {
+    "snippet": "import queue",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 33,
+    "end_byte": 45,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "queue",
+    "qualified_name": "queue",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 12,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_logger.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_logger.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 46,
+    "end_byte": 57,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_logger.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_logger.py"
+  },
+  {
+    "snippet": "class CSVFileLogger:\n    \"\"\"Class to handle logging robot state to file.\n\n    Attributes\n    ----------\n    file : file handle\n        File to be written to.\n    fields : list of strings\n        Fields to be logged.\n    command_queue : queue\n        Queue to store sent commands.\n    element_width : int\n        Each numerical element will have this width.\n\n    \"\"\"",
+    "span": [
+      7,
+      181
+    ],
+    "start_byte": 60,
+    "end_byte": 6822,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "CSVFileLogger",
+    "qualified_name": "CSVFileLogger",
+    "docstring": "Class to handle logging robot state to file.\n\n    Attributes\n    ----------\n    file : file handle\n        File to be written to.\n    fields : list of strings\n        Fields to be logged.\n    command_queue : queue\n        Queue to store sent commands.\n    element_width : int\n        Each numerical element will have this width.",
+    "chunk_size_bytes": 365,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_logger.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_logger.py"
+  },
+  {
+    "snippet": "def __init__(self, robot_info, robot_state, fields=None, file_path=None, record_time=True):\n        \"\"\"Initialize class.\n\n        Parameters\n        ----------\n        robot_info : RobotInfo\n            Contains robot information.\n        fields : list of strings\n            List of fields to be logged.\n        robot_state : RobotState\n            Contains state of robot.\n        file_path : string or None\n            If not provided, file will be saved in working directory.\n        record_time : bool\n            If true, current time will also be recorded in the text file. (Time is also available in filename.)\n\n        \"\"\"\n        current_date_time = time.strftime('%Y-%m-%d-%H-%M-%S')\n\n        serial_number_or_blank = ('_serial_' + robot_info.serial) if robot_info.serial else \"\"\n\n        # Add unique name to file path.\n        file_name = (f\"{robot_info.model}_R{robot_info.revision}_\"\n                     f\"v{robot_info.fw_major_rev}_{robot_info.fw_minor_rev}_{robot_info.fw_patch_num}_\"\n                     f\"log_{current_date_time}{serial_number_or_blank}.csv\")\n\n        if file_path:\n            file_name = os.path.join(file_path, file_name)\n\n        # If fields argument is None, log all compatible fields.\n        if fields == None:\n            fields = []\n\n            if robot_info.rt_message_capable:\n                for attr in vars(robot_state):\n                    if attr.startswith('target') or attr.startswith('drive'):\n                        fields.append(attr)\n            else:\n                # Only the following fields are available if platform is not rt monitoring capable.\n                fields = ['target_joint_positions', 'target_end_effector_pose']\n\n        # Set attributes.\n        self.file = open(file_name, 'w', newline='')\n        self.fields = fields\n        self.command_queue = queue.Queue()\n        self.element_width = 10\n        self.timestamp_element_width = 15\n\n        # Write robot information.\n        self.file.write('ROBOT_INFORMATION\\n')\n        for attr in ['model', 'revision', 'fw_major_rev', 'fw_minor_rev', 'fw_patch_num']:\n            self.file.write(f'{attr}, {getattr(robot_info, attr)}\\n')\n        if robot_info.serial != None:\n            self.file.write(f'serial_number, {robot_info.serial}\\n')\n        if record_time:\n            self.file.write(f'time_recorded, {current_date_time}\\n')\n\n        # Write headers for logged data.\n        self.file.write('\\nLOGGED_DATA\\n')\n        self.write_field_headers(robot_state)\n        self.write_field_and_element_headers(robot_info)",
+    "span": [
+      23,
+      83
+    ],
+    "start_byte": 431,
+    "end_byte": 2981,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot_info, robot_state, fields=None, file_path=None, record_time=True)",
+    "parent_class": "CSVFileLogger",
+    "qualified_name": "CSVFileLogger.__init__",
+    "docstring": "Initialize class.\n\n        Parameters\n        ----------\n        robot_info : RobotInfo\n            Contains robot information.\n        fields : list of strings\n            List of fields to be logged.\n        robot_state : RobotState\n            Contains state of robot.\n        file_path : string or None\n            If not provided, file will be saved in working directory.\n        record_time : bool\n            If true, current time will also be recorded in the text file. (Time is also available in filename.)",
+    "chunk_size_bytes": 2550,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_logger.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_logger.py"
+  },
+  {
+    "snippet": "def write_field_headers(self, robot_state):\n        \"\"\"For a field with multiple elements, write field name in first column, empty spaces for rest.\n\n        These headers are mostly for CSV and excel legibility.\n\n        Parameters\n        ----------\n        robot_state : RobotState\n            Current state of robot. Used only to get length of data fields.\n\n        \"\"\"\n        self.file.write(f\"{'timestamp':>{self.timestamp_element_width}},\")\n        for field in self.fields:\n            # Get number of elements in each field.\n            num_elements = len(getattr(robot_state, field).data)\n\n            # Add appropriate number of commas to align columns.\n            commas = ',' * (num_elements - 1)\n\n            # Calculate width of field given number of elements, accounting for commas.\n            width = (self.element_width + 1) * num_elements - 1\n            self.file.write(f'{field + commas:{width}},')\n        self.file.write('\\n')",
+    "span": [
+      85,
+      107
+    ],
+    "start_byte": 2987,
+    "end_byte": 3938,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "write_field_headers",
+    "signature": "write_field_headers(self, robot_state)",
+    "parent_class": "CSVFileLogger",
+    "qualified_name": "CSVFileLogger.write_field_headers",
+    "docstring": "For a field with multiple elements, write field name in first column, empty spaces for rest.\n\n        These headers are mostly for CSV and excel legibility.\n\n        Parameters\n        ----------\n        robot_state : RobotState\n            Current state of robot. Used only to get length of data fields.",
+    "chunk_size_bytes": 951,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_logger.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_logger.py"
+  },
+  {
+    "snippet": "def write_field_and_element_headers(self, robot_info):\n        \"\"\"Write the full field name and element name in each column.\n\n        Parameters\n        ----------\n        robot_info : RobotInfo\n            Information about the robot, such as model name and number of joints.\n\n        \"\"\"\n\n        def assemble_with_prefix(field, names):\n            return ','.join([field + '_' + str(x) for x in names]) + ','\n\n        # Write full name for each field.\n        self.file.write(f\"{'timestamp':>{self.timestamp_element_width}},\")\n        for field in self.fields:\n            if (field.endswith('joint_positions') or field.endswith('joint_velocity')\n                    or field.endswith('joint_torque_ratio')):\n                # Write field name followed by joint number. For example: \"target_joint_positions_1\".\n                self.file.write(assemble_with_prefix(field, range(robot_info.num_joints)))\n            elif field.endswith('end_effector_pose'):\n                self.file.write(assemble_with_prefix(field, ['x', 'y', 'z', 'alpha', 'beta', 'gamma']))\n            elif field.endswith('end_effector_velocity'):\n                self.file.write(\n                    assemble_with_prefix(field, ['x_dot', 'y_dot', 'z_dot', 'omega_x', 'omega_y', 'omega_z']))\n            elif field.endswith('configurations'):\n                self.file.write(assemble_with_prefix(field, ['shoulder', 'elbow', 'wrist']))\n            elif field.endswith('last_joint_turn'):\n                self.file.write(field + ',')\n            else:\n                raise ValueError(f'Missing formatting for field: {field}')\n        self.file.write('\\n')",
+    "span": [
+      109,
+      140
+    ],
+    "start_byte": 3944,
+    "end_byte": 5572,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "write_field_and_element_headers",
+    "signature": "write_field_and_element_headers(self, robot_info)",
+    "parent_class": "CSVFileLogger",
+    "qualified_name": "CSVFileLogger.write_field_and_element_headers",
+    "docstring": "Write the full field name and element name in each column.\n\n        Parameters\n        ----------\n        robot_info : RobotInfo\n            Information about the robot, such as model name and number of joints.",
+    "chunk_size_bytes": 1628,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_logger.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_logger.py"
+  },
+  {
+    "snippet": "def write_fields(self, timestamp, robot_state):\n        \"\"\"Write fields to file.\n\n        Parameters\n        ----------\n        timestamp : numeric\n            The timestamp of the current data.\n        robot_state : RobotState\n            This object contains the current robot state.\n\n        \"\"\"\n        if self.file.closed:\n            return\n\n        # First write the timestamp\n        self.file.write(f'{timestamp:{self.timestamp_element_width}},')\n\n        for field in self.fields:\n            # For each field, write each value with appropriate spacing.\n            self.file.write(','.join([f'{x:{self.element_width}}' for x in getattr(robot_state, field).data]))\n            self.file.write(',')\n\n        # End line with newline.\n        self.file.write('\\n')",
+    "span": [
+      142,
+      165
+    ],
+    "start_byte": 5578,
+    "end_byte": 6349,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "write_fields",
+    "signature": "write_fields(self, timestamp, robot_state)",
+    "parent_class": "CSVFileLogger",
+    "qualified_name": "CSVFileLogger.write_fields",
+    "docstring": "Write fields to file.\n\n        Parameters\n        ----------\n        timestamp : numeric\n            The timestamp of the current data.\n        robot_state : RobotState\n            This object contains the current robot state.",
+    "chunk_size_bytes": 771,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_logger.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_logger.py"
+  },
+  {
+    "snippet": "def end_log(self, ignore_checkpoints=True):\n        \"\"\"Write all accumulated sent commands and close file.\n\n        \"\"\"\n        # Write all sent commands.\n        self.file.write('\\nSENT_COMMANDS\\n')\n        while not self.command_queue.empty():\n            command = self.command_queue.get()\n\n            if ignore_checkpoints and command.startswith('SetCheckpoint'):\n                continue\n\n            self.file.write(f'\"{command}\"\\n')\n\n        self.file.close()",
+    "span": [
+      167,
+      181
+    ],
+    "start_byte": 6355,
+    "end_byte": 6822,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "end_log",
+    "signature": "end_log(self, ignore_checkpoints=True)",
+    "parent_class": "CSVFileLogger",
+    "qualified_name": "CSVFileLogger.end_log",
+    "docstring": "Write all accumulated sent commands and close file.",
+    "chunk_size_bytes": 467,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/robot_logger.py",
+    "normalized_path": "sample-programs/Python/PythonUI/robot_logger.py"
+  }
+]

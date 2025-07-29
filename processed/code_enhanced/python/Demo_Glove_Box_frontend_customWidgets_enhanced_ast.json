@@ -1,0 +1,468 @@
+[
+  {
+    "snippet": "from PyQt5.QtWidgets import QFrame, QPushButton, QGridLayout, QWidget, QLabel",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 77,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QFrame",
+    "qualified_name": "QFrame",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 77,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "from PyQt5.QtGui import QPixmap",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 78,
+    "end_byte": 109,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QPixmap",
+    "qualified_name": "QPixmap",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 31,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "from PyQt5.QtCore import QRect, Qt",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 110,
+    "end_byte": 144,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QRect",
+    "qualified_name": "QRect",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 34,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "import os.path",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 145,
+    "end_byte": 159,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "os.path",
+    "qualified_name": "os.path",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 14,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "class CustomToggleButton(QPushButton):\n    def __init__(self, parent=None):\n        super(CustomToggleButton, self).__init__(parent)\n        self.setCheckable(True)\n        self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        self.setFixedSize(95, 120)\n        self.clicked.connect(self._on_pressed_col_change)\n\n    def _on_pressed_col_change(self):\n        if self.isChecked():\n            self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(0,255,0,255); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")",
+    "span": [
+      7,
+      19
+    ],
+    "start_byte": 162,
+    "end_byte": 1087,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "CustomToggleButton",
+    "qualified_name": "CustomToggleButton",
+    "docstring": null,
+    "chunk_size_bytes": 713,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None):\n        super(CustomToggleButton, self).__init__(parent)\n        self.setCheckable(True)\n        self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        self.setFixedSize(95, 120)\n        self.clicked.connect(self._on_pressed_col_change)",
+    "span": [
+      8,
+      13
+    ],
+    "start_byte": 205,
+    "end_byte": 613,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None)",
+    "parent_class": "CustomToggleButton",
+    "qualified_name": "CustomToggleButton.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 408,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def _on_pressed_col_change(self):\n        if self.isChecked():\n            self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(0,255,0,255); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        else:\n            self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")",
+    "span": [
+      15,
+      19
+    ],
+    "start_byte": 619,
+    "end_byte": 1087,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_on_pressed_col_change",
+    "signature": "_on_pressed_col_change(self)",
+    "parent_class": "CustomToggleButton",
+    "qualified_name": "CustomToggleButton._on_pressed_col_change",
+    "docstring": null,
+    "chunk_size_bytes": 468,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "class StatusImage(QLabel):\n    def __init__(self, parent=None):\n        super(StatusImage, self).__init__(parent=parent)\n        current_dir = os.path.dirname(os.path.realpath(__file__))\n        self.im_height = 150\n        self.pixmap_on = QPixmap(os.path.join(current_dir, 'images/vial.png'))\n        self.pixmap_on = self.pixmap_on.scaledToHeight(self.im_height)\n        self.pixmap_off = QPixmap(os.path.join(current_dir, 'images/Vial_grey.png'))\n        self.pixmap_off = self.pixmap_off.scaledToHeight(self.im_height)\n\n        self.setPixmap(self.pixmap_on)",
+    "span": [
+      21,
+      37
+    ],
+    "start_byte": 1089,
+    "end_byte": 1784,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "StatusImage",
+    "qualified_name": "StatusImage",
+    "docstring": null,
+    "chunk_size_bytes": 563,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None):\n        super(StatusImage, self).__init__(parent=parent)\n        current_dir = os.path.dirname(os.path.realpath(__file__))\n        self.im_height = 150\n        self.pixmap_on = QPixmap(os.path.join(current_dir, 'images/vial.png'))\n        self.pixmap_on = self.pixmap_on.scaledToHeight(self.im_height)\n        self.pixmap_off = QPixmap(os.path.join(current_dir, 'images/Vial_grey.png'))\n        self.pixmap_off = self.pixmap_off.scaledToHeight(self.im_height)\n\n        self.setPixmap(self.pixmap_on)",
+    "span": [
+      22,
+      31
+    ],
+    "start_byte": 1120,
+    "end_byte": 1652,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None)",
+    "parent_class": "StatusImage",
+    "qualified_name": "StatusImage.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 532,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def switch_on(self):\n        self.setPixmap(self.pixmap_on)",
+    "span": [
+      33,
+      34
+    ],
+    "start_byte": 1658,
+    "end_byte": 1717,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "switch_on",
+    "signature": "switch_on(self)",
+    "parent_class": "StatusImage",
+    "qualified_name": "StatusImage.switch_on",
+    "docstring": null,
+    "chunk_size_bytes": 59,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def switch_off(self):\n        self.setPixmap(self.pixmap_off)",
+    "span": [
+      36,
+      37
+    ],
+    "start_byte": 1723,
+    "end_byte": 1784,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "switch_off",
+    "signature": "switch_off(self)",
+    "parent_class": "StatusImage",
+    "qualified_name": "StatusImage.switch_off",
+    "docstring": null,
+    "chunk_size_bytes": 61,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "class RackStatus(QWidget):\n    def __init__(self, parent=None, *args, **kwargs):\n        super(RackStatus, self).__init__(parent=parent, *args, **kwargs)\n        self.grid = QGridLayout()\n        self.rack_list = []\n        for i in range(6):\n            self.rack_list.append(StatusImage())\n\n        positions = [(i, j) for i in range(2) for j in range(3)]\n\n        for i in range(6):",
+    "span": [
+      40,
+      58
+    ],
+    "start_byte": 1787,
+    "end_byte": 2448,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RackStatus",
+    "qualified_name": "RackStatus",
+    "docstring": null,
+    "chunk_size_bytes": 385,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None, *args, **kwargs):\n        super(RackStatus, self).__init__(parent=parent, *args, **kwargs)\n        self.grid = QGridLayout()\n        self.rack_list = []\n        for i in range(6):\n            self.rack_list.append(StatusImage())\n\n        positions = [(i, j) for i in range(2) for j in range(3)]\n\n        for i in range(6):\n            self.grid.addWidget(self.rack_list[i], *positions[i], alignment=Qt.AlignCenter)\n        self.setLayout(self.grid)",
+    "span": [
+      41,
+      52
+    ],
+    "start_byte": 1818,
+    "end_byte": 2298,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None, *args, **kwargs)",
+    "parent_class": "RackStatus",
+    "qualified_name": "RackStatus.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 480,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def turn_vial_off(self, pos):\n        self.rack_list[pos].switch_off()",
+    "span": [
+      54,
+      55
+    ],
+    "start_byte": 2304,
+    "end_byte": 2374,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "turn_vial_off",
+    "signature": "turn_vial_off(self, pos)",
+    "parent_class": "RackStatus",
+    "qualified_name": "RackStatus.turn_vial_off",
+    "docstring": null,
+    "chunk_size_bytes": 70,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def turn_vial_on(self, pos):\n        self.rack_list[pos].switch_on()",
+    "span": [
+      57,
+      58
+    ],
+    "start_byte": 2380,
+    "end_byte": 2448,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "turn_vial_on",
+    "signature": "turn_vial_on(self, pos)",
+    "parent_class": "RackStatus",
+    "qualified_name": "RackStatus.turn_vial_on",
+    "docstring": null,
+    "chunk_size_bytes": 68,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "class CentStatus(QWidget):\n    def __init__(self, parent=None, *args, **kwargs):\n        super(CentStatus, self).__init__(parent=parent, *args, **kwargs)\n        self.frame = QFrame(parent)\n        self.frame.setGeometry(QRect(150, 120, 400, 400))\n        self.framebg = QLabel(parent=self.frame)\n        current_dir = os.path.dirname(os.path.realpath(__file__))\n        self.bgpath = os.path.join(current_dir, 'images/Centrifuge_Positions.png')\n        self.bgpixmap = QPixmap(self.bgpath)\n        self.bgpixmap = self.bgpixmap.scaled(400, 400)\n        self.framebg.setPixmap(self.bgpixmap)",
+    "span": [
+      60,
+      100
+    ],
+    "start_byte": 2450,
+    "end_byte": 4324,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "CentStatus",
+    "qualified_name": "CentStatus",
+    "docstring": null,
+    "chunk_size_bytes": 591,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None, *args, **kwargs):\n        super(CentStatus, self).__init__(parent=parent, *args, **kwargs)\n        self.frame = QFrame(parent)\n        self.frame.setGeometry(QRect(150, 120, 400, 400))\n        self.framebg = QLabel(parent=self.frame)\n        current_dir = os.path.dirname(os.path.realpath(__file__))\n        self.bgpath = os.path.join(current_dir, 'images/Centrifuge_Positions.png')\n        self.bgpixmap = QPixmap(self.bgpath)\n        self.bgpixmap = self.bgpixmap.scaled(400, 400)\n        self.framebg.setPixmap(self.bgpixmap)\n\n        self.led_on_path = os.path.join(current_dir, 'images/ring_light.png')\n        self.led_off_path = os.path.join(current_dir, 'images/ring_light_grey.png')\n        self.led_on_pm = QPixmap(self.led_on_path)\n        self.led_on_pm = self.led_on_pm.scaled(30, 30)\n        self.led_off_pm = QPixmap(self.led_off_path)\n        self.led_off_pm = self.led_off_pm.scaled(30, 30)\n        self.led_pos_list = [(50, 100), (185, 25), (320, 100), (320, 250), (185, 325), (50, 250)]\n\n        self.led_list = []\n        self.led_state = [False]*6\n        for i in range(6):\n            self.led_list.append(QLabel(self.frame))\n            self.led_list[i].setStyleSheet(\"background-color: transparent\")\n            self.led_list[i].setPixmap(self.led_off_pm)\n            self.led_list[i].setGeometry(QRect(*self.led_pos_list[i], 50, 50))",
+    "span": [
+      61,
+      86
+    ],
+    "start_byte": 2481,
+    "end_byte": 3872,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None, *args, **kwargs)",
+    "parent_class": "CentStatus",
+    "qualified_name": "CentStatus.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 1391,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def toggle_led(self, pos):\n        if not self.led_state[pos]:\n            self.led_list[pos].setPixmap(self.led_on_pm)\n            self.led_state[pos] = True\n        else:\n            self.led_list[pos].setPixmap(self.led_off_pm)\n            self.led_state[pos] = False",
+    "span": [
+      88,
+      94
+    ],
+    "start_byte": 3878,
+    "end_byte": 4148,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "toggle_led",
+    "signature": "toggle_led(self, pos)",
+    "parent_class": "CentStatus",
+    "qualified_name": "CentStatus.toggle_led",
+    "docstring": null,
+    "chunk_size_bytes": 270,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def turn_vial_on(self, pos):\n        self.led_list[pos].setPixmap(self.led_on_pm)",
+    "span": [
+      96,
+      97
+    ],
+    "start_byte": 4154,
+    "end_byte": 4235,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "turn_vial_on",
+    "signature": "turn_vial_on(self, pos)",
+    "parent_class": "CentStatus",
+    "qualified_name": "CentStatus.turn_vial_on",
+    "docstring": null,
+    "chunk_size_bytes": 81,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def turn_vial_off(self, pos):\n        self.led_list[pos].setPixmap(self.led_off_pm)",
+    "span": [
+      99,
+      100
+    ],
+    "start_byte": 4241,
+    "end_byte": 4324,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "turn_vial_off",
+    "signature": "turn_vial_off(self, pos)",
+    "parent_class": "CentStatus",
+    "qualified_name": "CentStatus.turn_vial_off",
+    "docstring": null,
+    "chunk_size_bytes": 83,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "class RackButtons(QWidget):\n    def __init__(self, parent=None, *args, **kwargs):\n        super(RackButtons, self).__init__(parent=parent, *args, **kwargs)\n        self.grid = QGridLayout()\n        self.button_list = []\n        for i in range(6):\n            self.button_list.append(CustomToggleButton(f\"Vial {i+1}\"))\n\n        positions = [(i, j) for i in range(2) for j in range(3)]\n\n        for i in range(6):",
+    "span": [
+      102,
+      122
+    ],
+    "start_byte": 4326,
+    "end_byte": 5033,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RackButtons",
+    "qualified_name": "RackButtons",
+    "docstring": null,
+    "chunk_size_bytes": 411,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None, *args, **kwargs):\n        super(RackButtons, self).__init__(parent=parent, *args, **kwargs)\n        self.grid = QGridLayout()\n        self.button_list = []\n        for i in range(6):\n            self.button_list.append(CustomToggleButton(f\"Vial {i+1}\"))\n\n        positions = [(i, j) for i in range(2) for j in range(3)]\n\n        for i in range(6):\n            self.grid.addWidget(self.button_list[i], *positions[i])\n        self.setLayout(self.grid)",
+    "span": [
+      103,
+      114
+    ],
+    "start_byte": 4358,
+    "end_byte": 4839,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None, *args, **kwargs)",
+    "parent_class": "RackButtons",
+    "qualified_name": "RackButtons.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 481,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def disableButtons(self):\n        for b in self.button_list:\n            b.setEnabled(False)",
+    "span": [
+      116,
+      118
+    ],
+    "start_byte": 4845,
+    "end_byte": 4937,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "disableButtons",
+    "signature": "disableButtons(self)",
+    "parent_class": "RackButtons",
+    "qualified_name": "RackButtons.disableButtons",
+    "docstring": null,
+    "chunk_size_bytes": 92,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "def enableButtons(self):\n        for b in self.button_list:\n            b.setEnabled(True)",
+    "span": [
+      120,
+      122
+    ],
+    "start_byte": 4943,
+    "end_byte": 5033,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "enableButtons",
+    "signature": "enableButtons(self)",
+    "parent_class": "RackButtons",
+    "qualified_name": "RackButtons.enableButtons",
+    "docstring": null,
+    "chunk_size_bytes": 90,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "normalized_path": "Demo_Glove_Box/frontend/customWidgets.py"
+  }
+]

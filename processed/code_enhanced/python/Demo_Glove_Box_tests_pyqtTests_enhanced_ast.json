@@ -1,0 +1,118 @@
+[
+  {
+    "snippet": "from frontend.customWidgets import RackStatus, StatusImage, CustomToggleButton",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 78,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "RackStatus",
+    "qualified_name": "RackStatus",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 78,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/tests/pyqtTests.py",
+    "normalized_path": "Demo_Glove_Box/tests/pyqtTests.py"
+  },
+  {
+    "snippet": "from PyQt5.QtWidgets import QApplication, QGridLayout, QLabel, QPushButton, QWidget",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 79,
+    "end_byte": 162,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QApplication",
+    "qualified_name": "QApplication",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 83,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/tests/pyqtTests.py",
+    "normalized_path": "Demo_Glove_Box/tests/pyqtTests.py"
+  },
+  {
+    "snippet": "class Apptest(QWidget):\n    def __init__(self) -> None:\n        super().__init__()\n        self.initUI()\n\n    def initUI(self):\n        self.grid = QGridLayout()\n        self.setLayout(self.grid)\n        self.rs = RackStatus()\n        self.button = CustomToggleButton()\n        self.test_flag = True",
+    "span": [
+      4,
+      27
+    ],
+    "start_byte": 164,
+    "end_byte": 824,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Apptest",
+    "qualified_name": "Apptest",
+    "docstring": null,
+    "chunk_size_bytes": 299,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/tests/pyqtTests.py",
+    "normalized_path": "Demo_Glove_Box/tests/pyqtTests.py"
+  },
+  {
+    "snippet": "def __init__(self) -> None:\n        super().__init__()\n        self.initUI()",
+    "span": [
+      5,
+      7
+    ],
+    "start_byte": 192,
+    "end_byte": 268,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self)",
+    "parent_class": "Apptest",
+    "qualified_name": "Apptest.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 76,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/tests/pyqtTests.py",
+    "normalized_path": "Demo_Glove_Box/tests/pyqtTests.py"
+  },
+  {
+    "snippet": "def initUI(self):\n        self.grid = QGridLayout()\n        self.setLayout(self.grid)\n        self.rs = RackStatus()\n        self.button = CustomToggleButton()\n        self.test_flag = True\n\n        self.grid.addWidget(self.rs)\n        self.grid.addWidget(self.button)\n\n        self.button.clicked.connect(self.on_pressed)",
+    "span": [
+      9,
+      19
+    ],
+    "start_byte": 274,
+    "end_byte": 596,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "initUI",
+    "signature": "initUI(self)",
+    "parent_class": "Apptest",
+    "qualified_name": "Apptest.initUI",
+    "docstring": null,
+    "chunk_size_bytes": 322,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/tests/pyqtTests.py",
+    "normalized_path": "Demo_Glove_Box/tests/pyqtTests.py"
+  },
+  {
+    "snippet": "def on_pressed(self):\n        if self.test_flag:\n            self.rs.rack_list[0].switch_off()\n            self.test_flag = False\n        else:\n            self.rs.rack_list[0].switch_on()\n            self.test_flag = True",
+    "span": [
+      21,
+      27
+    ],
+    "start_byte": 602,
+    "end_byte": 824,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_pressed",
+    "signature": "on_pressed(self)",
+    "parent_class": "Apptest",
+    "qualified_name": "Apptest.on_pressed",
+    "docstring": null,
+    "chunk_size_bytes": 222,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/tests/pyqtTests.py",
+    "normalized_path": "Demo_Glove_Box/tests/pyqtTests.py"
+  }
+]

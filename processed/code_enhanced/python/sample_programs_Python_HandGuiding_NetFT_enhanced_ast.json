@@ -1,0 +1,416 @@
+[
+  {
+    "snippet": "import socket",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 19,
+    "end_byte": 32,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "socket",
+    "qualified_name": "socket",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 13,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "import struct",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 33,
+    "end_byte": 46,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "struct",
+    "qualified_name": "struct",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 13,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 47,
+    "end_byte": 58,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "from threading import Thread",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 59,
+    "end_byte": 87,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Thread",
+    "qualified_name": "Thread",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 28,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "class Sensor:\n     '''The class interface for an ATI Force/Torque sensor.\n     This class contains all the functions necessary to communicate\n     with an ATI Force/Torque sensor with a Net F/T interface\n     using RDT.\n     '''",
+    "span": [
+      11,
+      187
+    ],
+    "start_byte": 146,
+    "end_byte": 7107,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Sensor",
+    "qualified_name": "Sensor",
+    "docstring": "The class interface for an ATI Force/Torque sensor.\n     This class contains all the functions necessary to communicate\n     with an ATI Force/Torque sensor with a Net F/T interface\n     using RDT.",
+    "chunk_size_bytes": 228,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def __init__(self, ip):\n          '''Start the sensor interface\n          This function intializes the class and opens the socket for the\n          sensor.\n          Args:\n               ip (str): The IP address of the Net F/T box.\n          '''\n          self.ip = ip\n          self.port = 49152\n          self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n          self.mean = [0] * 6\n          self.stream = False",
+    "span": [
+      17,
+      28
+    ],
+    "start_byte": 380,
+    "end_byte": 807,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, ip)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.__init__",
+    "docstring": "Start the sensor interface\n          This function intializes the class and opens the socket for the\n          sensor.\n          Args:\n               ip (str): The IP address of the Net F/T box.",
+    "chunk_size_bytes": 427,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def send(self, command, count = 0):\n          '''Send a given command to the Net F/T box with specified sample count.\n          This function sends the given RDT command to the Net F/T box, along with\n          the specified sample count, if needed.\n          Args:\n               command (int): The RDT command.\n               count (int, optional): The sample count to send. Defaults to 0.\n          '''\n          header = 0x1234\n          message = struct.pack('!HHI', header, command, count)\n          self.sock.sendto(message, (self.ip, self.port))",
+    "span": [
+      30,
+      40
+    ],
+    "start_byte": 814,
+    "end_byte": 1367,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "send",
+    "signature": "send(self, command, count = 0)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.send",
+    "docstring": "Send a given command to the Net F/T box with specified sample count.\n          This function sends the given RDT command to the Net F/T box, along with\n          the specified sample count, if needed.\n          Args:\n               command (int): The RDT command.\n               count (int, optional): The sample count to send. Defaults to 0.",
+    "chunk_size_bytes": 553,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def recieve(self):\n          '''Recieves and unpacks a response from the Net F/T box.\n          This function recieves and unpacks an RDT response from the Net F/T\n          box and saves it to the data class attribute.\n          Returns:\n               list of float: The force and torque values recieved. The first three\n                    values are the forces recorded, and the last three are the measured\n                    torques.\n          '''\n          rawdata = self.sock.recv(1024)\n          data = struct.unpack('!IIIiiiiii', rawdata)[3:]\n          output = [data[i] - self.mean[i] for i in range(6)]\n          return output",
+    "span": [
+      42,
+      54
+    ],
+    "start_byte": 1374,
+    "end_byte": 2012,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "recieve",
+    "signature": "recieve(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.recieve",
+    "docstring": "Recieves and unpacks a response from the Net F/T box.\n          This function recieves and unpacks an RDT response from the Net F/T\n          box and saves it to the data class attribute.\n          Returns:\n               list of float: The force and torque values recieved. The first three\n                    values are the forces recorded, and the last three are the measured\n                    torques.",
+    "chunk_size_bytes": 638,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def tare(self, n = 10):\n          '''Tare the sensor.\n          This function takes a given number of readings from the sensor\n          and averages them. This mean is then stored and subtracted from\n          all future measurements.\n          Args:\n               n (int, optional): The number of samples to use in the mean.\n                    Defaults to 10.\n          Returns:\n               list of float: The mean values calculated.\n          '''\n          self.mean = [0] * 6\n          self.getMeasurements(n = n)\n          mean = [0] * 6\n          for i in range(n):\n               self.recieve()\n               for i in range(6):\n                    mean[i] += self.measurement()[i] / float(n)\n          self.mean = mean\n          return mean",
+    "span": [
+      56,
+      75
+    ],
+    "start_byte": 2019,
+    "end_byte": 2772,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "tare",
+    "signature": "tare(self, n = 10)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.tare",
+    "docstring": "Tare the sensor.\n          This function takes a given number of readings from the sensor\n          and averages them. This mean is then stored and subtracted from\n          all future measurements.\n          Args:\n               n (int, optional): The number of samples to use in the mean.\n                    Defaults to 10.\n          Returns:\n               list of float: The mean values calculated.",
+    "chunk_size_bytes": 753,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def zero(self):\n          '''Remove the mean found with `tare` to start recieving raw sensor values.'''\n          self.mean = [0] * 6",
+    "span": [
+      77,
+      79
+    ],
+    "start_byte": 2779,
+    "end_byte": 2912,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "zero",
+    "signature": "zero(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.zero",
+    "docstring": "Remove the mean found with `tare` to start recieving raw sensor values.",
+    "chunk_size_bytes": 133,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def recieveHandler(self):\n                \n          '''A handler to recieve and store data.'''\n          while self.stream:\n                  self.recieve()",
+    "span": [
+      81,
+      85
+    ],
+    "start_byte": 2919,
+    "end_byte": 3076,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "recieveHandler",
+    "signature": "recieveHandler(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.recieveHandler",
+    "docstring": "A handler to recieve and store data.",
+    "chunk_size_bytes": 157,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def getMeasurement(self):\n          '''Get a single measurement from the sensor\n          Request a single measurement from the sensor and return it. If\n          The sensor is currently streaming, started by running `startStreaming`,\n          then this function will simply return the most recently returned value.\n          Returns:\n               list of float: The force and torque values recieved. The first three\n                    values are the forces recorded, and the last three are the measured\n                    torques.\n          '''\n          self.getMeasurements(1)\n          measured_data=[0,0,0,0,0,0]\n          output=self.recieve()\n          for i in range(6):\n               measured_data[i] = output[i]/ COUNTS_PER_FORCE\n          return measured_data",
+    "span": [
+      89,
+      104
+    ],
+    "start_byte": 3093,
+    "end_byte": 3869,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "getMeasurement",
+    "signature": "getMeasurement(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.getMeasurement",
+    "docstring": "Get a single measurement from the sensor\n          Request a single measurement from the sensor and return it. If\n          The sensor is currently streaming, started by running `startStreaming`,\n          then this function will simply return the most recently returned value.\n          Returns:\n               list of float: The force and torque values recieved. The first three\n                    values are the forces recorded, and the last three are the measured\n                    torques.",
+    "chunk_size_bytes": 776,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def measurement(self):\n          '''Get the most recent force/torque measurement\n          Returns:\n               list of float: The force and torque values recieved. The first three\n                    values are the forces recorded, and the last three are the measured\n                    torques.\n          '''\n          measured_data=[0,0,0,0,0,0]\n          output=self.recieve()\n          for i in range(6):\n               measured_data[i] = output[i]/ COUNTS_PER_FORCE\n          return measured_data",
+    "span": [
+      106,
+      117
+    ],
+    "start_byte": 3881,
+    "end_byte": 4387,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "measurement",
+    "signature": "measurement(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.measurement",
+    "docstring": "Get the most recent force/torque measurement\n          Returns:\n               list of float: The force and torque values recieved. The first three\n                    values are the forces recorded, and the last three are the measured\n                    torques.",
+    "chunk_size_bytes": 506,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def getForce(self):\n          '''Get a single force measurement from the sensor\n          Request a single measurement from the sensor and return it.\n          Returns:\n               list of float: The force values recieved.\n          '''\n          return self.getMeasurement()[:3]",
+    "span": [
+      119,
+      125
+    ],
+    "start_byte": 4394,
+    "end_byte": 4676,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "getForce",
+    "signature": "getForce(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.getForce",
+    "docstring": "Get a single force measurement from the sensor\n          Request a single measurement from the sensor and return it.\n          Returns:\n               list of float: The force values recieved.",
+    "chunk_size_bytes": 282,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def force(self):\n          '''Get the most recent force measurement\n          Returns:\n               list of float: The force values recieved.\n          '''\n          return self.measurement()[:3]",
+    "span": [
+      127,
+      132
+    ],
+    "start_byte": 4683,
+    "end_byte": 4880,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "force",
+    "signature": "force(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.force",
+    "docstring": "Get the most recent force measurement\n          Returns:\n               list of float: The force values recieved.",
+    "chunk_size_bytes": 197,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def getTorque(self):\n          '''Get a single torque measurement from the sensor\n          Request a single measurement from the sensor and return it.\n          Returns:\n               list of float: The torque values recieved.\n          '''\n          return self.getMeasurement()[3:]",
+    "span": [
+      134,
+      140
+    ],
+    "start_byte": 4887,
+    "end_byte": 5172,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "getTorque",
+    "signature": "getTorque(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.getTorque",
+    "docstring": "Get a single torque measurement from the sensor\n          Request a single measurement from the sensor and return it.\n          Returns:\n               list of float: The torque values recieved.",
+    "chunk_size_bytes": 285,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def torque(self):\n          '''Get the most recent torque measurement\n          Returns:\n               list of float: The torque values recieved.\n          '''\n          return self.measurement()[3:]",
+    "span": [
+      142,
+      147
+    ],
+    "start_byte": 5179,
+    "end_byte": 5379,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "torque",
+    "signature": "torque(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.torque",
+    "docstring": "Get the most recent torque measurement\n          Returns:\n               list of float: The torque values recieved.",
+    "chunk_size_bytes": 200,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def startStreaming(self, handler = True):\n          '''Start streaming data continuously\n          This function commands the Net F/T box to start sending data continuouly.\n          By default this also starts a new thread with a handler to save all data\n          points coming in. These data points can still be accessed with `measurement`,\n          `force`, and `torque`. This handler can also be disabled and measurements\n          can be recieved manually using the `recieve` function.\n          Args:\n               handler (bool, optional): If True start the handler which saves data to be\n                    used with `measurement`, `force`, and `torque`. If False the\n                    measurements must be recieved manually. Defaults to True.\n          '''\n          self.getMeasurements(0)\n          if handler:\n               self.stream = True\n               self.thread = Thread(target = self.recieveHandler)\n               self.thread.daemon = True\n               self.thread.start()",
+    "span": [
+      149,
+      166
+    ],
+    "start_byte": 5386,
+    "end_byte": 6389,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "startStreaming",
+    "signature": "startStreaming(self, handler = True)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.startStreaming",
+    "docstring": "Start streaming data continuously\n          This function commands the Net F/T box to start sending data continuouly.\n          By default this also starts a new thread with a handler to save all data\n          points coming in. These data points can still be accessed with `measurement`,\n          `force`, and `torque`. This handler can also be disabled and measurements\n          can be recieved manually using the `recieve` function.\n          Args:\n               handler (bool, optional): If True start the handler which saves data to be\n                    used with `measurement`, `force`, and `torque`. If False the\n                    measurements must be recieved manually. Defaults to True.",
+    "chunk_size_bytes": 1003,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def getMeasurements(self, n):\n          '''Request a given number of samples from the sensor\n          This function requestes a given number of samples from the sensor. These\n          measurements must be recieved manually using the `recieve` function.\n          Args:\n               n (int): The number of samples to request.\n          '''\n          self.send(2, count = n)",
+    "span": [
+      168,
+      175
+    ],
+    "start_byte": 6396,
+    "end_byte": 6772,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "getMeasurements",
+    "signature": "getMeasurements(self, n)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.getMeasurements",
+    "docstring": "Request a given number of samples from the sensor\n          This function requestes a given number of samples from the sensor. These\n          measurements must be recieved manually using the `recieve` function.\n          Args:\n               n (int): The number of samples to request.",
+    "chunk_size_bytes": 376,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def stopStreaming(self):\n          '''Stop streaming data continuously\n          This function stops the sensor from streaming continuously as started using\n          `startStreaming`.\n          '''\n          self.stream = False\n          time.sleep(0.1)\n          self.send(0)",
+    "span": [
+      177,
+      184
+    ],
+    "start_byte": 6779,
+    "end_byte": 7056,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "stopStreaming",
+    "signature": "stopStreaming(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.stopStreaming",
+    "docstring": "Stop streaming data continuously\n          This function stops the sensor from streaming continuously as started using\n          `startStreaming`.",
+    "chunk_size_bytes": 277,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  },
+  {
+    "snippet": "def setBias(self):\n          self.send(0x42)",
+    "span": [
+      186,
+      187
+    ],
+    "start_byte": 7063,
+    "end_byte": 7107,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "setBias",
+    "signature": "setBias(self)",
+    "parent_class": "Sensor",
+    "qualified_name": "Sensor.setBias",
+    "docstring": null,
+    "chunk_size_bytes": 44,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/NetFT.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/NetFT.py"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "snippet": "from mecademicpy.robot import Robot",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 35,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Robot",
+    "qualified_name": "Robot",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 35,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/test2.py",
+    "normalized_path": "sample-programs/Python/ZaberProbing/test2.py"
+  },
+  {
+    "snippet": "from zaber_motion import Library",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 36,
+    "end_byte": 68,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Library",
+    "qualified_name": "Library",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 32,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/test2.py",
+    "normalized_path": "sample-programs/Python/ZaberProbing/test2.py"
+  },
+  {
+    "snippet": "from zaber_motion.ascii import Connection",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 69,
+    "end_byte": 110,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Connection",
+    "qualified_name": "Connection",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 41,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/test2.py",
+    "normalized_path": "sample-programs/Python/ZaberProbing/test2.py"
+  },
+  {
+    "snippet": "from zaber_motion import Units",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 111,
+    "end_byte": 141,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Units",
+    "qualified_name": "Units",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 30,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/test2.py",
+    "normalized_path": "sample-programs/Python/ZaberProbing/test2.py"
+  },
+  {
+    "snippet": "from moveFunctions import *",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 142,
+    "end_byte": 169,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 27,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/test2.py",
+    "normalized_path": "sample-programs/Python/ZaberProbing/test2.py"
+  }
+]

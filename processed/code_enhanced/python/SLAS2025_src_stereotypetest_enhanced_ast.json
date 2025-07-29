@@ -1,0 +1,59 @@
+[
+  {
+    "snippet": "from MecaPlanar import MecaPlanar",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 33,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "MecaPlanar",
+    "qualified_name": "MecaPlanar",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 33,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/stereotypetest.py",
+    "normalized_path": "SLAS2025/src/stereotypetest.py"
+  },
+  {
+    "snippet": "from constants import *",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 34,
+    "end_byte": 57,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 23,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/stereotypetest.py",
+    "normalized_path": "SLAS2025/src/stereotypetest.py"
+  },
+  {
+    "snippet": "from pmclib import pmc_types",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 58,
+    "end_byte": 86,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "pmc_types",
+    "qualified_name": "pmc_types",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 28,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/stereotypetest.py",
+    "normalized_path": "SLAS2025/src/stereotypetest.py"
+  }
+]

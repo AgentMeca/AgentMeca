@@ -1,0 +1,97 @@
+[
+  {
+    "snippet": "using System;",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 13,
+    "node_type": "using_directive",
+    "chunk_type": "other",
+    "language": "csharp",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 13,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs",
+    "normalized_path": "sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs"
+  },
+  {
+    "snippet": "using System.Net.Sockets;",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 14,
+    "end_byte": 39,
+    "node_type": "using_directive",
+    "chunk_type": "other",
+    "language": "csharp",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 25,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs",
+    "normalized_path": "sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs"
+  },
+  {
+    "snippet": "using System.Text;",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 40,
+    "end_byte": 58,
+    "node_type": "using_directive",
+    "chunk_type": "other",
+    "language": "csharp",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 18,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs",
+    "normalized_path": "sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs"
+  },
+  {
+    "snippet": "using System.Threading;",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 59,
+    "end_byte": 82,
+    "node_type": "using_directive",
+    "chunk_type": "other",
+    "language": "csharp",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 23,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs",
+    "normalized_path": "sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs"
+  },
+  {
+    "snippet": "namespace Meca500Examples\n{\n    /// <summary>\n    /// Meca500 Quick Start Example\n    /// This script demonstrates the absolute basics of connecting to and controlling a Meca500 robot.\n    /// \n    /// Prerequisites:\n    /// - Meca500 robot connected to network\n    /// - Robot IP address known (default: 192.168.0.100)\n    /// - Robot in normal mode (not recovery mode)\n    /// \n    /// Usage:\n    /// 1. Update the ROBOT_IP constant to match your robot's IP address\n    /// 2. Compile and run\n    /// 3. Follow console prompts\n    /// </summary>\n    class Meca500QuickStart\n    {\n        // ========== CONFIGURATION ==========\n        // Change this to match your robot's IP address\n        const string ROBOT_IP = \"192.168.0.100\";\n        const int ROBOT_PORT = 10000;\n\n        // Basic movement parameters (in mm and degrees)\n        const double SAFE_Z_HEIGHT = 200;  // Safe height to avoid collisions\n        const double MOVE_SPEED = 25;      // Movement speed percentage (0-100)\n\n        static void Main(string[] args)\n        {\n            Console.WriteLine(\"=== Meca500 Quick Start Example ===\\n\");\n            \n            TcpClient? client = null;\n            NetworkStream? stream = null;\n\n            try\n            {\n                // ========== STEP 1: CONNECT TO ROBOT ==========\n                Console.WriteLine($\"[1] Connecting to robot at {ROBOT_IP}:{ROBOT_PORT}...\");\n                \n                client = new TcpClient();\n                // Set timeout for connection attempt (5 seconds)\n                var result = client.BeginConnect(ROBOT_IP, ROBOT_PORT, null, null);\n                var success = result.AsyncWaitHandle.WaitOne(TimeSpan.FromSeconds(5));\n                \n                if (!success)\n                {\n                    throw new Exception(\"Connection timeout - check robot IP and network connection\");\n                }\n                \n                client.EndConnect(result);\n                stream = client.GetStream();\n                Console.WriteLine(\"    ✓ Connected successfully!\\n\");\n\n                // Give robot time to process connection\n                Thread.Sleep(500);\n\n                // ========== STEP 2: ACTIVATE ROBOT ==========\n                Console.WriteLine(\"[2] Activating robot...\");\n                SendCommand(stream, \"ActivateRobot\");\n                Console.WriteLine(\"    - Command sent, waiting for activation...\");\n                \n                // Wait for activation (typically takes 2-3 seconds)\n                Thread.Sleep(3000);\n                Console.WriteLine(\"    ✓ Robot activated!\\n\");\n\n                // ========== STEP 3: HOME ROBOT ==========\n                Console.WriteLine(\"[3] Homing robot...\");\n                SendCommand(stream, \"Home\");\n                Console.WriteLine(\"    - Homing in progress...\");\n                \n                // Wait for homing confirmation from robot\n                WaitForResponse(stream, \"[2002][Homing done.]\");\n                Console.WriteLine(\"    ✓ Robot homed!\\n\");\n\n                // ========== STEP 4: SET MOTION PARAMETERS ==========\n                Console.WriteLine(\"[4] Setting motion parameters...\");\n                \n                // Set joint velocity (percentage of max speed)\n                SendCommand(stream, $\"SetJointVel({MOVE_SPEED})\");\n                Thread.Sleep(100);\n                \n                // Set Cartesian linear velocity (percentage of max speed)  \n                SendCommand(stream, $\"SetCartLinVel({MOVE_SPEED})\");\n                Thread.Sleep(100);\n                \n                // Resume motion (required after activation)\n                SendCommand(stream, \"ResumeMotion\");\n                Thread.Sleep(100);\n                \n                Console.WriteLine(\"    ✓ Motion parameters set!\\n\");\n\n                // ========== STEP 5: PERFORM TEST MOVEMENTS ==========\n                Console.WriteLine(\"[5] Performing test movements...\");\n                Console.WriteLine(\"    WARNING: Robot will move! Ensure area is clear.\");\n                Console.WriteLine(\"    Press any key to continue...\");\n                Console.ReadKey();\n\n                // Get current position\n                Console.WriteLine(\"\\n    - Getting current position...\");\n                SendCommand(stream, \"GetPose\");\n                Thread.Sleep(500);  // In production, you'd read the response\n\n                // Move to safe position above home\n                Console.WriteLine($\"    - Moving to safe position (Z={SAFE_Z_HEIGHT}mm)...\");\n                SendCommand(stream, $\"MovePose(190, 0, {SAFE_Z_HEIGHT}, 0, 90, 0)\");\n                \n                // Wait for movement to complete\n                Thread.Sleep(5000);\n                Console.WriteLine(\"    ✓ Reached safe position\");\n\n                // Move in a square pattern (X-Y plane)\n                Console.WriteLine(\"    - Executing square pattern...\");\n                \n                // Corner 1\n                SendCommand(stream, $\"MovePose(100, 100, {SAFE_Z_HEIGHT}, 0, 90, 0)\");\n                Thread.Sleep(3000);\n                \n                // Corner 2  \n                SendCommand(stream, $\"MovePose(100, -100, {SAFE_Z_HEIGHT}, 0, 90, 0)\");\n                Thread.Sleep(5000);\n                \n                // Corner 3\n                SendCommand(stream, $\"MovePose(200, -100, {SAFE_Z_HEIGHT}, 0, 90, 0)\");\n                Thread.Sleep(3000);\n                \n                // Corner 4\n                SendCommand(stream, $\"MovePose(200, 100, {SAFE_Z_HEIGHT}, 0, 90, 0)\");\n                Thread.Sleep(3000);\n                \n                // Return to center\n                SendCommand(stream, $\"MovePose(190, 0, {SAFE_Z_HEIGHT}, 0, 90, 0)\");\n                Thread.Sleep(3000);\n                \n                Console.WriteLine(\"    ✓ Test movements complete!\\n\");\n\n                // ========== STEP 6: DEACTIVATE ROBOT ==========\n                Console.WriteLine(\"[6] Deactivating robot...\");\n                SendCommand(stream, \"DeactivateRobot\");\n                Thread.Sleep(2000);\n                Console.WriteLine(\"    ✓ Robot deactivated\\n\");\n\n                Console.WriteLine(\"=== Quick Start Example Complete! ===\");\n                Console.WriteLine(\"\\nNext steps:\");\n                Console.WriteLine(\"- Try modifying the movement positions\");\n                Console.WriteLine(\"- Add error checking with GetStatusRobot\");\n                Console.WriteLine(\"- Explore other commands in the Meca500 manual\");\n            }\n            catch (Exception ex)\n            {\n                Console.WriteLine($\"\\n!!! ERROR: {ex.Message}\");\n                Console.WriteLine(\"\\nTroubleshooting:\");\n                Console.WriteLine(\"1. Check robot IP address in configuration\");\n                Console.WriteLine(\"2. Ensure robot is powered on and connected to network\");\n                Console.WriteLine(\"3. Verify no other application is connected to robot\");\n                Console.WriteLine(\"4. Check robot is not in error state (red LED)\");\n            }\n            finally\n            {\n                // ========== CLEANUP ==========\n                Console.WriteLine(\"\\n[7] Closing connection...\");\n                \n                // Close network stream\n                if (stream != null)\n                {\n                    stream.Close();\n                    stream.Dispose();\n                }\n                \n                // Close TCP client\n                if (client != null)\n                {\n                    client.Close();\n                    client.Dispose();\n                }\n                \n                Console.WriteLine(\"    ✓ Connection closed\\n\");\n                Console.WriteLine(\"Press any key to exit...\");\n                Console.ReadKey();\n            }\n        }\n\n        /// <summary>\n        /// Sends a command to the robot\n        /// All Meca500 commands must be null-terminated\n        /// </summary>\n        static void SendCommand(NetworkStream stream, string command)\n        {\n            // Add null terminator to command\n            byte[] data = Encoding.ASCII.GetBytes(command + \"\\0\");\n            \n            // Send to robot\n            stream.Write(data, 0, data.Length);\n            stream.Flush();\n            \n            // Log what we sent\n            Console.WriteLine($\"    → Sent: {command}\");\n        }\n\n        /// <summary>\n        /// Waits for a specific response from the robot\n        /// </summary>\n        static void WaitForResponse(NetworkStream stream, string expectedResponse)\n        {\n            byte[] buffer = new byte[1024];\n            var responseBuilder = new StringBuilder();\n            \n            while (true)\n            {\n                if (stream.DataAvailable)\n                {\n                    int bytesRead = stream.Read(buffer, 0, buffer.Length);\n                    string response = Encoding.ASCII.GetString(buffer, 0, bytesRead);\n                    responseBuilder.Append(response);\n                    \n                    string fullResponse = responseBuilder.ToString();\n                    Console.WriteLine($\"    ← Received: {response.Trim()}\");\n                    \n                    if (fullResponse.Contains(expectedResponse))\n                    {\n                        break;\n                    }\n                }\n                \n                Thread.Sleep(100); // Small delay to avoid busy waiting\n            }\n        }\n    }\n}",
+    "span": [
+      6,
+      233
+    ],
+    "start_byte": 84,
+    "end_byte": 9566,
+    "node_type": "namespace_declaration",
+    "chunk_type": "other",
+    "language": "csharp",
+    "name": "Meca500Examples",
+    "qualified_name": "Meca500Examples",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 9482,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs",
+    "normalized_path": "sample-programs/C#/Meca500-Quickstart/Meca500-Quickstart.cs"
+  }
+]

@@ -1,0 +1,726 @@
+[
+  {
+    "snippet": "import robot as rb",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 23,
+    "end_byte": 41,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "robot as rb",
+    "qualified_name": "robot as rb",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 18,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "import robot_common",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 42,
+    "end_byte": 61,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "robot_common",
+    "qualified_name": "robot_common",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 19,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "from NetFT import Sensor",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 62,
+    "end_byte": 86,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Sensor",
+    "qualified_name": "Sensor",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 24,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "from PyQt5 import QtCore, QtGui, QtWidgets",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 87,
+    "end_byte": 129,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QtCore",
+    "qualified_name": "QtCore",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 42,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "from PyQt5.QtCore import pyqtSignal, Qt, QThread, QObject",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 130,
+    "end_byte": 187,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "pyqtSignal",
+    "qualified_name": "pyqtSignal",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 57,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 188,
+    "end_byte": 199,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "class ForceGuideWidget(QtWidgets.QWidget):\n    ForceJogStop = pyqtSignal()\n    \n    def __init__(self):\n        super().__init__()\n        # UI Stuff\n        self.setWindowTitle(\"Meca500\")\n        self.setWindowIcon(QtGui.QIcon(\"favicon.ico\"))\n        \n        #self.setMinimumWidth(350)\n        #self.setMinimumHeight(350)",
+    "span": [
+      10,
+      238
+    ],
+    "start_byte": 202,
+    "end_byte": 11500,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget",
+    "docstring": null,
+    "chunk_size_bytes": 323,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def __init__(self):\n        super().__init__()\n        # UI Stuff\n        self.setWindowTitle(\"Meca500\")\n        self.setWindowIcon(QtGui.QIcon(\"favicon.ico\"))\n        \n        #self.setMinimumWidth(350)\n        #self.setMinimumHeight(350)\n        self.showMaximized()\n\n        self.logo = QtWidgets.QLabel()\n        self.logo.setPixmap(QtGui.QPixmap('logo.png'))\n\n        self.robot_on = QtWidgets.QPushButton(self)\n        self.robot_on.setIcon(QtGui.QIcon('robot.png'))\n        self.robot_on.setMaximumWidth(100)\n        self.robot_on.setMaximumHeight(100)\n        self.robot_on.setIconSize(QtCore.QSize(75, 75))\n        self.robot_on.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,0); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        self.robot_on.setCheckable(True)\n        \n        self.enable = QtWidgets.QPushButton(self)\n        self.enable.setIcon(QtGui.QIcon('data-wave.png'))\n        self.enable.setMaximumWidth(100)\n        self.enable.setMaximumHeight(100)\n        self.enable.setIconSize(QtCore.QSize(90, 90))\n        self.enable.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,0); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        self.enable.setCheckable(True)\n        self.enable.setEnabled(False)\n\n        self.play = QtWidgets.QPushButton()\n        self.play.setIcon(QtGui.QIcon('gripper.png'))\n        self.play.setMaximumWidth(100)\n        self.play.setMaximumHeight(100)\n        self.play.setIconSize(QtCore.QSize(75, 75))\n        self.play.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,0); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        self.play.setCheckable(True)\n        self.play.setEnabled(False)\n\n        self.hbox = QtWidgets.QHBoxLayout()\n        self.hbox.addWidget(self.robot_on)\n        self.hbox.addWidget(self.enable)\n        self.hbox.addWidget(self.play)\n\n        self.vbox = QtWidgets.QVBoxLayout()\n        #self.vbox.addWidget(self.logo)\n        self.vbox.addLayout(self.hbox)\n        self.vbox.addSpacing(100)\n        self.setLayout(self.vbox)\n\n        self.slave_mode = False\n        self.slave_address = \"192.168.0.102\"\n\n        # Backend setup\n        self.master_robot = rb.Robot()\n        self.monitor_robot = rb.Robot()\n        self.slave_robot = rb.Robot()\n        self.sensor = Sensor(\"192.168.0.101\")\n\n        self.SensorFeedbackThread = None\n        self.SensorFeedbackWorker = None\n        self.sensorvalues = []\n        self.MasterControlThread = None\n        self.MasterControlWorker = None\n        self.MasterMonitoringThread = None\n        self.MasterMonitoringWorker = None\n        self.jointvalues = []\n        self.SlaveControlThread = None\n        self.SlaveControlWorker = None\n\n        # Connect Buttons\n        self.robot_on.clicked.connect(self.on_robot)\n        self.enable.clicked.connect(self.on_enable)\n        self.play.clicked.connect(self.on_gripper)",
+    "span": [
+      13,
+      86
+    ],
+    "start_byte": 286,
+    "end_byte": 3370,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 3084,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def closeEvent(self, event):\n        if self.slave_mode:\n            self.slave_robot.Disconnect()\n        self.master_robot.Disconnect()\n        event.accept()",
+    "span": [
+      88,
+      92
+    ],
+    "start_byte": 3376,
+    "end_byte": 3536,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "closeEvent",
+    "signature": "closeEvent(self, event)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.closeEvent",
+    "docstring": null,
+    "chunk_size_bytes": 160,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def on_robot(self):\n        if self.robot_on.isChecked():\n            self.enable.setEnabled(True)\n            self.robot_on.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,125); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n            try:\n                self.master_robot.Connect()\n                self.master_robot.SetTRF(0, 0, 0, 0, 0, -22)\n                self.master_robot.SetVelTimeout(0.10)\n            except robot_common.CommunicationError:\n                self.robot_on.setChecked(False)\n                self.enable.setEnabled(False)\n                print(\"Connection Error Master\")\n                self.robot_on.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,0); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n                return\n            print(\"Master Connected\")\n            self.master_robot.ActivateAndHome()\n            if self.slave_mode:\n                try:\n                    self.slave_robot.Connect(self.slave_address)\n                except robot_common.CommunicationError:\n                    self.robot_on.setChecked(False)\n                    self.enable.setEnabled(False)\n                    self.robot_on.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,0); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n                    self.master_robot.Disconnect()\n                    print(\"Connection Error Slave\")\n                    return\n                print(\"Slave Connected\")\n                self.play.setEnabled(True)\n                self.slave_robot.ActivateAndHome()\n        else:\n            if self.slave_mode:\n                self.slave_robot.Disconnect()\n                self.monitor_robot.Disconnect()\n                self.play.setEnabled(False)\n            self.enable.setEnabled(False)\n            self.robot_on.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,0); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n            self.master_robot.Disconnect()",
+    "span": [
+      94,
+      130
+    ],
+    "start_byte": 3542,
+    "end_byte": 5764,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_robot",
+    "signature": "on_robot(self)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.on_robot",
+    "docstring": null,
+    "chunk_size_bytes": 2222,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def on_enable(self):\n        if self.enable.isChecked():\n            self.robot_on.setEnabled(False)\n            self.enable.setStyleSheet(\n                \"margin: 1px; padding: 7px; background-color:rgba(125,125,125,125); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n            # Move robot to a safe position\n            if self.slave_mode:\n                self.slave_robot.ClearMotion()\n                self.slave_robot.ResetError()\n                self.slave_robot.ResumeMotion()\n            self.master_robot.ClearMotion()\n            self.master_robot.ResetError()\n            self.master_robot.ResumeMotion()\n            self.master_robot.MoveJoints(0, 10, 15, 0, 65, 0)\n            time.sleep(2)\n            # Start Acquisition Thread\n            self.sensor.setBias()\n            self.sensor.startStreaming()\n            self.SensorFeedbackThread = QThread()\n            self.SensorFeedbackWorker = SensorFeedbackWorker(self.sensor)\n            self.SensorFeedbackWorker.moveToThread(self.SensorFeedbackThread)\n            self.SensorFeedbackThread.started.connect(self.SensorFeedbackWorker.run)\n            self.SensorFeedbackWorker.finished.connect(self.SensorFeedbackThread.quit)\n            self.SensorFeedbackWorker.finished.connect(self.SensorFeedbackWorker.deleteLater)\n            self.SensorFeedbackThread.finished.connect(self.SensorFeedbackThread.deleteLater)\n            self.SensorFeedbackWorker.sensorvalue.connect(self.update_sensor_values)\n            self.SensorFeedbackThread.start()\n\n            if self.slave_mode:\n                self.start_monitoring_thread()\n                self.start_jog_thread()\n                self.start_slave_thread()\n            else:\n                self.start_jog_thread()\n        else:\n            self.robot_on.setEnabled(True)\n            self.enable.setStyleSheet(\n                \"margin: 1px; padding: 7px; background-color:rgba(125,125,125,0); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n            if self.slave_mode:\n                self.SlaveControlWorker.stopSignal()\n                self.MasterMonitoringWorker.stopSignal()\n            self.MasterControlWorker.stopSignal()\n            self.SensorFeedbackWorker.stopSignal()\n            self.sensor.stopStreaming()",
+    "span": [
+      132,
+      175
+    ],
+    "start_byte": 5770,
+    "end_byte": 8116,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_enable",
+    "signature": "on_enable(self)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.on_enable",
+    "docstring": null,
+    "chunk_size_bytes": 2346,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def on_gripper(self):\n        if self.play.isChecked():\n            self.slave_robot.GripperClose()\n            self.play.setStyleSheet(\n                \"margin: 1px; padding: 7px; background-color:rgba(125,125,125,125); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        else:\n            self.slave_robot.GripperOpen()\n            self.play.setStyleSheet(\n                \"margin: 1px; padding: 7px; background-color:rgba(125,125,125,0); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")",
+    "span": [
+      177,
+      185
+    ],
+    "start_byte": 8122,
+    "end_byte": 8716,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_gripper",
+    "signature": "on_gripper(self)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.on_gripper",
+    "docstring": null,
+    "chunk_size_bytes": 594,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def start_jog_thread(self):\n        self.MasterControlThread = QThread()\n        self.MasterControlWorker = MasterControlWorker(self.master_robot)\n        self.MasterControlWorker.moveToThread(self.MasterControlThread)\n        self.MasterControlThread.started.connect(self.MasterControlWorker.run)\n        self.MasterControlWorker.finished.connect(self.MasterControlThread.quit)\n        self.MasterControlWorker.finished.connect(self.MasterControlWorker.deleteLater)\n        self.MasterControlThread.finished.connect(self.MasterControlThread.deleteLater)\n        self.MasterControlThread.start()",
+    "span": [
+      187,
+      195
+    ],
+    "start_byte": 8722,
+    "end_byte": 9317,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "start_jog_thread",
+    "signature": "start_jog_thread(self)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.start_jog_thread",
+    "docstring": null,
+    "chunk_size_bytes": 595,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def start_monitoring_thread(self):\n        self.MasterMonitoringThread = QThread()\n        self.MasterMonitoringWorker = RobotFeedbackWorker(self.master_robot)\n        self.MasterMonitoringWorker.moveToThread(self.MasterMonitoringThread)\n        self.MasterMonitoringThread.started.connect(self.MasterMonitoringWorker.run)\n        self.MasterMonitoringWorker.finished.connect(self.MasterMonitoringThread.quit)\n        self.MasterMonitoringWorker.finished.connect(self.MasterMonitoringWorker.deleteLater)\n        self.MasterMonitoringThread.finished.connect(self.MasterMonitoringThread.deleteLater)\n        self.MasterMonitoringWorker.jointpos.connect(self.update_joint_pos)\n        self.MasterMonitoringThread.start()",
+    "span": [
+      197,
+      206
+    ],
+    "start_byte": 9323,
+    "end_byte": 10040,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "start_monitoring_thread",
+    "signature": "start_monitoring_thread(self)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.start_monitoring_thread",
+    "docstring": null,
+    "chunk_size_bytes": 717,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def start_slave_thread(self):\n        self.jointvalues = self.master_robot.GetJoints()\n        self.slave_robot.SetJointVel(20)\n        self.slave_robot.MoveJoints(self.jointvalues[0],\n                                    self.jointvalues[1],\n                                    self.jointvalues[2],\n                                    self.jointvalues[3],\n                                    self.jointvalues[4],\n                                    self.jointvalues[5])\n        time.sleep(2)\n        print(\"Create Slave Thread\")\n        self.SlaveControlThread = QThread()\n        self.SlaveControlWorker = SlaveControlWorker(self.slave_robot)\n        self.SlaveControlWorker.updatetargetpos(self.jointvalues)\n        self.SlaveControlWorker.moveToThread(self.SlaveControlThread)\n        self.SlaveControlThread.started.connect(self.SlaveControlWorker.run)\n        self.SlaveControlWorker.finished.connect(self.SlaveControlThread.quit)\n        self.SlaveControlWorker.finished.connect(self.SlaveControlWorker.deleteLater)\n        self.SlaveControlThread.finished.connect(self.SlaveControlThread.deleteLater)\n        self.SlaveControlThread.start()",
+    "span": [
+      208,
+      227
+    ],
+    "start_byte": 10046,
+    "end_byte": 11193,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "start_slave_thread",
+    "signature": "start_slave_thread(self)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.start_slave_thread",
+    "docstring": null,
+    "chunk_size_bytes": 1147,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def on_replay(self):\n        pass",
+    "span": [
+      229,
+      230
+    ],
+    "start_byte": 11199,
+    "end_byte": 11232,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_replay",
+    "signature": "on_replay(self)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.on_replay",
+    "docstring": null,
+    "chunk_size_bytes": 33,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def update_sensor_values(self, values):\n        self.sensorvalues = values\n        self.MasterControlWorker.updatesensorval(values)",
+    "span": [
+      232,
+      234
+    ],
+    "start_byte": 11238,
+    "end_byte": 11369,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "update_sensor_values",
+    "signature": "update_sensor_values(self, values)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.update_sensor_values",
+    "docstring": null,
+    "chunk_size_bytes": 131,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def update_joint_pos(self, values):\n        self.jointvalues = values\n        self.SlaveControlWorker.updatetargetpos(values)",
+    "span": [
+      236,
+      238
+    ],
+    "start_byte": 11375,
+    "end_byte": 11500,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "update_joint_pos",
+    "signature": "update_joint_pos(self, values)",
+    "parent_class": "ForceGuideWidget",
+    "qualified_name": "ForceGuideWidget.update_joint_pos",
+    "docstring": null,
+    "chunk_size_bytes": 125,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "class RobotFeedbackWorker(QObject):\n    finished = pyqtSignal()\n    jointpos = pyqtSignal(list)\n\n    def __init__(self, robot):\n        super().__init__()\n        self.robot = robot\n        self.runFlag = True\n\n    def run(self):\n        print(\"Starting Master Monitoring\")",
+    "span": [
+      240,
+      258
+    ],
+    "start_byte": 11502,
+    "end_byte": 11996,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RobotFeedbackWorker",
+    "qualified_name": "RobotFeedbackWorker",
+    "docstring": null,
+    "chunk_size_bytes": 273,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def __init__(self, robot):\n        super().__init__()\n        self.robot = robot\n        self.runFlag = True",
+    "span": [
+      244,
+      247
+    ],
+    "start_byte": 11603,
+    "end_byte": 11711,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot)",
+    "parent_class": "RobotFeedbackWorker",
+    "qualified_name": "RobotFeedbackWorker.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 108,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def run(self):\n        print(\"Starting Master Monitoring\")\n        while self.runFlag:\n            vals = self.robot.GetJoints()\n            self.jointpos.emit(vals)\n            time.sleep(0.01)\n        self.finished.emit()",
+    "span": [
+      249,
+      255
+    ],
+    "start_byte": 11717,
+    "end_byte": 11940,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run",
+    "signature": "run(self)",
+    "parent_class": "RobotFeedbackWorker",
+    "qualified_name": "RobotFeedbackWorker.run",
+    "docstring": null,
+    "chunk_size_bytes": 223,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def stopSignal(self):\n        self.runFlag = False",
+    "span": [
+      257,
+      258
+    ],
+    "start_byte": 11946,
+    "end_byte": 11996,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "stopSignal",
+    "signature": "stopSignal(self)",
+    "parent_class": "RobotFeedbackWorker",
+    "qualified_name": "RobotFeedbackWorker.stopSignal",
+    "docstring": null,
+    "chunk_size_bytes": 50,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "class SensorFeedbackWorker(QObject):\n    finished = pyqtSignal()\n    sensorvalue = pyqtSignal(list)\n\n    def __init__(self, sensor):\n        super().__init__()\n        print(\"Creating Sensor\")\n        self.sensor = sensor\n        self.runFlag = True\n        self.prev_2_vals = [0]*6\n        self.prev_1_vals = [0]*6",
+    "span": [
+      261,
+      300
+    ],
+    "start_byte": 11999,
+    "end_byte": 13175,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "SensorFeedbackWorker",
+    "qualified_name": "SensorFeedbackWorker",
+    "docstring": null,
+    "chunk_size_bytes": 315,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def __init__(self, sensor):\n        super().__init__()\n        print(\"Creating Sensor\")\n        self.sensor = sensor\n        self.runFlag = True\n        self.prev_2_vals = [0]*6\n        self.prev_1_vals = [0]*6",
+    "span": [
+      265,
+      271
+    ],
+    "start_byte": 12104,
+    "end_byte": 12314,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, sensor)",
+    "parent_class": "SensorFeedbackWorker",
+    "qualified_name": "SensorFeedbackWorker.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 210,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def run(self):\n        print(\"Running Sensor\")\n        while self.runFlag:\n            vals = self.sensor.measurement()\n            l = 0.045\n            Fay = -vals[3]/l\n            Fax = vals[4]/l\n            May = -(vals[0]-Fax)*l\n            Max = (vals[1]-Fay)*l\n            vals[0] = Fax\n            vals[1] = Fay\n            vals[3] = Max\n            vals[4] = May\n            vals = self.norm_force_data(vals)\n            self.sensorvalue.emit(vals)\n        print(\"Sensor Finished\")\n        self.finished.emit()",
+    "span": [
+      273,
+      289
+    ],
+    "start_byte": 12320,
+    "end_byte": 12839,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run",
+    "signature": "run(self)",
+    "parent_class": "SensorFeedbackWorker",
+    "qualified_name": "SensorFeedbackWorker.run",
+    "docstring": null,
+    "chunk_size_bytes": 519,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def norm_force_data(self, val):\n        norm_val = [val[0] / 40, val[1] / 40, val[2] / 120, val[3], val[4], val[5]]\n        for i in range(0, 6):\n            if abs(norm_val[i]) < 0.01:\n                norm_val[i] = 0\n        return norm_val",
+    "span": [
+      291,
+      296
+    ],
+    "start_byte": 12845,
+    "end_byte": 13086,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "norm_force_data",
+    "signature": "norm_force_data(self, val)",
+    "parent_class": "SensorFeedbackWorker",
+    "qualified_name": "SensorFeedbackWorker.norm_force_data",
+    "docstring": null,
+    "chunk_size_bytes": 241,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def stopSignal(self):\n        print(\"Stopping Sensor\")\n        self.runFlag = False",
+    "span": [
+      298,
+      300
+    ],
+    "start_byte": 13092,
+    "end_byte": 13175,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "stopSignal",
+    "signature": "stopSignal(self)",
+    "parent_class": "SensorFeedbackWorker",
+    "qualified_name": "SensorFeedbackWorker.stopSignal",
+    "docstring": null,
+    "chunk_size_bytes": 83,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "class MasterControlWorker(QObject):\n    finished = pyqtSignal()\n\n    def __init__(self, robot):\n        super().__init__()\n        self.robot = robot\n        self.sensorvals = [0] * 6\n        self.sensorval_prev = [0] * 6\n        self.runFlag = True\n        self.d = 100\n",
+    "span": [
+      303,
+      336
+    ],
+    "start_byte": 13178,
+    "end_byte": 14562,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MasterControlWorker",
+    "qualified_name": "MasterControlWorker",
+    "docstring": null,
+    "chunk_size_bytes": 271,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def __init__(self, robot):\n        super().__init__()\n        self.robot = robot\n        self.sensorvals = [0] * 6\n        self.sensorval_prev = [0] * 6\n        self.runFlag = True\n        self.d = 100",
+    "span": [
+      306,
+      312
+    ],
+    "start_byte": 13247,
+    "end_byte": 13448,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot)",
+    "parent_class": "MasterControlWorker",
+    "qualified_name": "MasterControlWorker.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 201,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def run(self):\n        print(\"Starting Master Control\")\n        max_vel = 500\n        max_rot = 250\n        self.robot.ResumeMotion()\n        while self.runFlag:\n            cmd = [max_vel*self.sensorvals[0] - self.d*self.sensorvals[0]-self.sensorval_prev[0],\n                   max_vel*self.sensorvals[1] - self.d*self.sensorvals[1]-self.sensorval_prev[1],\n                   max_vel*self.sensorvals[2] - self.d*self.sensorvals[2]-self.sensorval_prev[2],\n                   max_rot*self.sensorvals[3] - self.d*self.sensorvals[3]-self.sensorval_prev[3],\n                   max_rot*self.sensorvals[4] - self.d*self.sensorvals[4]-self.sensorval_prev[4],\n                   max_rot*self.sensorvals[5] - self.d*self.sensorvals[5]-self.sensorval_prev[5]]\n            self.sensorval_prev = self.sensorvals\n            self.robot.MoveLinVelTRF(cmd[0], cmd[1], cmd[2], cmd[3], cmd[4], cmd[5])\n            time.sleep(0.004)\n        print(\"Finishing Master Control\")\n        self.finished.emit()",
+    "span": [
+      314,
+      330
+    ],
+    "start_byte": 13454,
+    "end_byte": 14439,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run",
+    "signature": "run(self)",
+    "parent_class": "MasterControlWorker",
+    "qualified_name": "MasterControlWorker.run",
+    "docstring": null,
+    "chunk_size_bytes": 985,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def updatesensorval(self, val):\n        self.sensorvals = val",
+    "span": [
+      332,
+      333
+    ],
+    "start_byte": 14445,
+    "end_byte": 14506,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "updatesensorval",
+    "signature": "updatesensorval(self, val)",
+    "parent_class": "MasterControlWorker",
+    "qualified_name": "MasterControlWorker.updatesensorval",
+    "docstring": null,
+    "chunk_size_bytes": 61,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def stopSignal(self):\n        self.runFlag = False",
+    "span": [
+      335,
+      336
+    ],
+    "start_byte": 14512,
+    "end_byte": 14562,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "stopSignal",
+    "signature": "stopSignal(self)",
+    "parent_class": "MasterControlWorker",
+    "qualified_name": "MasterControlWorker.stopSignal",
+    "docstring": null,
+    "chunk_size_bytes": 50,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "class SlaveControlWorker(QObject):\n    finished = pyqtSignal()\n\n    def __init__(self, robot):\n        super().__init__()\n        self.robot = robot\n        self.targetpos = []\n        self.runFlag = True\n\n    def run(self):\n        print(\"Starting Slave Control\")",
+    "span": [
+      339,
+      367
+    ],
+    "start_byte": 14565,
+    "end_byte": 15465,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "SlaveControlWorker",
+    "qualified_name": "SlaveControlWorker",
+    "docstring": null,
+    "chunk_size_bytes": 264,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def __init__(self, robot):\n        super().__init__()\n        self.robot = robot\n        self.targetpos = []\n        self.runFlag = True",
+    "span": [
+      342,
+      346
+    ],
+    "start_byte": 14633,
+    "end_byte": 14769,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot)",
+    "parent_class": "SlaveControlWorker",
+    "qualified_name": "SlaveControlWorker.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 136,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def run(self):\n        print(\"Starting Slave Control\")\n        self.robot.ResumeMotion()\n        self.robot.SetJointAcc(30)\n        self.robot.SetJointVel(35)\n        while self.runFlag:\n            self.robot.MoveJoints(self.targetpos[0],\n                                  self.targetpos[1],\n                                  self.targetpos[2],\n                                  self.targetpos[3],\n                                  self.targetpos[4],\n                                  self.targetpos[5])\n            time.sleep(0.03)\n        self.finished.emit()",
+    "span": [
+      348,
+      361
+    ],
+    "start_byte": 14775,
+    "end_byte": 15337,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run",
+    "signature": "run(self)",
+    "parent_class": "SlaveControlWorker",
+    "qualified_name": "SlaveControlWorker.run",
+    "docstring": null,
+    "chunk_size_bytes": 562,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def updatetargetpos(self, values):\n        self.targetpos = values",
+    "span": [
+      363,
+      364
+    ],
+    "start_byte": 15343,
+    "end_byte": 15409,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "updatetargetpos",
+    "signature": "updatetargetpos(self, values)",
+    "parent_class": "SlaveControlWorker",
+    "qualified_name": "SlaveControlWorker.updatetargetpos",
+    "docstring": null,
+    "chunk_size_bytes": 66,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  },
+  {
+    "snippet": "def stopSignal(self):\n        self.runFlag = False",
+    "span": [
+      366,
+      367
+    ],
+    "start_byte": 15415,
+    "end_byte": 15465,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "stopSignal",
+    "signature": "stopSignal(self)",
+    "parent_class": "SlaveControlWorker",
+    "qualified_name": "SlaveControlWorker.stopSignal",
+    "docstring": null,
+    "chunk_size_bytes": 50,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/HandGuiding/ForceControl.py",
+    "normalized_path": "sample-programs/Python/HandGuiding/ForceControl.py"
+  }
+]

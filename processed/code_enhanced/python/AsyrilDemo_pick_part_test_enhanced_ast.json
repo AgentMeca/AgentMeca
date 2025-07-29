@@ -1,0 +1,59 @@
+[
+  {
+    "snippet": "from eyeplus import EyePlusClient",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 33,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "EyePlusClient",
+    "qualified_name": "EyePlusClient",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 33,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/pick_part_test.py",
+    "normalized_path": "AsyrilDemo/pick_part_test.py"
+  },
+  {
+    "snippet": "from mecademicpy.robot import Robot",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 34,
+    "end_byte": 69,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Robot",
+    "qualified_name": "Robot",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 35,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/pick_part_test.py",
+    "normalized_path": "AsyrilDemo/pick_part_test.py"
+  },
+  {
+    "snippet": "from positions import *",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 70,
+    "end_byte": 93,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 23,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/pick_part_test.py",
+    "normalized_path": "AsyrilDemo/pick_part_test.py"
+  }
+]

@@ -1,0 +1,1083 @@
+[
+  {
+    "snippet": "import MainUI",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 13,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "MainUI",
+    "qualified_name": "MainUI",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 13,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "from PyQt5 import QtWidgets, QtGui",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 14,
+    "end_byte": 48,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QtWidgets",
+    "qualified_name": "QtWidgets",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 34,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "from PyQt5.QtCore import QObject, QThread, pyqtSignal",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 49,
+    "end_byte": 102,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QObject",
+    "qualified_name": "QObject",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 53,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 103,
+    "end_byte": 125,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sleep",
+    "qualified_name": "sleep",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 22,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "import joystick",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 126,
+    "end_byte": 141,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "joystick",
+    "qualified_name": "joystick",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 15,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "import parsdict",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 142,
+    "end_byte": 157,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "parsdict",
+    "qualified_name": "parsdict",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 15,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "from functools import partial",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 158,
+    "end_byte": 187,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "partial",
+    "qualified_name": "partial",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 29,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "import robot",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 189,
+    "end_byte": 201,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "robot",
+    "qualified_name": "robot",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 12,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "import MOXAE1212 as mx",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 202,
+    "end_byte": 224,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "MOXAE1212 as mx",
+    "qualified_name": "MOXAE1212 as mx",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 22,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "class Application(QtWidgets.QMainWindow, MainUI.Ui_MainWindow):\n    def __init__(self, *args, **kwargs):\n        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)\n        self.setupUi(self)\n        self.setFixedSize(1114, 730)\n\n        # Display UI setup\n        self.setWindowTitle(\"Mecademic Robot\")\n        self.setWindowIcon(QtGui.QIcon(\"robot_icon.png\"))\n        self.tcpPose.set_label(['x', 'y', 'z', 'alpha', 'beta', 'gamma'])\n        self.jointPose.set_label(['J1', 'J2', 'J3', 'J4', 'J5', 'J6'])",
+    "span": [
+      13,
+      398
+    ],
+    "start_byte": 227,
+    "end_byte": 17551,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Application",
+    "qualified_name": "Application",
+    "docstring": null,
+    "chunk_size_bytes": 508,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def __init__(self, *args, **kwargs):\n        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)\n        self.setupUi(self)\n        self.setFixedSize(1114, 730)\n\n        # Display UI setup\n        self.setWindowTitle(\"Mecademic Robot\")\n        self.setWindowIcon(QtGui.QIcon(\"robot_icon.png\"))\n        self.tcpPose.set_label(['x', 'y', 'z', 'alpha', 'beta', 'gamma'])\n        self.jointPose.set_label(['J1', 'J2', 'J3', 'J4', 'J5', 'J6'])\n        self.disableUI()\n        self.errorLabel.setStyleSheet(\"background-color:rgb(200,200,200)\")\n\n        # Build backend\n        self.robot = robot.Robot()\n        self.moxa = mx.MoxaE1212()\n        self.monitorThread = QThread()\n        self.monitorWorker = RobotMonitoring(self.robot)\n        self.moxaThread = QThread()\n        self.moxaWorker = Moxa_monitoring(self.moxa)\n        self.jogMode = None\n        self.jogVelocity = None\n        self.jointp = None\n        self.tcpp = None\n        self.moxa_state = None\n\n        # Connect Buttons\n        self.pushButtonConnect.clicked.connect(self.on_connect)\n        self.pushButtonDisconnect.clicked.connect(self.on_disconnect)\n        self.pushButtonUnpause.clicked.connect(self.on_unpause)\n        self.pushButtonActivate.clicked.connect(self.on_activate)\n        self.pushButtonHome.clicked.connect(self.on_home)\n        self.pushButtonReset.clicked.connect(self.on_reset_error)\n        self.pushButtonTest.clicked.connect(self.on_get_robot_state)\n        # self.pushButtonTest.clicked.connect(self.on_test_move)\n        self.pushButtonStart.clicked.connect(self.on_play)\n        self.pushButtonGenerate.clicked.connect(self.on_generate_script)\n\n        self.jogWindow.delta.connect(self.on_jog_button)\n        self.jogWindow.mode.connect(self.on_get_jog_mode)\n        self.jogWindow.vel.connect(self.on_get_jog_velocity)\n        self.jogWindow.joymode.clicked.connect(self.on_joy_mode)\n\n        self.teachWindow.but1.clicked.connect(self.on_send_command)\n        self.teachWindow.but2.clicked.connect(self.on_insert_movejoints)\n        self.teachWindow.but3.clicked.connect(self.on_insert_movepose)\n        self.teachWindow.but4.clicked.connect(self.on_insert_movelin)\n\n        self.moxaWidget.out_0.clicked.connect(lambda ignore, out=0: self.on_click_output(out))\n        self.moxaWidget.out_1.clicked.connect(lambda ignore, out=1: self.on_click_output(out))\n        self.moxaWidget.out_2.clicked.connect(lambda ignore, out=2: self.on_click_output(out))\n        self.moxaWidget.out_3.clicked.connect(lambda ignore, out=3: self.on_click_output(out))\n        self.moxaWidget.out_4.clicked.connect(lambda ignore, out=4: self.on_click_output(out))\n        self.moxaWidget.out_5.clicked.connect(lambda ignore, out=5: self.on_click_output(out))\n        self.moxaWidget.out_6.clicked.connect(lambda ignore, out=6: self.on_click_output(out))\n        self.moxaWidget.out_7.clicked.connect(lambda ignore, out=7: self.on_click_output(out))\n\n        # Connect Monitoring\n        self.monitorWorker.joints.connect(self.updateJointPose)\n        self.monitorWorker.pose.connect(self.updateTCPPose)\n        self.monitorWorker.error_state.connect(self.updateErrorState)",
+    "span": [
+      14,
+      74
+    ],
+    "start_byte": 295,
+    "end_byte": 3449,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, *args, **kwargs)",
+    "parent_class": "Application",
+    "qualified_name": "Application.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 3154,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def closeEvent(self, event):\n        self.monitorWorker.dcFlag()\n        self.moxaWorker.dcFlag()\n        event.accept()",
+    "span": [
+      76,
+      79
+    ],
+    "start_byte": 3455,
+    "end_byte": 3575,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "closeEvent",
+    "signature": "closeEvent(self, event)",
+    "parent_class": "Application",
+    "qualified_name": "Application.closeEvent",
+    "docstring": null,
+    "chunk_size_bytes": 120,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_connect(self):\n        try:\n            self.robot.Connect()\n        except:\n            error_dialog = QtWidgets.QErrorMessage(self)\n            error_dialog.setWindowTitle(\"Connection Error\")\n            error_dialog.showMessage(\"Could not connect to the robot\")\n            return\n        if self.useMoxa.isChecked():\n            r = self.moxa.connect(self.moxaIP.text())\n            if not r:\n                error_dialog = QtWidgets.QErrorMessage(self)\n                error_dialog.setWindowTitle(\"Connection Error\")\n                error_dialog.showMessage(\"Could not connect to the moxa\")\n                self.robot.Disconnect()\n                return\n        self.pushButtonConnect.setStyleSheet(\"background-color:rgb(0,255,0)\")\n        sleep(0.25)\n        self.enableUI()\n\n        # Start Monitoring\n        if not self.monitorThread.isRunning():\n            self.monitorWorker.moveToThread(self.monitorThread)\n            self.monitorThread.started.connect(self.monitorWorker.run)\n            self.monitorWorker.finished.connect(self.monitorThread.quit)\n            self.monitorWorker.finished.connect(self.monitorWorker.deleteLater)\n            self.monitorThread.finished.connect(self.monitorThread.deleteLater)\n            self.monitorThread.start()\n        else:\n            print(\"Thread already running\")\n            self.monitorWorker.dcPause()\n        if self.useMoxa.isChecked():\n            if not self.moxaThread.isRunning():\n                self.moxaWorker.moveToThread(self.moxaThread)\n                self.moxaThread.started.connect(self.moxaWorker.run)\n                self.moxaWorker.finished.connect(self.moxaThread.quit)\n                self.moxaWorker.finished.connect(self.moxaWorker.deleteLater)\n                self.moxaThread.finished.connect(self.moxaThread.deleteLater)\n                self.moxaWorker.moxa_state.connect(self.updateMoxa)\n                self.moxaThread.start()\n            else:\n                self.moxaWorker.pFlag()",
+    "span": [
+      81,
+      122
+    ],
+    "start_byte": 3581,
+    "end_byte": 5558,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_connect",
+    "signature": "on_connect(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_connect",
+    "docstring": null,
+    "chunk_size_bytes": 1977,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_disconnect(self):\n        try:\n            self.robot.Disconnect()\n        except:\n            print(\"Error\")\n        self.pushButtonConnect.setStyleSheet(\"background-color:rgb(127,127,127)\")\n        self.monitorWorker.dcPause()\n        if self.useMoxa.isChecked():\n            self.moxaWorker.pFlag()\n        self.disableUI()",
+    "span": [
+      124,
+      133
+    ],
+    "start_byte": 5564,
+    "end_byte": 5897,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_disconnect",
+    "signature": "on_disconnect(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_disconnect",
+    "docstring": null,
+    "chunk_size_bytes": 333,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_activate(self):\n        self.robot.ActivateRobot()",
+    "span": [
+      135,
+      136
+    ],
+    "start_byte": 5903,
+    "end_byte": 5960,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_activate",
+    "signature": "on_activate(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_activate",
+    "docstring": null,
+    "chunk_size_bytes": 57,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_home(self):\n        self.robot.Home()",
+    "span": [
+      138,
+      139
+    ],
+    "start_byte": 5966,
+    "end_byte": 6010,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_home",
+    "signature": "on_home(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_home",
+    "docstring": null,
+    "chunk_size_bytes": 44,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_unpause(self):\n        self.robot.ResumeMotion()",
+    "span": [
+      141,
+      142
+    ],
+    "start_byte": 6016,
+    "end_byte": 6071,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_unpause",
+    "signature": "on_unpause(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_unpause",
+    "docstring": null,
+    "chunk_size_bytes": 55,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_reset_error(self):\n        self.robot.ResetError()",
+    "span": [
+      144,
+      145
+    ],
+    "start_byte": 6077,
+    "end_byte": 6134,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_reset_error",
+    "signature": "on_reset_error(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_reset_error",
+    "docstring": null,
+    "chunk_size_bytes": 57,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_get_robot_state(self):\n        print(self.robot.GetRobotState().error_status)",
+    "span": [
+      147,
+      148
+    ],
+    "start_byte": 6140,
+    "end_byte": 6224,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_get_robot_state",
+    "signature": "on_get_robot_state(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_get_robot_state",
+    "docstring": null,
+    "chunk_size_bytes": 84,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def updateJointPose(self, joints):\n        self.jointPose.update(joints)\n        self.jointp = joints",
+    "span": [
+      150,
+      152
+    ],
+    "start_byte": 6230,
+    "end_byte": 6331,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "updateJointPose",
+    "signature": "updateJointPose(self, joints)",
+    "parent_class": "Application",
+    "qualified_name": "Application.updateJointPose",
+    "docstring": null,
+    "chunk_size_bytes": 101,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def updateTCPPose(self, pose):\n        self.tcpPose.update(pose)\n        self.tcpp = pose",
+    "span": [
+      154,
+      156
+    ],
+    "start_byte": 6337,
+    "end_byte": 6426,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "updateTCPPose",
+    "signature": "updateTCPPose(self, pose)",
+    "parent_class": "Application",
+    "qualified_name": "Application.updateTCPPose",
+    "docstring": null,
+    "chunk_size_bytes": 89,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def updateErrorState(self, state):\n        if state:\n            self.errorLabel.setStyleSheet(\"background-color:rgb(255,0,0)\")\n            self.errorLabel.setText(\"Error\")\n        else:\n            self.errorLabel.setStyleSheet(\"background-color:rgb(0,255,0)\")\n            self.errorLabel.setText(\"No Error\")",
+    "span": [
+      158,
+      164
+    ],
+    "start_byte": 6432,
+    "end_byte": 6741,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "updateErrorState",
+    "signature": "updateErrorState(self, state)",
+    "parent_class": "Application",
+    "qualified_name": "Application.updateErrorState",
+    "docstring": null,
+    "chunk_size_bytes": 309,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def updateMoxa(self, state):\n        self.moxa_state = state\n        self.moxaWidget.update_input(state)",
+    "span": [
+      166,
+      168
+    ],
+    "start_byte": 6747,
+    "end_byte": 6851,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "updateMoxa",
+    "signature": "updateMoxa(self, state)",
+    "parent_class": "Application",
+    "qualified_name": "Application.updateMoxa",
+    "docstring": null,
+    "chunk_size_bytes": 104,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_click_output(self, out):\n        self.moxaWorker.pFlag()\n        if out == 0:\n            if self.moxaWidget.out_0.isChecked():\n                self.moxa.setsingleoutput(0, True)\n            else:\n                self.moxa.setsingleoutput(0, False)\n        if out == 1:\n            if self.moxaWidget.out_1.isChecked():\n                self.moxa.setsingleoutput(1, True)\n            else:\n                self.moxa.setsingleoutput(1, False)\n        if out == 2:\n            if self.moxaWidget.out_2.isChecked():\n                self.moxa.setsingleoutput(2, True)\n            else:\n                self.moxa.setsingleoutput(2, False)\n        if out == 3:\n            if self.moxaWidget.out_3.isChecked():\n                self.moxa.setsingleoutput(3, True)\n            else:\n                self.moxa.setsingleoutput(3, False)\n        if out == 4:\n            if self.moxaWidget.out_4.isChecked():\n                self.moxa.setsingleoutput(4, True)\n            else:\n                self.moxa.setsingleoutput(4, False)\n        if out == 5:\n            if self.moxaWidget.out_5.isChecked():\n                self.moxa.setsingleoutput(5, True)\n            else:\n                self.moxa.setsingleoutput(5, False)\n        if out == 6:\n            if self.moxaWidget.out_6.isChecked():\n                self.moxa.setsingleoutput(6, True)\n            else:\n                self.moxa.setsingleoutput(6, False)\n        if out == 7:\n            if self.moxaWidget.out_7.isChecked():\n                self.moxa.setsingleoutput(7, True)\n            else:\n                self.moxa.setsingleoutput(7, False)\n        self.moxaWorker.pFlag()",
+    "span": [
+      170,
+      212
+    ],
+    "start_byte": 6857,
+    "end_byte": 8488,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_click_output",
+    "signature": "on_click_output(self, out)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_click_output",
+    "docstring": null,
+    "chunk_size_bytes": 1631,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_play(self):\n        self.disableUI()\n        if self.jogWindow.joymode.isChecked():\n            self.joyWorker.stoptrig()\n            self.jogWindow.joymode.setChecked(False)\n        self.jogWindow.jog.setChecked(False)\n        self.interpreterThread = QThread()\n        text = self.teachWindow.textf.toPlainText()\n        self.liveInterpreter = Interpreter(self.robot, self.moxa, text)\n        self.liveInterpreter.moveToThread(self.interpreterThread)\n        self.interpreterThread.started.connect(self.liveInterpreter.run)\n        self.interpreterThread.finished.connect(self.enableUI)\n        self.liveInterpreter.finished.connect(self.interpreterThread.quit)\n        self.liveInterpreter.finished.connect(self.liveInterpreter.deleteLater)\n        self.interpreterThread.finished.connect(self.interpreterThread.deleteLater)\n        self.interpreterThread.start()",
+    "span": [
+      214,
+      229
+    ],
+    "start_byte": 8494,
+    "end_byte": 9367,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_play",
+    "signature": "on_play(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_play",
+    "docstring": null,
+    "chunk_size_bytes": 873,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_test_move(self):\n        self.robot.MovePose(200, 0, 300, 0, 90, 0)\n        self.robot.MovePose(200, 100, 300, 0, 90, 0)\n        self.robot.MovePose(200, 100, 100, 0, 90, 0)\n        self.robot.MovePose(200, -100, 100, 0, 90, 0)\n        self.robot.MovePose(200, -100, 300, 0, 90, 0)\n        self.robot.MovePose(200, 0, 300, 0, 90, 0)",
+    "span": [
+      231,
+      237
+    ],
+    "start_byte": 9373,
+    "end_byte": 9712,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_test_move",
+    "signature": "on_test_move(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_test_move",
+    "docstring": null,
+    "chunk_size_bytes": 339,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_jog_button(self, data):\n        if self.jogMode is None:\n            print('Select jog mode')\n        elif self.jogVelocity is None:\n            print('Select a velocity')\n        else:\n            vel_scale = self.jogVelocity / 100.0\n            if self.jogMode == 'Joints':\n                joint_vel = [150, 150, 180, 300, 300, 500]\n                data_vel = [d * vel_scale for d in data]\n                data_temp = [joint_vel[i] * data_vel[i] for i in range(6)]\n                self.robot.MoveJointsVel(data_temp[0], data_temp[1], data_temp[2], data_temp[3], data_temp[4],\n                                         data_temp[5])\n            if self.jogMode == 'WRF':\n                joint_vel = [500, 500, 500, 150, 150, 150]\n                data_vel = [d * vel_scale for d in data]\n                data_temp = [joint_vel[i] * data_vel[i] for i in range(6)]\n                self.robot.MoveLinVelWRF(data_temp[0], data_temp[1], data_temp[2], data_temp[3], data_temp[4],\n                                         data_temp[5])\n            if self.jogMode == 'TRF':\n                joint_vel = [500, 500, 500, 150, 150, 150]\n                data_vel = [d * vel_scale for d in data]\n                data_temp = [joint_vel[i] * data_vel[i] for i in range(6)]\n                self.robot.MoveLinVelTRF(data_temp[0], data_temp[1], data_temp[2], data_temp[3], data_temp[4],\n                                         data_temp[5])",
+    "span": [
+      239,
+      263
+    ],
+    "start_byte": 9718,
+    "end_byte": 11147,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_jog_button",
+    "signature": "on_jog_button(self, data)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_jog_button",
+    "docstring": null,
+    "chunk_size_bytes": 1429,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_get_jog_velocity(self, value):\n        self.jogVelocity = value",
+    "span": [
+      265,
+      266
+    ],
+    "start_byte": 11153,
+    "end_byte": 11223,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_get_jog_velocity",
+    "signature": "on_get_jog_velocity(self, value)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_get_jog_velocity",
+    "docstring": null,
+    "chunk_size_bytes": 70,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_get_jog_mode(self, mode):\n        self.jogMode = mode",
+    "span": [
+      268,
+      269
+    ],
+    "start_byte": 11229,
+    "end_byte": 11289,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_get_jog_mode",
+    "signature": "on_get_jog_mode(self, mode)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_get_jog_mode",
+    "docstring": null,
+    "chunk_size_bytes": 60,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_joy_mode(self):\n        if self.jogWindow.joymode.isChecked():\n            self.joystick = joystick.MecaJoy()\n            if not self.joystick.checkdriver():\n                return\n            if not self.joystick.checkplugged():\n                return\n            self.joystick.getcaps()\n            self.joyThread = QThread()\n            self.joyWorker = Joystick_monitoring(self.joystick)\n            self.joyWorker.moveToThread(self.joyThread)\n            self.joyThread.started.connect(self.joyWorker.run)\n            self.joyWorker.joy_data.connect(self.on_get_joy)\n            self.joyWorker.finished.connect(self.joyThread.quit)\n            self.joyWorker.finished.connect(self.joyWorker.deleteLater)\n            self.joyThread.finished.connect(self.joyThread.deleteLater)\n            self.joyThread.start()\n\n        else:\n            self.joyWorker.stoptrig()",
+    "span": [
+      271,
+      290
+    ],
+    "start_byte": 11295,
+    "end_byte": 12170,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_joy_mode",
+    "signature": "on_joy_mode(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_joy_mode",
+    "docstring": null,
+    "chunk_size_bytes": 875,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_get_joy(self, data):\n        if self.jogMode is None:\n            print('Select jog mode')\n        elif self.jogVelocity is None:\n            print('Select a velocity')\n        else:\n            vel_scale = self.jogVelocity/100\n            if self.jogMode == 'Joints':\n                if not data[3] and not data[4]:\n                    joint_vel = [150, 150, 180, 300, 300, 500]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i] * data_vel[i] for i in range(3)]\n                    self.robot.MoveJointsVel(data_temp[0], data_temp[1], data_temp[2], 0, 0, 0)\n                else:\n                    joint_vel = [150, 150, 180, 300, 300, 500]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i+3] * data_vel[i] for i in range(3)]\n                    self.robot.MoveJointsVel(0, 0, 0, data_temp[0], data_temp[1], data_temp[2])\n            if self.jogMode == 'WRF':\n                if not data[3] and not data[4]:\n                    joint_vel = [500, 500, 500, 150, 150, 150]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i] * data_vel[i] for i in range(3)]\n                    self.robot.MoveLinVelWRF(data_temp[0], data_temp[1], data_temp[2], 0, 0, 0)\n                else:\n                    joint_vel = [500, 500, 500, 150, 150, 150]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i + 3] * data_vel[i] for i in range(3)]\n                    self.robot.MoveLinVelWRF(0, 0, 0, data_temp[0], data_temp[1], data_temp[2])\n            if self.jogMode == 'TRF':\n                if not data[3] and not data[4]:\n                    joint_vel = [500, 500, 500, 150, 150, 150]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i] * data_vel[i] for i in range(3)]\n                    self.robot.MoveLinVelTRF(data_temp[0], data_temp[1], data_temp[2], 0, 0, 0)\n                else:\n                    joint_vel = [500, 500, 500, 150, 150, 150]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i+3] * data_vel[i] for i in range(3)]\n                    self.robot.MoveLinVelTRF(0, 0, 0, data_temp[0], data_temp[1], data_temp[2])",
+    "span": [
+      292,
+      331
+    ],
+    "start_byte": 12176,
+    "end_byte": 14743,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_get_joy",
+    "signature": "on_get_joy(self, data)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_get_joy",
+    "docstring": null,
+    "chunk_size_bytes": 2567,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_send_command(self):\n        command = self.teachWindow.linef.text()\n        self.robot.SendCustomCommand(command)",
+    "span": [
+      334,
+      336
+    ],
+    "start_byte": 14750,
+    "end_byte": 14870,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_send_command",
+    "signature": "on_send_command(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_send_command",
+    "docstring": null,
+    "chunk_size_bytes": 120,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_insert_movejoints(self):\n        command = \"MoveJoints(\" + str(self.jointp[0]) + ', ' + str(self.jointp[1]) + ', ' + str(\n            self.jointp[2]) + ', ' + str(self.jointp[3]) + ', ' + str(self.jointp[4]) + ', ' + str(self.jointp[5]) + ')'\n        self.teachWindow.textf.insertPlainText(command + '\\n')",
+    "span": [
+      338,
+      341
+    ],
+    "start_byte": 14876,
+    "end_byte": 15188,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_insert_movejoints",
+    "signature": "on_insert_movejoints(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_insert_movejoints",
+    "docstring": null,
+    "chunk_size_bytes": 312,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_insert_movelin(self):\n        command = \"MoveLin(\" + str(self.tcpp[0]) + ', ' + str(self.tcpp[1]) + ', ' + str(self.tcpp[2]) + ', ' + str(\n            self.tcpp[3]) + ', ' + str(self.tcpp[4]) + ', ' + str(self.tcpp[5]) + ')'\n        self.teachWindow.textf.insertPlainText(command + '\\n')",
+    "span": [
+      343,
+      346
+    ],
+    "start_byte": 15194,
+    "end_byte": 15488,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_insert_movelin",
+    "signature": "on_insert_movelin(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_insert_movelin",
+    "docstring": null,
+    "chunk_size_bytes": 294,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_insert_movepose(self):\n        command = \"MovePose(\" + str(self.tcpp[0]) + ', ' + str(self.tcpp[1]) + ', ' + str(self.tcpp[2]) + ', ' + str(\n            self.tcpp[3]) + ', ' + str(self.tcpp[4]) + ', ' + str(self.tcpp[5]) + ')'\n        self.teachWindow.textf.insertPlainText(command + '\\n')",
+    "span": [
+      348,
+      351
+    ],
+    "start_byte": 15494,
+    "end_byte": 15790,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_insert_movepose",
+    "signature": "on_insert_movepose(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_insert_movepose",
+    "docstring": null,
+    "chunk_size_bytes": 296,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def disableUI(self):\n        self.jointPose.setEnabled(False)\n        self.tcpPose.setEnabled(False)\n        self.jogWindow.setEnabled(False)\n        self.teachWindow.setEnabled(False)\n        self.pushButtonDisconnect.setEnabled(False)\n        self.pushButtonActivate.setEnabled(False)\n        self.pushButtonHome.setEnabled(False)\n        self.moxaWidget.setEnabled(False)\n        self.errorLabel.setStyleSheet(\"background-color:rgb(200,200,200)\")",
+    "span": [
+      353,
+      362
+    ],
+    "start_byte": 15796,
+    "end_byte": 16245,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "disableUI",
+    "signature": "disableUI(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.disableUI",
+    "docstring": null,
+    "chunk_size_bytes": 449,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def enableUI(self):\n        self.jointPose.setEnabled(True)\n        self.tcpPose.setEnabled(True)\n        self.jogWindow.setEnabled(True)\n        self.teachWindow.setEnabled(True)\n        self.pushButtonDisconnect.setEnabled(True)\n        self.pushButtonActivate.setEnabled(True)\n        self.pushButtonHome.setEnabled(True)\n        if self.useMoxa.isChecked():\n            self.moxaWidget.setEnabled(True)\n        if self.robot.GetRobotState().error_status:\n            self.errorLabel.setStyleSheet(\"background-color:rgb(255,0,0)\")\n            self.errorLabel.setText(\"Error\")\n        else:\n            self.errorLabel.setStyleSheet(\"background-color:rgb(0,255,0)\")\n            self.errorLabel.setText(\"No Error\")",
+    "span": [
+      364,
+      379
+    ],
+    "start_byte": 16251,
+    "end_byte": 16966,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "enableUI",
+    "signature": "enableUI(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.enableUI",
+    "docstring": null,
+    "chunk_size_bytes": 715,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def on_generate_script(self):\n        file = open('generated_script.py', 'w+')\n        file.write('import robot\\n\\n')\n        file.write('r = robot.Robot()\\n')\n        file.write('r.Connect()\\n')\n        file.write('r.ActivateRobot()\\n')\n        file.write('r.Home()\\n')\n        file.write('print(r.WaitHomed())\\n')\n\n        mod_text = self.teachWindow.textf.toPlainText()\n        rep = parsdict.gen_script\n        for i, j in rep.items():\n            mod_text = mod_text.replace(i, j)\n        file.write(mod_text+'\\n')\n\n\n        file.write('r.Disconnect()')\n        file.close()",
+    "span": [
+      381,
+      398
+    ],
+    "start_byte": 16972,
+    "end_byte": 17551,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_generate_script",
+    "signature": "on_generate_script(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.on_generate_script",
+    "docstring": null,
+    "chunk_size_bytes": 579,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "class RobotMonitoring(QObject):\n    finished = pyqtSignal()\n    joints = pyqtSignal(list)\n    pose = pyqtSignal(list)\n    error_state = pyqtSignal(bool)\n\n    def __init__(self, robot):\n        super().__init__()\n        self.robot = robot\n        self.jointpos = [0, 0, 0, 0, 0, 0]\n        self.connectedFlag = True",
+    "span": [
+      403,
+      440
+    ],
+    "start_byte": 17572,
+    "end_byte": 18747,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RobotMonitoring",
+    "qualified_name": "RobotMonitoring",
+    "docstring": null,
+    "chunk_size_bytes": 315,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def __init__(self, robot):\n        super().__init__()\n        self.robot = robot\n        self.jointpos = [0, 0, 0, 0, 0, 0]\n        self.connectedFlag = True\n        self.pauseDC = False",
+    "span": [
+      409,
+      414
+    ],
+    "start_byte": 17730,
+    "end_byte": 17916,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot)",
+    "parent_class": "RobotMonitoring",
+    "qualified_name": "RobotMonitoring.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 186,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def run(self):\n        prev_error_state = self.robot.GetRobotState().error_status\n        while self.connectedFlag:\n            while self.pauseDC:\n                pass\n            jpose = self.robot.GetJoints()\n            tcppose = self.robot.GetPose()\n            self.joints.emit(jpose)\n            self.pose.emit(tcppose)\n            new_error_state = self.robot.GetRobotState().error_status\n            if new_error_state is not prev_error_state:\n                self.error_state.emit(new_error_state)\n                prev_error_state = new_error_state\n            sleep(0.1)\n        self.finished.emit()",
+    "span": [
+      416,
+      430
+    ],
+    "start_byte": 17922,
+    "end_byte": 18532,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run",
+    "signature": "run(self)",
+    "parent_class": "RobotMonitoring",
+    "qualified_name": "RobotMonitoring.run",
+    "docstring": null,
+    "chunk_size_bytes": 610,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def dcFlag(self):\n        self.connectedFlag = False\n        self.pauseDC = False",
+    "span": [
+      432,
+      434
+    ],
+    "start_byte": 18538,
+    "end_byte": 18619,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "dcFlag",
+    "signature": "dcFlag(self)",
+    "parent_class": "RobotMonitoring",
+    "qualified_name": "RobotMonitoring.dcFlag",
+    "docstring": null,
+    "chunk_size_bytes": 81,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def dcPause(self):\n        if self.pauseDC:\n            self.pauseDC = False\n        else:\n            self.pauseDC = True",
+    "span": [
+      436,
+      440
+    ],
+    "start_byte": 18625,
+    "end_byte": 18747,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "dcPause",
+    "signature": "dcPause(self)",
+    "parent_class": "RobotMonitoring",
+    "qualified_name": "RobotMonitoring.dcPause",
+    "docstring": null,
+    "chunk_size_bytes": 122,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "class Interpreter(QObject):\n    finished = pyqtSignal()\n\n    def __init__(self, robot, moxa, text):\n        super().__init__()\n        self.robot = robot\n        self.moxa = moxa\n        self.text = text\n\n    def run(self):\n        mod_text = self.text",
+    "span": [
+      443,
+      464
+    ],
+    "start_byte": 18750,
+    "end_byte": 19336,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Interpreter",
+    "qualified_name": "Interpreter",
+    "docstring": null,
+    "chunk_size_bytes": 252,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def __init__(self, robot, moxa, text):\n        super().__init__()\n        self.robot = robot\n        self.moxa = moxa\n        self.text = text",
+    "span": [
+      446,
+      450
+    ],
+    "start_byte": 18811,
+    "end_byte": 18953,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot, moxa, text)",
+    "parent_class": "Interpreter",
+    "qualified_name": "Interpreter.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 142,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def run(self):\n        mod_text = self.text\n        rep = parsdict.live_rep\n        mox = parsdict.moxadict\n        for i, j in rep.items():\n            mod_text = mod_text.replace(i, j)\n        for i, j in mox.items():\n            mod_text = mod_text.replace(i, j)\n        try:\n            exec(mod_text)\n        except:\n            print(\"Error\")\n        self.finished.emit()",
+    "span": [
+      452,
+      464
+    ],
+    "start_byte": 18959,
+    "end_byte": 19336,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run",
+    "signature": "run(self)",
+    "parent_class": "Interpreter",
+    "qualified_name": "Interpreter.run",
+    "docstring": null,
+    "chunk_size_bytes": 377,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "class Moxa_monitoring(QObject):\n    finished = pyqtSignal()\n    moxa_state = pyqtSignal(list)\n\n    def __init__(self, moxa):\n        super().__init__()\n        self.moxa = moxa\n        self.connectFlag = True\n        self.pauseFlag = False\n\n    def run(self):",
+    "span": [
+      467,
+      494
+    ],
+    "start_byte": 19339,
+    "end_byte": 20042,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Moxa_monitoring",
+    "qualified_name": "Moxa_monitoring",
+    "docstring": null,
+    "chunk_size_bytes": 259,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def __init__(self, moxa):\n        super().__init__()\n        self.moxa = moxa\n        self.connectFlag = True\n        self.pauseFlag = False",
+    "span": [
+      471,
+      475
+    ],
+    "start_byte": 19438,
+    "end_byte": 19578,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, moxa)",
+    "parent_class": "Moxa_monitoring",
+    "qualified_name": "Moxa_monitoring.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 140,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def run(self):\n        while self.connectFlag:\n            state = self.moxa.readallinputs()\n            self.moxa_state.emit(state)\n            while self.pauseFlag:\n                pass\n            sleep(0.2)\n        self.finished.emit()",
+    "span": [
+      477,
+      484
+    ],
+    "start_byte": 19584,
+    "end_byte": 19823,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run",
+    "signature": "run(self)",
+    "parent_class": "Moxa_monitoring",
+    "qualified_name": "Moxa_monitoring.run",
+    "docstring": null,
+    "chunk_size_bytes": 239,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def dcFlag(self):\n        self.connectFlag = False\n        self.pauseFlag = False",
+    "span": [
+      486,
+      488
+    ],
+    "start_byte": 19829,
+    "end_byte": 19910,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "dcFlag",
+    "signature": "dcFlag(self)",
+    "parent_class": "Moxa_monitoring",
+    "qualified_name": "Moxa_monitoring.dcFlag",
+    "docstring": null,
+    "chunk_size_bytes": 81,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def pFlag(self):\n        if self.pauseFlag:\n            self.pauseFlag = False\n        else:\n            self.pauseFlag = True",
+    "span": [
+      490,
+      494
+    ],
+    "start_byte": 19916,
+    "end_byte": 20042,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "pFlag",
+    "signature": "pFlag(self)",
+    "parent_class": "Moxa_monitoring",
+    "qualified_name": "Moxa_monitoring.pFlag",
+    "docstring": null,
+    "chunk_size_bytes": 126,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "class Joystick_monitoring(QObject):\n    finished = pyqtSignal()\n    joy_data = pyqtSignal(list)\n    def __init__(self, joy):\n        super().__init__()\n        self.joy = joy\n        self.stopFlag = True\n\n    def run(self):\n        while self.stopFlag:\n            data = self.joy.getinfo()",
+    "span": [
+      496,
+      512
+    ],
+    "start_byte": 20044,
+    "end_byte": 20479,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Joystick_monitoring",
+    "qualified_name": "Joystick_monitoring",
+    "docstring": null,
+    "chunk_size_bytes": 290,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def __init__(self, joy):\n        super().__init__()\n        self.joy = joy\n        self.stopFlag = True",
+    "span": [
+      499,
+      502
+    ],
+    "start_byte": 20144,
+    "end_byte": 20247,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, joy)",
+    "parent_class": "Joystick_monitoring",
+    "qualified_name": "Joystick_monitoring.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 103,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def run(self):\n        while self.stopFlag:\n            data = self.joy.getinfo()\n            self.joy_data.emit(data)\n            sleep(0.05)\n        self.finished.emit()",
+    "span": [
+      504,
+      509
+    ],
+    "start_byte": 20253,
+    "end_byte": 20424,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run",
+    "signature": "run(self)",
+    "parent_class": "Joystick_monitoring",
+    "qualified_name": "Joystick_monitoring.run",
+    "docstring": null,
+    "chunk_size_bytes": 171,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "def stoptrig(self):\n        self.stopFlag = False",
+    "span": [
+      511,
+      512
+    ],
+    "start_byte": 20430,
+    "end_byte": 20479,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "stoptrig",
+    "signature": "stoptrig(self)",
+    "parent_class": "Joystick_monitoring",
+    "qualified_name": "Joystick_monitoring.stoptrig",
+    "docstring": null,
+    "chunk_size_bytes": 49,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "normalized_path": "sample-programs/Python/PythonUI/UIApp.py"
+  }
+]

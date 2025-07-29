@@ -1,0 +1,97 @@
+[
+  {
+    "snippet": "import logging",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 294,
+    "end_byte": 308,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "logging",
+    "qualified_name": "logging",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 14,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/trajectory_logger_example.py",
+    "normalized_path": "mecademicpy/examples/trajectory_logger_example.py"
+  },
+  {
+    "snippet": "import pathlib",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 309,
+    "end_byte": 323,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "pathlib",
+    "qualified_name": "pathlib",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 14,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/trajectory_logger_example.py",
+    "normalized_path": "mecademicpy/examples/trajectory_logger_example.py"
+  },
+  {
+    "snippet": "import mecademicpy.robot as mdr",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 325,
+    "end_byte": 356,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "mecademicpy.robot as mdr",
+    "qualified_name": "mecademicpy.robot as mdr",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 31,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/trajectory_logger_example.py",
+    "normalized_path": "mecademicpy/examples/trajectory_logger_example.py"
+  },
+  {
+    "snippet": "import mecademicpy.tools as tools",
+    "span": [
+      14,
+      14
+    ],
+    "start_byte": 357,
+    "end_byte": 390,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "mecademicpy.tools as tools",
+    "qualified_name": "mecademicpy.tools as tools",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 33,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/trajectory_logger_example.py",
+    "normalized_path": "mecademicpy/examples/trajectory_logger_example.py"
+  },
+  {
+    "snippet": "def trajectory_logger_example():\n    \"\"\" Example that moves Mecademic robot while capturing the trajectory into a csv file \"\"\"\n    # Use tool to setup default console and file logger\n    tools.SetDefaultLogger(logging.INFO, f'{pathlib.Path(__file__).stem}.log')\n    logger = logging.getLogger(__name__)\n\n    # Define a callback function to print test progress based on reached checkpoints\n    # pylint: disable=redefined-builtin\n    def on_checkpoint_reached(id):\n        logger.info(f'Loop {id}...')\n\n    # Instantiate a robot instance (to control one robot)\n    # (use \"with\" block to ensure proper disconnection at end of block)\n    with mdr.Robot() as robot:\n        # Attach callback functions\n        callbacks = mdr.RobotCallbacks()\n        callbacks.on_checkpoint_reached = on_checkpoint_reached\n        robot.RegisterCallbacks(callbacks=callbacks, run_callbacks_in_separate_thread=True)\n\n        # CHECK THAT IP ADDRESS IS CORRECT! #\n        try:\n            robot.Connect(address='192.168.0.100')\n            logger.info('Connected to robot')\n        except mdr.CommunicationError as e:\n            logger.info(f'Robot failed to connect. Is the IP address correct? {e}')\n            raise e\n\n        try:\n            # Send the commands to get the robot ready for operation.\n            logger.info('Activating and homing robot...')\n            robot.ActivateRobot()\n            robot.Home()\n\n            # Wait until robot is homed.\n            robot.WaitHomed()\n\n            # Configure robot's behavior to desired speed/accel/etc.\n            logger.info('Configuring robot\\'s behavior...')\n            robot.SetJointVel(50)\n            robot.SetJointAcc(50)\n            robot.SetBlending(50)\n\n            # Move to starting position\n            logger.info('Moving to a well-known starting position...')\n            if tools.robot_model_is_meca500(robot.GetRobotInfo().robot_model):\n                robot.MoveJoints(0, 0, 0, 0, 0, 0)\n            else:\n                robot.MoveJoints(10, -10, 0, 0)\n\n            # Wait until robot is idle (reached starting position)\n            robot.WaitIdle()\n            # Wait until end of one monitoring cycle before logging (data more consistent this way)\n            robot.WaitEndOfCycle()\n\n            # Start running a test script while logging robot data to a csv file\n            logger.info('Start running test script while logging to csv file...')\n            # Configure monitoring interval and required fields to capture in file\n            with robot.FileLogger(0.001, fields=[\"TargetJointPos\", \"JointPos\"], file_name='logger_example_traj_file'):\n\n                # Perform 2 simple joint moves, few loops\n                for i in range(0, 2):\n                    robot.SetCheckpoint(i + 1)\n                    if tools.robot_model_is_meca500(robot.GetRobotInfo().robot_model):\n                        robot.MoveJoints(30, 25, 20, 15, 10, 5)\n                        robot.MoveJoints(-30, -25, -20, -15, -10, -5)\n                    else:\n                        robot.MoveJoints(30, 25, -20, 15)\n                        robot.MoveJoints(-30, -25, 0, -15)\n\n                # Wait until robot is idle (above commands finished executing) before stopping logging.\n                robot.WaitIdle(60)\n                # Exiting the \"FileLogger\" scope automatically stops logging\n\n            logger.info('Done!')\n\n        #pylint: disable=broad-exception-caught\n        except Exception as exception:\n            # Attempt to clear error if robot is in error.\n            if robot.GetStatusRobot().error_status:\n                logger.error(exception)\n                logger.error('Robot has encountered an error, attempting to clear...')\n                robot.ResetError()\n                robot.ResumeMotion()\n            else:\n                raise exception\n\n    # At the end of the \"with\" block, robot is automatically disconnected\n    logger.info('Now disconnected from the robot.')",
+    "span": [
+      17,
+      104
+    ],
+    "start_byte": 393,
+    "end_byte": 4338,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "trajectory_logger_example",
+    "qualified_name": "trajectory_logger_example",
+    "signature": "trajectory_logger_example()",
+    "docstring": "Example that moves Mecademic robot while capturing the trajectory into a csv file",
+    "chunk_size_bytes": 3945,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/trajectory_logger_example.py",
+    "normalized_path": "mecademicpy/examples/trajectory_logger_example.py"
+  }
+]

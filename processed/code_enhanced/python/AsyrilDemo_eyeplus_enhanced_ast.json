@@ -1,0 +1,319 @@
+[
+  {
+    "snippet": "import socket",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 13,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "socket",
+    "qualified_name": "socket",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 13,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "class EyePlusClient:\n\n    def __init__(self):\n        self.__connection = None\n        self.termination = \"\\n\"\n\n    def connect(self, ipaddress, port):\n        self.ipaddress = ipaddress\n        self.__connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n        self.__connection.connect((self.ipaddress, port))\n",
+    "span": [
+      4,
+      80
+    ],
+    "start_byte": 16,
+    "end_byte": 2298,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "EyePlusClient",
+    "qualified_name": "EyePlusClient",
+    "docstring": null,
+    "chunk_size_bytes": 323,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def __init__(self):\n        self.__connection = None\n        self.termination = \"\\n\"",
+    "span": [
+      6,
+      8
+    ],
+    "start_byte": 42,
+    "end_byte": 126,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 84,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def connect(self, ipaddress, port):\n        self.ipaddress = ipaddress\n        self.__connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n        self.__connection.connect((self.ipaddress, port))",
+    "span": [
+      10,
+      13
+    ],
+    "start_byte": 132,
+    "end_byte": 338,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "connect",
+    "signature": "connect(self, ipaddress, port)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.connect",
+    "docstring": null,
+    "chunk_size_bytes": 206,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def disconnect(self):\n        self.__connection.close()\n        self.__connection = None",
+    "span": [
+      15,
+      17
+    ],
+    "start_byte": 344,
+    "end_byte": 432,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "disconnect",
+    "signature": "disconnect(self)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.disconnect",
+    "docstring": null,
+    "chunk_size_bytes": 88,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def stop_production(self):\n        command = \"stop production\"\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response",
+    "span": [
+      19,
+      23
+    ],
+    "start_byte": 438,
+    "end_byte": 601,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "stop_production",
+    "signature": "stop_production(self)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.stop_production",
+    "docstring": null,
+    "chunk_size_bytes": 163,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def start_production(self, recipe):\n        command = \"start production \" + str(recipe)\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response",
+    "span": [
+      25,
+      29
+    ],
+    "start_byte": 607,
+    "end_byte": 795,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "start_production",
+    "signature": "start_production(self, recipe)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.start_production",
+    "docstring": null,
+    "chunk_size_bytes": 188,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def get_part(self):\n        command = \"get_part\"\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response",
+    "span": [
+      31,
+      35
+    ],
+    "start_byte": 801,
+    "end_byte": 950,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_part",
+    "signature": "get_part(self)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.get_part",
+    "docstring": null,
+    "chunk_size_bytes": 149,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def force_take_image(self):\n        command = \"force_take_image\"\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response",
+    "span": [
+      37,
+      41
+    ],
+    "start_byte": 956,
+    "end_byte": 1121,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "force_take_image",
+    "signature": "force_take_image(self)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.force_take_image",
+    "docstring": null,
+    "chunk_size_bytes": 165,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def prepare_part(self):\n        command = \"prepare_part\"\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response",
+    "span": [
+      43,
+      47
+    ],
+    "start_byte": 1127,
+    "end_byte": 1284,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "prepare_part",
+    "signature": "prepare_part(self)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.prepare_part",
+    "docstring": null,
+    "chunk_size_bytes": 157,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def can_take_image(self, value):\n        command = \"can_take_image \" + str(value).lower()\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response",
+    "span": [
+      49,
+      53
+    ],
+    "start_byte": 1290,
+    "end_byte": 1480,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "can_take_image",
+    "signature": "can_take_image(self, value)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.can_take_image",
+    "docstring": null,
+    "chunk_size_bytes": 190,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def set_parameter(self, parameter):\n        command = \"set_parameter \" + str(parameter)\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response",
+    "span": [
+      55,
+      59
+    ],
+    "start_byte": 1486,
+    "end_byte": 1674,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set_parameter",
+    "signature": "set_parameter(self, parameter)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.set_parameter",
+    "docstring": null,
+    "chunk_size_bytes": 188,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def __send_raw__(self, command):\n        self.__connection.send(\n            bytes(f'{command}{self.termination}', encoding=\"ascii\"))",
+    "span": [
+      61,
+      63
+    ],
+    "start_byte": 1680,
+    "end_byte": 1813,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__send_raw__",
+    "signature": "__send_raw__(self, command)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.__send_raw__",
+    "docstring": null,
+    "chunk_size_bytes": 133,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def __receive_raw__(self):\n        response = self.__connection.recv(4096).decode(\"ascii\")\n        return response",
+    "span": [
+      65,
+      67
+    ],
+    "start_byte": 1819,
+    "end_byte": 1933,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__receive_raw__",
+    "signature": "__receive_raw__(self)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.__receive_raw__",
+    "docstring": null,
+    "chunk_size_bytes": 114,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def extract_status(response):\n        status = int(response[:3])\n        return status",
+    "span": [
+      70,
+      72
+    ],
+    "start_byte": 1957,
+    "end_byte": 2043,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "extract_status",
+    "signature": "extract_status(response)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.extract_status",
+    "docstring": null,
+    "chunk_size_bytes": 86,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "def extract_position(response: str):\n        split_response = response.split(' ')\n        x = float(split_response[1][2:])\n        y = float(split_response[2][2:])\n        rz = float(split_response[3][3:])\n        return [x, y, rz]",
+    "span": [
+      75,
+      80
+    ],
+    "start_byte": 2067,
+    "end_byte": 2298,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "extract_position",
+    "signature": "extract_position(response: str)",
+    "parent_class": "EyePlusClient",
+    "qualified_name": "EyePlusClient.extract_position",
+    "docstring": null,
+    "chunk_size_bytes": 231,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "normalized_path": "AsyrilDemo/eyeplus.py"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "snippet": "import argparse",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 354,
+    "end_byte": 369,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "argparse",
+    "qualified_name": "argparse",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 15,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py",
+    "normalized_path": "mecademicpy/examples/firmware_update_loop.py"
+  },
+  {
+    "snippet": "import logging",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 370,
+    "end_byte": 384,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "logging",
+    "qualified_name": "logging",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 14,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py",
+    "normalized_path": "mecademicpy/examples/firmware_update_loop.py"
+  },
+  {
+    "snippet": "import pathlib",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 385,
+    "end_byte": 399,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "pathlib",
+    "qualified_name": "pathlib",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 14,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py",
+    "normalized_path": "mecademicpy/examples/firmware_update_loop.py"
+  },
+  {
+    "snippet": "import mecademicpy.robot as mdr",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 401,
+    "end_byte": 432,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "mecademicpy.robot as mdr",
+    "qualified_name": "mecademicpy.robot as mdr",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 31,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py",
+    "normalized_path": "mecademicpy/examples/firmware_update_loop.py"
+  },
+  {
+    "snippet": "import mecademicpy.tools as tools",
+    "span": [
+      14,
+      14
+    ],
+    "start_byte": 433,
+    "end_byte": 466,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "mecademicpy.tools as tools",
+    "qualified_name": "mecademicpy.tools as tools",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 33,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py",
+    "normalized_path": "mecademicpy/examples/firmware_update_loop.py"
+  }
+]

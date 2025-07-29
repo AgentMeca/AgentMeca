@@ -1,0 +1,526 @@
+[
+  {
+    "snippet": "from PyQt5 import QtCore, QtGui, QtWidgets",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 19,
+    "end_byte": 61,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QtCore",
+    "qualified_name": "QtCore",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 42,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "from PyQt5.QtCore import pyqtSignal,Qt",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 62,
+    "end_byte": 100,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "pyqtSignal",
+    "qualified_name": "pyqtSignal",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 38,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "import numpy as np",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 126,
+    "end_byte": 144,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "numpy as np",
+    "qualified_name": "numpy as np",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 18,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 145,
+    "end_byte": 156,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "class LCDNumber(QtWidgets.QLCDNumber):\n\n    def __init__(self, parent=None):\n        super(LCDNumber,self).__init__(parent)\n        self.setMaximumWidth(500)\n        self.setMaximumHeight(300)\n        self.setStyleSheet(\"\"\"QLCDNumber { background-color: black; color: black;}\"\"\")\n        self.setDigitCount(7)\n    def reset(self):\n        self.display(0)\n        self.setStyleSheet(\"\"\"QLCDNumber { background-color: green; color: yellow;}\"\"\")",
+    "span": [
+      8,
+      24
+    ],
+    "start_byte": 158,
+    "end_byte": 837,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "LCDNumber",
+    "qualified_name": "LCDNumber",
+    "docstring": null,
+    "chunk_size_bytes": 442,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None):\n        super(LCDNumber,self).__init__(parent)\n        self.setMaximumWidth(500)\n        self.setMaximumHeight(300)\n        self.setStyleSheet(\"\"\"QLCDNumber { background-color: black; color: black;}\"\"\")\n        self.setDigitCount(7)",
+    "span": [
+      10,
+      15
+    ],
+    "start_byte": 202,
+    "end_byte": 467,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None)",
+    "parent_class": "LCDNumber",
+    "qualified_name": "LCDNumber.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 265,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def reset(self):\n        self.display(0)\n        self.setStyleSheet(\"\"\"QLCDNumber { background-color: green; color: yellow;}\"\"\")",
+    "span": [
+      16,
+      18
+    ],
+    "start_byte": 472,
+    "end_byte": 600,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "reset",
+    "signature": "reset(self)",
+    "parent_class": "LCDNumber",
+    "qualified_name": "LCDNumber.reset",
+    "docstring": null,
+    "chunk_size_bytes": 128,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def default(self):\n        self.setStyleSheet(\"\"\"QLCDNumber { background-color: white; color: black;}\"\"\")",
+    "span": [
+      20,
+      21
+    ],
+    "start_byte": 614,
+    "end_byte": 719,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "default",
+    "signature": "default(self)",
+    "parent_class": "LCDNumber",
+    "qualified_name": "LCDNumber.default",
+    "docstring": null,
+    "chunk_size_bytes": 105,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def overLoad(self):\n        self.setStyleSheet(\"\"\"QLCDNumber { background-color: red; color: white;}\"\"\")",
+    "span": [
+      23,
+      24
+    ],
+    "start_byte": 733,
+    "end_byte": 837,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "overLoad",
+    "signature": "overLoad(self)",
+    "parent_class": "LCDNumber",
+    "qualified_name": "LCDNumber.overLoad",
+    "docstring": null,
+    "chunk_size_bytes": 104,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "class PushBut(QtWidgets.QPushButton):\n    \n    def __init__(self, parent=None):\n        super(PushBut, self).__init__(parent)\n        self.setMouseTracking(True)\n        self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        self.setMaximumWidth(1000)\n        self.setMaximumHeight(50)\n        self.setIconSize(QtCore.QSize(50, 50))\n\n    def enterEvent(self, event):",
+    "span": [
+      26,
+      45
+    ],
+    "start_byte": 839,
+    "end_byte": 2093,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "PushBut",
+    "qualified_name": "PushBut",
+    "docstring": null,
+    "chunk_size_bytes": 505,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None):\n        super(PushBut, self).__init__(parent)\n        self.setMouseTracking(True)\n        self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        self.setMaximumWidth(1000)\n        self.setMaximumHeight(50)\n        self.setIconSize(QtCore.QSize(50, 50))",
+    "span": [
+      28,
+      34
+    ],
+    "start_byte": 886,
+    "end_byte": 1310,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None)",
+    "parent_class": "PushBut",
+    "qualified_name": "PushBut.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 424,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def enterEvent(self, event):\n        if self.isEnabled() is True:\n            self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(255,255,255,255) ; color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        if self.isEnabled() is False:\n            pass\n            #self.setStyleSheet(\"margin: 1px; padding: 7px; background-color: rgba(255,255,255,255); color: black; border-style: solid;border-radius: 3px;border-width: 0.5px;border-color: black;\")",
+    "span": [
+      36,
+      41
+    ],
+    "start_byte": 1316,
+    "end_byte": 1832,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "enterEvent",
+    "signature": "enterEvent(self, event)",
+    "parent_class": "PushBut",
+    "qualified_name": "PushBut.enterEvent",
+    "docstring": null,
+    "chunk_size_bytes": 516,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def leaveEvent(self, event):\n        if self.isEnabled():\n            self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")",
+    "span": [
+      43,
+      45
+    ],
+    "start_byte": 1838,
+    "end_byte": 2093,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "leaveEvent",
+    "signature": "leaveEvent(self, event)",
+    "parent_class": "PushBut",
+    "qualified_name": "PushBut.leaveEvent",
+    "docstring": null,
+    "chunk_size_bytes": 255,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "class jogBut(QtWidgets.QPushButton):\n    \n    def __init__(self, parent=None):\n        super(jogBut, self).__init__(parent)\n        self.setMouseTracking(True)\n        self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        #self.setMaximumWidth(50)\n        #self.setMaximumHeight(30)\n        #self.setIconSize(QtCore.QSize(50, 50))\n        self.setAutoRepeat(True)\n        self.setAutoRepeatInterval(30)",
+    "span": [
+      49,
+      71
+    ],
+    "start_byte": 2097,
+    "end_byte": 3458,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "jogBut",
+    "qualified_name": "jogBut",
+    "docstring": null,
+    "chunk_size_bytes": 542,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None):\n        super(jogBut, self).__init__(parent)\n        self.setMouseTracking(True)\n        self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        #self.setMaximumWidth(50)\n        #self.setMaximumHeight(30)\n        #self.setIconSize(QtCore.QSize(50, 50))\n        self.setAutoRepeat(True)\n        self.setAutoRepeatInterval(30)\n        self.setAutoRepeatDelay(0)",
+    "span": [
+      51,
+      60
+    ],
+    "start_byte": 2143,
+    "end_byte": 2674,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None)",
+    "parent_class": "jogBut",
+    "qualified_name": "jogBut.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 531,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def enterEvent(self, event):\n        if self.isEnabled() is True:\n            self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(255,255,255,255) ; color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        if self.isEnabled() is False:\n            #self.setStyleSheet(\"margin: 1px; padding: 7px; background-color: rgba(255,255,255,255); color: black; border-style: solid;border-radius: 3px;border-width: 0.5px;border-color: black;\")\n            pass",
+    "span": [
+      62,
+      67
+    ],
+    "start_byte": 2681,
+    "end_byte": 3197,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "enterEvent",
+    "signature": "enterEvent(self, event)",
+    "parent_class": "jogBut",
+    "qualified_name": "jogBut.enterEvent",
+    "docstring": null,
+    "chunk_size_bytes": 516,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def leaveEvent(self, event):\n        if self.isEnabled():\n            self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")",
+    "span": [
+      69,
+      71
+    ],
+    "start_byte": 3203,
+    "end_byte": 3458,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "leaveEvent",
+    "signature": "leaveEvent(self, event)",
+    "parent_class": "jogBut",
+    "qualified_name": "jogBut.leaveEvent",
+    "docstring": null,
+    "chunk_size_bytes": 255,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "class Label(QtWidgets.QLabel):\n    \n    def __init__(self, parent=None):\n        super(Label, self).__init__(parent)\n        self.setMaximumWidth(200)\n        self.setFixedHeight(30)\n        font_label = QtGui.QFont()\n        font_label.setFamily('Helvetica')\n        font_label.setPointSize(10)\n        font_label.setWeight(25)\n        self.setFont(font_label)",
+    "span": [
+      73,
+      84
+    ],
+    "start_byte": 3460,
+    "end_byte": 3863,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Label",
+    "qualified_name": "Label",
+    "docstring": null,
+    "chunk_size_bytes": 361,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None):\n        super(Label, self).__init__(parent)\n        self.setMaximumWidth(200)\n        self.setFixedHeight(30)\n        font_label = QtGui.QFont()\n        font_label.setFamily('Helvetica')\n        font_label.setPointSize(10)\n        font_label.setWeight(25)\n        self.setFont(font_label)\n        self.setAlignment(Qt.AlignCenter)",
+    "span": [
+      75,
+      84
+    ],
+    "start_byte": 3500,
+    "end_byte": 3863,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None)",
+    "parent_class": "Label",
+    "qualified_name": "Label.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 363,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "class LCDPanel(QtWidgets.QWidget):\n    trigger = pyqtSignal(bool)\n    def __init__(self, parent=None):\n        from ConfigHandler import ConfigHandler\n        super(LCDPanel, self).__init__(parent)\n        self.horizontalLayoutWidget = QtWidgets.QWidget()\n        self.setFixedWidth(235)\n        self.setFixedHeight(325)\n        self.gridLayout = QtWidgets.QGridLayout()\n        self.gridLayout.setObjectName(\"gridLayout\")\n        self.label = Label(self.horizontalLayoutWidget)",
+    "span": [
+      86,
+      250
+    ],
+    "start_byte": 3865,
+    "end_byte": 10732,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "LCDPanel",
+    "qualified_name": "LCDPanel",
+    "docstring": null,
+    "chunk_size_bytes": 478,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None):\n        from ConfigHandler import ConfigHandler\n        super(LCDPanel, self).__init__(parent)\n        self.horizontalLayoutWidget = QtWidgets.QWidget()\n        self.setFixedWidth(235)\n        self.setFixedHeight(325)\n        self.gridLayout = QtWidgets.QGridLayout()\n        self.gridLayout.setObjectName(\"gridLayout\")\n        self.label = Label(self.horizontalLayoutWidget)\n        self.label.setObjectName(\"label\")\n        self.label.setText('Fx')\n        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)\n        self.label_2 = Label(self.horizontalLayoutWidget)\n        self.label_2.setObjectName(\"label_2\")\n        self.label_2.setText('Fy')\n        self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)\n        self.label_3 = Label(self.horizontalLayoutWidget)\n        self.label_3.setObjectName(\"label_3\")\n        self.label_3.setText('Fz')\n        self.gridLayout.addWidget(self.label_3, 2, 0, 1, 1)\n        self.label_4 = Label(self.horizontalLayoutWidget)\n        self.label_4.setObjectName(\"label_4\")\n        self.label_4.setText('Tx')\n        self.gridLayout.addWidget(self.label_4, 3, 0, 1, 1)\n        self.label_5 = Label(self.horizontalLayoutWidget)\n        self.label_5.setObjectName(\"label_5\")\n        self.label_5.setText('Ty')\n        self.gridLayout.addWidget(self.label_5, 4, 0, 1, 1)\n        self.label_6 = Label(self.horizontalLayoutWidget)\n        self.label_6.setObjectName(\"label_6\")\n        self.label_6.setText('Tz')\n        self.gridLayout.addWidget(self.label_6, 5, 0, 1, 1)\n        self.label_7 = Label(self.horizontalLayoutWidget)\n        self.label_7.setObjectName(\"label_7\")\n        self.label_7.setText('N')\n        self.gridLayout.addWidget(self.label_7, 0, 3, 1, 1)\n        self.label_8 = Label(self.horizontalLayoutWidget)\n        self.label_8.setObjectName(\"label_8\")\n        self.label_8.setText('N')\n        self.gridLayout.addWidget(self.label_8, 1, 3, 1, 1)\n        self.label_9 = Label(self.horizontalLayoutWidget)\n        self.label_9.setObjectName(\"label_9\")\n        self.label_9.setText('N')\n        self.gridLayout.addWidget(self.label_9, 2, 3, 1, 1)\n        self.label_10 = Label(self.horizontalLayoutWidget)\n        self.label_10.setObjectName(\"label_10\")\n        self.label_10.setText('Nm')\n        self.gridLayout.addWidget(self.label_10, 3, 3, 1, 1)\n        self.label_11 = Label(self.horizontalLayoutWidget)\n        self.label_11.setObjectName(\"label_11\")\n        self.label_11.setText('Nm')\n        self.gridLayout.addWidget(self.label_11, 4, 3, 1, 1)\n        self.label_12 = Label(self.horizontalLayoutWidget)\n        self.label_12.setObjectName(\"label_12\")\n        self.label_12.setText('Nm')\n        self.gridLayout.addWidget(self.label_12, 5, 3, 1, 1)\n        \n        self.lcdNumber = LCDNumber(self.horizontalLayoutWidget)\n        self.lcdNumber.setObjectName(\"lcdNumber\")\n        self.gridLayout.addWidget(self.lcdNumber, 0, 1, 1, 2)\n\n        self.lcdNumber_2 = LCDNumber(self.horizontalLayoutWidget)\n        self.lcdNumber_2.setObjectName(\"lcdNumber_2\")\n        self.gridLayout.addWidget(self.lcdNumber_2, 1, 1, 1, 2)\n\n        self.lcdNumber_3 = LCDNumber(self.horizontalLayoutWidget)\n        self.lcdNumber_3.setObjectName(\"lcdNumber_3\")\n        self.gridLayout.addWidget(self.lcdNumber_3, 2, 1, 1, 2)\n\n        self.lcdNumber_4 = LCDNumber(self.horizontalLayoutWidget)\n        self.lcdNumber_4.setObjectName(\"lcdNumber_4\")\n        self.gridLayout.addWidget(self.lcdNumber_4, 3, 1, 1, 2)\n\n        self.lcdNumber_5 = LCDNumber(self.horizontalLayoutWidget)\n        self.lcdNumber_5.setObjectName(\"lcdNumber_5\")\n        self.gridLayout.addWidget(self.lcdNumber_5, 4, 1, 1, 2)\n\n        self.lcdNumber_6 = LCDNumber(self.horizontalLayoutWidget)\n        self.lcdNumber_6.setObjectName(\"lcdNumber_6\")\n        self.gridLayout.addWidget(self.lcdNumber_6, 5, 1, 1, 2)\n       \n        self.setLayout(self.gridLayout)\n        self.config = ConfigHandler()\n        self.readThreshold()",
+    "span": [
+      88,
+      171
+    ],
+    "start_byte": 3935,
+    "end_byte": 7902,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None)",
+    "parent_class": "LCDPanel",
+    "qualified_name": "LCDPanel.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 3967,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def readThreshold(self):\n        self.Fx = self.config.read_config('Fx')\n        self.Fy = self.config.read_config('Fy')\n        self.Fz = self.config.read_config('Fz')\n        self.Tx = self.config.read_config('Tx')\n        self.Ty = self.config.read_config('Ty')\n        self.Tz = self.config.read_config('Tz')",
+    "span": [
+      173,
+      179
+    ],
+    "start_byte": 7916,
+    "end_byte": 8228,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "readThreshold",
+    "signature": "readThreshold(self)",
+    "parent_class": "LCDPanel",
+    "qualified_name": "LCDPanel.readThreshold",
+    "docstring": null,
+    "chunk_size_bytes": 312,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def reset(self):\n        self.lcdNumber.display(0)\n        self.lcdNumber.default()\n        self.lcdNumber_2.display(0)\n        self.lcdNumber_2.default()\n        self.lcdNumber_3.display(0)\n        self.lcdNumber_3.default()\n        self.lcdNumber_4.display(0)\n        self.lcdNumber_4.default()\n        self.lcdNumber_5.display(0)\n        self.lcdNumber_5.default()\n        self.lcdNumber_6.display(0)\n        self.lcdNumber_6.default()",
+    "span": [
+      181,
+      193
+    ],
+    "start_byte": 8242,
+    "end_byte": 8680,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "reset",
+    "signature": "reset(self)",
+    "parent_class": "LCDPanel",
+    "qualified_name": "LCDPanel.reset",
+    "docstring": null,
+    "chunk_size_bytes": 438,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def update(self, info):\n        self.lcdNumber.display(info[0])\n        self.lcdNumber_2.display(info[1])\n        self.lcdNumber_3.display(info[2])\n        self.lcdNumber_4.display(info[3])\n        self.lcdNumber_5.display(info[4])\n        self.lcdNumber_6.display(info[5])\n\n        if info[0] < -(self.Fx) or info[0] > self.Fx :\n            self.trigger.emit(True)\n            self.lcdNumber.overLoad()\n            #pub.sendMessage(\"Force Threshold\", string = \"Fz Exceeded\")\n        else:\n            self.lcdNumber.default()\n            self.trigger.emit(False)\n\n        if info[1] < -(self.Fy) or info[1] > self.Fy  :\n            self.trigger.emit(True)\n            self.lcdNumber_2.overLoad()\n            #pub.sendMessage(\"Force Threshold\", string = \"Fy Exceeded\")\n        else:\n            self.lcdNumber_2.default()\n            self.trigger.emit(False)\n\n        if info[2] < -(self.Fz) or info[2] > self.Fz  :\n            self.trigger.emit(True)\n            self.lcdNumber_3.overLoad()\n            #pub.sendMessage(\"Force Threshold\", string = \"Fz Exceeded\")\n        else:\n            self.lcdNumber_3.default()\n            self.trigger.emit(False)\n\n        if info[3] < -(self.Tx) or info[3] > self.Tx  :\n            self.lcdNumber_4.overLoad()\n            self.trigger.emit(True)\n            #pub.sendMessage(\"Force Threshold\", string = \"Tx Exceeded\")\n        else:\n            self.lcdNumber_4.default()\n            self.trigger.emit(False)\n\n        if info[4] < -(self.Ty) or info[4] > self.Ty  :\n            self.lcdNumber_5.overLoad()\n            self.trigger.emit(True)\n            #pub.sendMessage(\"Force Threshold\", string = \"Ty Exceeded\")\n        else:\n            self.lcdNumber_5.default()\n            self.trigger.emit(False)\n\n        if info[5] < -(self.Tz) or info[5] > self.Tz :\n            self.lcdNumber_6.overLoad()\n            self.trigger.emit(True)\n            #pub.sendMessage(\"Force Threshold\", string = \"Tz Exceeded\")\n        else:\n            self.lcdNumber_6.default()\n            self.trigger.emit(False)",
+    "span": [
+      196,
+      250
+    ],
+    "start_byte": 8695,
+    "end_byte": 10732,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "update",
+    "signature": "update(self, info)",
+    "parent_class": "LCDPanel",
+    "qualified_name": "LCDPanel.update",
+    "docstring": null,
+    "chunk_size_bytes": 2037,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "class OutputButton(QtWidgets.QPushButton):\n    def __init__(self, parent=None):\n        super(OutputButton, self).__init__(parent)\n        self.setStyleSheet(\"background-color:rgb(200,200,200)\")\n\n        self.clicked.connect(self.colorchange)\n\n    def colorchange(self):\n        if self.isChecked():\n            self.setStyleSheet(\"background-color:rgb(0,255,0)\")\n        else:",
+    "span": [
+      254,
+      265
+    ],
+    "start_byte": 10744,
+    "end_byte": 11189,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "OutputButton",
+    "qualified_name": "OutputButton",
+    "docstring": null,
+    "chunk_size_bytes": 377,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None):\n        super(OutputButton, self).__init__(parent)\n        self.setStyleSheet(\"background-color:rgb(200,200,200)\")\n\n        self.clicked.connect(self.colorchange)",
+    "span": [
+      255,
+      259
+    ],
+    "start_byte": 10791,
+    "end_byte": 10986,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None)",
+    "parent_class": "OutputButton",
+    "qualified_name": "OutputButton.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 195,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  },
+  {
+    "snippet": "def colorchange(self):\n        if self.isChecked():\n            self.setStyleSheet(\"background-color:rgb(0,255,0)\")\n        else:\n            self.setStyleSheet(\"background-color:rgb(200,200,200)\")",
+    "span": [
+      261,
+      265
+    ],
+    "start_byte": 10992,
+    "end_byte": 11189,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "colorchange",
+    "signature": "colorchange(self)",
+    "parent_class": "OutputButton",
+    "qualified_name": "OutputButton.colorchange",
+    "docstring": null,
+    "chunk_size_bytes": 197,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/PyQt5Widgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/PyQt5Widgets.py"
+  }
+]

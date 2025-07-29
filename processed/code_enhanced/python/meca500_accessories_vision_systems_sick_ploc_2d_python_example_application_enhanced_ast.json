@@ -1,0 +1,512 @@
+[
+  {
+    "snippet": "import time",
+    "span": [
+      21,
+      21
+    ],
+    "start_byte": 553,
+    "end_byte": 564,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "import sys",
+    "span": [
+      22,
+      22
+    ],
+    "start_byte": 565,
+    "end_byte": 575,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sys",
+    "qualified_name": "sys",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 10,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "import argparse",
+    "span": [
+      23,
+      23
+    ],
+    "start_byte": 576,
+    "end_byte": 591,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "argparse",
+    "qualified_name": "argparse",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 15,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "import logging",
+    "span": [
+      24,
+      24
+    ],
+    "start_byte": 592,
+    "end_byte": 606,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "logging",
+    "qualified_name": "logging",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 14,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "from typing import List, Tuple, Optional",
+    "span": [
+      25,
+      25
+    ],
+    "start_byte": 607,
+    "end_byte": 647,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "List",
+    "qualified_name": "List",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 40,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "from vision_controller import VisionController",
+    "span": [
+      26,
+      26
+    ],
+    "start_byte": 648,
+    "end_byte": 694,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "VisionController",
+    "qualified_name": "VisionController",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 46,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "from vision_guided_pick import VisionGuidedPick",
+    "span": [
+      27,
+      27
+    ],
+    "start_byte": 695,
+    "end_byte": 742,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 47,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "class SickPloc2DApplication:\n    \"\"\"\n    Complete application class for SICK PLOC 2D vision-guided automation.\n    \n    This class demonstrates a production-ready implementation with proper\n    error handling, logging, and operational monitoring.\n    \"\"\"",
+    "span": [
+      30,
+      468
+    ],
+    "start_byte": 745,
+    "end_byte": 17347,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication",
+    "docstring": "Complete application class for SICK PLOC 2D vision-guided automation.\n    \n    This class demonstrates a production-ready implementation with proper\n    error handling, logging, and operational monitoring.",
+    "chunk_size_bytes": 254,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def __init__(self, robot_ip: str, vision_ip: str, debug: bool = False):\n        \"\"\"\n        Initialize the application.\n        \n        Args:\n            robot_ip (str): IP address of Mecademic robot\n            vision_ip (str): IP address of SICK PLOC 2D system\n            debug (bool): Enable debug output\n        \"\"\"\n        self.robot_ip = robot_ip\n        self.vision_ip = vision_ip\n        self.debug = debug\n        \n        # Initialize integration system\n        self.app = VisionGuidedPick(robot_ip, vision_ip, debug=debug)\n        \n        # Operational parameters\n        self.job_id = 1\n        self.pick_offset = 5.0  # mm\n        self.place_offset = 10.0  # mm\n        self.robot_speed = 25.0  # %\n        \n        # Target positions for place operations\n        self.place_positions = [\n            (-120, 100, 0, 180, 0, 180),   # Position 1\n            (-120, 120, 0, 180, 0, 180),   # Position 2  \n            (-120, 140, 0, 180, 0, 180),   # Position 3\n        ]\n        self.current_place_index = 0\n        \n        # Performance monitoring\n        self.cycle_count = 0\n        self.total_cycle_time = 0.0\n        self.successful_picks = 0\n        self.failed_picks = 0\n        \n        # Setup logging\n        self._setup_logging()\n        \n        self.logger.info(f\"Application initialized - Robot: {robot_ip}, Vision: {vision_ip}\")",
+    "span": [
+      38,
+      77
+    ],
+    "start_byte": 1009,
+    "end_byte": 2367,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot_ip: str, vision_ip: str, debug: bool = False)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.__init__",
+    "docstring": "Initialize the application.\n        \n        Args:\n            robot_ip (str): IP address of Mecademic robot\n            vision_ip (str): IP address of SICK PLOC 2D system\n            debug (bool): Enable debug output",
+    "chunk_size_bytes": 1358,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def _setup_logging(self) -> None:\n        \"\"\"Setup logging configuration.\"\"\"\n        logging.basicConfig(\n            level=logging.INFO if not self.debug else logging.DEBUG,\n            format='%(asctime)s - %(levelname)s - %(message)s',\n            handlers=[\n                logging.FileHandler('sick_ploc2d_application.log'),\n                logging.StreamHandler(sys.stdout)\n            ]\n        )\n        self.logger = logging.getLogger(__name__)",
+    "span": [
+      79,
+      89
+    ],
+    "start_byte": 2377,
+    "end_byte": 2830,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_setup_logging",
+    "signature": "_setup_logging(self)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication._setup_logging",
+    "docstring": "Setup logging configuration.",
+    "chunk_size_bytes": 453,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def initialize_systems(self) -> bool:\n        \"\"\"\n        Initialize robot and vision systems.\n        \n        Returns:\n            bool: True if initialization successful, False otherwise\n        \"\"\"\n        self.logger.info(\"Initializing systems...\")\n        \n        try:\n            # Initialize robot\n            if not self.app.init_robot():\n                self.logger.error(\"Robot initialization failed\")\n                return False\n            self.logger.info(\"Robot initialized successfully\")\n            \n            # Initialize vision system\n            if not self.app.init_vision():\n                self.logger.error(\"Vision system initialization failed\")\n                return False\n            self.logger.info(\"Vision system initialized successfully\")\n            \n            # Configure operational parameters\n            self.app.set_offset(self.pick_offset, self.place_offset)\n            self.app.set_speed(self.robot_speed)\n            \n            self.logger.info(f\"Systems initialized - Pick offset: {self.pick_offset}mm, Speed: {self.robot_speed}%\")\n            return True\n            \n        except Exception as e:\n            self.logger.error(f\"System initialization error: {e}\")\n            return False",
+    "span": [
+      91,
+      122
+    ],
+    "start_byte": 2840,
+    "end_byte": 4081,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "initialize_systems",
+    "signature": "initialize_systems(self)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.initialize_systems",
+    "docstring": "Initialize robot and vision systems.\n        \n        Returns:\n            bool: True if initialization successful, False otherwise",
+    "chunk_size_bytes": 1241,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def perform_calibration(self, calibration_method: str = \"single_point\") -> bool:\n        \"\"\"\n        Perform vision-robot calibration.\n        \n        Args:\n            calibration_method (str): \"single_point\" or \"three_point\"\n            \n        Returns:\n            bool: True if calibration successful, False otherwise\n        \"\"\"\n        self.logger.info(f\"Starting {calibration_method} calibration...\")\n        \n        try:\n            if calibration_method == \"single_point\":\n                return self._single_point_calibration()\n            elif calibration_method == \"three_point\":\n                return self._three_point_calibration()\n            else:\n                self.logger.error(f\"Unknown calibration method: {calibration_method}\")\n                return False\n                \n        except Exception as e:\n            self.logger.error(f\"Calibration error: {e}\")\n            return False",
+    "span": [
+      124,
+      147
+    ],
+    "start_byte": 4091,
+    "end_byte": 5004,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "perform_calibration",
+    "signature": "perform_calibration(self, calibration_method: str = \"single_point\")",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.perform_calibration",
+    "docstring": "Perform vision-robot calibration.\n        \n        Args:\n            calibration_method (str): \"single_point\" or \"three_point\"\n            \n        Returns:\n            bool: True if calibration successful, False otherwise",
+    "chunk_size_bytes": 913,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def _single_point_calibration(self) -> bool:\n        \"\"\"\n        Perform single-point calibration (simplified method).\n        \n        Returns:\n            bool: True if calibration successful, False otherwise\n        \"\"\"\n        # Default reference point coordinates\n        ref_x, ref_y, ref_z = 100.0, 50.0, 25.0\n        ref_rx, ref_ry, ref_rz = 0.0, 0.0, 0.0\n        \n        self.app.set_vision_ref(ref_x, ref_y, ref_z, ref_rx, ref_ry, ref_rz)\n        \n        self.logger.info(f\"Single-point calibration completed at ({ref_x}, {ref_y}, {ref_z})\")\n        return True",
+    "span": [
+      149,
+      163
+    ],
+    "start_byte": 5014,
+    "end_byte": 5587,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_single_point_calibration",
+    "signature": "_single_point_calibration(self)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication._single_point_calibration",
+    "docstring": "Perform single-point calibration (simplified method).\n        \n        Returns:\n            bool: True if calibration successful, False otherwise",
+    "chunk_size_bytes": 573,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def _three_point_calibration(self) -> bool:\n        \"\"\"\n        Perform three-point calibration for high accuracy.\n        \n        Returns:\n            bool: True if calibration successful, False otherwise\n        \"\"\"\n        self.logger.info(\"Starting interactive 3-point calibration...\")\n        \n        # Define calibration points in robot coordinate system\n        robot_points = [\n            (100.0, 100.0, 25.0),  # Point 1\n            (200.0, 100.0, 25.0),  # Point 2\n            (150.0, 200.0, 25.0)   # Point 3\n        ]\n        \n        vision_points = []\n        \n        for i, (x, y, z) in enumerate(robot_points):\n            self.logger.info(f\"Moving to calibration point {i+1}: ({x}, {y}, {z})\")\n            \n            # Move robot to calibration point\n            self.app.robot.MoveCartPoint(x, y, z, 0, 0, 0)\n            self.app.robot.WaitMovementCompletion()\n            \n            # Interactive input for vision coordinates\n            print(f\"\\nRobot positioned at calibration point {i+1}\")\n            print(f\"Robot coordinates: ({x:.1f}, {y:.1f}, {z:.1f})\")\n            print(\"Please observe the corresponding coordinates in the vision system and enter them below:\")\n            \n            try:\n                vision_x = float(input(f\"Vision X coordinate for point {i+1}: \"))\n                vision_y = float(input(f\"Vision Y coordinate for point {i+1}: \"))\n                vision_points.append((vision_x, vision_y))\n                \n                self.logger.info(f\"Point {i+1} - Robot: ({x}, {y}, {z}), Vision: ({vision_x}, {vision_y})\")\n                \n            except ValueError:\n                self.logger.error(\"Invalid coordinate input\")\n                return False\n        \n        # Perform calibration calculation\n        success = self.app.calibrate_3_point(robot_points, vision_points)\n        \n        if success:\n            self.logger.info(\"3-point calibration completed successfully\")\n            return True\n        else:\n            self.logger.error(\"3-point calibration failed\")\n            return False",
+    "span": [
+      165,
+      214
+    ],
+    "start_byte": 5597,
+    "end_byte": 7664,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_three_point_calibration",
+    "signature": "_three_point_calibration(self)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication._three_point_calibration",
+    "docstring": "Perform three-point calibration for high accuracy.\n        \n        Returns:\n            bool: True if calibration successful, False otherwise",
+    "chunk_size_bytes": 2067,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def run_production_cycle(self) -> bool:\n        \"\"\"\n        Run a single production cycle (detect and process all visible parts).\n        \n        Returns:\n            bool: True if cycle completed, False if error occurred\n        \"\"\"\n        cycle_start_time = time.time()\n        \n        try:\n            # Get part count\n            count = self.app.get_count(self.job_id)\n            \n            if count is None:\n                self.logger.warning(\"Failed to get part count from vision system\")\n                return False\n            \n            if count == 0:\n                if self.debug:\n                    self.logger.debug(\"No parts detected\")\n                return True\n            \n            self.logger.info(f\"Processing {count} parts\")\n            \n            # Process each detected part\n            for i in range(1, count + 1):\n                if not self._process_single_part(i):\n                    self.logger.warning(f\"Failed to process part {i}\")\n                    self.failed_picks += 1\n                else:\n                    self.successful_picks += 1\n                    \n                    # Update place position for next part\n                    self.current_place_index = (self.current_place_index + 1) % len(self.place_positions)\n            \n            # Update performance statistics\n            cycle_time = time.time() - cycle_start_time\n            self.cycle_count += 1\n            self.total_cycle_time += cycle_time\n            \n            avg_cycle_time = self.total_cycle_time / self.cycle_count\n            success_rate = (self.successful_picks / (self.successful_picks + self.failed_picks)) * 100\n            \n            self.logger.info(f\"Cycle {self.cycle_count} completed in {cycle_time:.2f}s \"\n                           f\"(avg: {avg_cycle_time:.2f}s, success rate: {success_rate:.1f}%)\")\n            \n            return True\n            \n        except Exception as e:\n            self.logger.error(f\"Production cycle error: {e}\")\n            return False",
+    "span": [
+      216,
+      266
+    ],
+    "start_byte": 7674,
+    "end_byte": 9697,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run_production_cycle",
+    "signature": "run_production_cycle(self)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.run_production_cycle",
+    "docstring": "Run a single production cycle (detect and process all visible parts).\n        \n        Returns:\n            bool: True if cycle completed, False if error occurred",
+    "chunk_size_bytes": 2023,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def _process_single_part(self, part_index: int) -> bool:\n        \"\"\"\n        Process a single part (pick and place).\n        \n        Args:\n            part_index (int): Index of part to process (1-based)\n            \n        Returns:\n            bool: True if part processed successfully, False otherwise\n        \"\"\"\n        try:\n            part_start_time = time.time()\n            \n            # Pick part\n            if not self.app.pick_index(self.job_id, part_index):\n                self.logger.warning(f\"Failed to pick part {part_index}\")\n                return False\n            \n            # Get target place position\n            place_coords = self.place_positions[self.current_place_index]\n            \n            # Place part\n            if not self.app.place(*place_coords):\n                self.logger.warning(f\"Failed to place part {part_index}\")\n                return False\n            \n            part_time = time.time() - part_start_time\n            self.logger.info(f\"Part {part_index} processed successfully in {part_time:.2f}s\")\n            \n            return True\n            \n        except Exception as e:\n            self.logger.error(f\"Part processing error: {e}\")\n            return False",
+    "span": [
+      268,
+      301
+    ],
+    "start_byte": 9707,
+    "end_byte": 10929,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_process_single_part",
+    "signature": "_process_single_part(self, part_index: int)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication._process_single_part",
+    "docstring": "Process a single part (pick and place).\n        \n        Args:\n            part_index (int): Index of part to process (1-based)\n            \n        Returns:\n            bool: True if part processed successfully, False otherwise",
+    "chunk_size_bytes": 1222,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def run_continuous_operation(self, max_cycles: Optional[int] = None, \n                               cycle_delay: float = 1.0) -> None:\n        \"\"\"\n        Run continuous production operation.\n        \n        Args:\n            max_cycles (Optional[int]): Maximum number of cycles (None for infinite)\n            cycle_delay (float): Delay between cycles in seconds\n        \"\"\"\n        self.logger.info(\"Starting continuous operation...\")\n        \n        cycles_completed = 0\n        \n        try:\n            while max_cycles is None or cycles_completed < max_cycles:\n                # Run production cycle\n                success = self.run_production_cycle()\n                \n                if not success:\n                    self.logger.warning(\"Production cycle failed - attempting recovery\")\n                    \n                    # Attempt system recovery\n                    if not self._attempt_recovery():\n                        self.logger.error(\"Recovery failed - stopping operation\")\n                        break\n                \n                cycles_completed += 1\n                \n                # Wait before next cycle\n                if cycle_delay > 0:\n                    time.sleep(cycle_delay)\n                    \n        except KeyboardInterrupt:\n            self.logger.info(\"Operation interrupted by user\")\n        except Exception as e:\n            self.logger.error(f\"Continuous operation error: {e}\")\n        \n        finally:\n            self.logger.info(f\"Continuous operation completed - {cycles_completed} cycles\")\n            self._print_statistics()",
+    "span": [
+      303,
+      342
+    ],
+    "start_byte": 10939,
+    "end_byte": 12533,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run_continuous_operation",
+    "signature": "run_continuous_operation(self, max_cycles: Optional[int] = None, \n                               cycle_delay: float = 1.0)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.run_continuous_operation",
+    "docstring": "Run continuous production operation.\n        \n        Args:\n            max_cycles (Optional[int]): Maximum number of cycles (None for infinite)\n            cycle_delay (float): Delay between cycles in seconds",
+    "chunk_size_bytes": 1594,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def _attempt_recovery(self) -> bool:\n        \"\"\"\n        Attempt to recover from system errors.\n        \n        Returns:\n            bool: True if recovery successful, False otherwise\n        \"\"\"\n        self.logger.info(\"Attempting system recovery...\")\n        \n        try:\n            # Check vision system connection\n            if not self.app.vision_initialized:\n                self.logger.info(\"Reinitializing vision system...\")\n                if not self.app.init_vision():\n                    return False\n            \n            # Check robot connection\n            if not self.app.robot_initialized:\n                self.logger.info(\"Reinitializing robot...\")\n                if not self.app.init_robot():\n                    return False\n            \n            # Test basic functionality\n            count = self.app.get_count(self.job_id)\n            if count is None:\n                self.logger.warning(\"Vision system still not responding\")\n                return False\n            \n            self.logger.info(\"System recovery successful\")\n            return True\n            \n        except Exception as e:\n            self.logger.error(f\"Recovery attempt failed: {e}\")\n            return False",
+    "span": [
+      344,
+      377
+    ],
+    "start_byte": 12543,
+    "end_byte": 13761,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_attempt_recovery",
+    "signature": "_attempt_recovery(self)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication._attempt_recovery",
+    "docstring": "Attempt to recover from system errors.\n        \n        Returns:\n            bool: True if recovery successful, False otherwise",
+    "chunk_size_bytes": 1218,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def _print_statistics(self) -> None:\n        \"\"\"Print operation statistics.\"\"\"\n        if self.cycle_count > 0:\n            avg_cycle_time = self.total_cycle_time / self.cycle_count\n            total_parts = self.successful_picks + self.failed_picks\n            \n            if total_parts > 0:\n                success_rate = (self.successful_picks / total_parts) * 100\n            else:\n                success_rate = 0.0\n            \n            print(\"\\n\" + \"=\"*50)\n            print(\"OPERATION STATISTICS\")\n            print(\"=\"*50)\n            print(f\"Cycles completed: {self.cycle_count}\")\n            print(f\"Total cycle time: {self.total_cycle_time:.2f}s\")\n            print(f\"Average cycle time: {avg_cycle_time:.2f}s\")\n            print(f\"Successful picks: {self.successful_picks}\")\n            print(f\"Failed picks: {self.failed_picks}\")\n            print(f\"Success rate: {success_rate:.1f}%\")\n            print(\"=\"*50)",
+    "span": [
+      379,
+      399
+    ],
+    "start_byte": 13771,
+    "end_byte": 14701,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_print_statistics",
+    "signature": "_print_statistics(self)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication._print_statistics",
+    "docstring": "Print operation statistics.",
+    "chunk_size_bytes": 930,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "def run_test_sequence(self) -> None:\n        \"\"\"\n        Run a comprehensive test sequence to verify system functionality.\n        \"\"\"\n        self.logger.info(\"Starting test sequence...\")\n        \n        tests = [\n            (\"Vision System Communication\", self._test_vision_communication),\n            (\"Robot Movement\", self._test_robot_movement),\n            (\"Coordinate Transformation\", self._test_coordinate_transformation),\n            (\"Pick and Place Operation\", self._test_pick_place),\n        ]\n        \n        passed_tests = 0\n        \n        for test_name, test_function in tests:\n            self.logger.info(f\"Running test: {test_name}\")\n            \n            try:\n                if test_function():\n                    self.logger.info(f\"✓ {test_name} PASSED\")\n                    passed_tests += 1\n                else:\n                    self.logger.error(f\"✗ {test_name} FAILED\")\n            except Exception as e:\n                self.logger.error(f\"✗ {test_name} FAILED with exception: {e}\")\n        \n        self.logger.info(f\"Test sequence completed: {passed_tests}/{len(tests)} tests passed\")\n    \n",
+    "span": [
+      401,
+      428
+    ],
+    "start_byte": 14711,
+    "end_byte": 15843,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run_test_sequence",
+    "signature": "run_test_sequence(self)",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.run_test_sequence",
+    "docstring": "Run a comprehensive test sequence to verify system functionality.",
+    "chunk_size_bytes": 1138,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "est_vision_communication(self) -> bool:\n        \"\"\"Test vision system communication.\"\"\"\n        status = self.app.vision.get_system_status()\n        return status['connected']\n    \n",
+    "span": [
+      430,
+      433
+    ],
+    "start_byte": 15853,
+    "end_byte": 16034,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "vision_communication(self)",
+    "signature": "vision_communication(self) -> bo",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.vision_communication(self)",
+    "docstring": "t vision system communication.\"\"\"",
+    "chunk_size_bytes": 181,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "est_robot_movement(self) -> bool:\n        \"\"\"Test robot movement capability.\"\"\"\n        # Move to a safe test position\n        test_position = (150.0, 150.0, 50.0, 0.0, 0.0, 0.0)\n        self.app.robot.MoveCartPoint(*test_position)\n        self.app.robot.WaitMovementCompletion()\n        return True\n    \n",
+    "span": [
+      435,
+      441
+    ],
+    "start_byte": 16044,
+    "end_byte": 16349,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "robot_movement(self)",
+    "signature": "robot_movement(self) -> bo",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.robot_movement(self)",
+    "docstring": "t robot movement capability.\"\"\"",
+    "chunk_size_bytes": 305,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "est_coordinate_transformation(self) -> bool:\n        \"\"\"Test coordinate transformation accuracy.\"\"\"\n        # This would typically involve moving to known positions\n        # and comparing transformed coordinates\n        return True  # Simplified for example\n    \n",
+    "span": [
+      443,
+      447
+    ],
+    "start_byte": 16359,
+    "end_byte": 16623,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "coordinate_transformation(self)",
+    "signature": "coordinate_transformation(self) -> bo",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.coordinate_transformation(self)",
+    "docstring": "t coordinate transformation accuracy.\"\"\"",
+    "chunk_size_bytes": 264,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "est_pick_place(self) -> bool:\n        \"\"\"Test pick and place operation.\"\"\"\n        count = self.app.get_count(self.job_id)\n        if count and count > 0:\n            return self._process_single_part(1)\n        else:\n            self.logger.warning(\"No parts available for pick/place test\")\n            return False\n    \n",
+    "span": [
+      449,
+      456
+    ],
+    "start_byte": 16633,
+    "end_byte": 16954,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "pick_place(self)",
+    "signature": "pick_place(self) -> bo",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.pick_place(self)",
+    "docstring": "t pick and place operation.\"\"\"",
+    "chunk_size_bytes": 321,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "utdown(self) -> None:\n        \"\"\"Safely shutdown the application.\"\"\"\n        self.logger.info(\"Shutting down application...\")\n        \n        try:\n            self.app.shutdown()\n            self._print_statistics()\n            self.logger.info(\"Application shutdown completed\")\n            \n        except Exception as e:\n            self.logger.error(f\"Shutdown error: {e}\")\n\n\ndef",
+    "span": [
+      458,
+      468
+    ],
+    "start_byte": 16964,
+    "end_byte": 17347,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "wn(self)",
+    "signature": "wn(self) -> No",
+    "parent_class": "SickPloc2DApplication",
+    "qualified_name": "SickPloc2DApplication.wn(self)",
+    "docstring": "ely shutdown the application.\"\"\"",
+    "chunk_size_bytes": 383,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  },
+  {
+    "snippet": "in():\n    \"\"\"Main application entry point.\"\"\"\n    parser = argparse.ArgumentParser(description='SICK PLOC 2D Vision-Guided Pick and Place Application')\n    \n    parser.add_argument('--robot-ip', default='192.168.0.100', \n                       help='IP address of Mecademic robot (default: 192.168.0.100)')\n    parser.add_argument('--vision-ip', default='192.168.0.1',\n                       help='IP address of SICK PLOC 2D system (default: 192.168.0.1)')\n    parser.add_argument('--debug', action='store_true',\n                       help='Enable debug output')\n    parser.add_argument('--calibration', choices=['single', 'three'], default='single',\n                       help='Calibration method (default: single)')\n    parser.add_argument('--mode', choices=['test', 'production', 'continuous'], default='production',\n                       help='Operation mode (default: production)')\n    parser.add_argument('--max-cycles', type=int, default=None,\n                       help='Maximum number of cycles for continuous mode')\n    parser.add_argument('--cycle-delay', type=float, default=1.0,\n                       help='Delay between cycles in seconds (default: 1.0)')\n    \n    args = parser.parse_args()\n    \n    # Create application instance\n    app = SickPloc2DApplication(args.robot_ip, args.vision_ip, args.debug)\n    \n    try:\n        # Initialize systems\n        if not app.initialize_systems():\n            print(\"System initialization failed\")\n            return 1\n        \n        # Perform calibration\n        calibration_method = \"single_point\" if args.calibration == \"single\" else \"three_point\"\n        if not app.perform_calibration(calibration_method):\n            print(\"Calibration failed\")\n            return 1\n        \n        # Run selected mode\n        if args.mode == \"test\":\n            app.run_test_sequence()\n        elif args.mode == \"production\":\n            app.run_production_cycle()\n        elif args.mode == \"continuous\":\n            app.run_continuous_operation(args.max_cycles, args.cycle_delay)\n        \n        return 0\n        \n    except KeyboardInterrupt:\n        print(\"\\nApplication interrupted by user\")\n        return 0\n    except Exception as e:\n        print(f\"Application error: {e}\")\n        return 1\n    finally:\n        app.shutdown()\n\n\nif ",
+    "span": [
+      471,
+      524
+    ],
+    "start_byte": 17350,
+    "end_byte": 19643,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": ":\n  ",
+    "qualified_name": ":\n  ",
+    "signature": ":\n    ",
+    "docstring": "n application entry point.\"\"\"\n    p",
+    "chunk_size_bytes": 2293,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/example_application.py"
+  }
+]

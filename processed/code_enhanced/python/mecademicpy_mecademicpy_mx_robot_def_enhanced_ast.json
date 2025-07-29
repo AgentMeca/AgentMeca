@@ -1,0 +1,617 @@
+[
+  {
+    "snippet": "from enum import IntEnum",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 265,
+    "end_byte": 289,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "IntEnum",
+    "qualified_name": "IntEnum",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 24,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxRobotMsgType(IntEnum):\n    MX_ROBOT_MSG_TYPE_REQUEST = 0  # Request from the user\n    MX_ROBOT_MSG_TYPE_REQUEST_INTERNAL = 1  # Internal request from the user\n    MX_ROBOT_MSG_TYPE_RESPONSE = 10  # Response to user request\n    MX_ROBOT_MSG_TYPE_RESPONSE_INTERNAL = 11  # Response to user request that was identified as \"internal\" by user\n    MX_ROBOT_MSG_TYPE_CTRL_EVENT = 20  # Event spontaneously sent by the robot (control port)\n    MX_ROBOT_MSG_TYPE_MON_EVENT = 21  # Event spontaneously sent by the robot (monitoring port)\n    MX_ROBOT_MSG_TYPE_MON_EVENT_PERIODIC = 22  # Periodic (frequent) event spontaneously sent by the robot",
+    "span": [
+      43,
+      50
+    ],
+    "start_byte": 2285,
+    "end_byte": 2927,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxRobotMsgType",
+    "qualified_name": "MxRobotMsgType",
+    "docstring": null,
+    "chunk_size_bytes": 642,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxRobotModel(IntEnum):\n    MX_ROBOT_MODEL_UNKNOWN = 0\n    MX_ROBOT_MODEL_M500_R1 = 1\n    MX_ROBOT_MODEL_M500_R2 = 2\n    MX_ROBOT_MODEL_M500_R3 = 3\n    MX_ROBOT_MODEL_M500_R4 = 4\n    MX_ROBOT_MODEL_MCS500_R1 = 20\n    MX_ROBOT_MODEL_MCA250_R1 = 30\n    MX_ROBOT_MODEL_MCA1000_R1 = 40",
+    "span": [
+      58,
+      66
+    ],
+    "start_byte": 3395,
+    "end_byte": 3681,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxRobotModel",
+    "qualified_name": "MxRobotModel",
+    "docstring": null,
+    "chunk_size_bytes": 286,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxMoveMode(IntEnum):\n    MX_MOVE_MODE_VELOCITY = 0  # Velocity-based moves (SetJointVel, SetCartLinVel, SetCartAngVel)\n    MX_MOVE_MODE_DURATION = 1  # Time-based moves (SetMoveDuration)",
+    "span": [
+      69,
+      71
+    ],
+    "start_byte": 3684,
+    "end_byte": 3876,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxMoveMode",
+    "qualified_name": "MxMoveMode",
+    "docstring": null,
+    "chunk_size_bytes": 192,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxEventSeverity(IntEnum):\n    MX_EVENT_SEVERITY_SILENT = 0  # Trace event in robot log\n    MX_EVENT_SEVERITY_WARNING = 1  # Send status code on event\n    MX_EVENT_SEVERITY_PAUSE_MOTION = 2  # Send status code and pause motion on event\n    MX_EVENT_SEVERITY_CLEAR_MOTION = 3  # Send status code, pause and clear motion on event\n    MX_EVENT_SEVERITY_ERROR = 4  # Send status code, pause, clear motion and go in error mode on event\n    MX_EVENT_SEVERITY_INVALID = 0xFFFFFFFF  # Set consistent sizeof(MxEventSeverity)",
+    "span": [
+      74,
+      80
+    ],
+    "start_byte": 3879,
+    "end_byte": 4399,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxEventSeverity",
+    "qualified_name": "MxEventSeverity",
+    "docstring": null,
+    "chunk_size_bytes": 520,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxTorqueLimitsMode(IntEnum):\n    MX_TORQUE_LIMITS_MODE_ABSOLUTE = 0  # Absolute torque must be within limits\n    MX_TORQUE_LIMITS_MODE_ABSOLUTE_SKIP_ACCEL = 1  # Absolute torque within limits except during acceleration\n    MX_TORQUE_LIMITS_MODE_DELTA_WITH_EXPECTED = 2  # Difference with expected torque within limits\n    MX_TORQUE_LIMITS_MODE_INVALID = 0xFFFFFFFF  # Set consistent sizeof(MxTorqueLimitsMode)\n    MX_TORQUE_LIMITS_DETECT_ALL = 0\n    MX_TORQUE_LIMITS_DETECT_SKIP_ACCEL = 1",
+    "span": [
+      83,
+      89
+    ],
+    "start_byte": 4402,
+    "end_byte": 4896,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxTorqueLimitsMode",
+    "qualified_name": "MxTorqueLimitsMode",
+    "docstring": null,
+    "chunk_size_bytes": 494,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxIoBankId(IntEnum):\n    MX_IO_BANK_ID_UNDEFINED = 0\n    MX_IO_BANK_ID_IO_MODULE = 1  # IOs from the IO expansion module. API string: 'IoModule'\n    MX_IO_BANK_ID_GRIPPER_MODULE = 2  # IOs from the gripper expansion module. API string: 'GripperModule'\n    MX_IO_BANK_ID_SIG_GEN = 99  # IOs from the test signal generator module. API string: 'SigGen'\n    MX_IO_BANK_ID_FTDI_PSU = 100  # IOs from the FTDI device for the PSU safety port. API string: 'FtdiPsu'",
+    "span": [
+      92,
+      97
+    ],
+    "start_byte": 4899,
+    "end_byte": 5362,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxIoBankId",
+    "qualified_name": "MxIoBankId",
+    "docstring": null,
+    "chunk_size_bytes": 463,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxDigitalIoState(IntEnum):\n    MX_DIGITAL_IO_STATE_STAY = -1  # Leave previous state\n    MX_DIGITAL_IO_STATE_0 = 0  # Set digital output value to 0\n    MX_DIGITAL_IO_STATE_1 = 1  # Set digital output value to 1",
+    "span": [
+      104,
+      107
+    ],
+    "start_byte": 5655,
+    "end_byte": 5871,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxDigitalIoState",
+    "qualified_name": "MxDigitalIoState",
+    "docstring": null,
+    "chunk_size_bytes": 216,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxWorkZoneMode(IntEnum):\n    MX_WORK_ZONE_MODE_FCP_IN_WORK_ZONE = 1  # Flange center point must remain in the work zone\n    MX_WORK_ZONE_MODE_TOOL_IN_WORK_ZONE = 2  # Robot tool must remain in the work zone\n    MX_WORK_ZONE_MODE_ROBOT_AND_TOOL_IN_WORK_ZONE = 3  # Entire robot and tool must remain in the work zone",
+    "span": [
+      110,
+      113
+    ],
+    "start_byte": 5874,
+    "end_byte": 6194,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxWorkZoneMode",
+    "qualified_name": "MxWorkZoneMode",
+    "docstring": null,
+    "chunk_size_bytes": 320,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxCollisionGroup(IntEnum):\n    MX_COLLISION_GROUP_ROBOT = 0  # The robot itself (base and links)\n    MX_COLLISION_GROUP_FCP = 1  # The robot flange center point\n    MX_COLLISION_GROUP_TOOL = 2  # The robot tool (if defined with tools sphere APIs)\n    MX_COLLISION_GROUP_ENV_OBJ = 3  # A user-defined object in the environment (not yet supported)\n    MX_COLLISION_GROUP_WORK_ZONE = 4  # The robot work zone, as defined with the work zone APIs",
+    "span": [
+      116,
+      121
+    ],
+    "start_byte": 6197,
+    "end_byte": 6644,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxCollisionGroup",
+    "qualified_name": "MxCollisionGroup",
+    "docstring": null,
+    "chunk_size_bytes": 447,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxCollisionGroupRobotIdx(IntEnum):\n    MX_COLLISION_GROUP_ROBOT_BASE = 0  # The robot base\n    MX_COLLISION_GROUP_ROBOT_LINK_1 = 1  # Link between joint 1 and joint 2\n    MX_COLLISION_GROUP_ROBOT_LINK_2 = 2  # Link between joint 2 and joint 3\n    MX_COLLISION_GROUP_ROBOT_LINK_3 = 3  # Meca500: Link between joint 3 and joint 4, Mcs500: vertical rod\n    MX_COLLISION_GROUP_ROBOT_LINK_4 = 4  # Meca500: Link between joint 4 and joint 5\n    MX_COLLISION_GROUP_ROBOT_LINK_5 = 5  # Meca500: Link between joint 5 and joint 6\n    MX_COLLISION_GROUP_ROBOT_LINK_6 = 6  # Meca500: Rotating plate where the tool is attached",
+    "span": [
+      124,
+      131
+    ],
+    "start_byte": 6647,
+    "end_byte": 7266,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxCollisionGroupRobotIdx",
+    "qualified_name": "MxCollisionGroupRobotIdx",
+    "docstring": null,
+    "chunk_size_bytes": 619,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxCollisionGroupToolIdx(IntEnum):\n    MX_COLLISION_GROUP_TOOL_SPHERE = 0  # The tool sphere\n    MX_COLLISION_GROUP_TOOL_MPM500 = 10000  # Meca500 valve box\n    MX_COLLISION_GROUP_TOOL_MVK01 = 20000  # Mcs500, Mca250 and Mca1000 IO/vacuum module",
+    "span": [
+      134,
+      137
+    ],
+    "start_byte": 7269,
+    "end_byte": 7519,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxCollisionGroupToolIdx",
+    "qualified_name": "MxCollisionGroupToolIdx",
+    "docstring": null,
+    "chunk_size_bytes": 250,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxSafeStopCategory(IntEnum):\n    MX_SAFE_STOP_NONE = 0x00\n    MX_SAFE_STOP_ESTOP = 0x01  # Emergency stop (VM removed)\n    MX_SAFE_STOP_PSTOP1 = 0x02  # Safe stop category 1 (VM removed)\n    MX_SAFE_STOP_PSTOP2 = 0x04  # Safe stop category 2 (Standstill if VM is on)\n    MX_SAFE_STOP_OPERATION_MODE = 0x10  # Operation mode change or mode Locked mode (VM removed)\n    MX_SAFE_STOP_ENABLING_DEVICE_RELEASED = 0x20  # Enabling device released while manual mode.\n    MX_SAFE_STOP_VOLTAGE_FLUCTUATION = 0x40  # Power supply external voltage fluctuation (VM removed)\n    MX_SAFE_STOP_REBOOT = 0x80  # Robot just rebooted, waiting Reset to restore VM\n    MX_SAFE_STOP_REDUNDANCY_FAULT = 0x100  # Redundancy fault between master/slave branches (fatal)\n    MX_SAFE_STOP_STANDSTILL_FAULT = 0x200  # Standstill fault (robot moved while standstill)",
+    "span": [
+      140,
+      152
+    ],
+    "start_byte": 7522,
+    "end_byte": 8544,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxSafeStopCategory",
+    "qualified_name": "MxSafeStopCategory",
+    "docstring": null,
+    "chunk_size_bytes": 843,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxStopState(IntEnum):\n    MX_STOP_STATE_RESET = 0  # Safety stop condition is not active\n    MX_STOP_STATE_ACTIVE = 1  # Safety stop condition is active (robot is stopped/deactivated)\n    MX_STOP_STATE_RESETTABLE = 2  # Safety stop condition is cleared but awaiting ack (ResetPStop)",
+    "span": [
+      155,
+      158
+    ],
+    "start_byte": 8547,
+    "end_byte": 8835,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxStopState",
+    "qualified_name": "MxStopState",
+    "docstring": null,
+    "chunk_size_bytes": 288,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxRobotOperationMode(IntEnum):\n    MX_ROBOT_OPERATION_MODE_LOCKED = 0  # Operation mode is \"Locked\". VM off, can't activate robot.\n    MX_ROBOT_OPERATION_MODE_AUTO = 1  # Operation mode is \"Automatic\". No restriction.\n    MX_ROBOT_OPERATION_MODE_MANUAL = 2  # Operation mode is \"Manual\", speed is limited.\n    MX_ROBOT_OPERATION_MODE_INVALID = 3  # Operation mode is invalid.",
+    "span": [
+      161,
+      165
+    ],
+    "start_byte": 8838,
+    "end_byte": 9219,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxRobotOperationMode",
+    "qualified_name": "MxRobotOperationMode",
+    "docstring": null,
+    "chunk_size_bytes": 381,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxPsuInputMask(IntEnum):\n    MX_PSU_INPUT_ESTOP = 0x01  # Set (1) when at least one of the two power supply EStop inputs is asserted.\n    MX_PSU_INPUT_PSTOP1 = 0x02  # Set (1) when at least one of the two power supply PStop1 inputs is asserted.\n    MX_PSU_INPUT_PSTOP2 = 0x04  # Set (1) when at least one of the two power supply PStop2 inputs is asserted.\n    MX_PSU_INPUT_RESET_EXT = 0x08  # Set (1) when the power supply 'reset' input is asserted.\n    MX_PSU_INPUT_RESET_KEYPAD = 0x10  # Set (1) when the power supply keypad reset button is pressed.\n    MX_PSU_INPUT_ENABLING_DEVICE = 0x20  # Set (1) when both enabling device inputs are asserted (i.e. pressed).",
+    "span": [
+      168,
+      174
+    ],
+    "start_byte": 9222,
+    "end_byte": 9892,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxPsuInputMask",
+    "qualified_name": "MxPsuInputMask",
+    "docstring": null,
+    "chunk_size_bytes": 670,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxGetLogsMode(IntEnum):\n    MX_GET_LOGS_MODE_FULL = 0  # Get all logs + configuration files\n    MX_GET_LOGS_MODE_QUICK = 1  # Get minimal logs + configuration files\n    MX_GET_LOGS_MODE_LATEST_ONLY = 2  # Get only latest robot log file\n    MX_GET_LOGS_MODE_USER_LOG_ONLY = 3  # Get only the latest user log\n    MX_GET_LOGS_MODE_FLIGHT_RECORDER = 4  # Get only the flight recorder",
+    "span": [
+      177,
+      182
+    ],
+    "start_byte": 9895,
+    "end_byte": 10280,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxGetLogsMode",
+    "qualified_name": "MxGetLogsMode",
+    "docstring": null,
+    "chunk_size_bytes": 385,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxDiagStatus(IntEnum):\n    MX_DIAG_STATUS_UNKNOWN = 0  # Diagnostic status is unknown\n    MX_DIAG_STATUS_PASS = 1  # Diagnostic status is \"Valid\" (no error found)\n    MX_DIAG_STATUS_WARNING = 2  # Diagnostic status is \"warning\" (some minor problem detected)\n    MX_DIAG_STATUS_ERROR = 3  # Diagnostic status is \"error\" (an error was detected, but possibly non-fatal)\n    MX_DIAG_STATUS_FATAL_ERROR = 4  # Diagnostic status is \"fatal-error\" (a fatal error, i.e. robot cannot be used)",
+    "span": [
+      185,
+      190
+    ],
+    "start_byte": 10283,
+    "end_byte": 10771,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxDiagStatus",
+    "qualified_name": "MxDiagStatus",
+    "docstring": null,
+    "chunk_size_bytes": 488,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxDiagLevel(IntEnum):\n    MX_DIAG_LVL_BASIC = 0  # Basic level, always visible\n    MX_DIAG_LVL_ADVANCED = 5  # Advanced level, not shown by default\n    MX_DIAG_LVL_DEBUG = 10  # Debug level, only available in dev mode",
+    "span": [
+      193,
+      196
+    ],
+    "start_byte": 10774,
+    "end_byte": 10997,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxDiagLevel",
+    "qualified_name": "MxDiagLevel",
+    "docstring": null,
+    "chunk_size_bytes": 223,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxMotionCmdType(IntEnum):\n    MX_MOTION_CMD_TYPE_NO_MOVE = 0  # No movement (noop)\n    MX_MOTION_CMD_TYPE_MOVEJOINTS = 1  # Move each joint to given absolute position in degrees\n    MX_MOTION_CMD_TYPE_MOVEPOSE = 2  # Move to a position relative to WRF (x-y-z in mm, a-b-c in degrees)\n    MX_MOTION_CMD_TYPE_MOVELIN = 3  # Move to a position relative to WRF (x-y-z in mm, a-b-c in degrees)\n    MX_MOTION_CMD_TYPE_MOVELINRELTRF = 4  # Relative movement (relative to the current TRF position)\n    MX_MOTION_CMD_TYPE_MOVELINRELWRF = 5  # Relative movement (relative to the current WRF position)\n    MX_MOTION_CMD_TYPE_DELAY = 6  # Delay in seconds before processing the next command\n    MX_MOTION_CMD_TYPE_SETBLENDING = 7  # Set blending ration (in percent) between consecutive move commands\n    MX_MOTION_CMD_TYPE_SETJOINTVEL = 8  # Set joint target velocity in percent (for MovePost and MoveJoint only)\n    MX_MOTION_CMD_TYPE_SETJOINTACC = 9  # Set joint acceleration in percent (for MovePost and MoveJoint only)",
+    "span": [
+      199,
+      265
+    ],
+    "start_byte": 11000,
+    "end_byte": 17275,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxMotionCmdType",
+    "qualified_name": "MxMotionCmdType",
+    "docstring": null,
+    "chunk_size_bytes": 1016,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxEip_DynamicType(IntEnum):\n    MX_EIP_DYNAMIC_AUTO = 0\n    MX_EIP_DYNAMIC_CFG_FW_VERSION = 1\n    MX_EIP_DYNAMIC_CFG_PRODUCT_TYPE = 2\n    MX_EIP_DYNAMIC_CFG_ROBOT_SERIAL = 3\n    MX_EIP_DYNAMIC_CFG_ROBOT_DH_MODEL_1 = 5\n    MX_EIP_DYNAMIC_CFG_ROBOT_DH_MODEL_2 = 6\n    MX_EIP_DYNAMIC_CFG_ROBOT_DH_MODEL_3 = 7\n    MX_EIP_DYNAMIC_CFG_ROBOT_DH_MODEL_4 = 8\n    MX_EIP_DYNAMIC_CFG_ROBOT_DH_MODEL_5 = 9\n    MX_EIP_DYNAMIC_CFG_ROBOT_DH_MODEL_6 = 10",
+    "span": [
+      272,
+      330
+    ],
+    "start_byte": 17662,
+    "end_byte": 20501,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxEip_DynamicType",
+    "qualified_name": "MxEip_DynamicType",
+    "docstring": null,
+    "chunk_size_bytes": 444,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxCyclicProtocolMode(IntEnum):\n    MX_CYCLIC_PROTOCOL_DISABLED = 0  # Protocol is disabled. Robot does not listen on socket for connections.\n    MX_CYCLIC_PROTOCOL_ENABLED = 1  # Protocol is enabled and robot can be controlled.\n    MX_CYCLIC_PROTOCOL_ENABLED_MONITORING = 2  # Protocol is enabled for monitoring the robot only (output ignored)",
+    "span": [
+      333,
+      336
+    ],
+    "start_byte": 20504,
+    "end_byte": 20853,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxCyclicProtocolMode",
+    "qualified_name": "MxCyclicProtocolMode",
+    "docstring": null,
+    "chunk_size_bytes": 349,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxRobotStatusCode(IntEnum):\n    MX_ST_NONE = 0\n    MX_ST_BUFFER_FULL = 1000  # Maximum number of queued commands reached. Try sending fewer at a time.\n    MX_ST_UNKNOWN_CMD = 1001  # Unknown or empty command.\n    MX_ST_SYNTAX_ERR = 1002  # A parenthesis or a comma has been omitted.\n    MX_ST_ARG_ERR = 1003  # Wrong number of arguments or invalid input (e.g. value out of range).\n    MX_ST_NOT_ACTIVATED = 1005  # Robot is not activated, must be activated before using that command.\n    MX_ST_NOT_HOMED = 1006  # Robot is not homed, must be homed before using that command.\n    MX_ST_JOINT_OVER_LIMIT = 1007  # Requested position would cause joints to be over limit.\n    MX_ST_BLOCKED_BY_180_DEG_PROT = 1010  # Requested move blocked because some joints would move more than 180 deg\n    MX_ST_ALREADY_ERR = 1011  # Robot is in error, command can't be processed. Reset errors then retry.",
+    "span": [
+      340,
+      631
+    ],
+    "start_byte": 20924,
+    "end_byte": 43244,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxRobotStatusCode",
+    "qualified_name": "MxRobotStatusCode",
+    "docstring": null,
+    "chunk_size_bytes": 893,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxRobotState(IntEnum):\n    MX_ROBOT_STATE_UNKNOWN = 0\n    MX_ROBOT_STATE_INIT = 1\n    MX_ROBOT_STATE_POWERED = 2\n    MX_ROBOT_STATE_ACTIVATING = 3\n    MX_ROBOT_STATE_ACTIVATED = 4\n    MX_ROBOT_STATE_HOMING = 5\n    MX_ROBOT_STATE_MASTERING = 6\n    MX_ROBOT_STATE_RUN = 7\n    MX_ROBOT_STATE_DEACTIVATING = 9",
+    "span": [
+      635,
+      644
+    ],
+    "start_byte": 43276,
+    "end_byte": 43587,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxRobotState",
+    "qualified_name": "MxRobotState",
+    "docstring": null,
+    "chunk_size_bytes": 311,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxJointCalibrationMethod(IntEnum):\n    MX_JOINT_CALIB_METHOD_DH_PARAMS = 0  # Apply joint-space calibration as Theta offset in DH params\n    MX_JOINT_CALIB_METHOD_DRIVE_DATA = 1  # Apply joint-space calibration during communication with drives\n    MX_JOINT_CALIB_METHOD_DRIVE_DATA_RT = 2  # Apply during comm with drives, and adjust using real-time data\n    MX_JOINT_CALIB_METHOD_DRIVE_DATA_DYN_MODEL = 3  # Apply during comm with drives, and adjust using dyn model",
+    "span": [
+      647,
+      651
+    ],
+    "start_byte": 43590,
+    "end_byte": 44061,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxJointCalibrationMethod",
+    "qualified_name": "MxJointCalibrationMethod",
+    "docstring": null,
+    "chunk_size_bytes": 471,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxRobotSimulationMode(IntEnum):\n    MX_SIM_MODE_DISABLED = 0  # Simulation mode is disabled (robot will move)\n    MX_SIM_MODE_REAL_TIME = 1  # Using real-time sim mode (robot will execute commands without physically moving)\n    MX_SIM_MODE_FAST = 2  # Using fast simulation mode (robot will simulate commands as fast as possible)\n    MX_SIM_MODE_FAST_SAFE = 3  # Fast mode without optimizations (ex: Checking collision every loop)",
+    "span": [
+      654,
+      658
+    ],
+    "start_byte": 44064,
+    "end_byte": 44500,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxRobotSimulationMode",
+    "qualified_name": "MxRobotSimulationMode",
+    "docstring": null,
+    "chunk_size_bytes": 436,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxArgType(IntEnum):\n    MX_ARG_TYPE_ANY = 0\n    MX_ARG_TYPE_INTEGER = 1\n    MX_ARG_TYPE_FLOAT = 2\n    MX_ARG_TYPE_STRING = 3",
+    "span": [
+      661,
+      665
+    ],
+    "start_byte": 44503,
+    "end_byte": 44633,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxArgType",
+    "qualified_name": "MxArgType",
+    "docstring": null,
+    "chunk_size_bytes": 130,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxArgUnit(IntEnum):\n    MX_UNIT_NONE = 0  # no units\n    MX_UNIT_DEG = 1  # degrees\n    MX_UNIT_RAD = 2  # radians\n    MX_UNIT_PER = 3  # %\n    MX_UNIT_MM = 4  # mm\n    MX_UNIT_MS = 5  # ms\n    MX_UNIT_SEC = 6  # sec\n    MX_UNIT_ANGVEL = 7  # deg/s\n    MX_UNIT_LINVEL = 8  # mm/s\n    MX_UNIT_KG = 9  # kilograms",
+    "span": [
+      668,
+      680
+    ],
+    "start_byte": 44636,
+    "end_byte": 45024,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxArgUnit",
+    "qualified_name": "MxArgUnit",
+    "docstring": null,
+    "chunk_size_bytes": 317,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class RobotStatusCodeInfo:\n\n    def __init__(self, code, name, is_error, is_resettable):\n        \"\"\"This class contains information bout a robot status codes above (ex: MX_ST_BUFFER_FULL)\n\n        Parameters\n        ----------\n        code : integer\n            The integer value (ex: 1001)\n        name : string\n            The code name (ex: \"MX_ST_BUFFER_FULL\"\n        is_error : bool\n            True if this is an error code\n        is_resettable : bool\n            True if this is error code can be reset\n        \"\"\"",
+    "span": [
+      901,
+      920
+    ],
+    "start_byte": 61341,
+    "end_byte": 61989,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RobotStatusCodeInfo",
+    "qualified_name": "RobotStatusCodeInfo",
+    "docstring": null,
+    "chunk_size_bytes": 522,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "def __init__(self, code, name, is_error, is_resettable):\n        \"\"\"This class contains information bout a robot status codes above (ex: MX_ST_BUFFER_FULL)\n\n        Parameters\n        ----------\n        code : integer\n            The integer value (ex: 1001)\n        name : string\n            The code name (ex: \"MX_ST_BUFFER_FULL\"\n        is_error : bool\n            True if this is an error code\n        is_resettable : bool\n            True if this is error code can be reset\n        \"\"\"\n        self.code = code\n        self.name = name\n        self.is_error = is_error\n        self.is_resettable = is_resettable",
+    "span": [
+      903,
+      920
+    ],
+    "start_byte": 61373,
+    "end_byte": 61989,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, code, name, is_error, is_resettable)",
+    "parent_class": "RobotStatusCodeInfo",
+    "qualified_name": "RobotStatusCodeInfo.__init__",
+    "docstring": "This class contains information bout a robot status codes above (ex: MX_ST_BUFFER_FULL)\n\n        Parameters\n        ----------\n        code : integer\n            The integer value (ex: 1001)\n        name : string\n            The code name (ex: \"MX_ST_BUFFER_FULL\"\n        is_error : bool\n            True if this is an error code\n        is_resettable : bool\n            True if this is error code can be reset",
+    "chunk_size_bytes": 616,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxExtToolType(IntEnum):\n    MX_EXT_TOOL_NONE = 0  # No external tool connected\n    MX_EXT_TOOL_CURRENT = 1  # Use in SetExtToolSim in order to simulate current external tool\n    MX_EXT_TOOL_MEGP25_SHORT = 10  # MEGP25 electrical gripper\n    MX_EXT_TOOL_MEGP25_LONG = 11  # MEGP25 electrical gripper long stroke\n    MX_EXT_TOOL_VBOX_2VALVES = 20  # MPM500 pneumatic module with 2 valves\n    MX_EXT_TOOL_UGRIPPER = 30  # Mca250 micro gripper\n    MX_EXT_TOOL_TYPE_INVALID = 0xFFFFFFFF  # Set consistent sizeof(MxExtToolType)",
+    "span": [
+      1518,
+      1525
+    ],
+    "start_byte": 114740,
+    "end_byte": 115267,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxExtToolType",
+    "qualified_name": "MxExtToolType",
+    "docstring": null,
+    "chunk_size_bytes": 527,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxExtToolMode(IntEnum):\n    MX_EXT_TOOL_COMPLEMENTARY = 0  # Valves states are complementary\n    MX_EXT_TOOL_INDEPENDENT = 1  # Valves states are independent\n    MX_EXT_TOOL_POSITION = 2  # Position control\n    MX_EXT_TOOL_MODE_INVALID = 0xFFFFFFFF  # Set consistent sizeof(MxExtToolMode)",
+    "span": [
+      1528,
+      1532
+    ],
+    "start_byte": 115270,
+    "end_byte": 115564,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxExtToolMode",
+    "qualified_name": "MxExtToolMode",
+    "docstring": null,
+    "chunk_size_bytes": 294,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxCmdValveState(IntEnum):\n    MX_VALVE_STATE_STAY = -1  # Leave previous valve state\n    MX_VALVE_STATE_CLOSE = 0  # Close valve\n    MX_VALVE_STATE_OPEN = 1  # Open valve",
+    "span": [
+      1535,
+      1538
+    ],
+    "start_byte": 115567,
+    "end_byte": 115743,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxCmdValveState",
+    "qualified_name": "MxCmdValveState",
+    "docstring": null,
+    "chunk_size_bytes": 176,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  },
+  {
+    "snippet": "class MxUserTrace(IntEnum):\n    MX_USER_TRACE_NONE = 0\n    MX_USER_TRACE_CONNECTED = 10\n    MX_USER_TRACE_DISCONNECTED = 11\n    MX_USER_TRACE_CONNECT_SYNC_STARTED = 12\n    MX_USER_TRACE_CONNECT_SYNC_DONE = 13\n    MX_USER_TRACE_CONTROL_GRANTED = 20\n    MX_USER_TRACE_CONTROL_RELEASED = 21\n    MX_USER_TRACE_CONTROL_REFUSED = 22\n    MX_USER_TRACE_API_LOCKED = 23\n    MX_USER_TRACE_SIDE_CAR_REGISTRATION = 50  # Registration or un-registration",
+    "span": [
+      1544,
+      1640
+    ],
+    "start_byte": 115796,
+    "end_byte": 120044,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MxUserTrace",
+    "qualified_name": "MxUserTrace",
+    "docstring": null,
+    "chunk_size_bytes": 440,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def.py",
+    "normalized_path": "mecademicpy/mecademicpy/mx_robot_def.py"
+  }
+]

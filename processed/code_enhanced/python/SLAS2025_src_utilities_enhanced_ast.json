@@ -1,0 +1,177 @@
+[
+  {
+    "snippet": "from copy import deepcopy",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 25,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "deepcopy",
+    "qualified_name": "deepcopy",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 25,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/utilities.py",
+    "normalized_path": "SLAS2025/src/utilities.py"
+  },
+  {
+    "snippet": "class XbotType():\n    def __init__(self, bot_type: str, id: int):\n        self.bot_type = bot_type\n        self.id = id",
+    "span": [
+      4,
+      7
+    ],
+    "start_byte": 28,
+    "end_byte": 147,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "XbotType",
+    "qualified_name": "XbotType",
+    "docstring": null,
+    "chunk_size_bytes": 119,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/utilities.py",
+    "normalized_path": "SLAS2025/src/utilities.py"
+  },
+  {
+    "snippet": "def __init__(self, bot_type: str, id: int):\n        self.bot_type = bot_type\n        self.id = id",
+    "span": [
+      5,
+      7
+    ],
+    "start_byte": 50,
+    "end_byte": 147,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, bot_type: str, id: int)",
+    "parent_class": "XbotType",
+    "qualified_name": "XbotType.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 97,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/utilities.py",
+    "normalized_path": "SLAS2025/src/utilities.py"
+  },
+  {
+    "snippet": "class PlanarStateSLAS():\n    def __init__(self, xbot_list: list[XbotType]):\n        self.state_dict = {}\n        self.set_state(xbot_list)\n\n    def set_state(self, bots: XbotType):\n        self.state_dict[\"pp\"] = bots[0]\n        self.state_dict[\"wp\"] = bots[1]\n        self.state_dict[\"sv\"] = bots[2]\n        self.state_dict[\"sw\"] = bots[3]\n",
+    "span": [
+      10,
+      50
+    ],
+    "start_byte": 150,
+    "end_byte": 1706,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "PlanarStateSLAS",
+    "qualified_name": "PlanarStateSLAS",
+    "docstring": null,
+    "chunk_size_bytes": 341,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/utilities.py",
+    "normalized_path": "SLAS2025/src/utilities.py"
+  },
+  {
+    "snippet": "def __init__(self, xbot_list: list[XbotType]):\n        self.state_dict = {}\n        self.set_state(xbot_list)",
+    "span": [
+      11,
+      13
+    ],
+    "start_byte": 179,
+    "end_byte": 288,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, xbot_list: list[XbotType])",
+    "parent_class": "PlanarStateSLAS",
+    "qualified_name": "PlanarStateSLAS.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 109,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/utilities.py",
+    "normalized_path": "SLAS2025/src/utilities.py"
+  },
+  {
+    "snippet": "def set_state(self, bots: XbotType):\n        self.state_dict[\"pp\"] = bots[0]\n        self.state_dict[\"wp\"] = bots[1]\n        self.state_dict[\"sv\"] = bots[2]\n        self.state_dict[\"sw\"] = bots[3]",
+    "span": [
+      15,
+      19
+    ],
+    "start_byte": 294,
+    "end_byte": 490,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set_state",
+    "signature": "set_state(self, bots: XbotType)",
+    "parent_class": "PlanarStateSLAS",
+    "qualified_name": "PlanarStateSLAS.set_state",
+    "docstring": null,
+    "chunk_size_bytes": 196,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/utilities.py",
+    "normalized_path": "SLAS2025/src/utilities.py"
+  },
+  {
+    "snippet": "def get_id_positions(self) -> list[int]:\n        return [self.state_dict[\"pp\"].id,\n                self.state_dict[\"wp\"].id,\n                self.state_dict[\"sw\"].id,\n                self.state_dict[\"sv\"].id]",
+    "span": [
+      21,
+      25
+    ],
+    "start_byte": 496,
+    "end_byte": 704,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_id_positions",
+    "signature": "get_id_positions(self)",
+    "parent_class": "PlanarStateSLAS",
+    "qualified_name": "PlanarStateSLAS.get_id_positions",
+    "docstring": null,
+    "chunk_size_bytes": 208,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/utilities.py",
+    "normalized_path": "SLAS2025/src/utilities.py"
+  },
+  {
+    "snippet": "def swap_pipetting(self):\n        temp_pp = deepcopy(self.state_dict[\"pp\"])\n        temp_wp = deepcopy(self.state_dict[\"wp\"])\n\n        self.state_dict[\"pp\"] = deepcopy(temp_wp)\n        self.state_dict[\"wp\"] = deepcopy(temp_pp)",
+    "span": [
+      27,
+      32
+    ],
+    "start_byte": 710,
+    "end_byte": 936,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "swap_pipetting",
+    "signature": "swap_pipetting(self)",
+    "parent_class": "PlanarStateSLAS",
+    "qualified_name": "PlanarStateSLAS.swap_pipetting",
+    "docstring": null,
+    "chunk_size_bytes": 226,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/utilities.py",
+    "normalized_path": "SLAS2025/src/utilities.py"
+  },
+  {
+    "snippet": "def swap_full(self):\n        temp_pp = deepcopy(self.state_dict[\"pp\"])\n        temp_wp = deepcopy(self.state_dict[\"wp\"])\n        temp_sw = deepcopy(self.state_dict[\"sw\"])\n        temp_sv = deepcopy(self.state_dict[\"sv\"])\n\n        if temp_pp.bot_type == \"well\" and temp_wp.bot_type == \"vial\":\n            self.state_dict[\"sw\"] = deepcopy(temp_pp)\n            self.state_dict[\"sv\"] = deepcopy(temp_wp)\n        elif temp_pp.bot_type == \"vial\" and temp_wp.bot_type == \"well\":\n            self.state_dict[\"sv\"] = deepcopy(temp_pp)\n            self.state_dict[\"sw\"] = deepcopy(temp_wp)\n        else:\n            raise ValueError(\"Uh Oh can't swap cause of type issue.\")\n\n        self.state_dict[\"pp\"] = deepcopy(temp_sv)\n        self.state_dict[\"wp\"] = deepcopy(temp_sw)",
+    "span": [
+      34,
+      50
+    ],
+    "start_byte": 942,
+    "end_byte": 1706,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "swap_full",
+    "signature": "swap_full(self)",
+    "parent_class": "PlanarStateSLAS",
+    "qualified_name": "PlanarStateSLAS.swap_full",
+    "docstring": null,
+    "chunk_size_bytes": 764,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/utilities.py",
+    "normalized_path": "SLAS2025/src/utilities.py"
+  }
+]

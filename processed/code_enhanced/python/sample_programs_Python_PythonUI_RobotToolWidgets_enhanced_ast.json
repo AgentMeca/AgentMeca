@@ -1,0 +1,489 @@
+[
+  {
+    "snippet": "from PyQt5 import QtCore, QtGui, QtWidgets",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 42,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QtCore",
+    "qualified_name": "QtCore",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 42,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "from PyQt5.QtCore import pyqtSignal,Qt",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 43,
+    "end_byte": 81,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "pyqtSignal",
+    "qualified_name": "pyqtSignal",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 38,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "import PyQt5Widgets",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 83,
+    "end_byte": 102,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "PyQt5Widgets",
+    "qualified_name": "PyQt5Widgets",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 19,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "from PyQt5Widgets import PushBut, LCDNumber, Label, LCDPanel, jogBut",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 103,
+    "end_byte": 171,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "PushBut",
+    "qualified_name": "PushBut",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 68,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "from functools import partial",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 172,
+    "end_byte": 201,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "partial",
+    "qualified_name": "partial",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 29,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "class PoseWidget(QtWidgets.QWidget):\n    def __init__(self,parent = None):\n        super(PoseWidget,self).__init__(parent)\n        self.horizontalLayoutWidget = QtWidgets.QWidget()\n        #self.setFixedWidth(235)\n        #self.setFixedHeight(325)\n        self.gridLayout = QtWidgets.QGridLayout()\n\n        self.lcdNumber_1 = LCDNumber(self)\n        self.gridLayout.addWidget(self.lcdNumber_1, 0, 0, 1, 1)\n",
+    "span": [
+      8,
+      85
+    ],
+    "start_byte": 203,
+    "end_byte": 2780,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "PoseWidget",
+    "qualified_name": "PoseWidget",
+    "docstring": null,
+    "chunk_size_bytes": 406,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def __init__(self,parent = None):\n        super(PoseWidget,self).__init__(parent)\n        self.horizontalLayoutWidget = QtWidgets.QWidget()\n        #self.setFixedWidth(235)\n        #self.setFixedHeight(325)\n        self.gridLayout = QtWidgets.QGridLayout()\n\n        self.lcdNumber_1 = LCDNumber(self)\n        self.gridLayout.addWidget(self.lcdNumber_1, 0, 0, 1, 1)\n\n        self.lcdNumber_2 = LCDNumber(self)\n        self.gridLayout.addWidget(self.lcdNumber_2, 0, 1, 1, 1)\n\n        self.lcdNumber_3 = LCDNumber(self)\n        self.gridLayout.addWidget(self.lcdNumber_3, 0, 2, 1, 1)\n\n        self.lcdNumber_4 = LCDNumber(self)\n        self.gridLayout.addWidget(self.lcdNumber_4, 0, 3, 1, 1)\n\n        self.lcdNumber_5 = LCDNumber(self)\n        self.gridLayout.addWidget(self.lcdNumber_5, 0, 4, 1, 1)\n\n        self.lcdNumber_6 = LCDNumber(self)\n        self.gridLayout.addWidget(self.lcdNumber_6, 0, 5, 1, 1)\n\n        self.label_1 = Label(self)\n        self.gridLayout.addWidget(self.label_1, 1, 0, 1, 1)\n\n        self.label_2 = Label(self)\n        self.gridLayout.addWidget(self.label_2, 1, 1, 1, 1)\n\n        self.label_3 = Label(self)\n        self.gridLayout.addWidget(self.label_3, 1, 2, 1, 1)\n\n        self.label_4 = Label(self)\n        self.gridLayout.addWidget(self.label_4, 1, 3, 1, 1)\n\n        self.label_5 = Label(self)\n        self.gridLayout.addWidget(self.label_5, 1, 4, 1, 1)\n\n        self.label_6 = Label(self)\n        self.gridLayout.addWidget(self.label_6, 1, 5, 1, 1)\n\n\n\n        self.setLayout(self.gridLayout)",
+    "span": [
+      9,
+      54
+    ],
+    "start_byte": 244,
+    "end_byte": 1767,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self,parent = None)",
+    "parent_class": "PoseWidget",
+    "qualified_name": "PoseWidget.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 1523,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def update(self,info):\n        self.lcdNumber_1.display(info[0])\n        self.lcdNumber_2.display(info[1])\n        self.lcdNumber_3.display(info[2])\n        self.lcdNumber_4.display(info[3])\n        self.lcdNumber_5.display(info[4])\n        self.lcdNumber_6.display(info[5])",
+    "span": [
+      56,
+      62
+    ],
+    "start_byte": 1773,
+    "end_byte": 2047,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "update",
+    "signature": "update(self,info)",
+    "parent_class": "PoseWidget",
+    "qualified_name": "PoseWidget.update",
+    "docstring": null,
+    "chunk_size_bytes": 274,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def reset(self):\n        self.lcdNumber_1.display(0)\n        self.lcdNumber_1.default()\n        self.lcdNumber_2.display(0)\n        self.lcdNumber_2.default()\n        self.lcdNumber_3.display(0)\n        self.lcdNumber_3.default()\n        self.lcdNumber_4.display(0)\n        self.lcdNumber_4.default()\n        self.lcdNumber_5.display(0)\n        self.lcdNumber_5.default()\n        self.lcdNumber_6.display(0)\n        self.lcdNumber_6.default()",
+    "span": [
+      65,
+      77
+    ],
+    "start_byte": 2066,
+    "end_byte": 2508,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "reset",
+    "signature": "reset(self)",
+    "parent_class": "PoseWidget",
+    "qualified_name": "PoseWidget.reset",
+    "docstring": null,
+    "chunk_size_bytes": 442,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def set_label(self, info):\n        self.label_1.setText(info[0])\n        self.label_2.setText(info[1])\n        self.label_3.setText(info[2])\n        self.label_4.setText(info[3])\n        self.label_5.setText(info[4])\n        self.label_6.setText(info[5])",
+    "span": [
+      79,
+      85
+    ],
+    "start_byte": 2526,
+    "end_byte": 2780,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set_label",
+    "signature": "set_label(self, info)",
+    "parent_class": "PoseWidget",
+    "qualified_name": "PoseWidget.set_label",
+    "docstring": null,
+    "chunk_size_bytes": 254,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "class JogPanel(QtWidgets.QWidget):\n    mode = pyqtSignal(str)\n    vel = pyqtSignal(int)\n    delta = pyqtSignal(list)\n    def __init__(self,parent = None):\n        super (JogPanel,self).__init__(parent)\n        self.hboxLayout = QtWidgets.QHBoxLayout()\n        self.vboxLayout = QtWidgets.QVBoxLayout()\n        self.gridLayout = QtWidgets.QGridLayout()\n        \n        self.jog = QtWidgets.QPushButton()",
+    "span": [
+      88,
+      343
+    ],
+    "start_byte": 2787,
+    "end_byte": 12705,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "JogPanel",
+    "qualified_name": "JogPanel",
+    "docstring": null,
+    "chunk_size_bytes": 403,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def __init__(self,parent = None):\n        super (JogPanel,self).__init__(parent)\n        self.hboxLayout = QtWidgets.QHBoxLayout()\n        self.vboxLayout = QtWidgets.QVBoxLayout()\n        self.gridLayout = QtWidgets.QGridLayout()\n        \n        self.jog = QtWidgets.QPushButton()\n        self.jog.setMaximumHeight(50)\n        self.jog.setText(\"Jogging Mode\")\n        self.jog.setCheckable(True)\n\n        self.joymode = QtWidgets.QPushButton()\n        self.joymode.setMaximumHeight(25)\n        self.joymode.setText(\"Use Joystick\")\n        self.joymode.setCheckable(True)\n        self.joymode.setEnabled(False)\n\n        self.jointsMode = QtWidgets.QRadioButton(\"Joints\")\n        self.WRFMode = QtWidgets.QRadioButton(\"WRF\")\n        self.TRFMode = QtWidgets.QRadioButton(\"TRF\")\n        self.jointsMode.setEnabled(False)\n        self.WRFMode.setEnabled(False)\n        self.TRFMode.setEnabled(False)\n\n        self.hboxLayout.addWidget(self.jointsMode)\n        self.hboxLayout.addWidget(self.WRFMode)\n        self.hboxLayout.addWidget(self.TRFMode)\n\n        self.label_1 = QtWidgets.QLabel()\n        self.gridLayout.addWidget(self.label_1,0,0,1,1)\n        self.btn1 = jogBut()\n        self.btn1.setText(\"-\")\n        self.gridLayout.addWidget(self.btn1,0,1,1,1)\n        self.btn2 = jogBut()\n        self.btn2.setText(\"+\")\n        self.gridLayout.addWidget(self.btn2,0,2,1,1)\n        \n        self.label_2= QtWidgets.QLabel()\n        self.gridLayout.addWidget(self.label_2,1,0,1,1)\n        self.btn3 = jogBut()\n        self.btn3.setText(\"-\")\n        self.gridLayout.addWidget(self.btn3,1,1,1,1)\n        self.btn4 = jogBut()\n        self.btn4.setText(\"+\")\n        self.gridLayout.addWidget(self.btn4,1,2,1,1)\n        \n        \n        self.label_3= QtWidgets.QLabel()\n        self.gridLayout.addWidget(self.label_3,2,0,1,1)\n        self.btn5 = jogBut()\n        self.btn5.setText(\"-\")\n        self.gridLayout.addWidget(self.btn5,2,1,1,1)\n        self.btn6 = jogBut()\n        self.btn6.setText(\"+\")\n        self.gridLayout.addWidget(self.btn6,2,2,1,1)\n\n        self.label_4= QtWidgets.QLabel()\n        self.gridLayout.addWidget(self.label_4,3,0,1,1)\n        self.btn7 = jogBut()\n        self.btn7.setText(\"-\")\n        self.gridLayout.addWidget(self.btn7,3,1,1,1)\n        self.btn8 = jogBut()\n        self.btn8.setText(\"+\")\n        self.gridLayout.addWidget(self.btn8,3,2,1,1)\n        \n        self.label_5= QtWidgets.QLabel()\n        self.gridLayout.addWidget(self.label_5,4,0,1,1)\n        self.btn9 = jogBut()\n        self.btn9.setText(\"-\")\n        self.gridLayout.addWidget(self.btn9,4,1,1,1)\n        self.btn10 = jogBut()\n        self.btn10.setText(\"+\")\n        self.gridLayout.addWidget(self.btn10,4,2,1,1)\n        \n\n        self.label_6= QtWidgets.QLabel()\n        self.gridLayout.addWidget(self.label_6,5,0,1,1)\n        self.btn11 = jogBut()\n        self.btn11.setText(\"-\")\n        self.gridLayout.addWidget(self.btn11,5,1,1,1)\n        self.btn12 = jogBut()\n        self.btn12.setText(\"+\")\n        self.gridLayout.addWidget(self.btn12,5,2,1,1)\n        self.btn1.setEnabled(False)\n        self.btn2.setEnabled(False)\n        self.btn3.setEnabled(False)\n        self.btn4.setEnabled(False)\n        self.btn5.setEnabled(False)\n        self.btn6.setEnabled(False)\n        self.btn7.setEnabled(False)\n        self.btn8.setEnabled(False)\n        self.btn9.setEnabled(False)\n        self.btn10.setEnabled(False)\n        self.btn11.setEnabled(False)\n        self.btn12.setEnabled(False)\n\n        self.speed_set_label = QtWidgets.QLabel(\"Speed Settings\")\n        self.speed_set_label.setMaximumHeight(50)\n\n        self.slider_layout = QtWidgets.QHBoxLayout()\n        \n        self.speed = QtWidgets.QSlider(Qt.Horizontal)\n        self.speed.setRange(0, 20)\n        self.speed.setFocusPolicy(Qt.NoFocus)\n        self.speed.setPageStep(5)\n        self.speed.setValue(0)\n        self.val = QtWidgets.QLabel('0')\n        self.val.setMaximumHeight(50)\n        self.val.setAlignment(Qt.AlignCenter | Qt.AlignVCenter)\n\n        self.slider_layout.addWidget(self.speed)\n        self.slider_layout.addWidget(self.val)\n\n        self.vboxLayout.addWidget(self.jog)\n        self.vboxLayout.addWidget(self.joymode)\n        self.vboxLayout.addLayout(self.hboxLayout)\n        self.vboxLayout.addLayout(self.gridLayout)\n        self.vboxLayout.addWidget(self.speed_set_label)\n        self.vboxLayout.addLayout(self.slider_layout)\n        \n        self.setLayout(self.vboxLayout)\n\n        self.jointsMode.toggled.connect(self.on_joints)\n        self.WRFMode.toggled.connect(self.on_WRF)\n        self.TRFMode.toggled.connect(self.on_TRF)\n        self.jog.clicked.connect(self.enable_jog)\n        self.speed.valueChanged.connect(self.updateVal)\n\n        #Button connection\n        self.btn1.clicked.connect(lambda ignore, label=0, direction='-': self.on_button_delta(label, direction))\n        self.btn2.clicked.connect(lambda ignore, label=0, direction='+': self.on_button_delta(label, direction))\n        self.btn3.clicked.connect(lambda ignore, label=1, direction='-': self.on_button_delta(label, direction))\n        self.btn4.clicked.connect(lambda ignore, label=1, direction='+': self.on_button_delta(label, direction))\n        self.btn5.clicked.connect(lambda ignore, label=2, direction='-': self.on_button_delta(label, direction))\n        self.btn6.clicked.connect(lambda ignore, label=2, direction='+': self.on_button_delta(label, direction))\n        self.btn7.clicked.connect(lambda ignore, label=3, direction='-': self.on_button_delta(label, direction))\n        self.btn8.clicked.connect(lambda ignore, label=3, direction='+': self.on_button_delta(label, direction))\n        self.btn9.clicked.connect(lambda ignore, label=4, direction='-': self.on_button_delta(label, direction))\n        self.btn10.clicked.connect(lambda ignore, label=4, direction='+': self.on_button_delta(label, direction))\n        self.btn11.clicked.connect(lambda ignore, label=5, direction='-': self.on_button_delta(label, direction))\n        self.btn12.clicked.connect(lambda ignore, label=5, direction='+': self.on_button_delta(label, direction))\n\n        self.joymode.clicked.connect(self.on_joy_mode)",
+    "span": [
+      92,
+      234
+    ],
+    "start_byte": 2908,
+    "end_byte": 9064,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self,parent = None)",
+    "parent_class": "JogPanel",
+    "qualified_name": "JogPanel.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 6156,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def enable_jog(self):\n        if self.jog.isChecked():\n                \n            self.jointsMode.setEnabled(True)\n            self.WRFMode.setEnabled(True)\n            self.TRFMode.setEnabled(True)\n            self.joymode.setEnabled(True)\n\n            self.btn1.setEnabled(True)\n            self.btn2.setEnabled(True)\n            self.btn3.setEnabled(True)\n            self.btn4.setEnabled(True)\n            self.btn5.setEnabled(True)\n            self.btn6.setEnabled(True)\n            self.btn7.setEnabled(True)\n            self.btn8.setEnabled(True)\n            self.btn9.setEnabled(True)\n            self.btn10.setEnabled(True)\n            self.btn11.setEnabled(True)\n            self.btn12.setEnabled(True)\n\n        else:\n    \n            self.jointsMode.setEnabled(False)\n            self.WRFMode.setEnabled(False)\n            self.TRFMode.setEnabled(False)\n            self.joymode.setEnabled(False)\n\n            self.btn1.setEnabled(False)\n            self.btn2.setEnabled(False)\n            self.btn3.setEnabled(False)\n            self.btn4.setEnabled(False)\n            self.btn5.setEnabled(False)\n            self.btn6.setEnabled(False)\n            self.btn7.setEnabled(False)\n            self.btn8.setEnabled(False)\n            self.btn9.setEnabled(False)\n            self.btn10.setEnabled(False)\n            self.btn11.setEnabled(False)\n            self.btn12.setEnabled(False)",
+    "span": [
+      236,
+      275
+    ],
+    "start_byte": 9078,
+    "end_byte": 10471,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "enable_jog",
+    "signature": "enable_jog(self)",
+    "parent_class": "JogPanel",
+    "qualified_name": "JogPanel.enable_jog",
+    "docstring": null,
+    "chunk_size_bytes": 1393,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def on_joy_mode(self):\n        if self.joymode.isChecked():\n            self.btn1.setEnabled(False)\n            self.btn2.setEnabled(False)\n            self.btn3.setEnabled(False)\n            self.btn4.setEnabled(False)\n            self.btn5.setEnabled(False)\n            self.btn6.setEnabled(False)\n            self.btn7.setEnabled(False)\n            self.btn8.setEnabled(False)\n            self.btn9.setEnabled(False)\n            self.btn10.setEnabled(False)\n            self.btn11.setEnabled(False)\n            self.btn12.setEnabled(False)\n        else:\n            self.btn1.setEnabled(True)\n            self.btn2.setEnabled(True)\n            self.btn3.setEnabled(True)\n            self.btn4.setEnabled(True)\n            self.btn5.setEnabled(True)\n            self.btn6.setEnabled(True)\n            self.btn7.setEnabled(True)\n            self.btn8.setEnabled(True)\n            self.btn9.setEnabled(True)\n            self.btn10.setEnabled(True)\n            self.btn11.setEnabled(True)\n            self.btn12.setEnabled(True)",
+    "span": [
+      277,
+      303
+    ],
+    "start_byte": 10477,
+    "end_byte": 11504,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_joy_mode",
+    "signature": "on_joy_mode(self)",
+    "parent_class": "JogPanel",
+    "qualified_name": "JogPanel.on_joy_mode",
+    "docstring": null,
+    "chunk_size_bytes": 1027,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def on_joints(self):\n        self.mode.emit(\"Joints\")\n        self.updateLabel(\"Joints\")",
+    "span": [
+      305,
+      307
+    ],
+    "start_byte": 11522,
+    "end_byte": 11610,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_joints",
+    "signature": "on_joints(self)",
+    "parent_class": "JogPanel",
+    "qualified_name": "JogPanel.on_joints",
+    "docstring": null,
+    "chunk_size_bytes": 88,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def on_WRF(self):\n        self.mode.emit(\"WRF\")\n        self.updateLabel(\"WRF\")",
+    "span": [
+      308,
+      310
+    ],
+    "start_byte": 11615,
+    "end_byte": 11694,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_WRF",
+    "signature": "on_WRF(self)",
+    "parent_class": "JogPanel",
+    "qualified_name": "JogPanel.on_WRF",
+    "docstring": null,
+    "chunk_size_bytes": 79,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def on_TRF(self):\n        self.mode.emit(\"TRF\")\n        self.updateLabel(\"TRF\")",
+    "span": [
+      311,
+      313
+    ],
+    "start_byte": 11699,
+    "end_byte": 11778,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_TRF",
+    "signature": "on_TRF(self)",
+    "parent_class": "JogPanel",
+    "qualified_name": "JogPanel.on_TRF",
+    "docstring": null,
+    "chunk_size_bytes": 79,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def updateLabel(self,value):\n        if value == \"Joints\":\n            self.label_1.setText(\"J1\")\n            self.label_2.setText(\"J2\")\n            self.label_3.setText(\"J3\")\n            self.label_4.setText(\"J4\")\n            self.label_5.setText(\"J5\")\n            self.label_6.setText(\"J6\")\n            \n            \n        elif (value == \"WRF\") or (value == \"TRF\"):\n            self.label_1.setText(\"X\")\n            self.label_2.setText(\"Y\")\n            self.label_3.setText(\"Z\")\n            self.label_4.setText(\"Rx\")\n            self.label_5.setText(\"Ry\")\n            self.label_6.setText(\"Rz\")",
+    "span": [
+      315,
+      331
+    ],
+    "start_byte": 11792,
+    "end_byte": 12392,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "updateLabel",
+    "signature": "updateLabel(self,value)",
+    "parent_class": "JogPanel",
+    "qualified_name": "JogPanel.updateLabel",
+    "docstring": null,
+    "chunk_size_bytes": 600,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def updateVal(self, value):\n        self.val.setText(str(value))\n        self.vel.emit(value)",
+    "span": [
+      333,
+      335
+    ],
+    "start_byte": 12398,
+    "end_byte": 12491,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "updateVal",
+    "signature": "updateVal(self, value)",
+    "parent_class": "JogPanel",
+    "qualified_name": "JogPanel.updateVal",
+    "docstring": null,
+    "chunk_size_bytes": 93,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def on_button_delta(self, label, direction):\n        data = [0, 0, 0, 0, 0, 0]\n        if direction == '+':\n            data[label] = 1\n        else:\n            data[label] = -1\n        self.delta.emit(data)",
+    "span": [
+      337,
+      343
+    ],
+    "start_byte": 12497,
+    "end_byte": 12705,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "on_button_delta",
+    "signature": "on_button_delta(self, label, direction)",
+    "parent_class": "JogPanel",
+    "qualified_name": "JogPanel.on_button_delta",
+    "docstring": null,
+    "chunk_size_bytes": 208,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "class TeachPanel(QtWidgets.QWidget):\n    def __init__(self,parent = None):\n        super (TeachPanel,self).__init__(parent)\n        #self.setWindowTitle(\"QThread Application\")\n        #self.setWindowIcon(QtGui.QIcon(\"Path/to/image/file.png\"))\n        #self.setMinimumWidth(resolution.width() / 3)\n        #self.setMinimumHeight(resolution.height() / 1.5)\n        #self.setStyleSheet(\"QScrollBar:horizontal {width: 1px; height: 1px;}, QScrollBar:vertical {width: 1px;height: 1px;}\")\n        self.linef = QtWidgets.QLineEdit(self)\n        self.linef.setPlaceholderText(\"Command to send...\")\n        self.linef.setStyleSheet(\"margin: 1px; padding: 7px;border-style: solid;border-radius: 3px;border-width: 0.5px;\")",
+    "span": [
+      346,
+      390
+    ],
+    "start_byte": 12708,
+    "end_byte": 14944,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "TeachPanel",
+    "qualified_name": "TeachPanel",
+    "docstring": null,
+    "chunk_size_bytes": 710,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def __init__(self,parent = None):\n        super (TeachPanel,self).__init__(parent)\n        #self.setWindowTitle(\"QThread Application\")\n        #self.setWindowIcon(QtGui.QIcon(\"Path/to/image/file.png\"))\n        #self.setMinimumWidth(resolution.width() / 3)\n        #self.setMinimumHeight(resolution.height() / 1.5)\n        #self.setStyleSheet(\"QScrollBar:horizontal {width: 1px; height: 1px;}, QScrollBar:vertical {width: 1px;height: 1px;}\")\n        self.linef = QtWidgets.QLineEdit(self)\n        self.linef.setPlaceholderText(\"Command to send...\")\n        self.linef.setStyleSheet(\"margin: 1px; padding: 7px;border-style: solid;border-radius: 3px;border-width: 0.5px;\")\n        self.but1 = PushBut(self)\n        self.but1.setText(\"Send\")\n        #self.but1.setFixedWidth(72)\n        #self.but1.setFont(font_but)\n                                 \n        self.textf = QtWidgets.QPlainTextEdit(self)\n        self.textf.setPlaceholderText(\"Programm...\")\n        self.textf.setTabStopDistance(QtGui.QFontMetricsF(self.textf.font()).horizontalAdvance(' ') * 4)\n        #self.textfsetStyleSheet(\"margin: 1px; padding: 7px;border-style: solid;border-radius: 3px;border-width: 0.5px;\")\n                                 \n        self.but2 = PushBut(self)\n        self.but2.setText(\"MoveJoints\")\n        #self.but2.setFixedWidth(72)\n        #self.but2.setFont(font_but)\n        self.but3 = PushBut(self)\n        self.but3.setText(\"MovePose\")\n        #self.but3.setFixedWidth(72)\n        #self.but3.setFont(font_but)\n        self.but4 = PushBut(self)\n        self.but4.setText(\"MoveLin\")\n        #self.but4.setFixedWidth(72)\n        #self.but4.setFont(font_but)\n\n        self.grid2 = QtWidgets.QGridLayout()\n        self.grid2.addWidget(self.but2, 0, 0, 1, 1)\n        self.grid2.addWidget(self.but3, 0, 2, 1, 1)\n        self.grid2.addWidget(self.but4, 0, 3, 1, 1)\n        self.grid1 = QtWidgets.QGridLayout()\n        self.grid1.addWidget(self.linef, 0, 0, 1, 1)\n        self.grid1.addWidget(self.but1, 1, 0, 1, 1)\n        self.grid1.addWidget(self.textf, 2, 0, 13, 1)\n        self.grid1.addLayout(self.grid2, 16, 0, 1, 1)\n        self.grid1.setContentsMargins(7, 7, 7, 7)\n        self.setLayout(self.grid1)",
+    "span": [
+      347,
+      390
+    ],
+    "start_byte": 12749,
+    "end_byte": 14944,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self,parent = None)",
+    "parent_class": "TeachPanel",
+    "qualified_name": "TeachPanel.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 2195,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "class MoxaVisual(QtWidgets.QWidget):\n    def __init__(self, parent=None):\n        super(MoxaVisual, self).__init__(parent)\n        self.wid = QtWidgets.QHBoxLayout()\n        self.Inputs = QtWidgets.QVBoxLayout()\n        self.Outputs = QtWidgets.QVBoxLayout()\n        self.OutLabels = QtWidgets.QVBoxLayout()\n\n        self.wid.addLayout(self.Inputs)\n        self.wid.addLayout(self.OutLabels)\n        self.wid.addLayout(self.Outputs)",
+    "span": [
+      392,
+      528
+    ],
+    "start_byte": 14946,
+    "end_byte": 20086,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MoxaVisual",
+    "qualified_name": "MoxaVisual",
+    "docstring": null,
+    "chunk_size_bytes": 432,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def __init__(self, parent=None):\n        super(MoxaVisual, self).__init__(parent)\n        self.wid = QtWidgets.QHBoxLayout()\n        self.Inputs = QtWidgets.QVBoxLayout()\n        self.Outputs = QtWidgets.QVBoxLayout()\n        self.OutLabels = QtWidgets.QVBoxLayout()\n\n        self.wid.addLayout(self.Inputs)\n        self.wid.addLayout(self.OutLabels)\n        self.wid.addLayout(self.Outputs)\n\n        self.in_0 = QtWidgets.QLabel()\n        self.in_1 = QtWidgets.QLabel()\n        self.in_2 = QtWidgets.QLabel()\n        self.in_3 = QtWidgets.QLabel()\n        self.in_4 = QtWidgets.QLabel()\n        self.in_5 = QtWidgets.QLabel()\n        self.in_6 = QtWidgets.QLabel()\n        self.in_7 = QtWidgets.QLabel()\n\n        self.outL_0 = QtWidgets.QLabel()\n        self.outL_1 = QtWidgets.QLabel()\n        self.outL_2 = QtWidgets.QLabel()\n        self.outL_3 = QtWidgets.QLabel()\n        self.outL_4 = QtWidgets.QLabel()\n        self.outL_5 = QtWidgets.QLabel()\n        self.outL_6 = QtWidgets.QLabel()\n        self.outL_7 = QtWidgets.QLabel()\n\n        self.outL_0.setText(\"Output 0\")\n        self.outL_1.setText(\"Output 1\")\n        self.outL_2.setText(\"Output 2\")\n        self.outL_3.setText(\"Output 3\")\n        self.outL_4.setText(\"Output 4\")\n        self.outL_5.setText(\"Output 5\")\n        self.outL_6.setText(\"Output 6\")\n        self.outL_7.setText(\"Output 7\")\n\n        self.out_0 = PyQt5Widgets.OutputButton()\n        self.out_0.setCheckable(True)\n        self.out_1 = PyQt5Widgets.OutputButton()\n        self.out_1.setCheckable(True)\n        self.out_2 = PyQt5Widgets.OutputButton()\n        self.out_2.setCheckable(True)\n        self.out_3 = PyQt5Widgets.OutputButton()\n        self.out_3.setCheckable(True)\n        self.out_4 = PyQt5Widgets.OutputButton()\n        self.out_4.setCheckable(True)\n        self.out_5 = PyQt5Widgets.OutputButton()\n        self.out_5.setCheckable(True)\n        self.out_6 = PyQt5Widgets.OutputButton()\n        self.out_6.setCheckable(True)\n        self.out_7 = PyQt5Widgets.OutputButton()\n        self.out_7.setCheckable(True)\n\n        self.in_0.setText(\"Input 0\")\n        self.in_0.setStyleSheet(\"border: 1px solid black;\")\n        self.in_1.setText(\"Input 1\")\n        self.in_1.setStyleSheet(\"border: 1px solid black;\")\n        self.in_2.setText(\"Input 2\")\n        self.in_2.setStyleSheet(\"border: 1px solid black;\")\n        self.in_3.setText(\"Input 3\")\n        self.in_3.setStyleSheet(\"border: 1px solid black;\")\n        self.in_4.setText(\"Input 4\")\n        self.in_4.setStyleSheet(\"border: 1px solid black;\")\n        self.in_5.setText(\"Input 5\")\n        self.in_5.setStyleSheet(\"border: 1px solid black;\")\n        self.in_6.setText(\"Input 6\")\n        self.in_6.setStyleSheet(\"border: 1px solid black;\")\n        self.in_7.setText(\"Input 7\")\n        self.in_7.setStyleSheet(\"border: 1px solid black;\")\n\n        self.Inputs.addWidget(self.in_0)\n        self.Inputs.addWidget(self.in_1)\n        self.Inputs.addWidget(self.in_2)\n        self.Inputs.addWidget(self.in_3)\n        self.Inputs.addWidget(self.in_4)\n        self.Inputs.addWidget(self.in_5)\n        self.Inputs.addWidget(self.in_6)\n        self.Inputs.addWidget(self.in_7)\n\n        self.OutLabels.addWidget(self.outL_0)\n        self.OutLabels.addWidget(self.outL_1)\n        self.OutLabels.addWidget(self.outL_2)\n        self.OutLabels.addWidget(self.outL_3)\n        self.OutLabels.addWidget(self.outL_4)\n        self.OutLabels.addWidget(self.outL_5)\n        self.OutLabels.addWidget(self.outL_6)\n        self.OutLabels.addWidget(self.outL_7)\n\n        self.Outputs.addWidget(self.out_0)\n        self.Outputs.addWidget(self.out_1)\n        self.Outputs.addWidget(self.out_2)\n        self.Outputs.addWidget(self.out_3)\n        self.Outputs.addWidget(self.out_4)\n        self.Outputs.addWidget(self.out_5)\n        self.Outputs.addWidget(self.out_6)\n        self.Outputs.addWidget(self.out_7)\n\n        self.setLayout(self.wid)",
+    "span": [
+      393,
+      492
+    ],
+    "start_byte": 14987,
+    "end_byte": 18892,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, parent=None)",
+    "parent_class": "MoxaVisual",
+    "qualified_name": "MoxaVisual.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 3905,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  },
+  {
+    "snippet": "def update_input(self, values):\n        color_high = \"background-color:rgb(0,255,0)\"\n        color_low = \"background-color:rgb(200,200,200)\"\n        if values[0]:\n            self.in_0.setStyleSheet(color_high)\n        else:\n            self.in_0.setStyleSheet(color_low)\n        if values[1]:\n            self.in_1.setStyleSheet(color_high)\n        else:\n            self.in_1.setStyleSheet(color_low)\n        if values[2]:\n            self.in_2.setStyleSheet(color_high)\n        else:\n            self.in_2.setStyleSheet(color_low)\n        if values[3]:\n            self.in_3.setStyleSheet(color_high)\n        else:\n            self.in_3.setStyleSheet(color_low)\n        if values[4]:\n            self.in_4.setStyleSheet(color_high)\n        else:\n            self.in_4.setStyleSheet(color_low)\n        if values[5]:\n            self.in_5.setStyleSheet(color_high)\n        else:\n            self.in_5.setStyleSheet(color_low)\n        if values[6]:\n            self.in_6.setStyleSheet(color_high)\n        else:\n            self.in_6.setStyleSheet(color_low)\n        if values[7]:\n            self.in_7.setStyleSheet(color_high)\n        else:\n            self.in_7.setStyleSheet(color_low)",
+    "span": [
+      494,
+      528
+    ],
+    "start_byte": 18898,
+    "end_byte": 20086,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "update_input",
+    "signature": "update_input(self, values)",
+    "parent_class": "MoxaVisual",
+    "qualified_name": "MoxaVisual.update_input",
+    "docstring": null,
+    "chunk_size_bytes": 1188,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/RobotToolWidgets.py",
+    "normalized_path": "sample-programs/Python/PythonUI/RobotToolWidgets.py"
+  }
+]

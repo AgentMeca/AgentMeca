@@ -1,0 +1,514 @@
+[
+  {
+    "snippet": "from pmclib import system_commands as sys",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 41,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "system_commands as sys",
+    "qualified_name": "system_commands as sys",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 41,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "from pmclib import xbot_commands as bot",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 74,
+    "end_byte": 113,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "xbot_commands as bot",
+    "qualified_name": "xbot_commands as bot",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 39,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "from pmclib import pmc_types",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 147,
+    "end_byte": 175,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "pmc_types",
+    "qualified_name": "pmc_types",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 28,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 208,
+    "end_byte": 219,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "class PlanarMotorMove():\n    def __init__(self, bot_id, xpos: float, ypos: float, vel: float = 1.0, acc: float = 10.0, ending_speed: float = 0) -> None:\n        self.bot_id = bot_id\n        self.xpos = xpos\n        self.ypos = ypos\n        self.vel = vel\n        self.acc = acc\n        self.end_speed = ending_speed",
+    "span": [
+      8,
+      15
+    ],
+    "start_byte": 222,
+    "end_byte": 537,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "PlanarMotorMove",
+    "qualified_name": "PlanarMotorMove",
+    "docstring": null,
+    "chunk_size_bytes": 315,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def __init__(self, bot_id, xpos: float, ypos: float, vel: float = 1.0, acc: float = 10.0, ending_speed: float = 0) -> None:\n        self.bot_id = bot_id\n        self.xpos = xpos\n        self.ypos = ypos\n        self.vel = vel\n        self.acc = acc\n        self.end_speed = ending_speed",
+    "span": [
+      9,
+      15
+    ],
+    "start_byte": 251,
+    "end_byte": 537,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, bot_id, xpos: float, ypos: float, vel: float = 1.0, acc: float = 10.0, ending_speed: float = 0)",
+    "parent_class": "PlanarMotorMove",
+    "qualified_name": "PlanarMotorMove.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 286,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "class MecaPlanar():\n    def __init__(self) -> None:\n        self.is_connected = False\n\n    def connect(self, auto_connect: bool = True, ip: str = '192.168.10.100') -> bool:\n        if auto_connect:\n            connection_state = sys.auto_search_and_connect_to_pmc()\n            self.is_connected = connection_state\n            return connection_state\n        else:\n            connection_state = sys.connect_to_specific_pmc(ip)",
+    "span": [
+      18,
+      146
+    ],
+    "start_byte": 540,
+    "end_byte": 6174,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "MecaPlanar",
+    "qualified_name": "MecaPlanar",
+    "docstring": null,
+    "chunk_size_bytes": 427,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def __init__(self) -> None:\n        self.is_connected = False",
+    "span": [
+      19,
+      20
+    ],
+    "start_byte": 564,
+    "end_byte": 625,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 61,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def connect(self, auto_connect: bool = True, ip: str = '192.168.10.100') -> bool:\n        if auto_connect:\n            connection_state = sys.auto_search_and_connect_to_pmc()\n            self.is_connected = connection_state\n            return connection_state\n        else:\n            connection_state = sys.connect_to_specific_pmc(ip)\n            self.is_connected = connection_state\n            return connection_state",
+    "span": [
+      22,
+      30
+    ],
+    "start_byte": 631,
+    "end_byte": 1052,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "connect",
+    "signature": "connect(self, auto_connect: bool = True, ip: str = '192.168.10.100')",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.connect",
+    "docstring": null,
+    "chunk_size_bytes": 421,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def initialize(self, timeout: float = 10.0):\n        if not sys.is_master():\n            sys.gain_mastership()\n        bot.activate_xbots()\n        maxTime = time.time() + timeout\n        while sys.get_pmc_status() is not pmc_types.PMCSTATUS.PMC_FULLCTRL:\n            time.sleep(0.5)\n            if time.time() > maxTime:\n                raise TimeoutError(\"PMC Activation timeout\")",
+    "span": [
+      32,
+      40
+    ],
+    "start_byte": 1058,
+    "end_byte": 1440,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "initialize",
+    "signature": "initialize(self, timeout: float = 10.0)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.initialize",
+    "docstring": null,
+    "chunk_size_bytes": 382,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def activate_bots(self, timeout: float = 10.0):\n        bot.activate_xbots()\n        maxTime = time.time() + timeout\n        while sys.get_pmc_status() is not pmc_types.PMCSTATUS.PMC_FULLCTRL:\n            time.sleep(0.5)\n            if time.time() > maxTime:\n                raise TimeoutError(\"PMC Activation timeout\")",
+    "span": [
+      42,
+      48
+    ],
+    "start_byte": 1446,
+    "end_byte": 1765,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "activate_bots",
+    "signature": "activate_bots(self, timeout: float = 10.0)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.activate_bots",
+    "docstring": null,
+    "chunk_size_bytes": 319,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def deactivate_bots(self, timeout: float = 10.0):\n        bot.deactivate_xbots()\n        maxTime = time.time() + timeout\n        while sys.get_pmc_status() is not pmc_types.PMCSTATUS.PMC_INACTIVE:\n            time.sleep(0.5)\n            if time.time() > maxTime:\n                raise TimeoutError(\"PMC Deactivation timeout\")",
+    "span": [
+      50,
+      56
+    ],
+    "start_byte": 1771,
+    "end_byte": 2096,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "deactivate_bots",
+    "signature": "deactivate_bots(self, timeout: float = 10.0)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.deactivate_bots",
+    "docstring": null,
+    "chunk_size_bytes": 325,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def get_pmc_status(self) -> pmc_types.PMCSTATUS:\n        return sys.get_pmc_status()",
+    "span": [
+      58,
+      59
+    ],
+    "start_byte": 2102,
+    "end_byte": 2186,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_pmc_status",
+    "signature": "get_pmc_status(self)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.get_pmc_status",
+    "docstring": null,
+    "chunk_size_bytes": 84,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def get_xbot_ids(self) -> list[int]:\n        status = bot.get_all_xbot_info(\n            pmc_types.ALLXBOTSFEEDBACKOPTION(0))\n        ids = []\n        for state in status:\n            ids.append(state.xbot_id)\n        return ids",
+    "span": [
+      61,
+      67
+    ],
+    "start_byte": 2192,
+    "end_byte": 2420,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_xbot_ids",
+    "signature": "get_xbot_ids(self)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.get_xbot_ids",
+    "docstring": null,
+    "chunk_size_bytes": 228,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def get_num_xbots(self) -> int:\n        return len(bot.get_all_xbot_info(pmc_types.ALLXBOTSFEEDBACKOPTION(0)))",
+    "span": [
+      69,
+      70
+    ],
+    "start_byte": 2426,
+    "end_byte": 2536,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_num_xbots",
+    "signature": "get_num_xbots(self)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.get_num_xbots",
+    "docstring": null,
+    "chunk_size_bytes": 110,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def get_xbots_state(self) -> dict:\n        status = bot.get_all_xbot_info(\n            pmc_types.ALLXBOTSFEEDBACKOPTION(0))\n        states = {}\n        for stat in status:\n            states[stat.xbot_id] = stat.xbot_state\n        return states",
+    "span": [
+      72,
+      78
+    ],
+    "start_byte": 2542,
+    "end_byte": 2786,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_xbots_state",
+    "signature": "get_xbots_state(self)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.get_xbots_state",
+    "docstring": null,
+    "chunk_size_bytes": 244,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def get_xbots_pos(self) -> dict:\n        status = bot.get_all_xbot_info(\n            pmc_types.ALLXBOTSFEEDBACKOPTION(0))\n        pos = {}\n        for stat in status:\n            pos[stat.xbot_id] = (stat.x_pos, stat.y_pos)",
+    "span": [
+      80,
+      85
+    ],
+    "start_byte": 2792,
+    "end_byte": 3015,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_xbots_pos",
+    "signature": "get_xbots_pos(self)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.get_xbots_pos",
+    "docstring": null,
+    "chunk_size_bytes": 223,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def send_rotation(self, id: int) -> None:\n        bot.rotary_motion_timed_spin(1, id, 0, 52.36, 25.0, 7.0)",
+    "span": [
+      87,
+      88
+    ],
+    "start_byte": 3021,
+    "end_byte": 3127,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "send_rotation",
+    "signature": "send_rotation(self, id: int)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.send_rotation",
+    "docstring": null,
+    "chunk_size_bytes": 106,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def send_single_linear_command(self, xbot_id: int, xpos: float, ypos: float, vel: float = 1.0, acc: float = 10.0) -> None:\n        bot.linear_motion_si(1, xbot_id, pmc_types.POSITIONMODE(0),\n                             pmc_types.LINEARPATHTYPE(0), xpos, ypos, 0.0, vel, acc)",
+    "span": [
+      90,
+      92
+    ],
+    "start_byte": 3133,
+    "end_byte": 3408,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "send_single_linear_command",
+    "signature": "send_single_linear_command(self, xbot_id: int, xpos: float, ypos: float, vel: float = 1.0, acc: float = 10.0)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.send_single_linear_command",
+    "docstring": null,
+    "chunk_size_bytes": 275,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def send_multi_linear_commands(self, moves: list[PlanarMotorMove]) -> None:\n        for move in moves:\n            bot.linear_motion_si(1, move.bot_id, pmc_types.POSITIONMODE(0), pmc_types.LINEARPATHTYPE(0), move.xpos,\n                                 move.ypos, move.end_speed, move.vel, move.acc)",
+    "span": [
+      94,
+      97
+    ],
+    "start_byte": 3414,
+    "end_byte": 3712,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "send_multi_linear_commands",
+    "signature": "send_multi_linear_commands(self, moves: list[PlanarMotorMove])",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.send_multi_linear_commands",
+    "docstring": null,
+    "chunk_size_bytes": 298,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def send_auto_move_command(self, num_bot: int, xbot_ids: list[int], x_pos: list[float], y_pos: list[float]) -> None:\n        bot.auto_driving_motion_si(\n            num_bot, pmc_types.ASYNCOPTIONS.MOVEALL, xbot_ids, x_pos, y_pos)",
+    "span": [
+      99,
+      101
+    ],
+    "start_byte": 3718,
+    "end_byte": 3947,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "send_auto_move_command",
+    "signature": "send_auto_move_command(self, num_bot: int, xbot_ids: list[int], x_pos: list[float], y_pos: list[float])",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.send_auto_move_command",
+    "docstring": null,
+    "chunk_size_bytes": 229,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def wait_move_done(self, bot_id: int, timeout: float = 10.0) -> pmc_types.XBOTSTATE:\n        while bot.get_xbot_status(xbot_id=bot_id).xbot_state is not pmc_types.XBOTSTATE.XBOT_IDLE:\n            if bot.get_xbot_status(xbot_id=bot_id).xbot_state == pmc_types.XBOTSTATE.XBOT_OBSTACLE_DETECTED:\n                return pmc_types.XBOTSTATE.XBOT_OBSTACLE_DETECTED\n            time.sleep(0.5)\n        return pmc_types.XBOTSTATE.XBOT_IDLE",
+    "span": [
+      103,
+      108
+    ],
+    "start_byte": 3953,
+    "end_byte": 4384,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "wait_move_done",
+    "signature": "wait_move_done(self, bot_id: int, timeout: float = 10.0)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.wait_move_done",
+    "docstring": null,
+    "chunk_size_bytes": 431,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def wait_multiple_move_done(self, bot_list, timeout: float = 10) -> None:\n        for bot in bot_list:\n            self.wait_move_done(bot, timeout)",
+    "span": [
+      110,
+      112
+    ],
+    "start_byte": 4390,
+    "end_byte": 4538,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "wait_multiple_move_done",
+    "signature": "wait_multiple_move_done(self, bot_list, timeout: float = 10)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.wait_multiple_move_done",
+    "docstring": null,
+    "chunk_size_bytes": 148,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def define_stereotype(self,\n                          mover_type: pmc_types.XBOTTYPE,\n                          id: int,\n                          payload: float = 0,\n                          size_pos_x: float = 0,\n                          size_neg_x: float = 0,\n                          size_pos_y: float = 0,\n                          size_neg_y: float = 0,\n                          perf_level: int = 0,\n                          cg_x: float = 0,\n                          cg_y: float = 0,\n                          cg_z: float = 0,\n                          emerg_d_acc: float = 20) -> None:\n        mover_data = pmc_types.MoverStereotypeData(perf_level,\n                                                   payload,\n                                                   size_pos_x,\n                                                   size_neg_x,\n                                                   size_pos_y,\n                                                   size_neg_y,\n                                                   cg_x,\n                                                   cg_y,\n                                                   cg_z,\n                                                   emerg_d_acc)\n        bot.define_mover_stereotype(mover_type,\n                                    id,\n                                    mover_data)",
+    "span": [
+      114,
+      139
+    ],
+    "start_byte": 4544,
+    "end_byte": 5888,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "define_stereotype",
+    "signature": "define_stereotype(self,\n                          mover_type: pmc_types.XBOTTYPE,\n                          id: int,\n                          payload: float = 0,\n                          size_pos_x: float = 0,\n                          size_neg_x: float = 0,\n                          size_pos_y: float = 0,\n                          size_neg_y: float = 0,\n                          perf_level: int = 0,\n                          cg_x: float = 0,\n                          cg_y: float = 0,\n                          cg_z: float = 0,\n                          emerg_d_acc: float = 20)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.define_stereotype",
+    "docstring": null,
+    "chunk_size_bytes": 1344,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def assign_stereotype(self, bot_id: int, ster_id: int) -> None:\n        bot.assign_stereotype_to_mover(\n            bot_id, ster_id, pmc_types.ASSIGNSTEREOTYPEOPTION(0))",
+    "span": [
+      141,
+      143
+    ],
+    "start_byte": 5894,
+    "end_byte": 6063,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "assign_stereotype",
+    "signature": "assign_stereotype(self, bot_id: int, ster_id: int)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.assign_stereotype",
+    "docstring": null,
+    "chunk_size_bytes": 169,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "def start_macro(self, macro_id: int, xbot_id) -> None:\n        bot.run_motion_macro(1, macro_id, xbot_id)",
+    "span": [
+      145,
+      146
+    ],
+    "start_byte": 6069,
+    "end_byte": 6174,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "start_macro",
+    "signature": "start_macro(self, macro_id: int, xbot_id)",
+    "parent_class": "MecaPlanar",
+    "qualified_name": "MecaPlanar.start_macro",
+    "docstring": null,
+    "chunk_size_bytes": 105,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "normalized_path": "SLAS2025/src/MecaPlanar.py"
+  }
+]

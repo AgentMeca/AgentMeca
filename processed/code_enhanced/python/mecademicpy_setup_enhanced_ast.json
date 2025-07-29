@@ -1,0 +1,40 @@
+[
+  {
+    "snippet": "import sys",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 53,
+    "end_byte": 63,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sys",
+    "qualified_name": "sys",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 10,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/setup.py",
+    "normalized_path": "mecademicpy/setup.py"
+  },
+  {
+    "snippet": "import setuptools",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 65,
+    "end_byte": 82,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "setuptools",
+    "qualified_name": "setuptools",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 17,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/setup.py",
+    "normalized_path": "mecademicpy/setup.py"
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "snippet": "from app import app, robotList",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 30,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "app",
+    "qualified_name": "app",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 30,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/api/app/routes.py",
+    "normalized_path": "MecaDashboard/api/app/routes.py"
+  },
+  {
+    "snippet": "from flask import request",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 31,
+    "end_byte": 56,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "request",
+    "qualified_name": "request",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 25,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/api/app/routes.py",
+    "normalized_path": "MecaDashboard/api/app/routes.py"
+  },
+  {
+    "snippet": "from mecademicpy.robot import Robot",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 57,
+    "end_byte": 92,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Robot",
+    "qualified_name": "Robot",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 35,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/api/app/routes.py",
+    "normalized_path": "MecaDashboard/api/app/routes.py"
+  }
+]

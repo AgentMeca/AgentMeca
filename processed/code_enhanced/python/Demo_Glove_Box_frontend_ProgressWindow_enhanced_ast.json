@@ -1,0 +1,79 @@
+[
+  {
+    "snippet": "from PyQt5 import QtCore, QtGui, QtWidgets",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 306,
+    "end_byte": 348,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QtCore",
+    "qualified_name": "QtCore",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 42,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/ProgressWindow.py",
+    "normalized_path": "Demo_Glove_Box/frontend/ProgressWindow.py"
+  },
+  {
+    "snippet": "class Ui_MainWindow(object):\n    def setupUi(self, MainWindow):\n        MainWindow.setObjectName(\"MainWindow\")\n        MainWindow.resize(588, 300)\n        self.centralwidget = QtWidgets.QWidget(MainWindow)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)\n        self.progressBar.setGeometry(QtCore.QRect(130, 140, 331, 23))\n        self.progressBar.setProperty(\"value\", 24)\n        self.progressBar.setObjectName(\"progressBar\")\n        self.label = QtWidgets.QLabel(self.centralwidget)",
+    "span": [
+      14,
+      46
+    ],
+    "start_byte": 351,
+    "end_byte": 1936,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Ui_MainWindow",
+    "qualified_name": "Ui_MainWindow",
+    "docstring": null,
+    "chunk_size_bytes": 565,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/ProgressWindow.py",
+    "normalized_path": "Demo_Glove_Box/frontend/ProgressWindow.py"
+  },
+  {
+    "snippet": "def setupUi(self, MainWindow):\n        MainWindow.setObjectName(\"MainWindow\")\n        MainWindow.resize(588, 300)\n        self.centralwidget = QtWidgets.QWidget(MainWindow)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)\n        self.progressBar.setGeometry(QtCore.QRect(130, 140, 331, 23))\n        self.progressBar.setProperty(\"value\", 24)\n        self.progressBar.setObjectName(\"progressBar\")\n        self.label = QtWidgets.QLabel(self.centralwidget)\n        self.label.setGeometry(QtCore.QRect(90, 60, 401, 51))\n        font = QtGui.QFont()\n        font.setPointSize(22)\n        self.label.setFont(font)\n        self.label.setAlignment(QtCore.Qt.AlignCenter)\n        self.label.setObjectName(\"label\")\n        MainWindow.setCentralWidget(self.centralwidget)\n        self.menubar = QtWidgets.QMenuBar(MainWindow)\n        self.menubar.setGeometry(QtCore.QRect(0, 0, 588, 21))\n        self.menubar.setObjectName(\"menubar\")\n        MainWindow.setMenuBar(self.menubar)\n        self.statusbar = QtWidgets.QStatusBar(MainWindow)\n        self.statusbar.setObjectName(\"statusbar\")\n        MainWindow.setStatusBar(self.statusbar)\n\n        self.retranslateUi(MainWindow)\n        QtCore.QMetaObject.connectSlotsByName(MainWindow)",
+    "span": [
+      15,
+      41
+    ],
+    "start_byte": 384,
+    "end_byte": 1683,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "setupUi",
+    "signature": "setupUi(self, MainWindow)",
+    "parent_class": "Ui_MainWindow",
+    "qualified_name": "Ui_MainWindow.setupUi",
+    "docstring": null,
+    "chunk_size_bytes": 1299,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/ProgressWindow.py",
+    "normalized_path": "Demo_Glove_Box/frontend/ProgressWindow.py"
+  },
+  {
+    "snippet": "def retranslateUi(self, MainWindow):\n        _translate = QtCore.QCoreApplication.translate\n        MainWindow.setWindowTitle(_translate(\"MainWindow\", \"Progress Window\"))\n        self.label.setText(_translate(\"MainWindow\", \"Centrifuging Samples\"))",
+    "span": [
+      43,
+      46
+    ],
+    "start_byte": 1689,
+    "end_byte": 1936,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "retranslateUi",
+    "signature": "retranslateUi(self, MainWindow)",
+    "parent_class": "Ui_MainWindow",
+    "qualified_name": "Ui_MainWindow.retranslateUi",
+    "docstring": null,
+    "chunk_size_bytes": 247,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/ProgressWindow.py",
+    "normalized_path": "Demo_Glove_Box/frontend/ProgressWindow.py"
+  }
+]

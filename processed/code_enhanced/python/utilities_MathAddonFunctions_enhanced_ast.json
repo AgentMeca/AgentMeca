@@ -1,0 +1,213 @@
+[
+  {
+    "snippet": "import numpy as np",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 18,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "numpy as np",
+    "qualified_name": "numpy as np",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 18,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "from numpy import linalg as LA",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 19,
+    "end_byte": 49,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "linalg as LA",
+    "qualified_name": "linalg as LA",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 30,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "class Mat():\n    '''\n    A Matrix class to handle the pose transformation and rotation matrices\n    used for calculating WRF and TCP\n    '''",
+    "span": [
+      4,
+      45
+    ],
+    "start_byte": 51,
+    "end_byte": 1414,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Mat",
+    "qualified_name": "Mat",
+    "docstring": "A Matrix class to handle the pose transformation and rotation matrices\n    used for calculating WRF and TCP",
+    "chunk_size_bytes": 140,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "def __init__(self,pose):\n\n        self.x = pose[0]\n        self.y = pose[1]\n        self.z = pose[2]\n        \n        alpha = np.deg2rad(pose[3])\n        beta = np.deg2rad(pose[4])\n        gamma = np.deg2rad(pose[5]) \n        sin_alpha = np.sin(alpha)\n        cos_alpha = np.cos(alpha)\n\n        sin_beta = np.sin(beta)\n        cos_beta = np.cos(beta)\n\n        sin_gamma = np.sin(gamma)\n        cos_gamma = np.cos(gamma)\n\n        self.r11 = cos_beta*cos_gamma\n        self.r12 = -(cos_beta)*(sin_gamma)\n        self.r13 = sin_beta\n\n        self.r21 = cos_alpha*sin_gamma + sin_alpha*sin_beta*cos_gamma\n        self.r22 = cos_alpha*cos_gamma - sin_alpha*sin_beta*sin_gamma\n        self.r23 = -(sin_alpha*cos_beta)\n\n        self.r31 = sin_alpha*sin_gamma - cos_alpha*sin_beta*cos_gamma\n        self.r32 = sin_alpha*cos_gamma + cos_alpha*sin_beta*sin_gamma\n        self.r33 = cos_alpha*cos_beta",
+    "span": [
+      10,
+      38
+    ],
+    "start_byte": 201,
+    "end_byte": 1091,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self,pose)",
+    "parent_class": "Mat",
+    "qualified_name": "Mat.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 890,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "def H(self):\n        return np.array([[self.r11, self.r12, self.r13, self.x],[self.r21, self.r22, self.r23, self.y],[self.r31, self.r32, self.r33, self.z],[0, 0, 0, 1]])",
+    "span": [
+      41,
+      42
+    ],
+    "start_byte": 1098,
+    "end_byte": 1267,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "H",
+    "signature": "H(self)",
+    "parent_class": "Mat",
+    "qualified_name": "Mat.H",
+    "docstring": null,
+    "chunk_size_bytes": 169,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "def R33(self):\n        return np.array([[self.r11, self.r12, self.r13],[self.r21, self.r22, self.r23],[self.r31, self.r32, self.r33]])",
+    "span": [
+      44,
+      45
+    ],
+    "start_byte": 1280,
+    "end_byte": 1414,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "R33",
+    "signature": "R33(self)",
+    "parent_class": "Mat",
+    "qualified_name": "Mat.R33",
+    "docstring": null,
+    "chunk_size_bytes": 134,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "def xyzRxyz_to_H(pose):\n    '''\n    Function to calculate the Pose Transformation Matrix for a given (x,y,z,rx,ry,rz)\n    ***Uses Euler Angle notation***\n    '''\n    return Mat(pose).H()",
+    "span": [
+      48,
+      53
+    ],
+    "start_byte": 1417,
+    "end_byte": 1603,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "xyzRxyz_to_H",
+    "qualified_name": "xyzRxyz_to_H",
+    "signature": "xyzRxyz_to_H(pose)",
+    "docstring": "Function to calculate the Pose Transformation Matrix for a given (x,y,z,rx,ry,rz)\n    ***Uses Euler Angle notation***",
+    "chunk_size_bytes": 186,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "def H_to_xyzRxyz(Pose_Mat):\n    '''\n    Function to calculate the (x,y,z,rx,ry,rz) from the Pose Transormation Matrix.\n    ***Uses Euler Angle notation***\n    '''\n    if abs(Pose_Mat[0,2]) == 1:\n        ry = Pose_Mat[0,2]*90\n\n        rz_rad = np.arctan2(Pose_Mat[1,0],Pose_Mat[1,1])\n        rz = np.rad2deg(rz_rad)\n\n        rx = 0\n    else:\n        ry_rad = np.arcsin(Pose_Mat[0,2])\n        ry = np.rad2deg(ry_rad)\n\n        rz_rad = np.arctan2(-Pose_Mat[0,1],Pose_Mat[0,0])\n        rz = np.rad2deg(rz_rad)\n\n        rx_rad = np.arctan2(-Pose_Mat[1,2],Pose_Mat[2,2])\n        rx = np.rad2deg(rx_rad)\n\n    return (Pose_Mat[0,3],Pose_Mat[1,3],Pose_Mat[2,3],rx,ry,rz)",
+    "span": [
+      55,
+      77
+    ],
+    "start_byte": 1605,
+    "end_byte": 2266,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "H_to_xyzRxyz",
+    "qualified_name": "H_to_xyzRxyz",
+    "signature": "H_to_xyzRxyz(Pose_Mat)",
+    "docstring": "Function to calculate the (x,y,z,rx,ry,rz) from the Pose Transormation Matrix.\n    ***Uses Euler Angle notation***",
+    "chunk_size_bytes": 661,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "def CalcWRFChild(WRF_Parent, WRF_Child):\n    '''\n    Function to calculate the WRF of a child reference frame with respect to BRF of Meca500\n    Takes the parent WRF and child WRF values and returns the WRF of child with respect to BRF of Meca500\n    Parent Frame: Reference frame defined with respect to BRF of Meca500\n    Child Frame: Reference frame defined with respect to Parent Frame\n    '''\n    Pose_Parent = xyzRxyz_to_H(WRF_Parent)\n    Pose_Child = xyzRxyz_to_H(WRF_Child)\n\n    Pose_Child_Parent = Pose_Parent.dot(Pose_Child)\n\n    return str(H_to_xyzRxyz(Pose_Child_Parent))",
+    "span": [
+      80,
+      92
+    ],
+    "start_byte": 2277,
+    "end_byte": 2860,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "CalcWRFChild",
+    "qualified_name": "CalcWRFChild",
+    "signature": "CalcWRFChild(WRF_Parent, WRF_Child)",
+    "docstring": "Function to calculate the WRF of a child reference frame with respect to BRF of Meca500\n    Takes the parent WRF and child WRF values and returns the WRF of child with respect to BRF of Meca500\n    Parent Frame: Reference frame defined with respect to BRF of Meca500\n    Child Frame: Reference frame defined with respect to Parent Frame",
+    "chunk_size_bytes": 583,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "def CalcWRF(p1,p2,p3):\n    '''\n    Function to calculate the WRF with respect to BRF of Meca500 using 3 points\n    P1 is at Origin of the reference frame\n    P2 is a point on the +X axis of the reference frame\n    P3 is a point on the +XY plane of the reference frame\n    '''\n    p1p2 = True\n    p1p3 = True\n    \n    ux = [p2[0]-p1[0],p2[1]-p1[1],p2[2]-p1[2]] \n    norm_ux = LA.norm(ux)\n    if norm_ux < 10:\n        print(\" P1 and P2 are too close to each other\")\n        p1p2 = False\n        \n    else:\n        uvx = ux / norm_ux # Unit Vector along X\n\n    if p1p2:\n        v13 = [p3[0]-p1[0],p3[1]-p1[1],p3[2]-p1[2]] \n        norm_v13 = LA.norm(v13)\n        if norm_v13 < 10:\n            print(\" P3 and P1 are too close to each other\")\n            p1p3 = False\n            \n        else:\n            uv13 = v13 / norm_v13\n    \n    if p1p2 and p1p3:\n        uz = np.cross(uvx,uv13)\n        norm_uz = LA.norm(uz)\n        uvz = uz / norm_uz # Unit Vector along Z\n\n        uvy = np.cross(uvz,uvx) # Unit Vector along Y\n        \n        if abs(uvz[0]) == 1:\n            beta_deg = uvz[0]*90\n\n            gamma = np.arctan2(uvy[0],uvx[0])\n            gamma_deg = np.rad2deg(gamma)\n\n            alpha_deg = 0\n    \n        else:\n            beta = np.arcsin(uvz[0])\n            beta_deg = np.rad2deg(beta)\n\n            gamma = np.arctan2(-uvy[0],uvx[0])\n            gamma_deg = np.rad2deg(gamma)\n\n            alpha = np.arctan2(-uvz[1],uvz[2])\n            alpha_deg = np.rad2deg(alpha)\n\n    \n        result = [p1[0],p1[1],p1[2],alpha_deg,beta_deg,gamma_deg]\n        #result_str = 'setWRF'+'(' + (','.join(format(vi, \".3f\") for vi in result)+')')\n        \n    else:\n        result= []\n        #result_str = \" Invalid Data\"\n    return result",
+    "span": [
+      95,
+      156
+    ],
+    "start_byte": 2863,
+    "end_byte": 4596,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "CalcWRF",
+    "qualified_name": "CalcWRF",
+    "signature": "CalcWRF(p1,p2,p3)",
+    "docstring": "Function to calculate the WRF with respect to BRF of Meca500 using 3 points\n    P1 is at Origin of the reference frame\n    P2 is a point on the +X axis of the reference frame\n    P3 is a point on the +XY plane of the reference frame",
+    "chunk_size_bytes": 1733,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  },
+  {
+    "snippet": "def CalcTCP(nPoses):\n    '''\n    Function to calculate the TCP (X,Y,Z) from 4 or more poses\n    Takes a list of Poses as input and returns the TCP \n    \n        TCP(x,y,z) = [(R_Transpose.R)^-1].R_Transpose.p\n    '''\n    \n    #nRows = 3*len(nPoses)\n    #nCols = 3\n\n    R = np.empty((0,3))\n    p = np.empty((0,1))\n\n    nPoseMat = []\n    for pose in nPoses:\n        nPoseMat.append(Mat(pose))\n\n    for i in range(len(nPoses)):\n        if i < len(nPoses)-1:\n            R = np.append(R, np.array([[nPoseMat[i].r11 - nPoseMat[i+1].r11, nPoseMat[i].r12 - nPoseMat[i+1].r12, nPoseMat[i].r13 - nPoseMat[i+1].r13],[nPoseMat[i].r21 - nPoseMat[i+1].r21, nPoseMat[i].r22 - nPoseMat[i+1].r22, nPoseMat[i].r23 - nPoseMat[i+1].r23],[nPoseMat[i].r31 - nPoseMat[i+1].r31, nPoseMat[i].r32 - nPoseMat[i+1].r32, nPoseMat[i].r33 - nPoseMat[i+1].r33]]),axis = 0)\n            p = np.append(p,np.array([[-nPoseMat[i].x + nPoseMat[i+1].x],[-nPoseMat[i].y + nPoseMat[i+1].y],[-nPoseMat[i].z + nPoseMat[i+1].z]]),axis = 0)\n            \n            \n        elif i == len(nPoses)-1:\n            R = np.append(R, np.array([[nPoseMat[i].r11 - nPoseMat[0].r11, nPoseMat[i].r12 - nPoseMat[0].r12, nPoseMat[i].r13 - nPoseMat[0].r13],[nPoseMat[i].r21 - nPoseMat[0].r21, nPoseMat[i].r22 - nPoseMat[0].r22, nPoseMat[i].r23 - nPoseMat[0].r23],[nPoseMat[i].r31 - nPoseMat[0].r31, nPoseMat[i].r32 - nPoseMat[0].r32, nPoseMat[i].r33 - nPoseMat[0].r33]]),axis = 0)\n            p = np.append(p,np.array([[-nPoseMat[i].x + nPoseMat[0].x],[-nPoseMat[i].y + nPoseMat[0].y],[-nPoseMat[i].z + nPoseMat[0].z]]),axis = 0)\n            \n    \n    TCP = (LA.inv(R.transpose().dot(R))).dot(R.transpose()).dot(p)\n    return TCP",
+    "span": [
+      158,
+      188
+    ],
+    "start_byte": 4606,
+    "end_byte": 6279,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "CalcTCP",
+    "qualified_name": "CalcTCP",
+    "signature": "CalcTCP(nPoses)",
+    "docstring": "Function to calculate the TCP (X,Y,Z) from 4 or more poses\n    Takes a list of Poses as input and returns the TCP \n    \n        TCP(x,y,z) = [(R_Transpose.R)^-1].R_Transpose.p",
+    "chunk_size_bytes": 1673,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/utilities/MathAddonFunctions.py",
+    "normalized_path": "utilities/MathAddonFunctions.py"
+  }
+]

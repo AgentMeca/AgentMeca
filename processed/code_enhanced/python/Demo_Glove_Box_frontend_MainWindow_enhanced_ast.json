@@ -1,0 +1,98 @@
+[
+  {
+    "snippet": "from PyQt5 import QtCore, QtGui, QtWidgets",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 302,
+    "end_byte": 344,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QtCore",
+    "qualified_name": "QtCore",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 42,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/MainWindow.py",
+    "normalized_path": "Demo_Glove_Box/frontend/MainWindow.py"
+  },
+  {
+    "snippet": "class Ui_MainWindow(object):\n    def setupUi(self, MainWindow):\n        MainWindow.setObjectName(\"MainWindow\")\n        MainWindow.resize(1280, 800)\n        self.centralwidget = QtWidgets.QWidget(MainWindow)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.LoadButton = QtWidgets.QPushButton(self.centralwidget)\n        self.LoadButton.setGeometry(QtCore.QRect(150, 520, 151, 91))\n        self.LoadButton.setObjectName(\"LoadButton\")\n        self.CentStatusDisplay = CentStatus(self.centralwidget)\n        self.CentStatusDisplay.setGeometry(QtCore.QRect(150, 100, 400, 400))",
+    "span": [
+      14,
+      104
+    ],
+    "start_byte": 347,
+    "end_byte": 5421,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Ui_MainWindow",
+    "qualified_name": "Ui_MainWindow",
+    "docstring": null,
+    "chunk_size_bytes": 594,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/MainWindow.py",
+    "normalized_path": "Demo_Glove_Box/frontend/MainWindow.py"
+  },
+  {
+    "snippet": "def setupUi(self, MainWindow):\n        MainWindow.setObjectName(\"MainWindow\")\n        MainWindow.resize(1280, 800)\n        self.centralwidget = QtWidgets.QWidget(MainWindow)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.LoadButton = QtWidgets.QPushButton(self.centralwidget)\n        self.LoadButton.setGeometry(QtCore.QRect(150, 520, 151, 91))\n        self.LoadButton.setObjectName(\"LoadButton\")\n        self.CentStatusDisplay = CentStatus(self.centralwidget)\n        self.CentStatusDisplay.setGeometry(QtCore.QRect(150, 100, 400, 400))\n        self.CentStatusDisplay.setObjectName(\"CentStatusDisplay\")\n        self.labelRackStatus = QtWidgets.QLabel(self.centralwidget)\n        self.labelRackStatus.setGeometry(QtCore.QRect(770, -10, 301, 61))\n        font = QtGui.QFont()\n        font.setFamily(\"Calibri\")\n        font.setPointSize(24)\n        self.labelRackStatus.setFont(font)\n        self.labelRackStatus.setAlignment(QtCore.Qt.AlignCenter)\n        self.labelRackStatus.setObjectName(\"labelRackStatus\")\n        self.label = QtWidgets.QLabel(self.centralwidget)\n        self.label.setGeometry(QtCore.QRect(770, 410, 301, 31))\n        font = QtGui.QFont()\n        font.setFamily(\"Calibri\")\n        font.setPointSize(14)\n        self.label.setFont(font)\n        self.label.setAlignment(QtCore.Qt.AlignCenter)\n        self.label.setObjectName(\"label\")\n        self.logo = QtWidgets.QLabel(self.centralwidget)\n        self.logo.setGeometry(QtCore.QRect(149, 10, 400, 75))\n        self.logo.setText(\"\")\n        self.logo.setObjectName(\"logo\")\n        self.StatusFrame = QtWidgets.QFrame(self.centralwidget)\n        self.StatusFrame.setGeometry(QtCore.QRect(770, 50, 305, 355))\n        font = QtGui.QFont()\n        font.setPointSize(8)\n        self.StatusFrame.setFont(font)\n        self.StatusFrame.setFrameShape(QtWidgets.QFrame.Box)\n        self.StatusFrame.setFrameShadow(QtWidgets.QFrame.Raised)\n        self.StatusFrame.setLineWidth(4)\n        self.StatusFrame.setObjectName(\"StatusFrame\")\n        self.RackStatusDisplay = RackStatus(self.StatusFrame)\n        self.RackStatusDisplay.setGeometry(QtCore.QRect(2, 2, 300, 350))\n        self.RackStatusDisplay.setObjectName(\"RackStatusDisplay\")\n        self.ButtonsFrame = QtWidgets.QFrame(self.centralwidget)\n        self.ButtonsFrame.setGeometry(QtCore.QRect(770, 450, 305, 255))\n        self.ButtonsFrame.setFrameShape(QtWidgets.QFrame.Box)\n        self.ButtonsFrame.setFrameShadow(QtWidgets.QFrame.Raised)\n        self.ButtonsFrame.setLineWidth(4)\n        self.ButtonsFrame.setObjectName(\"ButtonsFrame\")\n        self.RackSelection = RackButtons(self.ButtonsFrame)\n        self.RackSelection.setGeometry(QtCore.QRect(2, 2, 300, 250))\n        self.RackSelection.setObjectName(\"RackSelection\")\n        self.buttonCentrifuge = QtWidgets.QPushButton(self.centralwidget)\n        self.buttonCentrifuge.setGeometry(QtCore.QRect(400, 520, 151, 91))\n        self.buttonCentrifuge.setObjectName(\"buttonCentrifuge\")\n        self.buttonRobot = QtWidgets.QPushButton(self.centralwidget)\n        self.buttonRobot.setGeometry(QtCore.QRect(150, 650, 401, 41))\n        self.buttonRobot.setObjectName(\"buttonRobot\")\n        self.buttonAutoMode = QtWidgets.QPushButton(self.centralwidget)\n        self.buttonAutoMode.setGeometry(QtCore.QRect(590, 520, 151, 91))\n        self.buttonAutoMode.setObjectName(\"buttonAutoMode\")\n        MainWindow.setCentralWidget(self.centralwidget)\n        self.menubar = QtWidgets.QMenuBar(MainWindow)\n        self.menubar.setGeometry(QtCore.QRect(0, 0, 1280, 21))\n        self.menubar.setObjectName(\"menubar\")\n        self.menuOptions = QtWidgets.QMenu(self.menubar)\n        self.menuOptions.setObjectName(\"menuOptions\")\n        MainWindow.setMenuBar(self.menubar)\n        self.statusbar = QtWidgets.QStatusBar(MainWindow)\n        self.statusbar.setObjectName(\"statusbar\")\n        MainWindow.setStatusBar(self.statusbar)\n        self.actionSetup = QtWidgets.QAction(MainWindow)\n        self.actionSetup.setObjectName(\"actionSetup\")\n        self.menuOptions.addAction(self.actionSetup)\n        self.menubar.addAction(self.menuOptions.menuAction())\n\n        self.retranslateUi(MainWindow)\n        QtCore.QMetaObject.connectSlotsByName(MainWindow)",
+    "span": [
+      15,
+      92
+    ],
+    "start_byte": 380,
+    "end_byte": 4614,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "setupUi",
+    "signature": "setupUi(self, MainWindow)",
+    "parent_class": "Ui_MainWindow",
+    "qualified_name": "Ui_MainWindow.setupUi",
+    "docstring": null,
+    "chunk_size_bytes": 4234,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/MainWindow.py",
+    "normalized_path": "Demo_Glove_Box/frontend/MainWindow.py"
+  },
+  {
+    "snippet": "def retranslateUi(self, MainWindow):\n        _translate = QtCore.QCoreApplication.translate\n        MainWindow.setWindowTitle(_translate(\"MainWindow\", \"Centrifuge Controls 9000\"))\n        self.LoadButton.setText(_translate(\"MainWindow\", \"Load selected vials\"))\n        self.labelRackStatus.setText(_translate(\"MainWindow\", \"Vial Rack Status\"))\n        self.label.setText(_translate(\"MainWindow\", \"Select which vial to load\"))\n        self.buttonCentrifuge.setText(_translate(\"MainWindow\", \"Start Centrifuge\"))\n        self.buttonRobot.setText(_translate(\"MainWindow\", \"Robot Connection\"))\n        self.buttonAutoMode.setText(_translate(\"MainWindow\", \"AutoMode\"))\n        self.menuOptions.setTitle(_translate(\"MainWindow\", \"Options\"))\n        self.actionSetup.setText(_translate(\"MainWindow\", \"Setup\"))",
+    "span": [
+      94,
+      104
+    ],
+    "start_byte": 4620,
+    "end_byte": 5421,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "retranslateUi",
+    "signature": "retranslateUi(self, MainWindow)",
+    "parent_class": "Ui_MainWindow",
+    "qualified_name": "Ui_MainWindow.retranslateUi",
+    "docstring": null,
+    "chunk_size_bytes": 801,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/MainWindow.py",
+    "normalized_path": "Demo_Glove_Box/frontend/MainWindow.py"
+  },
+  {
+    "snippet": "from frontend.customWidgets import CentStatus, RackButtons, RackStatus",
+    "span": [
+      105,
+      105
+    ],
+    "start_byte": 5422,
+    "end_byte": 5492,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "CentStatus",
+    "qualified_name": "CentStatus",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 70,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/MainWindow.py",
+    "normalized_path": "Demo_Glove_Box/frontend/MainWindow.py"
+  }
+]

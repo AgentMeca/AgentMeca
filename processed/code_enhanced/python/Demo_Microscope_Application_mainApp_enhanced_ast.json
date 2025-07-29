@@ -1,0 +1,470 @@
+[
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 22,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sleep",
+    "qualified_name": "sleep",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 22,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "from PyQt5 import QtWidgets",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 23,
+    "end_byte": 50,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QtWidgets",
+    "qualified_name": "QtWidgets",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 27,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "from PyQt5.QtWidgets import QApplication, QLCDNumber",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 51,
+    "end_byte": 103,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QApplication",
+    "qualified_name": "QApplication",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 52,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "from PyQt5.QtGui import QPixmap",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 104,
+    "end_byte": 135,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QPixmap",
+    "qualified_name": "QPixmap",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 31,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "from frontend import ApplicationWindow",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 136,
+    "end_byte": 174,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "ApplicationWindow",
+    "qualified_name": "ApplicationWindow",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 38,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "from backend import sampletray, joystickThread, autoThread",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 175,
+    "end_byte": 233,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sampletray",
+    "qualified_name": "sampletray",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 58,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "from mecademicpy.robot import Robot",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 234,
+    "end_byte": 269,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Robot",
+    "qualified_name": "Robot",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 35,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "import sys",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 270,
+    "end_byte": 280,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sys",
+    "qualified_name": "sys",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 10,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "import os",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 281,
+    "end_byte": 290,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "os",
+    "qualified_name": "os",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 9,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "from random import randint",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 291,
+    "end_byte": 317,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "randint",
+    "qualified_name": "randint",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 26,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "class Application(QtWidgets.QMainWindow, ApplicationWindow.Ui_ApplicationWindow):\n    def __init__(self, *args, **kwargs):\n        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)\n        self.setupUi(self)\n        self.showMaximized()\n\n        # Frontend setup\n        self.buttonRetSample.setEnabled(False)\n        self.labelJoystick.setStyleSheet(\"background-color: gray\")\n        \n        current_dir = os.path.dirname(os.path.realpath(__file__))",
+    "span": [
+      12,
+      182
+    ],
+    "start_byte": 319,
+    "end_byte": 7062,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Application",
+    "qualified_name": "Application",
+    "docstring": null,
+    "chunk_size_bytes": 455,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def __init__(self, *args, **kwargs):\n        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)\n        self.setupUi(self)\n        self.showMaximized()\n\n        # Frontend setup\n        self.buttonRetSample.setEnabled(False)\n        self.labelJoystick.setStyleSheet(\"background-color: gray\")\n        \n        current_dir = os.path.dirname(os.path.realpath(__file__))\n        parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))\n        pixmap_logo = QPixmap(os.path.join(parent_dir, 'frontend/images/logoM.png'))\n        pixmap_logo = pixmap_logo.scaledToWidth(281)\n        self.labelLogo.setPixmap(pixmap_logo)\n\n        self.lcdNumberX.setSegmentStyle(QLCDNumber.Flat)\n        self.lcdNumberX.setStyleSheet('background: white; color: black')\n\n        self.lcdNumberY.setSegmentStyle(QLCDNumber.Flat)\n        self.lcdNumberY.setStyleSheet('background: white; color: black')\n        \n\n        # Backend setup\n        self.joystick_status = False\n        self.sampleTray = sampletray.SampleTray()\n        self.rack_position = [-32.25, -262.478, 87.574, 0, 0, 0]\n        self.currentSampleIndex = None\n        self.currentSamplePosition = None\n        self.robot = Robot()\n        self.robot.Connect()\n        self.robot.ActivateAndHome()\n        self.robot.WaitHomed()\n        self.robot.GripperOpen()\n        self.robot.SetTRF(37,0,14,0,0,0)\n        self.robot.SetJointVel(20)\n        self.robot.SetCartLinVel(15)\n        self.robot.SetGripperForce(20)\n        self.robot.SetGripperVel(20)\n        self.joystickThread = None\n        self.autoThread = None\n        self.autoFlag = True\n\n        # Button connections\n        self.comboCameraSelect.currentIndexChanged.connect(self.change_camera)\n        self.buttonPickSample.clicked.connect(self.pick_random_sample)\n        self.buttonRetSample.clicked.connect(self.place_back_sample)\n        self.autoButton.clicked.connect(self._toggle_auto_mode)\n\n        # Testing stuff",
+    "span": [
+      13,
+      61
+    ],
+    "start_byte": 405,
+    "end_byte": 2343,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, *args, **kwargs)",
+    "parent_class": "Application",
+    "qualified_name": "Application.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 1938,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def toggle_joystick(self):\n        self.joystick_status = True if not self.joystick_status else False\n\n        if self.joystick_status:\n            self.labelJoystick.setStyleSheet(\"background-color: green\")\n            self.labelJoystick.setText(\"Joystick Active\")\n        else:\n            self.labelJoystick.setStyleSheet(\"background-color: gray\")\n            self.labelJoystick.setText(\"Joystick not Active\")",
+    "span": [
+      63,
+      71
+    ],
+    "start_byte": 2349,
+    "end_byte": 2761,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "toggle_joystick",
+    "signature": "toggle_joystick(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.toggle_joystick",
+    "docstring": null,
+    "chunk_size_bytes": 412,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def change_camera(self):\n        camera_index = self.comboCameraSelect.currentIndex()\n        if self.videoPlayer.cameraIndex == camera_index:\n            return\n        else:\n            self.videoPlayer.change_capture(camera_index)",
+    "span": [
+      73,
+      78
+    ],
+    "start_byte": 2767,
+    "end_byte": 3000,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "change_camera",
+    "signature": "change_camera(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.change_camera",
+    "docstring": null,
+    "chunk_size_bytes": 233,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def pick_random_sample(self):\n        if self.currentSampleIndex is not None:\n            return\n        else:\n            self.buttonPickSample.setEnabled(False)\n            self.autoButton.setEnabled(False)\n            self.currentSampleIndex = randint(0, 24)\n            self._move_to_rack()\n            self.robot.SetWRF(*self.rack_position)\n            self._pick_action(self.sampleTray.positions_wrf[self.currentSampleIndex])\n            self.robot.SetWRF(0,0,0,0,0,0)\n            self._move_from_rack()\n            self._move_to_micro()\n            self.toggle_joystick()\n            self.buttonRetSample.setEnabled(True)\n            self.joystickThread = joystickThread.JoystickThread(self.robot, [self.lcdNumberX, self.lcdNumberY])\n            self.joystickThread.start()",
+    "span": [
+      80,
+      96
+    ],
+    "start_byte": 3006,
+    "end_byte": 3786,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "pick_random_sample",
+    "signature": "pick_random_sample(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.pick_random_sample",
+    "docstring": null,
+    "chunk_size_bytes": 780,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def place_back_sample(self):\n        if self.currentSampleIndex is None:\n            return\n        else:\n            self.buttonRetSample.setEnabled(False)\n            self.toggle_joystick()\n            self._move_from_micro()\n            self._move_to_rack()\n            self.robot.SetWRF(*self.rack_position)\n            self._place_action()\n            self.robot.SetWRF(0,0,0,0,0,0)\n            self._move_from_rack()\n            self.autoButton.setEnabled(True)\n            self.buttonPickSample.setEnabled(True)\n            self.currentSampleIndex = None\n            self.joystickThread.stop_running()",
+    "span": [
+      98,
+      113
+    ],
+    "start_byte": 3792,
+    "end_byte": 4400,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "place_back_sample",
+    "signature": "place_back_sample(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.place_back_sample",
+    "docstring": null,
+    "chunk_size_bytes": 608,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def _pick_action(self, position):\n        self.robot.MovePose(*position)\n        self.robot.MoveLinRelTRF(9,0,0,0,0,0)\n        self.robot.GripperClose()\n        self.robot.Delay(0.5)\n        self.robot.MoveLinRelTRF(-30,0,0,0,0,0)\n        self.robot.MoveLinRelTRF(0,0,-30,0,0,0)\n        cp5 = self.robot.SetCheckpoint(5)\n        cp5.wait()\n        self.currentSamplePosition = self.robot.GetPose()",
+    "span": [
+      115,
+      124
+    ],
+    "start_byte": 4410,
+    "end_byte": 4807,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_pick_action",
+    "signature": "_pick_action(self, position)",
+    "parent_class": "Application",
+    "qualified_name": "Application._pick_action",
+    "docstring": null,
+    "chunk_size_bytes": 397,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def _place_action(self):\n        self.robot.MovePose(*self.currentSamplePosition)\n        self.robot.MoveLinRelTRF(0,0,30,0,0,0)\n        self.robot.MoveLinRelTRF(25,0,0,0,0,0)\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLinRelTRF(-10,0,0,0,0,0)\n        cp3 = self.robot.SetCheckpoint(3)\n        cp3.wait()",
+    "span": [
+      126,
+      134
+    ],
+    "start_byte": 4813,
+    "end_byte": 5160,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_place_action",
+    "signature": "_place_action(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application._place_action",
+    "docstring": null,
+    "chunk_size_bytes": 347,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def _move_to_micro(self):\n        self.robot.MovePose(34.25, -232.218, 197.534, 90, 0, 0)\n        self.robot.MovePose(34.25, -210.168, 63.534, 90, 0, 0)\n        self.robot.MovePose(34.25, -205.518, 39.334, 90, 0, 0)\n        self.robot.MoveLin(121.8, -205.518, 39.334, 90, 0, 0)\n        self.robot.MoveLin(121.8, -205.518, 42.199, 90, 0, 0)\n        cp2 = self.robot.SetCheckpoint(2)\n        cp2.wait()",
+    "span": [
+      136,
+      143
+    ],
+    "start_byte": 5166,
+    "end_byte": 5566,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_move_to_micro",
+    "signature": "_move_to_micro(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application._move_to_micro",
+    "docstring": null,
+    "chunk_size_bytes": 400,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def _move_from_micro(self):\n        self.robot.MoveLin(121.8, -205.518, 39.334, 90, 0, 0)\n        self.robot.MoveLin(34.25, -205.518, 39.334, 90, 0, 0)\n        self.robot.MovePose(34.25, -210.168, 63.534, 90, 0, 0)\n        self.robot.MovePose(34.25, -232.218, 197.534, 90, 0, 0)\n        cp6 = self.robot.SetCheckpoint(6)\n        cp6.wait()",
+    "span": [
+      145,
+      151
+    ],
+    "start_byte": 5576,
+    "end_byte": 5915,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_move_from_micro",
+    "signature": "_move_from_micro(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application._move_from_micro",
+    "docstring": null,
+    "chunk_size_bytes": 339,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def _move_to_rack(self):\n        self.robot.MoveJoints(-90, 10, 0, 0, -10, 0)\n        self.robot.MoveJoints(-90, -1.431, 68.895, 0, -67.465, 0)\n        cp1 = self.robot.SetCheckpoint(1)\n        cp1.wait()",
+    "span": [
+      154,
+      158
+    ],
+    "start_byte": 5922,
+    "end_byte": 6126,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_move_to_rack",
+    "signature": "_move_to_rack(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application._move_to_rack",
+    "docstring": null,
+    "chunk_size_bytes": 204,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def _move_from_rack(self):\n        self.robot.MoveJoints(-90, -1.431, 68.895, 0, -67.465, 0)\n        self.robot.MoveJoints(-90, 10, 0, 0, -10, -6)\n        cp4 = self.robot.SetCheckpoint(4)\n        cp4.wait()",
+    "span": [
+      160,
+      164
+    ],
+    "start_byte": 6136,
+    "end_byte": 6343,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_move_from_rack",
+    "signature": "_move_from_rack(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application._move_from_rack",
+    "docstring": null,
+    "chunk_size_bytes": 207,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def _toggle_auto_mode(self):\n        if self.autoButton.isChecked():\n            self.autoFlag = True\n            self.buttonPickSample.setEnabled(False)\n            self.buttonRetSample.setEnabled(False)\n            self.autoThread = autoThread.AutoThread(self.robot, self.sampleTray, self.rack_position)\n            self.autoThread.finished.connect(self.wait_finished)\n            self.autoThread.start()\n        else:\n            self.autoThread.toggle_off()\n            cp_ext = self.robot.ExpectExternalCheckpoint(42)\n            cp_ext.wait()\n            self.buttonPickSample.setEnabled(True)\n            self.buttonRetSample.setEnabled(True)",
+    "span": [
+      166,
+      179
+    ],
+    "start_byte": 6349,
+    "end_byte": 6998,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_toggle_auto_mode",
+    "signature": "_toggle_auto_mode(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application._toggle_auto_mode",
+    "docstring": null,
+    "chunk_size_bytes": 649,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  },
+  {
+    "snippet": "def wait_finished(self):\n        self.autoFlag = False",
+    "span": [
+      181,
+      182
+    ],
+    "start_byte": 7008,
+    "end_byte": 7062,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "wait_finished",
+    "signature": "wait_finished(self)",
+    "parent_class": "Application",
+    "qualified_name": "Application.wait_finished",
+    "docstring": null,
+    "chunk_size_bytes": 54,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/Application/mainApp.py",
+    "normalized_path": "Demo_Microscope/Application/mainApp.py"
+  }
+]

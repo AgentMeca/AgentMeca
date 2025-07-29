@@ -1,0 +1,355 @@
+[
+  {
+    "snippet": "from robodk.robolink import *",
+    "span": [
+      21,
+      21
+    ],
+    "start_byte": 547,
+    "end_byte": 576,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 29,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "from robodk.robomath import *",
+    "span": [
+      22,
+      22
+    ],
+    "start_byte": 593,
+    "end_byte": 622,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 29,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      23,
+      23
+    ],
+    "start_byte": 647,
+    "end_byte": 658,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "import sys",
+    "span": [
+      24,
+      24
+    ],
+    "start_byte": 659,
+    "end_byte": 669,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "sys",
+    "qualified_name": "sys",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 10,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "class Meca500Controller:\n    \"\"\"\n    Controller class for Mecademic Meca500 robot using RoboDK API\n    \"\"\"",
+    "span": [
+      32,
+      346
+    ],
+    "start_byte": 924,
+    "end_byte": 11874,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "Meca500Controller",
+    "qualified_name": "Meca500Controller",
+    "docstring": "Controller class for Mecademic Meca500 robot using RoboDK API",
+    "chunk_size_bytes": 106,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def __init__(self, robot_name=ROBOT_NAME):\n        \"\"\"\n        Initialize connection to RoboDK and get robot reference\n        \n        Args:\n            robot_name (str): Name of the robot in RoboDK workspace\n        \"\"\"\n        self.RDK = None\n        self.robot = None\n        self.robot_name = robot_name\n        self.connect_to_robodk()",
+    "span": [
+      37,
+      47
+    ],
+    "start_byte": 1040,
+    "end_byte": 1381,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot_name=ROBOT_NAME)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.__init__",
+    "docstring": "Initialize connection to RoboDK and get robot reference\n        \n        Args:\n            robot_name (str): Name of the robot in RoboDK workspace",
+    "chunk_size_bytes": 341,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def connect_to_robodk(self):\n        \"\"\"\n        Establish connection to RoboDK and get robot reference\n        \"\"\"\n        try:\n            # Connect to RoboDK\n            self.RDK = Robolink()\n            \n            # Check if RoboDK is running\n            if not self.RDK.Valid():\n                raise Exception(\"RoboDK is not running or not accessible\")\n            \n            # Get robot by name\n            self.robot = self.RDK.Item(self.robot_name, ITEM_TYPE_ROBOT)\n            \n            if not self.robot.Valid():\n                raise Exception(f\"Robot '{self.robot_name}' not found in RoboDK workspace\")\n            \n            print(f\"Successfully connected to robot: {self.robot_name}\")\n            \n            # Set default speeds\n            self.robot.setSpeed(DEFAULT_SPEED)  # Linear speed in mm/s\n            self.robot.setZoneData(5)  # Rounding/blending radius in mm\n            \n        except Exception as e:\n            print(f\"Error connecting to RoboDK: {e}\")\n            sys.exit(1)",
+    "span": [
+      49,
+      75
+    ],
+    "start_byte": 1391,
+    "end_byte": 2410,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "connect_to_robodk",
+    "signature": "connect_to_robodk(self)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.connect_to_robodk",
+    "docstring": "Establish connection to RoboDK and get robot reference",
+    "chunk_size_bytes": 1019,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def get_robot_status(self):\n        \"\"\"\n        Get current robot status and joint positions\n        \n        Returns:\n            dict: Robot status information\n        \"\"\"\n        try:\n            joints = self.robot.Joints()\n            pose = self.robot.Pose()\n            \n            return {\n                'joints': joints.tolist(),\n                'pose': pose,\n                'position': pose.Pos(),\n                'orientation': pose.Euler_2_Pose()[1]\n            }\n        except Exception as e:\n            print(f\"Error getting robot status: {e}\")\n            return None",
+    "span": [
+      77,
+      96
+    ],
+    "start_byte": 2420,
+    "end_byte": 3008,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_robot_status",
+    "signature": "get_robot_status(self)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.get_robot_status",
+    "docstring": "Get current robot status and joint positions\n        \n        Returns:\n            dict: Robot status information",
+    "chunk_size_bytes": 588,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def move_to_home(self):\n        \"\"\"\n        Move robot to home position (all joints at 0 degrees)\n        \"\"\"\n        try:\n            home_joints = [0, 0, 0, 0, 0, 0]  # All joints at 0 degrees\n            print(\"Moving to home position...\")\n            self.robot.MoveJ(home_joints)\n            print(\"Home position reached\")\n        except Exception as e:\n            print(f\"Error moving to home: {e}\")",
+    "span": [
+      98,
+      108
+    ],
+    "start_byte": 3018,
+    "end_byte": 3424,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "move_to_home",
+    "signature": "move_to_home(self)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.move_to_home",
+    "docstring": "Move robot to home position (all joints at 0 degrees)",
+    "chunk_size_bytes": 406,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def move_joints(self, joint_angles):\n        \"\"\"\n        Move robot to specified joint angles\n        \n        Args:\n            joint_angles (list): List of 6 joint angles in degrees [J1, J2, J3, J4, J5, J6]\n        \"\"\"\n        try:\n            if len(joint_angles) != 6:\n                raise ValueError(\"Joint angles must be a list of 6 values\")\n            \n            print(f\"Moving to joint angles: {joint_angles}\")\n            self.robot.MoveJ(joint_angles)\n            print(\"Joint movement completed\")\n        except Exception as e:\n            print(f\"Error in joint movement: {e}\")",
+    "span": [
+      110,
+      125
+    ],
+    "start_byte": 3434,
+    "end_byte": 4027,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "move_joints",
+    "signature": "move_joints(self, joint_angles)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.move_joints",
+    "docstring": "Move robot to specified joint angles\n        \n        Args:\n            joint_angles (list): List of 6 joint angles in degrees [J1, J2, J3, J4, J5, J6]",
+    "chunk_size_bytes": 593,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def move_linear(self, target_pose):\n        \"\"\"\n        Move robot linearly to target pose\n        \n        Args:\n            target_pose: Target pose (can be Mat object or target item)\n        \"\"\"\n        try:\n            print(\"Executing linear movement...\")\n            self.robot.MoveL(target_pose)\n            print(\"Linear movement completed\")\n        except Exception as e:\n            print(f\"Error in linear movement: {e}\")",
+    "span": [
+      127,
+      139
+    ],
+    "start_byte": 4037,
+    "end_byte": 4469,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "move_linear",
+    "signature": "move_linear(self, target_pose)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.move_linear",
+    "docstring": "Move robot linearly to target pose\n        \n        Args:\n            target_pose: Target pose (can be Mat object or target item)",
+    "chunk_size_bytes": 432,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def create_target(self, name, x, y, z, rx=0, ry=0, rz=0):\n        \"\"\"\n        Create a target in RoboDK workspace\n        \n        Args:\n            name (str): Name of the target\n            x, y, z (float): Position coordinates in mm\n            rx, ry, rz (float): Rotation angles in degrees\n            \n        Returns:\n            Target item or None if failed\n        \"\"\"\n        try:\n            # Create pose matrix\n            pose = transl(x, y, z) * rotz(rz * pi/180) * roty(ry * pi/180) * rotx(rx * pi/180)\n            \n            # Create target in RoboDK\n            target = self.RDK.AddTarget(name)\n            target.setPose(pose)\n            \n            print(f\"Target '{name}' created at position ({x}, {y}, {z})\")\n            return target\n        except Exception as e:\n            print(f\"Error creating target: {e}\")\n            return None",
+    "span": [
+      141,
+      165
+    ],
+    "start_byte": 4479,
+    "end_byte": 5345,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "create_target",
+    "signature": "create_target(self, name, x, y, z, rx=0, ry=0, rz=0)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.create_target",
+    "docstring": "Create a target in RoboDK workspace\n        \n        Args:\n            name (str): Name of the target\n            x, y, z (float): Position coordinates in mm\n            rx, ry, rz (float): Rotation angles in degrees\n            \n        Returns:\n            Target item or None if failed",
+    "chunk_size_bytes": 866,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def pick_and_place_demo(self):\n        \"\"\"\n        Demonstrate a simple pick and place operation\n        \"\"\"\n        try:\n            print(\"\\n=== Starting Pick and Place Demo ===\")\n            \n            # Define pick and place positions (adjust as needed)\n            pick_pos = [300, 100, 200]      # Pick position [x, y, z] in mm\n            place_pos = [300, -100, 200]    # Place position [x, y, z] in mm\n            \n            # Create targets\n            pick_target = self.create_target(\"Pick_Target\", *pick_pos)\n            place_target = self.create_target(\"Place_Target\", *place_pos)\n            \n            if not pick_target or not place_target:\n                raise Exception(\"Failed to create targets\")\n            \n            # 1. Move to home position\n            self.move_to_home()\n            time.sleep(1)\n            \n            # 2. Move to pick approach position\n            pick_approach = self.create_target(\"Pick_Approach\", \n                                             pick_pos[0], pick_pos[1], pick_pos[2] + APPROACH_DISTANCE)\n            self.move_linear(pick_approach)\n            time.sleep(0.5)\n            \n            # 3. Move down to pick position\n            self.move_linear(pick_target)\n            time.sleep(0.5)\n            \n            # Simulate gripper close\n            print(\"Closing gripper (simulated)\")\n            time.sleep(1)\n            \n            # 4. Move up from pick position\n            self.move_linear(pick_approach)\n            time.sleep(0.5)\n            \n            # 5. Move to place approach position\n            place_approach = self.create_target(\"Place_Approach\", \n                                              place_pos[0], place_pos[1], place_pos[2] + APPROACH_DISTANCE)\n            self.move_linear(place_approach)\n            time.sleep(0.5)\n            \n            # 6. Move down to place position\n            self.move_linear(place_target)\n            time.sleep(0.5)\n            \n            # Simulate gripper open\n            print(\"Opening gripper (simulated)\")\n            time.sleep(1)\n            \n            # 7. Move up from place position\n            self.move_linear(place_approach)\n            time.sleep(0.5)\n            \n            # 8. Return to home\n            self.move_to_home()\n            \n            print(\"=== Pick and Place Demo Completed ===\\n\")\n            \n        except Exception as e:\n            print(f\"Error in pick and place demo: {e}\")",
+    "span": [
+      167,
+      231
+    ],
+    "start_byte": 5355,
+    "end_byte": 7817,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "pick_and_place_demo",
+    "signature": "pick_and_place_demo(self)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.pick_and_place_demo",
+    "docstring": "Demonstrate a simple pick and place operation",
+    "chunk_size_bytes": 2462,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def circular_path_demo(self, center_x=300, center_y=0, center_z=200, radius=50, num_points=8):\n        \"\"\"\n        Demonstrate circular path movement\n        \n        Args:\n            center_x, center_y, center_z (float): Center of circle in mm\n            radius (float): Radius of circle in mm\n            num_points (int): Number of points on circle\n        \"\"\"\n        try:\n            print(f\"\\n=== Starting Circular Path Demo ===\")\n            print(f\"Center: ({center_x}, {center_y}, {center_z}), Radius: {radius}mm\")\n            \n            # Create circular path points\n            for i in range(num_points + 1):  # +1 to close the circle\n                angle = i * 2 * pi / num_points\n                \n                # Calculate point on circle\n                x = center_x + radius * cos(angle)\n                y = center_y + radius * sin(angle)\n                z = center_z\n                \n                # Create target\n                target_name = f\"Circle_Point_{i}\"\n                target = self.create_target(target_name, x, y, z)\n                \n                if target:\n                    if i == 0:\n                        # First point - use joint movement\n                        self.robot.MoveJ(target)\n                    else:\n                        # Subsequent points - use linear movement\n                        self.robot.MoveL(target)\n                    \n                    time.sleep(0.2)  # Brief pause between movements\n            \n            print(\"=== Circular Path Demo Completed ===\\n\")\n            \n        except Exception as e:\n            print(f\"Error in circular path demo: {e}\")",
+    "span": [
+      233,
+      272
+    ],
+    "start_byte": 7827,
+    "end_byte": 9468,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "circular_path_demo",
+    "signature": "circular_path_demo(self, center_x=300, center_y=0, center_z=200, radius=50, num_points=8)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.circular_path_demo",
+    "docstring": "Demonstrate circular path movement\n        \n        Args:\n            center_x, center_y, center_z (float): Center of circle in mm\n            radius (float): Radius of circle in mm\n            num_points (int): Number of points on circle",
+    "chunk_size_bytes": 1641,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def speed_test_demo(self):\n        \"\"\"\n        Demonstrate different movement speeds\n        \"\"\"\n        try:\n            print(\"\\n=== Starting Speed Test Demo ===\")\n            \n            # Define test positions\n            pos1 = [300, 100, 200]\n            pos2 = [300, -100, 200]\n            \n            # Create targets\n            target1 = self.create_target(\"Speed_Test_1\", *pos1)\n            target2 = self.create_target(\"Speed_Test_2\", *pos2)\n            \n            # Test different speeds\n            speeds = [50, 100, 200]  # mm/s\n            \n            for speed in speeds:\n                print(f\"Testing speed: {speed} mm/s\")\n                self.robot.setSpeed(speed)\n                \n                self.move_linear(target1)\n                time.sleep(0.5)\n                self.move_linear(target2)\n                time.sleep(0.5)\n            \n            # Reset to default speed\n            self.robot.setSpeed(DEFAULT_SPEED)\n            print(\"=== Speed Test Demo Completed ===\\n\")\n            \n        except Exception as e:\n            print(f\"Error in speed test demo: {e}\")",
+    "span": [
+      274,
+      306
+    ],
+    "start_byte": 9478,
+    "end_byte": 10584,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "speed_test_demo",
+    "signature": "speed_test_demo(self)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.speed_test_demo",
+    "docstring": "Demonstrate different movement speeds",
+    "chunk_size_bytes": 1106,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def run_full_demo(self):\n        \"\"\"\n        Run complete demonstration of robot capabilities\n        \"\"\"\n        try:\n            print(\"Starting Meca500 RoboDK Programming Demo\")\n            print(\"=\" * 50)\n            \n            # Display robot status\n            status = self.get_robot_status()\n            if status:\n                print(f\"Current robot position: {[round(x, 2) for x in status['position']]}\")\n                print(f\"Current joint angles: {[round(x, 2) for x in status['joints']]}\")\n            \n            # Run demonstrations\n            self.pick_and_place_demo()\n            self.circular_path_demo()\n            self.speed_test_demo()\n            \n            # Return to home\n            self.move_to_home()\n            \n            print(\"All demonstrations completed successfully!\")\n            \n        except Exception as e:\n            print(f\"Error in full demo: {e}\")",
+    "span": [
+      308,
+      333
+    ],
+    "start_byte": 10594,
+    "end_byte": 11501,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "run_full_demo",
+    "signature": "run_full_demo(self)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.run_full_demo",
+    "docstring": "Run complete demonstration of robot capabilities",
+    "chunk_size_bytes": 907,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def cleanup(self):\n        \"\"\"\n        Clean up resources and close connections\n        \"\"\"\n        try:\n            if self.robot and self.robot.Valid():\n                # Return to home position\n                self.move_to_home()\n            \n            print(\"Cleanup completed\")\n        except Exception as e:\n            print(f\"Error during cleanup: {e}\")",
+    "span": [
+      335,
+      346
+    ],
+    "start_byte": 11511,
+    "end_byte": 11874,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "cleanup",
+    "signature": "cleanup(self)",
+    "parent_class": "Meca500Controller",
+    "qualified_name": "Meca500Controller.cleanup",
+    "docstring": "Clean up resources and close connections",
+    "chunk_size_bytes": 363,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  },
+  {
+    "snippet": "def main():\n    \"\"\"\n    Main function to run the Meca500 programming example\n    \"\"\"\n    print(\"Mecademic Meca500 RoboDK Programming Example\")\n    print(\"=\" * 50)\n    \n    # Create controller instance\n    controller = Meca500Controller()\n    \n    try:\n        # Run demonstration\n        controller.run_full_demo()\n    \n    except KeyboardInterrupt:\n        print(\"\\nProgram interrupted by user\")\n    \n    except Exception as e:\n        print(f\"Unexpected error: {e}\")\n    \n    finally:\n        # Clean up\n        controller.cleanup()\n        print(\"Program finished\")",
+    "span": [
+      348,
+      371
+    ],
+    "start_byte": 11876,
+    "end_byte": 12444,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "main",
+    "qualified_name": "main",
+    "signature": "main()",
+    "docstring": "Main function to run the Meca500 programming example",
+    "chunk_size_bytes": 568,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/example_robodk_script.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/example_robodk_script.py"
+  }
+]

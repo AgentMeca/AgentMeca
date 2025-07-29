@@ -1,0 +1,475 @@
+[
+  {
+    "snippet": "import time",
+    "span": [
+      12,
+      12
+    ],
+    "start_byte": 367,
+    "end_byte": 378,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "time",
+    "qualified_name": "time",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "import numpy as np",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 379,
+    "end_byte": 397,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "numpy as np",
+    "qualified_name": "numpy as np",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 18,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "from typing import List, Tuple, Optional, Dict, Any",
+    "span": [
+      14,
+      14
+    ],
+    "start_byte": 398,
+    "end_byte": 449,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "List",
+    "qualified_name": "List",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 51,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "from vision_controller import VisionController",
+    "span": [
+      15,
+      15
+    ],
+    "start_byte": 450,
+    "end_byte": 496,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "VisionController",
+    "qualified_name": "VisionController",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 46,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "class VisionGuidedPick:\n    \"\"\"\n    High-level integration class combining SICK PLOC 2D vision system with Mecademic robot control.\n    \n    This class provides methods for vision-guided pick and place operations, including calibration,\n    coordinate transformation, and automated workflow execution.\n    \n    Attributes:\n        robot_ip (str): IP address of Mecademic robot\n        vision_ip (str): IP address of SICK PLOC 2D system\n        robot: Mecademic robot instance\n        vision (VisionController): Vision system controller\n        vision_ref_frame (np.ndarray): Vision reference frame transformation matrix\n        pick_offset (float): Z-axis offset for pick operations (mm)\n        place_offset (float): Z-axis offset for place operations (mm)\n        speed (float): Robot movement speed percentage\n        debug (bool): Enable debug output\n    \"\"\"",
+    "span": [
+      25,
+      559
+    ],
+    "start_byte": 697,
+    "end_byte": 20545,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick",
+    "docstring": "High-level integration class combining SICK PLOC 2D vision system with Mecademic robot control.\n    \n    This class provides methods for vision-guided pick and place operations, including calibration,\n    coordinate transformation, and automated workflow execution.\n    \n    Attributes:\n        robot_ip (str): IP address of Mecademic robot\n        vision_ip (str): IP address of SICK PLOC 2D system\n        robot: Mecademic robot instance\n        vision (VisionController): Vision system controller\n        vision_ref_frame (np.ndarray): Vision reference frame transformation matrix\n        pick_offset (float): Z-axis offset for pick operations (mm)\n        place_offset (float): Z-axis offset for place operations (mm)\n        speed (float): Robot movement speed percentage\n        debug (bool): Enable debug output",
+    "chunk_size_bytes": 862,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def __init__(self, robot_ip: str, vision_ip: str, debug: bool = False):\n        \"\"\"\n        Initialize VisionGuidedPick integration system.\n        \n        Args:\n            robot_ip (str): IP address of Mecademic robot\n            vision_ip (str): IP address of SICK PLOC 2D vision system\n            debug (bool): Enable debug output for troubleshooting\n        \"\"\"\n        self.robot_ip = robot_ip\n        self.vision_ip = vision_ip\n        self.debug = debug\n        \n        # Initialize components\n        self.robot = None\n        self.vision = VisionController(vision_ip, debug=debug)\n        \n        # Transformation and offset parameters\n        self.vision_ref_frame = np.eye(4)  # 4x4 identity matrix\n        self.pick_offset = 5.0  # Default 5mm pick offset\n        self.place_offset = 10.0  # Default 10mm place offset\n        self.speed = 25.0  # Default 25% speed\n        \n        # Status flags\n        self.robot_initialized = False\n        self.vision_initialized = False\n        self.calibrated = False\n        \n        if self.debug:\n            print(f\"VisionGuidedPick initialized - Robot: {robot_ip}, Vision: {vision_ip}\")",
+    "span": [
+      44,
+      73
+    ],
+    "start_byte": 1569,
+    "end_byte": 2717,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, robot_ip: str, vision_ip: str, debug: bool = False)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.__init__",
+    "docstring": "Initialize VisionGuidedPick integration system.\n        \n        Args:\n            robot_ip (str): IP address of Mecademic robot\n            vision_ip (str): IP address of SICK PLOC 2D vision system\n            debug (bool): Enable debug output for troubleshooting",
+    "chunk_size_bytes": 1148,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def init_robot(self) -> bool:\n        \"\"\"\n        Initialize connection to Mecademic robot.\n        \n        Returns:\n            bool: True if robot initialization successful, False otherwise\n        \"\"\"\n        if not MECADEMIC_AVAILABLE:\n            print(\"Error: Mecademic package not available\")\n            return False\n        \n        try:\n            # Initialize robot connection\n            self.robot = mecademic.Robot()\n            self.robot.Connect(address=self.robot_ip)\n            \n            # Wait for connection\n            timeout = 10.0\n            start_time = time.time()\n            while not self.robot.GetStatusRobot().Connected and (time.time() - start_time) < timeout:\n                time.sleep(0.1)\n            \n            if not self.robot.GetStatusRobot().Connected:\n                if self.debug:\n                    print(f\"Failed to connect to robot at {self.robot_ip}\")\n                return False\n            \n            # Activate and home robot\n            self.robot.ActivateRobot()\n            self.robot.Home()\n            \n            # Wait for homing to complete\n            self.robot.WaitHomed()\n            \n            # Set default speed\n            self.robot.SetCartLinVel(self.speed)\n            self.robot.SetCartAngVel(self.speed)\n            \n            self.robot_initialized = True\n            \n            if self.debug:\n                print(\"Robot initialized and homed successfully\")\n            \n            return True\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Robot initialization error: {e}\")\n            return False",
+    "span": [
+      75,
+      123
+    ],
+    "start_byte": 2727,
+    "end_byte": 4370,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "init_robot",
+    "signature": "init_robot(self)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.init_robot",
+    "docstring": "Initialize connection to Mecademic robot.\n        \n        Returns:\n            bool: True if robot initialization successful, False otherwise",
+    "chunk_size_bytes": 1643,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def init_vision(self) -> bool:\n        \"\"\"\n        Initialize connection to SICK PLOC 2D vision system.\n        \n        Returns:\n            bool: True if vision system initialization successful, False otherwise\n        \"\"\"\n        try:\n            success = self.vision.connect()\n            \n            if success:\n                # Verify system status\n                status = self.vision.get_system_status()\n                if status['connected']:\n                    self.vision_initialized = True\n                    \n                    if self.debug:\n                        print(\"Vision system initialized successfully\")\n                    return True\n            \n            if self.debug:\n                print(\"Failed to initialize vision system\")\n            return False\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Vision initialization error: {e}\")\n            return False",
+    "span": [
+      125,
+      152
+    ],
+    "start_byte": 4380,
+    "end_byte": 5325,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "init_vision",
+    "signature": "init_vision(self)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.init_vision",
+    "docstring": "Initialize connection to SICK PLOC 2D vision system.\n        \n        Returns:\n            bool: True if vision system initialization successful, False otherwise",
+    "chunk_size_bytes": 945,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def set_vision_ref(self, x: float, y: float, z: float, rx: float, ry: float, rz: float) -> None:\n        \"\"\"\n        Set vision reference frame coordinates (calibration point).\n        \n        This method establishes the transformation between vision coordinates and robot coordinates\n        using a reference point that is visible to both systems.\n        \n        Args:\n            x, y, z (float): Robot coordinates of reference point (mm)\n            rx, ry, rz (float): Robot orientation of reference point (degrees)\n        \"\"\"\n        # Store reference frame coordinates\n        self.vision_ref_x = x\n        self.vision_ref_y = y\n        self.vision_ref_z = z\n        self.vision_ref_rx = rx\n        self.vision_ref_ry = ry\n        self.vision_ref_rz = rz\n        \n        # Create transformation matrix (simplified - full calibration would use multiple points)\n        self.vision_ref_frame = self._create_transform_matrix(x, y, z, rx, ry, rz)\n        self.calibrated = True\n        \n        if self.debug:\n            print(f\"Vision reference frame set: ({x:.2f}, {y:.2f}, {z:.2f}, {rx:.2f}, {ry:.2f}, {rz:.2f})\")",
+    "span": [
+      154,
+      178
+    ],
+    "start_byte": 5335,
+    "end_byte": 6460,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set_vision_ref",
+    "signature": "set_vision_ref(self, x: float, y: float, z: float, rx: float, ry: float, rz: float)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.set_vision_ref",
+    "docstring": "Set vision reference frame coordinates (calibration point).\n        \n        This method establishes the transformation between vision coordinates and robot coordinates\n        using a reference point that is visible to both systems.\n        \n        Args:\n            x, y, z (float): Robot coordinates of reference point (mm)\n            rx, ry, rz (float): Robot orientation of reference point (degrees)",
+    "chunk_size_bytes": 1125,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def calibrate_3_point(self, robot_points: List[Tuple[float, float, float]], \n                         vision_points: List[Tuple[float, float]]) -> bool:\n        \"\"\"\n        Perform 3-point calibration to establish vision-to-robot coordinate transformation.\n        \n        Args:\n            robot_points (List[Tuple[float, float, float]]): Three robot coordinates (x, y, z)\n            vision_points (List[Tuple[float, float]]): Corresponding vision coordinates (x, y)\n            \n        Returns:\n            bool: True if calibration successful, False otherwise\n        \"\"\"\n        if len(robot_points) != 3 or len(vision_points) != 3:\n            if self.debug:\n                print(\"Error: Exactly 3 points required for calibration\")\n            return False\n        \n        try:\n            # Convert to numpy arrays\n            robot_pts = np.array(robot_points)\n            vision_pts = np.array(vision_points)\n            \n            # Calculate transformation matrix using least squares\n            # This is a simplified implementation - production systems may use more sophisticated methods\n            \n            # Add homogeneous coordinates\n            vision_homo = np.column_stack([vision_pts, np.ones(3)])\n            \n            # Solve for transformation parameters\n            transform_x = np.linalg.lstsq(vision_homo, robot_pts[:, 0], rcond=None)[0]\n            transform_y = np.linalg.lstsq(vision_homo, robot_pts[:, 1], rcond=None)[0]\n            \n            # Create transformation matrix\n            self.vision_to_robot_transform = np.array([\n                [transform_x[0], transform_x[1], transform_x[2]],\n                [transform_y[0], transform_y[1], transform_y[2]]\n            ])\n            \n            # Use average Z coordinate for all transformations\n            self.average_z = np.mean(robot_pts[:, 2])\n            \n            self.calibrated = True\n            \n            if self.debug:\n                print(\"3-point calibration completed successfully\")\n                print(f\"Transformation matrix:\\n{self.vision_to_robot_transform}\")\n            \n            return True\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Calibration error: {e}\")\n            return False",
+    "span": [
+      180,
+      232
+    ],
+    "start_byte": 6470,
+    "end_byte": 8745,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "calibrate_3_point",
+    "signature": "calibrate_3_point(self, robot_points: List[Tuple[float, float, float]], \n                         vision_points: List[Tuple[float, float]])",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.calibrate_3_point",
+    "docstring": "Perform 3-point calibration to establish vision-to-robot coordinate transformation.\n        \n        Args:\n            robot_points (List[Tuple[float, float, float]]): Three robot coordinates (x, y, z)\n            vision_points (List[Tuple[float, float]]): Corresponding vision coordinates (x, y)\n            \n        Returns:\n            bool: True if calibration successful, False otherwise",
+    "chunk_size_bytes": 2275,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def set_offset(self, pick_offset: float, place_offset: Optional[float] = None) -> None:\n        \"\"\"\n        Set Z-axis offsets for pick and place operations.\n        \n        Args:\n            pick_offset (float): Pick height offset in mm (positive = above part)\n            place_offset (Optional[float]): Place height offset in mm (uses pick_offset if None)\n        \"\"\"\n        self.pick_offset = pick_offset\n        self.place_offset = place_offset if place_offset is not None else pick_offset\n        \n        if self.debug:\n            print(f\"Offsets set - Pick: {self.pick_offset}mm, Place: {self.place_offset}mm\")",
+    "span": [
+      234,
+      246
+    ],
+    "start_byte": 8755,
+    "end_byte": 9376,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set_offset",
+    "signature": "set_offset(self, pick_offset: float, place_offset: Optional[float] = None)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.set_offset",
+    "docstring": "Set Z-axis offsets for pick and place operations.\n        \n        Args:\n            pick_offset (float): Pick height offset in mm (positive = above part)\n            place_offset (Optional[float]): Place height offset in mm (uses pick_offset if None)",
+    "chunk_size_bytes": 621,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def set_speed(self, speed: float) -> None:\n        \"\"\"\n        Set robot movement speed.\n        \n        Args:\n            speed (float): Speed percentage (1-100)\n        \"\"\"\n        self.speed = max(1.0, min(100.0, speed))  # Clamp to 1-100%\n        \n        if self.robot_initialized and self.robot:\n            self.robot.SetCartLinVel(self.speed)\n            self.robot.SetCartAngVel(self.speed)\n        \n        if self.debug:\n            print(f\"Speed set to {self.speed}%\")",
+    "span": [
+      248,
+      262
+    ],
+    "start_byte": 9386,
+    "end_byte": 9867,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set_speed",
+    "signature": "set_speed(self, speed: float)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.set_speed",
+    "docstring": "Set robot movement speed.\n        \n        Args:\n            speed (float): Speed percentage (1-100)",
+    "chunk_size_bytes": 481,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def get_count(self, job_id: int) -> Optional[int]:\n        \"\"\"\n        Get number of parts detected by vision system.\n        \n        Args:\n            job_id (int): Vision job ID to query\n            \n        Returns:\n            Optional[int]: Number of detected parts, None if query failed\n        \"\"\"\n        if not self.vision_initialized:\n            if self.debug:\n                print(\"Vision system not initialized\")\n            return None\n        \n        return self.vision.get_part_count(job_id)",
+    "span": [
+      264,
+      279
+    ],
+    "start_byte": 9877,
+    "end_byte": 10387,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_count",
+    "signature": "get_count(self, job_id: int)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.get_count",
+    "docstring": "Get number of parts detected by vision system.\n        \n        Args:\n            job_id (int): Vision job ID to query\n            \n        Returns:\n            Optional[int]: Number of detected parts, None if query failed",
+    "chunk_size_bytes": 510,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def pick_index(self, job_id: int, part_index: int) -> bool:\n        \"\"\"\n        Pick part at specified index using vision guidance.\n        \n        Args:\n            job_id (int): Vision job ID\n            part_index (int): Index of part to pick (1-based)\n            \n        Returns:\n            bool: True if pick operation successful, False otherwise\n        \"\"\"\n        if not self._check_system_ready():\n            return False\n        \n        try:\n            # Get part coordinates from vision system\n            part_data = self.vision.locate_by_index(job_id, part_index)\n            if not part_data:\n                if self.debug:\n                    print(f\"Failed to get coordinates for part {part_index}\")\n                return False\n            \n            # Transform vision coordinates to robot coordinates\n            robot_coords = self._transform_vision_to_robot(part_data['x'], part_data['y'])\n            if not robot_coords:\n                if self.debug:\n                    print(\"Coordinate transformation failed\")\n                return False\n            \n            target_x, target_y, target_z = robot_coords\n            target_rz = part_data.get('rz', 0.0)  # Use vision rotation or default to 0\n            \n            if self.debug:\n                print(f\"Picking part {part_index} at ({target_x:.2f}, {target_y:.2f}, {target_z:.2f}, rz={target_rz:.2f})\")\n            \n            # Execute pick sequence\n            return self._execute_pick(target_x, target_y, target_z, 0, 0, target_rz)\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Pick operation error: {e}\")\n            return False",
+    "span": [
+      281,
+      322
+    ],
+    "start_byte": 10397,
+    "end_byte": 12074,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "pick_index",
+    "signature": "pick_index(self, job_id: int, part_index: int)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.pick_index",
+    "docstring": "Pick part at specified index using vision guidance.\n        \n        Args:\n            job_id (int): Vision job ID\n            part_index (int): Index of part to pick (1-based)\n            \n        Returns:\n            bool: True if pick operation successful, False otherwise",
+    "chunk_size_bytes": 1677,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def place(self, x: float, y: float, z: float, rx: float, ry: float, rz: float) -> bool:\n        \"\"\"\n        Place part at specified coordinates.\n        \n        Args:\n            x, y, z (float): Target coordinates (mm)\n            rx, ry, rz (float): Target orientation (degrees)\n            \n        Returns:\n            bool: True if place operation successful, False otherwise\n        \"\"\"\n        if not self.robot_initialized:\n            if self.debug:\n                print(\"Robot not initialized\")\n            return False\n        \n        try:\n            if self.debug:\n                print(f\"Placing part at ({x:.2f}, {y:.2f}, {z:.2f}, {rx:.2f}, {ry:.2f}, {rz:.2f})\")\n            \n            # Execute place sequence\n            return self._execute_place(x, y, z, rx, ry, rz)\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Place operation error: {e}\")\n            return False",
+    "span": [
+      324,
+      350
+    ],
+    "start_byte": 12084,
+    "end_byte": 13023,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "place",
+    "signature": "place(self, x: float, y: float, z: float, rx: float, ry: float, rz: float)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.place",
+    "docstring": "Place part at specified coordinates.\n        \n        Args:\n            x, y, z (float): Target coordinates (mm)\n            rx, ry, rz (float): Target orientation (degrees)\n            \n        Returns:\n            bool: True if place operation successful, False otherwise",
+    "chunk_size_bytes": 939,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def _check_system_ready(self) -> bool:\n        \"\"\"\n        Check if both robot and vision systems are ready for operation.\n        \n        Returns:\n            bool: True if systems are ready, False otherwise\n        \"\"\"\n        if not self.robot_initialized:\n            if self.debug:\n                print(\"Robot not initialized\")\n            return False\n        \n        if not self.vision_initialized:\n            if self.debug:\n                print(\"Vision system not initialized\")\n            return False\n        \n        if not self.calibrated:\n            if self.debug:\n                print(\"System not calibrated\")\n            return False\n        \n        return True",
+    "span": [
+      352,
+      374
+    ],
+    "start_byte": 13033,
+    "end_byte": 13717,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_check_system_ready",
+    "signature": "_check_system_ready(self)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick._check_system_ready",
+    "docstring": "Check if both robot and vision systems are ready for operation.\n        \n        Returns:\n            bool: True if systems are ready, False otherwise",
+    "chunk_size_bytes": 684,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def _transform_vision_to_robot(self, vision_x: float, vision_y: float) -> Optional[Tuple[float, float, float]]:\n        \"\"\"\n        Transform vision coordinates to robot coordinates.\n        \n        Args:\n            vision_x, vision_y (float): Vision system coordinates\n            \n        Returns:\n            Optional[Tuple[float, float, float]]: Robot coordinates (x, y, z), None if failed\n        \"\"\"\n        try:\n            if hasattr(self, 'vision_to_robot_transform'):\n                # Use 3-point calibration transformation\n                vision_homo = np.array([vision_x, vision_y, 1.0])\n                robot_x = np.dot(self.vision_to_robot_transform[0], vision_homo)\n                robot_y = np.dot(self.vision_to_robot_transform[1], vision_homo)\n                robot_z = self.average_z\n                \n            else:\n                # Use simple reference frame transformation (less accurate)\n                # This is a simplified transformation - production systems should use proper calibration\n                robot_x = self.vision_ref_x + (vision_x * 0.1)  # Scale factor example\n                robot_y = self.vision_ref_y + (vision_y * 0.1)\n                robot_z = self.vision_ref_z\n            \n            return (robot_x, robot_y, robot_z)\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Coordinate transformation error: {e}\")\n            return None",
+    "span": [
+      376,
+      406
+    ],
+    "start_byte": 13727,
+    "end_byte": 15160,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_transform_vision_to_robot",
+    "signature": "_transform_vision_to_robot(self, vision_x: float, vision_y: float)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick._transform_vision_to_robot",
+    "docstring": "Transform vision coordinates to robot coordinates.\n        \n        Args:\n            vision_x, vision_y (float): Vision system coordinates\n            \n        Returns:\n            Optional[Tuple[float, float, float]]: Robot coordinates (x, y, z), None if failed",
+    "chunk_size_bytes": 1433,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def _execute_pick(self, x: float, y: float, z: float, rx: float, ry: float, rz: float) -> bool:\n        \"\"\"\n        Execute pick sequence at specified coordinates.\n        \n        Args:\n            x, y, z (float): Target coordinates (mm)\n            rx, ry, rz (float): Target orientation (degrees)\n            \n        Returns:\n            bool: True if pick successful, False otherwise\n        \"\"\"\n        try:\n            # Move to approach position (offset above part)\n            approach_z = z + self.pick_offset\n            self.robot.MoveCartPoint(x, y, approach_z, rx, ry, rz)\n            self.robot.WaitMovementCompletion()\n            \n            # Move down to pick position\n            self.robot.MoveCartPoint(x, y, z, rx, ry, rz)\n            self.robot.WaitMovementCompletion()\n            \n            # Activate gripper (implementation depends on gripper type)\n            # This is a placeholder - actual implementation would control specific gripper\n            if self.debug:\n                print(\"Gripper activated (placeholder)\")\n            \n            # Small delay for gripper activation\n            time.sleep(0.5)\n            \n            # Move back to approach position\n            self.robot.MoveCartPoint(x, y, approach_z, rx, ry, rz)\n            self.robot.WaitMovementCompletion()\n            \n            if self.debug:\n                print(\"Pick sequence completed\")\n            \n            return True\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Pick execution error: {e}\")\n            return False",
+    "span": [
+      408,
+      449
+    ],
+    "start_byte": 15170,
+    "end_byte": 16762,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_execute_pick",
+    "signature": "_execute_pick(self, x: float, y: float, z: float, rx: float, ry: float, rz: float)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick._execute_pick",
+    "docstring": "Execute pick sequence at specified coordinates.\n        \n        Args:\n            x, y, z (float): Target coordinates (mm)\n            rx, ry, rz (float): Target orientation (degrees)\n            \n        Returns:\n            bool: True if pick successful, False otherwise",
+    "chunk_size_bytes": 1592,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def _execute_place(self, x: float, y: float, z: float, rx: float, ry: float, rz: float) -> bool:\n        \"\"\"\n        Execute place sequence at specified coordinates.\n        \n        Args:\n            x, y, z (float): Target coordinates (mm)\n            rx, ry, rz (float): Target orientation (degrees)\n            \n        Returns:\n            bool: True if place successful, False otherwise\n        \"\"\"\n        try:\n            # Move to approach position (offset above target)\n            approach_z = z + self.place_offset\n            self.robot.MoveCartPoint(x, y, approach_z, rx, ry, rz)\n            self.robot.WaitMovementCompletion()\n            \n            # Move down to place position\n            self.robot.MoveCartPoint(x, y, z, rx, ry, rz)\n            self.robot.WaitMovementCompletion()\n            \n            # Deactivate gripper (implementation depends on gripper type)\n            # This is a placeholder - actual implementation would control specific gripper\n            if self.debug:\n                print(\"Gripper deactivated (placeholder)\")\n            \n            # Small delay for gripper deactivation\n            time.sleep(0.5)\n            \n            # Move back to approach position\n            self.robot.MoveCartPoint(x, y, approach_z, rx, ry, rz)\n            self.robot.WaitMovementCompletion()\n            \n            if self.debug:\n                print(\"Place sequence completed\")\n            \n            return True\n            \n        except Exception as e:\n            if self.debug:\n                print(f\"Place execution error: {e}\")\n            return False",
+    "span": [
+      451,
+      492
+    ],
+    "start_byte": 16772,
+    "end_byte": 18379,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_execute_place",
+    "signature": "_execute_place(self, x: float, y: float, z: float, rx: float, ry: float, rz: float)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick._execute_place",
+    "docstring": "Execute place sequence at specified coordinates.\n        \n        Args:\n            x, y, z (float): Target coordinates (mm)\n            rx, ry, rz (float): Target orientation (degrees)\n            \n        Returns:\n            bool: True if place successful, False otherwise",
+    "chunk_size_bytes": 1607,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def _create_transform_matrix(self, x: float, y: float, z: float, rx: float, ry: float, rz: float) -> np.ndarray:\n        \"\"\"\n        Create 4x4 transformation matrix from position and orientation.\n        \n        Args:\n            x, y, z (float): Position coordinates\n            rx, ry, rz (float): Rotation angles in degrees\n            \n        Returns:\n            np.ndarray: 4x4 transformation matrix\n        \"\"\"\n        # Convert angles to radians\n        rx_rad = np.radians(rx)\n        ry_rad = np.radians(ry)\n        rz_rad = np.radians(rz)\n        \n        # Create rotation matrices\n        Rx = np.array([[1, 0, 0],\n                       [0, np.cos(rx_rad), -np.sin(rx_rad)],\n                       [0, np.sin(rx_rad), np.cos(rx_rad)]])\n        \n        Ry = np.array([[np.cos(ry_rad), 0, np.sin(ry_rad)],\n                       [0, 1, 0],\n                       [-np.sin(ry_rad), 0, np.cos(ry_rad)]])\n        \n        Rz = np.array([[np.cos(rz_rad), -np.sin(rz_rad), 0],\n                       [np.sin(rz_rad), np.cos(rz_rad), 0],\n                       [0, 0, 1]])\n        \n        # Combined rotation matrix\n        R = Rz @ Ry @ Rx\n        \n        # Create 4x4 transformation matrix\n        T = np.eye(4)\n        T[0:3, 0:3] = R\n        T[0:3, 3] = [x, y, z]\n        \n        return T",
+    "span": [
+      494,
+      531
+    ],
+    "start_byte": 18389,
+    "end_byte": 19694,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_create_transform_matrix",
+    "signature": "_create_transform_matrix(self, x: float, y: float, z: float, rx: float, ry: float, rz: float)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick._create_transform_matrix",
+    "docstring": "Create 4x4 transformation matrix from position and orientation.\n        \n        Args:\n            x, y, z (float): Position coordinates\n            rx, ry, rz (float): Rotation angles in degrees\n            \n        Returns:\n            np.ndarray: 4x4 transformation matrix",
+    "chunk_size_bytes": 1305,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def shutdown(self) -> None:\n        \"\"\"\n        Safely shutdown robot and vision systems.\n        \"\"\"\n        try:\n            if self.robot_initialized and self.robot:\n                self.robot.DeactivateRobot()\n                self.robot.Disconnect()\n                if self.debug:\n                    print(\"Robot disconnected\")\n            \n            if self.vision_initialized:\n                self.vision.disconnect()\n                if self.debug:\n                    print(\"Vision system disconnected\")\n                    \n        except Exception as e:\n            if self.debug:\n                print(f\"Shutdown error: {e}\")",
+    "span": [
+      533,
+      551
+    ],
+    "start_byte": 19704,
+    "end_byte": 20342,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "shutdown",
+    "signature": "shutdown(self)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.shutdown",
+    "docstring": "Safely shutdown robot and vision systems.",
+    "chunk_size_bytes": 638,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def __enter__(self):\n        \"\"\"Context manager entry.\"\"\"\n        return self",
+    "span": [
+      553,
+      555
+    ],
+    "start_byte": 20352,
+    "end_byte": 20429,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__enter__",
+    "signature": "__enter__(self)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.__enter__",
+    "docstring": "Context manager entry.",
+    "chunk_size_bytes": 77,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def __exit__(self, exc_type, exc_val, exc_tb):\n        \"\"\"Context manager exit.\"\"\"\n        self.shutdown()",
+    "span": [
+      557,
+      559
+    ],
+    "start_byte": 20439,
+    "end_byte": 20545,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__exit__",
+    "signature": "__exit__(self, exc_type, exc_val, exc_tb)",
+    "parent_class": "VisionGuidedPick",
+    "qualified_name": "VisionGuidedPick.__exit__",
+    "docstring": "Context manager exit.",
+    "chunk_size_bytes": 106,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  },
+  {
+    "snippet": "def example_pick_and_place():\n    \"\"\"\n    Example demonstrating vision-guided pick and place workflow.\n    \"\"\"\n    robot_ip = \"192.168.0.100\"\n    vision_ip = \"192.168.0.1\"\n    \n    print(\"Starting vision-guided pick and place example\")\n    \n    with VisionGuidedPick(robot_ip, vision_ip, debug=True) as app:\n        # Initialize systems\n        if not app.init_robot():\n            print(\"Failed to initialize robot\")\n            return\n        \n        if not app.init_vision():\n            print(\"Failed to initialize vision system\")\n            return\n        \n        # Set calibration (example coordinates)\n        app.set_vision_ref(100, 50, 25, 0, 0, 0)\n        \n        # Configure operation parameters\n        app.set_offset(5.0)  # 5mm pick offset\n        app.set_speed(25.0)  # 25% speed\n        \n        # Execute pick and place workflow\n        job_id = 1\n        count = app.get_count(job_id)\n        \n        if count and count > 0:\n            print(f\"Found {count} parts to process\")\n            \n            for i in range(1, count + 1):\n                print(f\"Processing part {i}/{count}\")\n                \n                # Pick part\n                if app.pick_index(job_id, i):\n                    # Place part at target location\n                    target_coords = (-120, 100, 0, 180, 0, 180)\n                    if app.place(*target_coords):\n                        print(f\"Part {i} completed successfully\")\n                    else:\n                        print(f\"Failed to place part {i}\")\n                else:\n                    print(f\"Failed to pick part {i}\")\n        else:\n            print(\"No parts detected\")\n    \n    print(\"Example completed\")",
+    "span": [
+      563,
+      612
+    ],
+    "start_byte": 20573,
+    "end_byte": 22255,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "example_pick_and_place",
+    "qualified_name": "example_pick_and_place",
+    "signature": "example_pick_and_place()",
+    "docstring": "Example demonstrating vision-guided pick and place workflow.",
+    "chunk_size_bytes": 1682,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py",
+    "normalized_path": "meca500-accessories/vision-systems/sick-ploc-2d/python/vision_guided_pick.py"
+  }
+]

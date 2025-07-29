@@ -1,0 +1,938 @@
+[
+  {
+    "snippet": "import copy",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 138,
+    "end_byte": 149,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "copy",
+    "qualified_name": "copy",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 11,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "from typing import Callable, Optional, Union",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 150,
+    "end_byte": 194,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Callable",
+    "qualified_name": "Callable",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 44,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "from mecademicpy.mx_robot_def import *",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 252,
+    "end_byte": 290,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 38,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "from mecademicpy.robot_classes import NotFoundException",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 291,
+    "end_byte": 346,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "NotFoundException",
+    "qualified_name": "NotFoundException",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 55,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "class SidecarScriptType(IntEnum):\n    MXPY = 0  # Simplified .mxpy script\n    PY = 1  # Complete python file (.py)",
+    "span": [
+      14,
+      16
+    ],
+    "start_byte": 349,
+    "end_byte": 463,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "SidecarScriptType",
+    "qualified_name": "SidecarScriptType",
+    "docstring": null,
+    "chunk_size_bytes": 114,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "class RegisteredFunctionType(IntEnum):\n    NON_BLOCKING = 0  # Non-blocking script that quickly pushes robot instructions and terminates\n    BLOCKING_NON_EXCLUSIVE = 1  # Blocking script, non-exclusive (API commands are postponed while it runs)\n    BLOCKING_EXCLUSIVE = 1  # Blocking script, exclusive (API commands are refused while it runs)",
+    "span": [
+      19,
+      22
+    ],
+    "start_byte": 466,
+    "end_byte": 808,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RegisteredFunctionType",
+    "qualified_name": "RegisteredFunctionType",
+    "docstring": null,
+    "chunk_size_bytes": 342,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "class RegisteredArg:\n    \"\"\" Class that describes one argument for RegisteredFunction \"\"\"\n\n    def __init__(\n        self,\n        name: str,\n        description: str = \"\",\n        #pylint: disable=redefined-builtin\n        type: MxArgType = MxArgType.MX_ARG_TYPE_ANY,\n        length: Optional[int] = None,\n        units: Optional[MxArgUnit] = None,\n        default: Optional[any] = None,\n        min: Optional[any] = None,\n        max: Optional[any] = None,\n    ):\n        \"\"\" Mandatory constructor for this object",
+    "span": [
+      25,
+      108
+    ],
+    "start_byte": 811,
+    "end_byte": 4569,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RegisteredArg",
+    "qualified_name": "RegisteredArg",
+    "docstring": "Class that describes one argument for RegisteredFunction",
+    "chunk_size_bytes": 515,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __init__(\n        self,\n        name: str,\n        description: str = \"\",\n        #pylint: disable=redefined-builtin\n        type: MxArgType = MxArgType.MX_ARG_TYPE_ANY,\n        length: Optional[int] = None,\n        units: Optional[MxArgUnit] = None,\n        default: Optional[any] = None,\n        min: Optional[any] = None,\n        max: Optional[any] = None,\n    ):\n        \"\"\" Mandatory constructor for this object\n\n        Args:\n            name (str): Name of this argument/variable\n            description (str, optional): Description of this argument for the users. Defaults to \"\".\n            type (MxArgType, optional): Type of this argument. Defaults to MxArgType.MX_ARG_TYPE_ANY.\n            length (Optional[int], optional): Length of this array (0 if single argument, not array). Defaults to None.\n            units (Optional[MxArgUnit], optional): Units of this argument (for documentation only). Defaults to None.\n            default (Optional[any], optional): Default value for this argument (for documentation). Defaults to None.\n            min (Optional[any], optional): Minimum value of this argument (for documentation only). Defaults to None.\n            max (Optional[any], optional): Maximum value of this argument (for documentation only). Defaults to None.\n        \"\"\"\n        self.name = name\n        self.description = description\n        self.type = type\n        self.length = length\n        self.units = units\n        self.default = default\n        self.min = min\n        self.max = max",
+    "span": [
+      28,
+      59
+    ],
+    "start_byte": 906,
+    "end_byte": 2425,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(\n        self,\n        name: str,\n        description: str = \"\",\n        #pylint: disable=redefined-builtin\n        type: MxArgType = MxArgType.MX_ARG_TYPE_ANY,\n        length: Optional[int] = None,\n        units: Optional[MxArgUnit] = None,\n        default: Optional[any] = None,\n        min: Optional[any] = None,\n        max: Optional[any] = None,\n    )",
+    "parent_class": "RegisteredArg",
+    "qualified_name": "RegisteredArg.__init__",
+    "docstring": "Mandatory constructor for this object\n\n        Args:\n            name (str): Name of this argument/variable\n            description (str, optional): Description of this argument for the users. Defaults to \"\".\n            type (MxArgType, optional): Type of this argument. Defaults to MxArgType.MX_ARG_TYPE_ANY.\n            length (Optional[int], optional): Length of this array (0 if single argument, not array). Defaults to None.\n            units (Optional[MxArgUnit], optional): Units of this argument (for documentation only). Defaults to None.\n            default (Optional[any], optional): Default value for this argument (for documentation). Defaults to None.\n            min (Optional[any], optional): Minimum value of this argument (for documentation only). Defaults to None.\n            max (Optional[any], optional): Maximum value of this argument (for documentation only). Defaults to None.",
+    "chunk_size_bytes": 1519,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __str__(self) -> str:\n        \"\"\" Returns string representation \"\"\"\n        return self.name",
+    "span": [
+      61,
+      63
+    ],
+    "start_byte": 2431,
+    "end_byte": 2527,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__str__",
+    "signature": "__str__(self)",
+    "parent_class": "RegisteredArg",
+    "qualified_name": "RegisteredArg.__str__",
+    "docstring": "Returns string representation",
+    "chunk_size_bytes": 96,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __repr__(self) -> str:\n        return str(self)",
+    "span": [
+      65,
+      66
+    ],
+    "start_byte": 2533,
+    "end_byte": 2584,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__repr__",
+    "signature": "__repr__(self)",
+    "parent_class": "RegisteredArg",
+    "qualified_name": "RegisteredArg.__repr__",
+    "docstring": null,
+    "chunk_size_bytes": 51,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def to_dict(self) -> str:\n        \"\"\" Returns a dictionary string representation of this object, ready to be serialized as JSON for the robot\"\"\"\n        return {\n            MX_JSON_KEY_VAR_NAME: self.name,\n            MX_JSON_KEY_VAR_DESC: self.description,\n            MX_JSON_KEY_VAR_TYPE: int(self.type),\n            MX_JSON_KEY_VAR_ARR_LEN: self.length,\n            MX_JSON_KEY_VAR_UNIT: int(self.units) if self.units else int(MxArgUnit.MX_UNIT_NONE),\n            MX_JSON_KEY_VAR_DEFVAL: self.default,\n            MX_JSON_KEY_VAR_MIN: self.min,\n            MX_JSON_KEY_VAR_MAX: self.max,\n        }",
+    "span": [
+      68,
+      79
+    ],
+    "start_byte": 2590,
+    "end_byte": 3192,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "to_dict",
+    "signature": "to_dict(self)",
+    "parent_class": "RegisteredArg",
+    "qualified_name": "RegisteredArg.to_dict",
+    "docstring": "Returns a dictionary string representation of this object, ready to be serialized as JSON for the robot",
+    "chunk_size_bytes": 602,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def from_dict(cls, arg_def: dict) -> RegisteredArg:\n        \"\"\" Fill this class members from a dictionary (generally parsed from a JSON received from the robot) \"\"\"\n        return RegisteredArg(\n            name=str(arg_def.get(MX_JSON_KEY_VAR_NAME, \"\")),\n            description=str(arg_def.get(MX_JSON_KEY_VAR_DESC, \"\")),\n            type=RegisteredArg._parse_type(arg_def.get(MX_JSON_KEY_VAR_TYPE, int(MxArgType.MX_ARG_TYPE_ANY))),\n            length=arg_def.get(MX_JSON_KEY_VAR_ARR_LEN, None),\n            units=arg_def.get(MX_JSON_KEY_VAR_UNIT, None),\n            default=arg_def.get(MX_JSON_KEY_VAR_DEFVAL, None),\n            min=arg_def.get(MX_JSON_KEY_VAR_MIN, None),\n            max=arg_def.get(MX_JSON_KEY_VAR_MAX, None),\n        )",
+    "span": [
+      82,
+      93
+    ],
+    "start_byte": 3215,
+    "end_byte": 3956,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "from_dict",
+    "signature": "from_dict(cls, arg_def: dict)",
+    "parent_class": "RegisteredArg",
+    "qualified_name": "RegisteredArg.from_dict",
+    "docstring": "Fill this class members from a dictionary (generally parsed from a JSON received from the robot)",
+    "chunk_size_bytes": 741,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def _parse_type(cls, type: Union[str, int]) -> MxArgType:\n        \"\"\" Parse argument type, which can either be enum value (int) or string (from robot command dict) \"\"\"\n        if isinstance(type, int):\n            return MxArgType(type)\n        elif type == \"int32\" or type == \"uint32\":\n            return MxArgType.MX_ARG_TYPE_INTEGER\n        elif type == \"double\":\n            return MxArgType.MX_ARG_TYPE_FLOAT\n        elif type == \"string\":\n            return MxArgType.MX_ARG_TYPE_STRING\n        else:\n            return MxArgType.MX_ARG_TYPE_ANY",
+    "span": [
+      97,
+      108
+    ],
+    "start_byte": 4018,
+    "end_byte": 4569,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "_parse_type",
+    "signature": "_parse_type(cls, type: Union[str, int])",
+    "parent_class": "RegisteredArg",
+    "qualified_name": "RegisteredArg._parse_type",
+    "docstring": "Parse argument type, which can either be enum value (int) or string (from robot command dict)",
+    "chunk_size_bytes": 551,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "class RegisteredFunction:\n    \"\"\" Class to store information of a registered function from a user sidecar module \"\"\"\n\n    def __init__(self,\n                 function: callable,\n                 name: str,\n                 description: str = \"\",\n                 args: Optional[list[RegisteredArg]] = None,\n                 validate_args: bool = True,\n                 tags: Optional[list[str]] = None,\n                 cyclic_id: Optional[int] = None,\n                 script_type=SidecarScriptType.PY,\n                 function_type=RegisteredFunctionType.NON_BLOCKING,\n                 private: bool = False):\n        \"\"\"Constructor for this class",
+    "span": [
+      111,
+      223
+    ],
+    "start_byte": 4572,
+    "end_byte": 10838,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RegisteredFunction",
+    "qualified_name": "RegisteredFunction",
+    "docstring": "Class to store information of a registered function from a user sidecar module",
+    "chunk_size_bytes": 650,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __init__(self,\n                 function: callable,\n                 name: str,\n                 description: str = \"\",\n                 args: Optional[list[RegisteredArg]] = None,\n                 validate_args: bool = True,\n                 tags: Optional[list[str]] = None,\n                 cyclic_id: Optional[int] = None,\n                 script_type=SidecarScriptType.PY,\n                 function_type=RegisteredFunctionType.NON_BLOCKING,\n                 private: bool = False):\n        \"\"\"Constructor for this class\n\n        Args:\n            function (callable): Function to register\n            name (str): Name of the function to use in the namespaces (and on the robot's command dictionary)\n            description (str): Short description that will show up in MecaPortal code editor\n            args (Optional[list[any]], optional): Description of arguments for this function.\n                This is used for user help/documentation in the MecaPortal code editor.\n                It can also be used for arguments validation (if validate_args is True) to avoid the function to be\n                called with unexpected/incorrect arguments (the robot will refuse the command, it won't be called).\n                Note that if validate_args is False, the function will receive any passed arguments, whether they\n                correspond or not to args provided here.\n                Defaults to None.\n            validate_args (bool, optional): Validate that the argument match 'args' above before calling this function.\n                The function will not be called if the arguments don't match the description.\n                Defaults to True.\n            tags (Optional[list[str]], optional): Tags that identify which type of robot command this function\n                implements. The tags are used to classify the function in MecaPortal's code editor context menus.\n                Defaults to None.\n            cyclic_id (Optional[int], optional): Optional Id that can be used in cyclic protocols to call this\n                function.\n                Note that, when called from cyclic protocols, the function can normally only receive float arguments,\n                and up to 6 of them.\n                Defaults to None.\n            private (bool, optional): Indicate that this registered function should not be included in robot's commands\n                dictionary. It will thus not be known by the MecaPortal's code editor and not advertize to users\n                (no auto-complete suggestion, not visible in context menus).\n                Defaults to False.\n        \"\"\"\n        # Parameters\n        self.function: str = function\n        self.module_name: str = \"\"\n        self.name: str = name\n        self.description = description\n        self.tags = tags\n        self.args = args\n        self.validate_args = validate_args\n        self.cyclic_id = cyclic_id\n        self.script_type = script_type\n        self.function_type = function_type\n        self.private = private\n        # Other members\n        self.locally_created = True  # Tells if this function is locally created, else received from the robot\n        self.is_override = False  # Tells if this local function is an override of an existing robot function",
+    "span": [
+      114,
+      168
+    ],
+    "start_byte": 4694,
+    "end_byte": 7952,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self,\n                 function: callable,\n                 name: str,\n                 description: str = \"\",\n                 args: Optional[list[RegisteredArg]] = None,\n                 validate_args: bool = True,\n                 tags: Optional[list[str]] = None,\n                 cyclic_id: Optional[int] = None,\n                 script_type=SidecarScriptType.PY,\n                 function_type=RegisteredFunctionType.NON_BLOCKING,\n                 private: bool = False)",
+    "parent_class": "RegisteredFunction",
+    "qualified_name": "RegisteredFunction.__init__",
+    "docstring": "Constructor for this class\n\n        Args:\n            function (callable): Function to register\n            name (str): Name of the function to use in the namespaces (and on the robot's command dictionary)\n            description (str): Short description that will show up in MecaPortal code editor\n            args (Optional[list[any]], optional): Description of arguments for this function.\n                This is used for user help/documentation in the MecaPortal code editor.\n                It can also be used for arguments validation (if validate_args is True) to avoid the function to be\n                called with unexpected/incorrect arguments (the robot will refuse the command, it won't be called).\n                Note that if validate_args is False, the function will receive any passed arguments, whether they\n                correspond or not to args provided here.\n                Defaults to None.\n            validate_args (bool, optional): Validate that the argument match 'args' above before calling this function.\n                The function will not be called if the arguments don't match the description.\n                Defaults to True.\n            tags (Optional[list[str]], optional): Tags that identify which type of robot command this function\n                implements. The tags are used to classify the function in MecaPortal's code editor context menus.\n                Defaults to None.\n            cyclic_id (Optional[int], optional): Optional Id that can be used in cyclic protocols to call this\n                function.\n                Note that, when called from cyclic protocols, the function can normally only receive float arguments,\n                and up to 6 of them.\n                Defaults to None.\n            private (bool, optional): Indicate that this registered function should not be included in robot's commands\n                dictionary. It will thus not be known by the MecaPortal's code editor and not advertize to users\n                (no auto-complete suggestion, not visible in context menus).\n                Defaults to False.",
+    "chunk_size_bytes": 3258,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __str__(self) -> str:\n        \"\"\" Returns string representation \"\"\"\n        return self.name",
+    "span": [
+      170,
+      172
+    ],
+    "start_byte": 7958,
+    "end_byte": 8054,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__str__",
+    "signature": "__str__(self)",
+    "parent_class": "RegisteredFunction",
+    "qualified_name": "RegisteredFunction.__str__",
+    "docstring": "Returns string representation",
+    "chunk_size_bytes": 96,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __repr__(self) -> str:\n        return str(self)",
+    "span": [
+      174,
+      175
+    ],
+    "start_byte": 8060,
+    "end_byte": 8111,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__repr__",
+    "signature": "__repr__(self)",
+    "parent_class": "RegisteredFunction",
+    "qualified_name": "RegisteredFunction.__repr__",
+    "docstring": null,
+    "chunk_size_bytes": 51,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def get_full_name(self) -> str:\n        \"\"\" Get the full name (i.e.'function:module.name')\"\"\"\n        return f'function:{self.module_name}.{self.name}'",
+    "span": [
+      177,
+      179
+    ],
+    "start_byte": 8117,
+    "end_byte": 8268,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_full_name",
+    "signature": "get_full_name(self)",
+    "parent_class": "RegisteredFunction",
+    "qualified_name": "RegisteredFunction.get_full_name",
+    "docstring": "Get the full name (i.e.'function:module.name')",
+    "chunk_size_bytes": 151,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def to_dict(self) -> str:\n        \"\"\" Returns a dictionary string representation of this object, ready to be serialized as JSON for the robot\"\"\"\n        return {\n            MX_JSON_KEY_SIDECAR_FCT_NAME: self.name,\n            MX_JSON_KEY_SIDECAR_FCT_DESC: self.description,\n            MX_JSON_KEY_SIDECAR_FCT_ARGS: [arg.to_dict() for arg in self.args] if self.args else [],\n            MX_JSON_KEY_SIDECAR_FCT_VALIDATE_ARGS: self.validate_args,\n            MX_JSON_KEY_SIDECAR_FCT_TAGS: self.tags,\n            MX_JSON_KEY_SIDECAR_FCT_CYCLIC_ID: self.cyclic_id,\n            MX_JSON_KEY_SIDECAR_FCT_PRIVATE: self.private,\n            MX_JSON_KEY_SIDECAR_FCT_OVERRIDE: self.is_override\n        }",
+    "span": [
+      181,
+      192
+    ],
+    "start_byte": 8274,
+    "end_byte": 8968,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "to_dict",
+    "signature": "to_dict(self)",
+    "parent_class": "RegisteredFunction",
+    "qualified_name": "RegisteredFunction.to_dict",
+    "docstring": "Returns a dictionary string representation of this object, ready to be serialized as JSON for the robot",
+    "chunk_size_bytes": 694,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def from_robot_cmd_def(cls, function: callable, name: str, cmd_def: dict) -> RegisteredFunction:\n        \"\"\"Build a RegisteredFunction object from a command definition received from the robot\n        as a JSON string and parsed as a dictionary passed as argument to this function.\n        This function is called, for example, when receiving a notification from the robot indicating that a sidecar\n        module has registered a new function.\n\n        Args:\n            function (callable): The function to call if this command is called.\n                                 Typically, this function will send a message to the robot telling to call this\n                                 registered function with the provided arguments)\n            name (str): Name of the function (may include prefixes, like my_module.my_function)\n            cmd_def (dict): Definition of the function (description, tags, arguments, etc.)\n\n        Returns:\n            RegisteredFunction: The RegisteredFunction object rebuilt from the provided cmd_def dictionary\n        \"\"\"\n        function = RegisteredFunction(\n            function=function,\n            name=name,\n            description=cmd_def.get(MX_JSON_KEY_SIDECAR_FCT_DESC, \"\"),\n            args=[RegisteredArg.from_dict(arg_dict) for arg_dict in cmd_def.get(MX_JSON_KEY_SIDECAR_FCT_ARGS, [])],\n            validate_args=bool(cmd_def.get(MX_JSON_KEY_SIDECAR_FCT_VALIDATE_ARGS, True)),\n            tags=[str(tag) for tag in cmd_def.get(MX_JSON_KEY_SIDECAR_FCT_TAGS, [])],\n            cyclic_id=cmd_def.get(MX_JSON_KEY_SIDECAR_FCT_CYCLIC_ID, None),\n            private=bool(cmd_def.get(MX_JSON_KEY_SIDECAR_FCT_PRIVATE, False)))\n\n        # Remember that this function was not locally registered (it comes from the robot's command dictionary)\n        function.locally_created = False\n        return function",
+    "span": [
+      195,
+      223
+    ],
+    "start_byte": 8991,
+    "end_byte": 10838,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "from_robot_cmd_def",
+    "signature": "from_robot_cmd_def(cls, function: callable, name: str, cmd_def: dict)",
+    "parent_class": "RegisteredFunction",
+    "qualified_name": "RegisteredFunction.from_robot_cmd_def",
+    "docstring": "Build a RegisteredFunction object from a command definition received from the robot\n        as a JSON string and parsed as a dictionary passed as argument to this function.\n        This function is called, for example, when receiving a notification from the robot indicating that a sidecar\n        module has registered a new function.\n\n        Args:\n            function (callable): The function to call if this command is called.\n                                 Typically, this function will send a message to the robot telling to call this\n                                 registered function with the provided arguments)\n            name (str): Name of the function (may include prefixes, like my_module.my_function)\n            cmd_def (dict): Definition of the function (description, tags, arguments, etc.)\n\n        Returns:\n            RegisteredFunction: The RegisteredFunction object rebuilt from the provided cmd_def dictionary",
+    "chunk_size_bytes": 1847,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "class RegisteredVariable(RegisteredArg):\n    \"\"\" Class to store information of a robot variable registered in the local namespace \"\"\"\n\n    def __init__(\n            self,\n            name: str,\n            description: str = \"\",\n            #pylint: disable=redefined-builtin\n            type: MxArgType = MxArgType.MX_ARG_TYPE_ANY,\n            length: Optional[int] = None,\n            units: Optional[MxArgUnit] = None,\n            cyclic_id: Optional[int] = None,\n            default: Optional[any] = None,\n            min: Optional[any] = None,\n            max: Optional[any] = None):\n        \"\"\" Constructor for this class",
+    "span": [
+      226,
+      295
+    ],
+    "start_byte": 10841,
+    "end_byte": 13294,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "RegisteredVariable",
+    "qualified_name": "RegisteredVariable",
+    "docstring": "Class to store information of a robot variable registered in the local namespace",
+    "chunk_size_bytes": 627,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __init__(\n            self,\n            name: str,\n            description: str = \"\",\n            #pylint: disable=redefined-builtin\n            type: MxArgType = MxArgType.MX_ARG_TYPE_ANY,\n            length: Optional[int] = None,\n            units: Optional[MxArgUnit] = None,\n            cyclic_id: Optional[int] = None,\n            default: Optional[any] = None,\n            min: Optional[any] = None,\n            max: Optional[any] = None):\n        \"\"\" Constructor for this class\n\n        Args:\n            See @ref RegisteredArg for arguments description.\n            This class adds the following arguments to base class:\n            module_name (str): Name of the module that has registered this variable\n        \"\"\"\n        super().__init__(name, description, type, length, units, default, min, max)\n        self.cyclic_id = cyclic_id\n        self._value = default",
+    "span": [
+      229,
+      250
+    ],
+    "start_byte": 10980,
+    "end_byte": 11857,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(\n            self,\n            name: str,\n            description: str = \"\",\n            #pylint: disable=redefined-builtin\n            type: MxArgType = MxArgType.MX_ARG_TYPE_ANY,\n            length: Optional[int] = None,\n            units: Optional[MxArgUnit] = None,\n            cyclic_id: Optional[int] = None,\n            default: Optional[any] = None,\n            min: Optional[any] = None,\n            max: Optional[any] = None)",
+    "parent_class": "RegisteredVariable",
+    "qualified_name": "RegisteredVariable.__init__",
+    "docstring": "Constructor for this class\n\n        Args:\n            See @ref RegisteredArg for arguments description.\n            This class adds the following arguments to base class:\n            module_name (str): Name of the module that has registered this variable",
+    "chunk_size_bytes": 877,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def set_value(self, value: any) -> any:\n        \"\"\"Set the variable's value. This function will attempt to \"cast\" the value into the expected type.\n\n        Args:\n            value (any): Value to set\n\n        Raises:\n            ValueError: Cannot set value (array of incorrect length for example)\n\n        Returns:\n            any: The previous value of the variable before this function call\n        \"\"\"\n        old_value = self._value\n        self._value = value\n        return old_value",
+    "span": [
+      252,
+      266
+    ],
+    "start_byte": 11863,
+    "end_byte": 12354,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set_value",
+    "signature": "set_value(self, value: any)",
+    "parent_class": "RegisteredVariable",
+    "qualified_name": "RegisteredVariable.set_value",
+    "docstring": "Set the variable's value. This function will attempt to \"cast\" the value into the expected type.\n\n        Args:\n            value (any): Value to set\n\n        Raises:\n            ValueError: Cannot set value (array of incorrect length for example)\n\n        Returns:\n            any: The previous value of the variable before this function call",
+    "chunk_size_bytes": 491,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def get_value(self) -> any:\n        \"\"\" Get the current variable value \"\"\"\n        return self._value",
+    "span": [
+      268,
+      270
+    ],
+    "start_byte": 12360,
+    "end_byte": 12461,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_value",
+    "signature": "get_value(self)",
+    "parent_class": "RegisteredVariable",
+    "qualified_name": "RegisteredVariable.get_value",
+    "docstring": "Get the current variable value",
+    "chunk_size_bytes": 101,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def cast_value(self, value: any):\n        \"\"\" Cast a value into the expected type for this variable \"\"\"\n        if self.type == MxArgType.MX_ARG_TYPE_INTEGER:\n            return int(value)\n        elif self.type == MxArgType.MX_ARG_TYPE_FLOAT:\n            return float(value)\n        elif self.type == MxArgType.MX_ARG_TYPE_STRING:\n            return str(value)\n        else:\n            return value",
+    "span": [
+      273,
+      282
+    ],
+    "start_byte": 12501,
+    "end_byte": 12901,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "cast_value",
+    "signature": "cast_value(self, value: any)",
+    "parent_class": "RegisteredVariable",
+    "qualified_name": "RegisteredVariable.cast_value",
+    "docstring": "Cast a value into the expected type for this variable",
+    "chunk_size_bytes": 400,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __str__(self) -> str:\n        \"\"\" Returns string representation \"\"\"\n        if self.length is None:\n            return f'{self._value}'\n        else:\n            if isinstance(self._value, list):\n                return f'[{\", \".join([str(x) for x in self._value])}]'\n            else:\n                return f'[{self._value}]'",
+    "span": [
+      284,
+      292
+    ],
+    "start_byte": 12907,
+    "end_byte": 13237,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__str__",
+    "signature": "__str__(self)",
+    "parent_class": "RegisteredVariable",
+    "qualified_name": "RegisteredVariable.__str__",
+    "docstring": "Returns string representation",
+    "chunk_size_bytes": 330,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __repr__(self) -> str:\n        return str(self)",
+    "span": [
+      294,
+      295
+    ],
+    "start_byte": 13243,
+    "end_byte": 13294,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__repr__",
+    "signature": "__repr__(self)",
+    "parent_class": "RegisteredVariable",
+    "qualified_name": "RegisteredVariable.__repr__",
+    "docstring": null,
+    "chunk_size_bytes": 51,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "class AttributeName:\n    \"\"\" This class is a simple container that is used by AttributeContainer to store the full name (with prefixes)\n        of a registered attribute \"\"\"",
+    "span": [
+      298,
+      303
+    ],
+    "start_byte": 13297,
+    "end_byte": 13531,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "AttributeName",
+    "qualified_name": "AttributeName",
+    "docstring": "This class is a simple container that is used by AttributeContainer to store the full name (with prefixes)\n        of a registered attribute",
+    "chunk_size_bytes": 173,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __init__(self, name: str):\n        self.name = name",
+    "span": [
+      302,
+      303
+    ],
+    "start_byte": 13476,
+    "end_byte": 13531,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self, name: str)",
+    "parent_class": "AttributeName",
+    "qualified_name": "AttributeName.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 55,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "class AttributeContainer:\n    \"\"\" This class is used to recursively store attributes (variables or functions) by path into object and sub-object,\n    allowing code to later access attributes with code like:\n        Calling a registered function:\n            robot.my_module.my_sub_module.my_function(my_args)\n        Read or write a registered variable\n            robot.my_group.my_subgroup.my_variable += 2\n            print(f'robot.my_group.my_subgroup.my_variable')\n\n    This class supports saving the attributes in a local dictionary, or else using callback functions at run-time\n    to get/set registered attribute values dynamically (without actually storing the values in this class instance).\n    \"\"\"",
+    "span": [
+      306,
+      524
+    ],
+    "start_byte": 13534,
+    "end_byte": 24967,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "AttributeContainer",
+    "qualified_name": "AttributeContainer",
+    "docstring": "This class is used to recursively store attributes (variables or functions) by path into object and sub-object,\n    allowing code to later access attributes with code like:\n        Calling a registered function:\n            robot.my_module.my_sub_module.my_function(my_args)\n        Read or write a registered variable\n            robot.my_group.my_subgroup.my_variable += 2\n            print(f'robot.my_group.my_subgroup.my_variable')\n\n    This class supports saving the attributes in a local dictionary, or else using callback functions at run-time\n    to get/set registered attribute values dynamically (without actually storing the values in this class instance).",
+    "chunk_size_bytes": 709,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __init__(self):\n        #pylint: disable=invalid-name\n        self._get_attribute_callback: callable = None\n        self._set_attribute_callback: callable = None\n        self._attributes: dict[str, Union[str, AttributeContainer]] = {}",
+    "span": [
+      319,
+      323
+    ],
+    "start_byte": 14249,
+    "end_byte": 14487,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self)",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 238,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def attach(self, get_attribute_callback: Callable[[str]], set_attribute_callback: Callable[[str, any]]):\n        \"\"\"Attach the callback functions that will be used to actually get and set the attributes when this\n            class is accessed\n\n        Args:\n            get_attribute_callback (callable): Function to call (with attribute full name as argument) to retrieve an\n                                               attribute that was registered in this container.\n            set_attribute_callback (callable): Function to call (with attribute full name as argument and value) to\n                                               change the value of an attribute that was registered in this container.\n        \"\"\"\n        self._get_attribute_callback = get_attribute_callback\n        self._set_attribute_callback = set_attribute_callback",
+    "span": [
+      325,
+      336
+    ],
+    "start_byte": 14493,
+    "end_byte": 15335,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "attach",
+    "signature": "attach(self, get_attribute_callback: Callable[[str]], set_attribute_callback: Callable[[str, any]])",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.attach",
+    "docstring": "Attach the callback functions that will be used to actually get and set the attributes when this\n            class is accessed\n\n        Args:\n            get_attribute_callback (callable): Function to call (with attribute full name as argument) to retrieve an\n                                               attribute that was registered in this container.\n            set_attribute_callback (callable): Function to call (with attribute full name as argument and value) to\n                                               change the value of an attribute that was registered in this container.",
+    "chunk_size_bytes": 842,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def detach(self):\n        \"\"\" Detach previously attached get/set callbacks \"\"\"\n        self._get_attribute_callback = None\n        self._set_attribute_callback = None",
+    "span": [
+      338,
+      341
+    ],
+    "start_byte": 15341,
+    "end_byte": 15507,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "detach",
+    "signature": "detach(self)",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.detach",
+    "docstring": "Detach previously attached get/set callbacks",
+    "chunk_size_bytes": 166,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def register_attribute(self, attribute_name: str, attribute_full_name: str, attribute: Optional[any] = None):\n        \"\"\"Register one attribute into this attribute container (recursively)\n\n        Args:\n            attribute_name (str): Name of the attribute to register (partial for nested instances of this class)\n            attribute_full_name (str): Full attribute name (no prefix removal even when we're a nested instance)\n            attribute(any): Optional attribute value to register. If None, then self._get_attribute_callback will\n                            be used to retrieve the attribute\n        \"\"\"\n        if '.' in attribute_name:\n            # Nested attribute. Let's save into a sub-object\n            prefix, sub_name = attribute_name.split('.', 1)\n            if prefix not in self._attributes:\n                self._attributes[prefix] = self.__class__()  # This should create AttributeContainer, or derived class\n                self._attributes[prefix].attach(self._get_attribute_callback, self._set_attribute_callback)\n            self._attributes[prefix].register_attribute(sub_name, attribute_full_name, attribute)\n        else:\n            # Not nested, save the attribute locally\n            if attribute is None:\n                # We'll retrieve attribute with self._get_attribute_callback when necessary\n                self._attributes[attribute_name] = AttributeName(attribute_full_name)\n            else:\n                self._attributes[attribute_name] = attribute",
+    "span": [
+      343,
+      365
+    ],
+    "start_byte": 15513,
+    "end_byte": 17014,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "register_attribute",
+    "signature": "register_attribute(self, attribute_name: str, attribute_full_name: str, attribute: Optional[any] = None)",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.register_attribute",
+    "docstring": "Register one attribute into this attribute container (recursively)\n\n        Args:\n            attribute_name (str): Name of the attribute to register (partial for nested instances of this class)\n            attribute_full_name (str): Full attribute name (no prefix removal even when we're a nested instance)\n            attribute(any): Optional attribute value to register. If None, then self._get_attribute_callback will\n                            be used to retrieve the attribute",
+    "chunk_size_bytes": 1501,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def unregister_attribute(self, attribute_name: str):\n        \"\"\"Unregister a previously registered attribute\n\n        Args:\n            attribute_name (str): The name of the attribute to unregister from this container\n        \"\"\"\n        if '.' in attribute_name:\n            # Nested attribute. Let's delete from sub-object\n            prefix, sub_name = attribute_name.split('.', 1)\n            if prefix in self._attributes:\n                if isinstance(self._attributes[prefix], AttributeContainer):\n                    self._attributes[prefix].unregister_attribute(sub_name)\n                    if self._attributes[prefix].empty():\n                        del self._attributes[prefix]\n                else:\n                    del self._attributes[prefix]\n        else:\n            # Not nested, delete the attribute locally\n            if attribute_name in self._attributes:\n                del self._attributes[attribute_name]",
+    "span": [
+      367,
+      386
+    ],
+    "start_byte": 17020,
+    "end_byte": 17954,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "unregister_attribute",
+    "signature": "unregister_attribute(self, attribute_name: str)",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.unregister_attribute",
+    "docstring": "Unregister a previously registered attribute\n\n        Args:\n            attribute_name (str): The name of the attribute to unregister from this container",
+    "chunk_size_bytes": 934,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def get(self, attribute_name: str) -> Optional[any]:\n        \"\"\"Get the specified attribute by name, or return None if not found.\n           This is similar to accessing the container attribute directly (ex: container.my_attr) except that:\n           - here we use a recursive string to identify the attribute (attr_name.sub_name...)\n           - Here we return None if the attribute is not found instead of raising an exception.\n\n        Args:\n            attribute_name (str): Name of the attribute to get (including prefixes if appropriate)\n\n        Returns:\n            The found attribute value or None\n        \"\"\"\n        if '.' in attribute_name:\n            # Nested attribute. Let's recurse into a sub-object\n            prefix, sub_name = attribute_name.split('.', 1)\n            if prefix not in self._attributes:\n                return None\n            return self._attributes[prefix].get(sub_name)\n        else:\n            # Not nested, get the attribute locally\n            if attribute_name not in self._attributes:\n                return None\n            return getattr(self, attribute_name)",
+    "span": [
+      388,
+      410
+    ],
+    "start_byte": 17960,
+    "end_byte": 19068,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get",
+    "signature": "get(self, attribute_name: str)",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.get",
+    "docstring": "Get the specified attribute by name, or return None if not found.\n           This is similar to accessing the container attribute directly (ex: container.my_attr) except that:\n           - here we use a recursive string to identify the attribute (attr_name.sub_name...)\n           - Here we return None if the attribute is not found instead of raising an exception.\n\n        Args:\n            attribute_name (str): Name of the attribute to get (including prefixes if appropriate)\n\n        Returns:\n            The found attribute value or None",
+    "chunk_size_bytes": 1108,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def set(self, attribute_name: str, value: any) -> Optional[any]:\n        \"\"\"Set the specified attribute by name, or raise NotFoundException if not found.\n           This is similar to accessing the container attribute directly (ex: container.my_attr=...) except that\n           here we use a recursive string to identify the attribute (attr_name.sub_name...)\n\n        Args:\n            attribute_name (str):   Name of the attribute to get (including prefixes if appropriate)\n            value (any):            The new value to set for this attribute\n\n        Raises:\n            NotFoundException: The variable with specified name does not exist\n\n        Returns:\n            Optional[any]: The previous variable value.\n            Note that if the function returns None, it means that the variable existed and had a value None\n            (if the variable does not exist, this function raises NotFoundException)\n\n        \"\"\"\n        if '.' in attribute_name:\n            # Nested attribute. Let's recurse into a sub-object\n            prefix, sub_name = attribute_name.split('.', 1)\n            if prefix not in self._attributes:\n                raise NotFoundException(f'Cannot set {attribute_name}, does not exist')\n            return self._attributes[prefix].set(sub_name, value)\n        else:\n            # Not nested, set the attribute locally\n            if attribute_name not in self._attributes:\n                raise NotFoundException(f'Cannot set {attribute_name}, does not exist')\n            prev_val = copy.deepcopy(getattr(self, attribute_name))\n            setattr(self, attribute_name, value)\n            return prev_val",
+    "span": [
+      412,
+      442
+    ],
+    "start_byte": 19074,
+    "end_byte": 20712,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "set",
+    "signature": "set(self, attribute_name: str, value: any)",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.set",
+    "docstring": "Set the specified attribute by name, or raise NotFoundException if not found.\n           This is similar to accessing the container attribute directly (ex: container.my_attr=...) except that\n           here we use a recursive string to identify the attribute (attr_name.sub_name...)\n\n        Args:\n            attribute_name (str):   Name of the attribute to get (including prefixes if appropriate)\n            value (any):            The new value to set for this attribute\n\n        Raises:\n            NotFoundException: The variable with specified name does not exist\n\n        Returns:\n            Optional[any]: The previous variable value.\n            Note that if the function returns None, it means that the variable existed and had a value None\n            (if the variable does not exist, this function raises NotFoundException)",
+    "chunk_size_bytes": 1638,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def empty(self) -> bool:\n        \"\"\" Tells if there are attributes or sub-groups in this instance \"\"\"\n        return len(self._attributes) == 0",
+    "span": [
+      444,
+      446
+    ],
+    "start_byte": 20718,
+    "end_byte": 20861,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "empty",
+    "signature": "empty(self)",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.empty",
+    "docstring": "Tells if there are attributes or sub-groups in this instance",
+    "chunk_size_bytes": 143,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __getattr__(self, attr_name: str) -> any:\n        \"\"\"We override this to provide access to registered attributes as class attributes\n\n        Args:\n            attr_name (str): The name of the attribute to get (no prefix, attribute name only)\n\n        Raises:\n            AttributeError: No attribute is registered with this name\n            ModuleNotFoundError: No callback function attached, cannot retrieve the attribute value from parent module\n\n        Returns:\n            any: The retrieved attribute value\n        \"\"\"\n        # Make sure we can still access member variables of this class\n        if attr_name == \"_get_attribute_callback\":\n            return self._get_attribute_callback\n        if attr_name == \"_set_attribute_callback\":\n            return self._set_attribute_callback\n        if attr_name == \"_attributes\":\n            return self._attributes\n\n        # Other attribute (not explicit members of this class): Check if exists in our registered attributes dictionary\n        if attr_name not in self._attributes:\n            raise AttributeError(f'Trying to get non-registered attribute {attr_name}')\n\n        if isinstance(self._attributes[attr_name], AttributeContainer):\n            # Nested attribute, return the nested container\n            return self._attributes[attr_name]\n\n        # Check if we have saved the attribute itself, or just its name and must use the \"get\" callback\n        if isinstance(self._attributes[attr_name], AttributeName):\n            # Return the attribute value (by using our \"get\" callback)\n            if self._get_attribute_callback is None:\n                raise ModuleNotFoundError(f'Attributes container has not been attached to get/set callbacks')\n            attribute_full_name: str = self._attributes[attr_name].name\n            return self._get_attribute_callback(attribute_full_name)\n        else:\n            # Return the attribute value directly\n            return self._attributes[attr_name]",
+    "span": [
+      448,
+      486
+    ],
+    "start_byte": 20867,
+    "end_byte": 22833,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__getattr__",
+    "signature": "__getattr__(self, attr_name: str)",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.__getattr__",
+    "docstring": "We override this to provide access to registered attributes as class attributes\n\n        Args:\n            attr_name (str): The name of the attribute to get (no prefix, attribute name only)\n\n        Raises:\n            AttributeError: No attribute is registered with this name\n            ModuleNotFoundError: No callback function attached, cannot retrieve the attribute value from parent module\n\n        Returns:\n            any: The retrieved attribute value",
+    "chunk_size_bytes": 1966,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __setattr__(self, attr_name: str, value=any):\n        \"\"\"We override this to provide access to registered attributes as class attributes\n\n        Args:\n            attr_name (str): The name of the attribute to set (no prefix, attribute name only)\n            value (_type_, optional): Value to set. Defaults to any.\n\n        Raises:\n            ValueError: Trying to assign a value into an already registered sub-group\n            AttributeError: No attribute with this name was registered\n            ModuleNotFoundError: No callback function attached, cannot set the attribute value into parent module\n        \"\"\"\n        # Make sure we can still access member variables of this class\n        if (attr_name == \"_get_attribute_callback\" or attr_name == \"_set_attribute_callback\"\n                or attr_name == \"_attributes\" or attr_name == \"_getting_reg_var\"):\n            return super().__setattr__(attr_name, value)\n\n        # Make sure that this attribute is registered\n        if attr_name not in self._attributes:\n            raise AttributeError(f'Trying to set non-registered attribute {attr_name}')\n\n        if isinstance(self._attributes[attr_name], AttributeContainer):\n            # Nested attribute, should not happen until someone is trying to assign a value name that conflicts with\n            # a sub-container name that was previously registered\n            # For example g_attributes.my_group = 2\n            # while we already have sub-attributes nested under sub-container \"my_group\"\n            raise ValueError(f'Trying to assign a value to attribute group {attr_name}')\n\n        # Set the attribute value (by using our \"set\" callback)\n        if isinstance(self._attributes[attr_name], AttributeName):\n            if self._set_attribute_callback is None:\n                raise ModuleNotFoundError(f'Attributes container has not been attached to get/set callbacks')\n            attribute_full_name: str = self._attributes[attr_name].name\n            return self._set_attribute_callback(attribute_full_name, value)\n        else:\n            self._attributes[attr_name] = value\n            return value",
+    "span": [
+      488,
+      524
+    ],
+    "start_byte": 22839,
+    "end_byte": 24967,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__setattr__",
+    "signature": "__setattr__(self, attr_name: str, value=any)",
+    "parent_class": "AttributeContainer",
+    "qualified_name": "AttributeContainer.__setattr__",
+    "docstring": "We override this to provide access to registered attributes as class attributes\n\n        Args:\n            attr_name (str): The name of the attribute to set (no prefix, attribute name only)\n            value (_type_, optional): Value to set. Defaults to any.\n\n        Raises:\n            ValueError: Trying to assign a value into an already registered sub-group\n            AttributeError: No attribute with this name was registered\n            ModuleNotFoundError: No callback function attached, cannot set the attribute value into parent module",
+    "chunk_size_bytes": 2128,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "class VariablesContainer(AttributeContainer):\n    \"\"\" This class is a specialization of AttributeContainer used to store variable values \"\"\"\n\n    def __init__(self):\n        super().__init__()\n        self._getting_reg_var = False\n\n    def get(self, attribute_name: str) -> Optional[RegisteredVariable]:\n        \"\"\" Returns the RegisteredVariable object by name \"\"\"",
+    "span": [
+      527,
+      550
+    ],
+    "start_byte": 24970,
+    "end_byte": 26079,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "VariablesContainer",
+    "qualified_name": "VariablesContainer",
+    "docstring": "This class is a specialization of AttributeContainer used to store variable values",
+    "chunk_size_bytes": 365,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __init__(self):\n        super().__init__()\n        self._getting_reg_var = False",
+    "span": [
+      530,
+      532
+    ],
+    "start_byte": 25116,
+    "end_byte": 25200,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__init__",
+    "signature": "__init__(self)",
+    "parent_class": "VariablesContainer",
+    "qualified_name": "VariablesContainer.__init__",
+    "docstring": null,
+    "chunk_size_bytes": 84,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def get(self, attribute_name: str) -> Optional[RegisteredVariable]:\n        \"\"\" Returns the RegisteredVariable object by name \"\"\"\n        # This  will call __getattr__ which we want to return the RegisteredVariable object, not it's value\n        self._getting_reg_var = True\n        var = super().get(attribute_name)\n        self._getting_reg_var = False\n        return var",
+    "span": [
+      534,
+      540
+    ],
+    "start_byte": 25206,
+    "end_byte": 25579,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get",
+    "signature": "get(self, attribute_name: str)",
+    "parent_class": "VariablesContainer",
+    "qualified_name": "VariablesContainer.get",
+    "docstring": "Returns the RegisteredVariable object by name",
+    "chunk_size_bytes": 373,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def __getattr__(self, attr_name: str) -> any:\n        \"\"\" See base class doc. Here we just return the value from the registered variable.\n        This allows code that do robot.vars.myvar  to get the value directly, while robot.vars.get(\"myvar\") returns\n        a RegisteredVariable object\n        \"\"\"\n        reg_var = super().__getattr__(attr_name)\n        if isinstance(reg_var, RegisteredVariable) and not self._getting_reg_var:\n            return reg_var.get_value()\n        return reg_var",
+    "span": [
+      542,
+      550
+    ],
+    "start_byte": 25585,
+    "end_byte": 26079,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "__getattr__",
+    "signature": "__getattr__(self, attr_name: str)",
+    "parent_class": "VariablesContainer",
+    "qualified_name": "VariablesContainer.__getattr__",
+    "docstring": "See base class doc. Here we just return the value from the registered variable.\n        This allows code that do robot.vars.myvar  to get the value directly, while robot.vars.get(\"myvar\") returns\n        a RegisteredVariable object",
+    "chunk_size_bytes": 494,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "class ScriptUtils:\n    \"\"\" This class contains utility functions for simplified .mxpy scripts \"\"\"\n\n    @classmethod\n    def get_arg(cls,\n                args: list[any],\n                kwargs: dict[str, any],\n                index: Optional[int] = None,\n                name: Optional[str] = None,\n                default: Optional[any] = None) -> any:\n        \"\"\"",
+    "span": [
+      553,
+      590
+    ],
+    "start_byte": 26082,
+    "end_byte": 27590,
+    "node_type": "class_definition",
+    "chunk_type": "class",
+    "language": "python",
+    "name": "ScriptUtils",
+    "qualified_name": "ScriptUtils",
+    "docstring": "This class contains utility functions for simplified .mxpy scripts",
+    "chunk_size_bytes": 365,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def get_arg(cls,\n                args: list[any],\n                kwargs: dict[str, any],\n                index: Optional[int] = None,\n                name: Optional[str] = None,\n                default: Optional[any] = None) -> any:\n        \"\"\"\n        This is a utility function for user programs, in particular .mxpy programs.\n        They have access to *args and *kwargs, but using 'get_arg' by index and/or keyword is convenient.\n        Gets an argument from *args or **kwargs.\n\n        This function will first attempt to retrieve the argument by name from kwargs.\n        If not found, will try to retrieve the positional argument (by index) from args.\n\n        Args:\n            *args: Positional arguments.\n            **kwargs: Keyword arguments.\n            index: Index of the argument to retrieve from *args.\n            name: Name of the argument to retrieve from **kwargs.\n            default: Default value to return if the argument is not found.\n\n        Returns:\n            The retrieved argument or the default value.\n        \"\"\"\n        # Try to get by argument name\n        if name is not None and name in kwargs:\n            return kwargs.get(name, default)\n\n        # Try to get by argument index\n        if index is not None and index < len(args):\n            return args[index] if index < len(args) else default\n\n        # Return default\n        return default",
+    "span": [
+      557,
+      590
+    ],
+    "start_byte": 26202,
+    "end_byte": 27590,
+    "node_type": "function_definition",
+    "chunk_type": "method",
+    "language": "python",
+    "name": "get_arg",
+    "signature": "get_arg(cls,\n                args: list[any],\n                kwargs: dict[str, any],\n                index: Optional[int] = None,\n                name: Optional[str] = None,\n                default: Optional[any] = None)",
+    "parent_class": "ScriptUtils",
+    "qualified_name": "ScriptUtils.get_arg",
+    "docstring": "This is a utility function for user programs, in particular .mxpy programs.\n        They have access to *args and *kwargs, but using 'get_arg' by index and/or keyword is convenient.\n        Gets an argument from *args or **kwargs.\n\n        This function will first attempt to retrieve the argument by name from kwargs.\n        If not found, will try to retrieve the positional argument (by index) from args.\n\n        Args:\n            *args: Positional arguments.\n            **kwargs: Keyword arguments.\n            index: Index of the argument to retrieve from *args.\n            name: Name of the argument to retrieve from **kwargs.\n            default: Default value to return if the argument is not found.\n\n        Returns:\n            The retrieved argument or the default value.",
+    "chunk_size_bytes": 1388,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def register_nested_function(function_full_name: str, get_parent_attr: Callable[[str]],\n                             set_parent_attr: Callable[[str, any]], function: callable):\n    \"\"\"This is a helper method to register a nested function into a namespace.\n    This function will take care to recursively create intermediate containers in case the function name contains\n    prefixes (like my_group.my_sub_group.my_function)\n\n    Args:\n        function_full_name (str): Name of the function to register (which may have a prefix)\n        get_parent_attr (Callable[[str]]): Callback function to get by name from the desired namespace\n        set_parent_attr (Callable[[str, any]]): Callback function to set by name into the desired namespace\n        function (callable): The function to register\n    \"\"\"\n    if '.' in function_full_name:\n        prefix, sub_name = function_full_name.split('.', 1)\n        # Must register inside a nested attribute. Let's first check if this sub-container already exists\n        attr_container: AttributeContainer = get_parent_attr(prefix)\n        if attr_container is None:\n            # Create a new attribute container\n            attr_container = AttributeContainer()\n            # Register this attribute container in the parent namespace\n            set_parent_attr(prefix, attr_container)\n\n        # Recursive registering inside the attribute container\n        attr_container.register_attribute(sub_name, function_full_name, function)\n\n    else:\n        # Not nested, directly register the function in the parent namespace\n        set_parent_attr(function_full_name, function)",
+    "span": [
+      593,
+      620
+    ],
+    "start_byte": 27593,
+    "end_byte": 29206,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "register_nested_function",
+    "qualified_name": "register_nested_function",
+    "signature": "register_nested_function(function_full_name: str, get_parent_attr: Callable[[str]],\n                             set_parent_attr: Callable[[str, any]], function: callable)",
+    "docstring": "This is a helper method to register a nested function into a namespace.\n    This function will take care to recursively create intermediate containers in case the function name contains\n    prefixes (like my_group.my_sub_group.my_function)\n\n    Args:\n        function_full_name (str): Name of the function to register (which may have a prefix)\n        get_parent_attr (Callable[[str]]): Callback function to get by name from the desired namespace\n        set_parent_attr (Callable[[str, any]]): Callback function to set by name into the desired namespace\n        function (callable): The function to register",
+    "chunk_size_bytes": 1613,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  },
+  {
+    "snippet": "def unregister_nested_function(function_full_name: str, get_parent_attr: Callable[[str]],\n                               del_parent_attr: Callable[[str]]):\n    \"\"\"This is a helper method to recursively unregister a function from a namespace.\n\n    Args:\n        function_full_name (str): Name of the attribute to unregister (which may have a prefix)\n        get_parent_attr (Callable[[str]]): Callback function to get by name (or prefix) from the desired namespace\n        del_parent_attr (Callable[[str]]): Callback function to delete by name (or prefix) from the desired namespace\n    \"\"\"\n    if '.' in function_full_name:\n        # Nested attribute. Let's delete from nested container object\n        prefix, sub_name = function_full_name.split('.', 1)\n\n        # Retrieve the attribute container that we previously registered in the parent namespace\n        attr_container: AttributeContainer = get_parent_attr(prefix)\n        if attr_container is not None:\n            if isinstance(attr_container, AttributeContainer):\n                # Recursively unregister the sub-function name from the attribute container\n                attr_container.unregister_attribute(sub_name)\n                # Note: Do not delete the prefix object from the root parent container because scripts will keep\n                #       references to that root object. And later if we recreate a new root object, the scripts will\n                #       continue (until they are reloaded) to point to the old (empty) root object and would not longer\n                #       be able to call re-registered functions.\n                #\n                #       So we keep ('leak') this root object forever in case functions are re-registered in it later.\n                #\n                #       Note that it's correct to delete sub-attributes because scripts will go through root object's\n                #       __getattr__ overload when accessing child attributes so it's correct to delete/recreate child\n                #       attributes within this root object or sub-objects. We just can't delete the root object.\n                # if attr_container.empty():\n                #     del_parent_attr(prefix)\n            else:\n                # Oops... seems like the function name prefix was never registered as an attribute container.\n                # This is most likely a mismatch between the function names passed in register vs unregister calls.\n                raise ValueError(f'Found attribute {prefix} in parent namespace but it is not an AttributeContainer')\n    else:\n        # Not nested, directly delete the attribute within the parent namespace\n        del_parent_attr(function_full_name)",
+    "span": [
+      623,
+      660
+    ],
+    "start_byte": 29209,
+    "end_byte": 31890,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "unregister_nested_function",
+    "qualified_name": "unregister_nested_function",
+    "signature": "unregister_nested_function(function_full_name: str, get_parent_attr: Callable[[str]],\n                               del_parent_attr: Callable[[str]])",
+    "docstring": "This is a helper method to recursively unregister a function from a namespace.\n\n    Args:\n        function_full_name (str): Name of the attribute to unregister (which may have a prefix)\n        get_parent_attr (Callable[[str]]): Callback function to get by name (or prefix) from the desired namespace\n        del_parent_attr (Callable[[str]]): Callback function to delete by name (or prefix) from the desired namespace",
+    "chunk_size_bytes": 2681,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_sidecar_classes.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_sidecar_classes.py"
+  }
+]

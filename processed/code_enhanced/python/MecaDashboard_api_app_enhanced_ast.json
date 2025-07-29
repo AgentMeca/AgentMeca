@@ -1,0 +1,21 @@
+[
+  {
+    "snippet": "from app import app",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 19,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "app",
+    "qualified_name": "app",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 19,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/api/app.py",
+    "normalized_path": "MecaDashboard/api/app.py"
+  }
+]

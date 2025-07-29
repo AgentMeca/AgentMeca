@@ -1,0 +1,116 @@
+[
+  {
+    "snippet": "import shutil",
+    "span": [
+      17,
+      17
+    ],
+    "start_byte": 840,
+    "end_byte": 853,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "shutil",
+    "qualified_name": "shutil",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 13,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_trajectory_files.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_trajectory_files.py"
+  },
+  {
+    "snippet": "from dataclasses import dataclass, field",
+    "span": [
+      18,
+      18
+    ],
+    "start_byte": 854,
+    "end_byte": 894,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "dataclass",
+    "qualified_name": "dataclass",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 40,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_trajectory_files.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_trajectory_files.py"
+  },
+  {
+    "snippet": "from pathlib import Path, PurePath",
+    "span": [
+      19,
+      19
+    ],
+    "start_byte": 895,
+    "end_byte": 929,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "Path",
+    "qualified_name": "Path",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 34,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_trajectory_files.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_trajectory_files.py"
+  },
+  {
+    "snippet": "from tempfile import TemporaryDirectory",
+    "span": [
+      20,
+      20
+    ],
+    "start_byte": 930,
+    "end_byte": 969,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "TemporaryDirectory",
+    "qualified_name": "TemporaryDirectory",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 39,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_trajectory_files.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_trajectory_files.py"
+  },
+  {
+    "snippet": "import pandas as pd",
+    "span": [
+      22,
+      22
+    ],
+    "start_byte": 971,
+    "end_byte": 990,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "pandas as pd",
+    "qualified_name": "pandas as pd",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 19,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_trajectory_files.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_trajectory_files.py"
+  },
+  {
+    "snippet": "from dataclasses_json import dataclass_json",
+    "span": [
+      23,
+      23
+    ],
+    "start_byte": 991,
+    "end_byte": 1034,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "dataclass_json",
+    "qualified_name": "dataclass_json",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 43,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_trajectory_files.py",
+    "normalized_path": "mecademicpy/mecademicpy/robot_trajectory_files.py"
+  }
+]

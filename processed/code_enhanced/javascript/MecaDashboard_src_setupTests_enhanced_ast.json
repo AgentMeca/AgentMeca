@@ -1,0 +1,21 @@
+[
+  {
+    "snippet": "import '@testing-library/jest-dom';",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 205,
+    "end_byte": 240,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 35,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/setupTests.js",
+    "normalized_path": "MecaDashboard/src/setupTests.js"
+  }
+]

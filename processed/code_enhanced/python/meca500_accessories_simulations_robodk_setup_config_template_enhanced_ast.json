@@ -1,0 +1,78 @@
+[
+  {
+    "snippet": "def validate_position(x, y, z):\n    \"\"\"\n    Validate if position is within workspace limits\n    \n    Args:\n        x, y, z (float): Position coordinates in mm\n        \n    Returns:\n        bool: True if position is valid, False otherwise\n    \"\"\"\n    return (WORKSPACE_LIMITS['x_min'] <= x <= WORKSPACE_LIMITS['x_max'] and\n            WORKSPACE_LIMITS['y_min'] <= y <= WORKSPACE_LIMITS['y_max'] and\n            WORKSPACE_LIMITS['z_min'] <= z <= WORKSPACE_LIMITS['z_max'])",
+    "span": [
+      222,
+      234
+    ],
+    "start_byte": 8525,
+    "end_byte": 8995,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "validate_position",
+    "qualified_name": "validate_position",
+    "signature": "validate_position(x, y, z)",
+    "docstring": "Validate if position is within workspace limits\n    \n    Args:\n        x, y, z (float): Position coordinates in mm\n        \n    Returns:\n        bool: True if position is valid, False otherwise",
+    "chunk_size_bytes": 470,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/config_template.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/config_template.py"
+  },
+  {
+    "snippet": "def get_safe_approach_height(z):\n    \"\"\"\n    Calculate safe approach height for given Z coordinate\n    \n    Args:\n        z (float): Target Z coordinate in mm\n        \n    Returns:\n        float: Safe approach height in mm\n    \"\"\"\n    return max(z + APPROACH_DISTANCE, WORKSPACE_LIMITS['z_min'] + MIN_APPROACH_HEIGHT)",
+    "span": [
+      236,
+      246
+    ],
+    "start_byte": 8997,
+    "end_byte": 9314,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "get_safe_approach_height",
+    "qualified_name": "get_safe_approach_height",
+    "signature": "get_safe_approach_height(z)",
+    "docstring": "Calculate safe approach height for given Z coordinate\n    \n    Args:\n        z (float): Target Z coordinate in mm\n        \n    Returns:\n        float: Safe approach height in mm",
+    "chunk_size_bytes": 317,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/config_template.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/config_template.py"
+  },
+  {
+    "snippet": "def check_speed_limits(linear_speed, joint_speed):\n    \"\"\"\n    Check if speeds are within safe limits\n    \n    Args:\n        linear_speed (float): Linear speed in mm/s\n        joint_speed (float): Joint speed in deg/s\n        \n    Returns:\n        tuple: (is_valid, adjusted_linear_speed, adjusted_joint_speed)\n    \"\"\"\n    is_valid = True\n    \n    if linear_speed > MAX_LINEAR_SPEED:\n        linear_speed = MAX_LINEAR_SPEED\n        is_valid = False\n    \n    if joint_speed > MAX_JOINT_SPEED:\n        joint_speed = MAX_JOINT_SPEED\n        is_valid = False\n    \n    return is_valid, linear_speed, joint_speed",
+    "span": [
+      248,
+      269
+    ],
+    "start_byte": 9316,
+    "end_byte": 9922,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "check_speed_limits",
+    "qualified_name": "check_speed_limits",
+    "signature": "check_speed_limits(linear_speed, joint_speed)",
+    "docstring": "Check if speeds are within safe limits\n    \n    Args:\n        linear_speed (float): Linear speed in mm/s\n        joint_speed (float): Joint speed in deg/s\n        \n    Returns:\n        tuple: (is_valid, adjusted_linear_speed, adjusted_joint_speed)",
+    "chunk_size_bytes": 606,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/config_template.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/config_template.py"
+  },
+  {
+    "snippet": "def validate_config():\n    \"\"\"\n    Validate configuration parameters\n    \n    Returns:\n        list: List of validation errors (empty if all valid)\n    \"\"\"\n    errors = []\n    \n    # Check workspace limits\n    if WORKSPACE_LIMITS['x_min'] >= WORKSPACE_LIMITS['x_max']:\n        errors.append(\"Invalid X workspace limits\")\n    \n    if WORKSPACE_LIMITS['y_min'] >= WORKSPACE_LIMITS['y_max']:\n        errors.append(\"Invalid Y workspace limits\")\n    \n    if WORKSPACE_LIMITS['z_min'] >= WORKSPACE_LIMITS['z_max']:\n        errors.append(\"Invalid Z workspace limits\")\n    \n    # Check speed limits\n    if DEFAULT_LINEAR_SPEED > MAX_LINEAR_SPEED:\n        errors.append(\"Default linear speed exceeds maximum\")\n    \n    if DEFAULT_JOINT_SPEED > MAX_JOINT_SPEED:\n        errors.append(\"Default joint speed exceeds maximum\")\n    \n    # Check approach distance\n    if APPROACH_DISTANCE < MIN_APPROACH_HEIGHT:\n        errors.append(\"Approach distance less than minimum height\")\n    \n    return errors",
+    "span": [
+      275,
+      305
+    ],
+    "start_byte": 10112,
+    "end_byte": 11098,
+    "node_type": "function_definition",
+    "chunk_type": "function",
+    "language": "python",
+    "name": "validate_config",
+    "qualified_name": "validate_config",
+    "signature": "validate_config()",
+    "docstring": "Validate configuration parameters\n    \n    Returns:\n        list: List of validation errors (empty if all valid)",
+    "chunk_size_bytes": 986,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/config_template.py",
+    "normalized_path": "meca500-accessories/simulations/robodk-setup/config_template.py"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "snippet": "from eyeplus import EyePlusClient",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 33,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "EyePlusClient",
+    "qualified_name": "EyePlusClient",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 33,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/get_part_test.py",
+    "normalized_path": "AsyrilDemo/get_part_test.py"
+  }
+]

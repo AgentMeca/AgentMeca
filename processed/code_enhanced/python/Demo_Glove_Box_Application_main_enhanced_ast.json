@@ -1,0 +1,40 @@
+[
+  {
+    "snippet": "import mainApp",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 14,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "mainApp",
+    "qualified_name": "mainApp",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 14,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/main.py",
+    "normalized_path": "Demo_Glove_Box/Application/main.py"
+  },
+  {
+    "snippet": "from PyQt5 import QtWidgets",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 15,
+    "end_byte": 42,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QtWidgets",
+    "qualified_name": "QtWidgets",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 27,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/main.py",
+    "normalized_path": "Demo_Glove_Box/Application/main.py"
+  }
+]

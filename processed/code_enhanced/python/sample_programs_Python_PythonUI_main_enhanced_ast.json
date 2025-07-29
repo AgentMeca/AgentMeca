@@ -1,0 +1,40 @@
+[
+  {
+    "snippet": "import UIApp",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 12,
+    "node_type": "import_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "UIApp",
+    "qualified_name": "UIApp",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 12,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/main.py",
+    "normalized_path": "sample-programs/Python/PythonUI/main.py"
+  },
+  {
+    "snippet": "from PyQt5 import QtWidgets",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 13,
+    "end_byte": 40,
+    "node_type": "import_from_statement",
+    "chunk_type": "import",
+    "language": "python",
+    "name": "QtWidgets",
+    "qualified_name": "QtWidgets",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 27,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/main.py",
+    "normalized_path": "sample-programs/Python/PythonUI/main.py"
+  }
+]

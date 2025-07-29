@@ -1,0 +1,41 @@
+{
+  "total_files": 122,
+  "processed_files": 105,
+  "total_units": 2216,
+  "chunk_type_counts": {
+    "import": 417,
+    "class": 195,
+    "method": 1376,
+    "function": 175,
+    "other": 39,
+    "function_part": 14
+  },
+  "size_distribution": {
+    "small": 1481,
+    "medium": 637,
+    "large": 76,
+    "oversized": 22
+  },
+  "by_language": {
+    "python": {
+      "files": 89,
+      "units": 2122,
+      "avg_chunk_size": 533
+    },
+    "csharp": {
+      "files": 2,
+      "units": 14,
+      "avg_chunk_size": 1912
+    },
+    "javascript": {
+      "files": 11,
+      "units": 45,
+      "avg_chunk_size": 68
+    },
+    "c": {
+      "files": 3,
+      "units": 35,
+      "avg_chunk_size": 334
+    }
+  }
+}

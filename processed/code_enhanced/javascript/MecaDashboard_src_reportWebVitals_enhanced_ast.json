@@ -1,0 +1,21 @@
+[
+  {
+    "snippet": "export default reportWebVitals;",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 330,
+    "end_byte": 361,
+    "node_type": "export_statement",
+    "chunk_type": "other",
+    "language": "javascript",
+    "name": "unknown",
+    "qualified_name": "unknown",
+    "signature": null,
+    "docstring": null,
+    "chunk_size_bytes": 31,
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/reportWebVitals.js",
+    "normalized_path": "MecaDashboard/src/reportWebVitals.js"
+  }
+]
