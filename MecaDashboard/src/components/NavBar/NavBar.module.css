@@ -1,0 +1,44 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D9D8D6;
+    height: 4rem;
+    padding: 1em 2em;
+    box-shadow: 0px 0px 15px 0px #1D252C;
+}
+
+.logo {
+    width: 15em;
+}
+
+.links {
+    display: flex;
+}
+
+.links>a {
+    padding: 0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #1D252C;
+    padding: 0em 1em;
+    margin: 0em 1em;
+}
+
+.links>a:hover {
+    border-bottom: 3px solid #1D252C;
+}
+
+.socials {
+    display: flex;
+}
+
+.lilogo {
+    width: 2.2em;
+    margin-right: 0.5em;
+}
+
+.twitterlogo {
+    width: 2.2em;
+}

@@ -1,0 +1,39 @@
+.dialogbox {
+    background-color: #D9D8D6;
+    padding: 2em;
+    border-radius: 2em;
+    border: 2px solid #1D252C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    width: 40em;
+    height: 30em;
+    top: 50%;
+    left: 50%;
+    margin-top: -15em;
+    margin-left: -20em;
+    box-shadow: 0px 0em 1em 0.1em #1D252C;
+}
+
+.title {
+    align-self: center;
+    text-decoration: underline;
+}
+
+.userinput {
+    width: 100%;
+}
+
+.dialogbutton {
+    width: fit-content;
+    padding: 0.5em;
+    margin: 0em 1em 0em 0em;
+    border-radius: 0.7em;
+    border: 1px solid #1D252C;
+    transition: all 0.2s;
+}
+
+.dialogbutton:hover {
+    background-color: #929291;
+}

@@ -1,0 +1,4 @@
+mecademicpy
+requests
+PyQt5
+scipy

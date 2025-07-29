@@ -1,0 +1,72 @@
+.robotcard {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0em;
+    font-size: 1.2em;
+    background-color: #D9D8D6;
+    width: 15em;
+    height: 20em;
+    border-radius: 1.5em;
+    margin: 1em;
+    box-shadow: 0em 1em 1em 0.1em grey;
+    border: 2px solid #1d252C;
+}
+
+.titles {
+    display: flex;
+    font-size: 0.8em;
+    flex-direction: column;
+    align-items: center;
+    max-width: 75%;
+}
+
+.title {
+    margin: 0;
+    color: #1d252C;
+}
+
+.robotlogo {
+    max-height: 10em;
+}
+
+.ipaddress {
+    margin: 0.35em 0 0.5em 0;
+    padding: 0.2em 1.2em;
+    line-height: 1.2em;
+    border-radius: 1em;
+    text-decoration: none;
+    color: #D9D8D6;
+    background-color: #1d252C;
+    transition: all 0.3s;
+    border: 1px solid #1d252C;
+}
+
+.ipaddress:hover {
+    background-color: #D9D8D6;
+    color: #1d252C;
+}
+
+.closebutton {
+    position: absolute;
+    right: 5%;
+    background-color: #1d252C;
+    color: #D9D8D6;
+    font-size: 0.55em;
+    font-weight: 600;
+    text-align: center;
+    text-justify: auto;
+    height: 2.5em;
+    width: 2.5em;
+    padding: 0.5em;
+    border-radius: 0.75em;
+    border: 1px solid black;
+    transition: all 0.3s;
+}
+
+.closebutton:hover {
+    background-color: #D9D8D6;
+    color: #1d252C;
+}

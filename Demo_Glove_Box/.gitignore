@@ -1,0 +1,7 @@
+/venv/
+/release/
+.vscode/
+__pycache__/
+/__pycache__/
+*.pyc
+*.cpython-39

@@ -1,0 +1,19 @@
+# RoboDK Python API Requirements
+# ================================
+# 
+# Install these packages for RoboDK Python programming with Mecademic Meca500
+# 
+# Installation:
+# pip install -r requirements.txt
+
+# RoboDK API for Python
+robodk>=5.0.0
+
+# Optional: Additional packages for advanced functionality
+numpy>=1.21.0           # Mathematical operations and arrays
+matplotlib>=3.5.0       # Plotting and visualization (optional)
+opencv-python>=4.5.0    # Computer vision integration (optional)
+
+# Development and testing
+pytest>=6.0.0           # Unit testing framework (optional)
+pylint>=2.12.0          # Code quality checking (optional)

@@ -1,0 +1,7 @@
+This application has 2 robots that manipulate well plates. One that picks the cover and place it back, the other that picks the well plate
+and move it to somewhere else. Then it picks it pack up and place it back and the other robot puts back the cover.
+
+Need two objects:
+robot 1 => mecademicpy
+robot 2 => mecademicpy
+

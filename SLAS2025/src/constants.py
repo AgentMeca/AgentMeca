@@ -1,0 +1,48 @@
+# Robot constants
+PIPETTING_WELL_PROG = "SLAS2025/pipette_wells"
+PIPETTING_VIAL_PROG = "SLAS2025/pipette_vials"
+
+SWAP_WELL_LEFT = "SLAS2025/swap_wells_right"
+SWAP_WELL_RIGHT = "SLAS2025/swap_wells_right"
+SWAP_VIAL_LEFT = "SLAS2025/swap_vials_left"
+SWAP_VIAL_RIGHT = "SLAS2025/swap_vials_right"
+
+PIPETTE_IP = "192.168.0.100"
+VIAL_IP = "192.168.0.101"
+WELL_IP = "192.168.0.102"
+
+# XBOTS constants
+PMC_IP = "192.168.0.200"
+PIPETTE_POSITION = [0.840, 0.120]
+WAIT_POSITION = [0.600, 0.120]
+SWAP_WELL_POSITION = [0.120, 0.120]
+SWAP_VIAL_POSITION = [0.360, 0.120]
+
+
+M1 = [[0.840, 0.060],
+      [0.600, 0.060],
+      [0.600, 0.120]]
+
+M2 = [[0.600, 0.180],
+      [0.840, 0.180],
+      [0.840, 0.120]]
+
+# Positions for manual swap
+X_PIPETTE = 0.840
+X_WAIT = 0.600
+Y_LOW = 0.060
+Y_HIGH = 0.180
+
+X_POS = [PIPETTE_POSITION[0],
+         WAIT_POSITION[0],
+         SWAP_WELL_POSITION[0],
+         SWAP_VIAL_POSITION[0]]
+
+Y_POS = [PIPETTE_POSITION[1],
+         WAIT_POSITION[1],
+         SWAP_WELL_POSITION[1],
+         SWAP_VIAL_POSITION[1]]
+
+PIPETTE_SAFE_POS = [0, 0, 0, 0, 0, 0]
+VIALS_SAFE_POS = [0, 0, 0, 0, 0, 0]
+WELL_SAFE_POS = [0, 0, 0, 0, 0, 0]

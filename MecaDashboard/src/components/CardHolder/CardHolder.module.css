@@ -1,0 +1,29 @@
+.cardholder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.addbutton {
+    padding: 1em 0em;
+    font-size: 0.75em;
+    background-color: #D9D8D6;
+    width: 5em;
+    height: 6em;
+    border-radius: 1.5em;
+    margin: 11em;
+    box-shadow: 0em 0.5em 0.5em 0.1em grey;
+    transition: all 0.3s;
+}
+
+.addbutton:hover {
+    background-color: #565f66;
+    transform: scale(1.2);
+}
+
+.plussign {
+    width: 2em;
+}
