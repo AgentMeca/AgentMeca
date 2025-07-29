@@ -1,0 +1,140 @@
+[
+  {
+    "snippet": "#include <stdio.h>\n",
+    "span": [
+      1,
+      2
+    ],
+    "start_byte": 0,
+    "end_byte": 19,
+    "node_type": "preproc_include",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c"
+  },
+  {
+    "snippet": "#include <stdlib.h>\n",
+    "span": [
+      2,
+      3
+    ],
+    "start_byte": 19,
+    "end_byte": 39,
+    "node_type": "preproc_include",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c"
+  },
+  {
+    "snippet": "#include \"socket_comm.h\"\n",
+    "span": [
+      3,
+      4
+    ],
+    "start_byte": 39,
+    "end_byte": 64,
+    "node_type": "preproc_include",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c"
+  },
+  {
+    "snippet": "static int socket_system_user_count = 0;",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 135,
+    "end_byte": 175,
+    "node_type": "declaration",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c"
+  },
+  {
+    "snippet": "static WSADATA wsaData;",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 219,
+    "end_byte": 242,
+    "node_type": "declaration",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c"
+  },
+  {
+    "snippet": "int init_socket_system()\n{\n    if (socket_system_user_count == 0)\n    {\n        printf(\"Init WSA\\r\\n\");\n        int result = WSAStartup(MAKEWORD(2, 2), &wsaData);\n        if (result != 0)\n        {\n            printf(\"WSAStartup failed with error: %d\\r\\n\", result);\n            cleanup_socket_system();\n            return -1;\n        }\n    }\n    socket_system_user_count++;\n    return 0;\n}",
+    "span": [
+      16,
+      31
+    ],
+    "start_byte": 447,
+    "end_byte": 836,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c",
+    "name": "init_socket_system"
+  },
+  {
+    "snippet": "void cleanup_socket_system()\n{\n    socket_system_user_count--;\n    if (socket_system_user_count == 0)\n    {\n        printf(\"Closing WSA\\r\\n\");\n        WSACleanup();\n    }\n}",
+    "span": [
+      34,
+      42
+    ],
+    "start_byte": 890,
+    "end_byte": 1062,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c",
+    "name": "cleanup_socket_system"
+  },
+  {
+    "snippet": "int tcpip_connect(const char *address, const char *port, tcpip_connection *connection)\n{\n    int result = 0;\n    result = init_socket_system();\n    if (result != 0)\n    {\n        return -1;\n    }\n\n    struct addrinfo hints, *addr_result;\n    ZeroMemory(&hints, sizeof(hints));\n    hints.ai_family = AF_UNSPEC;\n    hints.ai_socktype = SOCK_STREAM;\n    hints.ai_protocol = IPPROTO_TCP;\n    // Get the address information for the connection\n    result = getaddrinfo(address, port, &hints, &addr_result);\n\n    if (result != 0)\n    {\n        printf(\"getaddrinfo failed with error: %d\\r\\n\", result);\n        cleanup_socket_system();\n        return -1;\n    }\n\n    // Create a SOCKET for connecting to server\n    connection->socket_ = socket(addr_result->ai_family,\n                                 addr_result->ai_socktype,\n                                 addr_result->ai_protocol);\n    if (connection->socket_ == INVALID_SOCKET)\n    {\n        printf(\"socket failed with error: %ld\\r\\n\", WSAGetLastError());\n        cleanup_socket_system();\n        return -1;\n    }\n\n    // Connect to server.\n    result = connect(connection->socket_,\n                     addr_result->ai_addr,\n                     (int)addr_result->ai_addrlen);\n    if (result == SOCKET_ERROR)\n    {\n        closesocket(connection->socket_);\n        cleanup_socket_system();\n        connection->socket_ = INVALID_SOCKET;\n        return -1;\n    }\n\n    // Done with socket creation.\n    freeaddrinfo(addr_result);\n\n    return 0;\n}",
+    "span": [
+      46,
+      97
+    ],
+    "start_byte": 1147,
+    "end_byte": 2637,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c",
+    "name": "tcpip_connect"
+  },
+  {
+    "snippet": "void tcpip_disconnect(tcpip_connection *connection)\n{\n    if (socket_system_user_count == 0)\n    {\n        return;\n    }\n    closesocket(connection->socket_);\n    cleanup_socket_system();\n}",
+    "span": [
+      101,
+      109
+    ],
+    "start_byte": 2722,
+    "end_byte": 2911,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c",
+    "name": "tcpip_disconnect"
+  },
+  {
+    "snippet": "int tcpip_send(const char *buffer, int len, tcpip_connection *connection)\n{\n    EXIT_ON_SYSTEM_NOT_INITED();\n// Send an initial buffer\n#ifdef DEBUG\n    printf(\"Sending: %s\\r\\n\", buffer);\n#endif\n\n    int send_result = send(connection->socket_, buffer, len, 0);\n    if (send_result == SOCKET_ERROR)\n    {\n        printf(\"send failed with error: %d\\r\\n\", WSAGetLastError());\n        closesocket(connection->socket_);\n        cleanup_socket_system();\n        return -1;\n    }\n\n    // Did not send everything, return the amount of data that was sent.\n    if (send_result != len)\n    {\n        return send_result;\n    }\n\n    // everything was sent and\n    return 0;\n}",
+    "span": [
+      113,
+      138
+    ],
+    "start_byte": 2996,
+    "end_byte": 3657,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c",
+    "name": "tcpip_send"
+  },
+  {
+    "snippet": "int tcpip_receive(char *buffer, int len, tcpip_connection *connection)\n{\n    EXIT_ON_SYSTEM_NOT_INITED();\n\n    int recv_result = recv(connection->socket_, buffer, len, 0);\n    if (recv_result == 0) // Closing connection case\n    {\n        printf(\"Connection closed\\r\\n\");\n        closesocket(connection->socket_);\n        cleanup_socket_system();\n        return 0;\n    }\n    else if (recv_result < 0) // Error case\n    {\n        printf(\"recv failed with error: %d\\r\\n\", WSAGetLastError());\n        return -1;\n    }\n#ifdef DEBUG\n    printf(\"Receiving: %s\\r\\n\", buffer);\n#endif\n\n    // contains the amount of data received.\n    return recv_result;\n}",
+    "span": [
+      142,
+      165
+    ],
+    "start_byte": 3742,
+    "end_byte": 4389,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/socket_comm.c",
+    "name": "tcpip_receive"
+  }
+]

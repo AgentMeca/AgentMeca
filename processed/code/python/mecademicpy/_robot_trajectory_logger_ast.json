@@ -1,0 +1,99 @@
+[
+  {
+    "snippet": "import queue",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 308,
+    "end_byte": 320,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/_robot_trajectory_logger.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 321,
+    "end_byte": 332,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/_robot_trajectory_logger.py"
+  },
+  {
+    "snippet": "from pathlib import PurePath",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 333,
+    "end_byte": 361,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/_robot_trajectory_logger.py"
+  },
+  {
+    "snippet": "import pandas as pd",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 363,
+    "end_byte": 382,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/_robot_trajectory_logger.py"
+  },
+  {
+    "snippet": "from .mx_robot_def import MxRobotStatusCode as mx_st",
+    "span": [
+      15,
+      15
+    ],
+    "start_byte": 384,
+    "end_byte": 436,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/_robot_trajectory_logger.py"
+  },
+  {
+    "snippet": "from .robot_classes import *",
+    "span": [
+      17,
+      17
+    ],
+    "start_byte": 494,
+    "end_byte": 522,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/_robot_trajectory_logger.py"
+  },
+  {
+    "snippet": "from .robot_trajectory_files import RobotTrajectories",
+    "span": [
+      18,
+      18
+    ],
+    "start_byte": 523,
+    "end_byte": 576,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/_robot_trajectory_logger.py"
+  },
+  {
+    "snippet": "class _RobotTrajectoryLogger:\n    \"\"\"Class to handle logging robot state to file.\n\n    Attributes\n    ----------\n    file_name : str\n        Name of file produced by logger\n    fields : dict of strings\n        Fields to be logged. Key: attribute name in 'RobotState'. Value: Equivalent UpperCamelCase string or enum value\n        used in 'SetRealTimeMonitoring'\n    command_queue : queue\n        Queue to store sent commands.\n    element_width : int\n        Each numerical element will have this width.\n    timestamp_element_width: int\n        Each timestamp will have this width\n    done_logging: bool\n        'write_fields' wont log more robot states when this is True. Set to True by 'end_log'\n    logging_commands: bool\n        Indicate if sent commands are being logged\n    expanded_fields:\n        Elements of 'fields', but expanded to have a name for each sub-element of corresponding robot states\n    data_dict:\n        Keys: timestamps. Values: robot state stored at moment corresponding to timestamp\n    robot_trajectories: RobotTrajectories object\n        Contains robot states logged data and information about the robot used during logging\n    \"\"\"\n\n    def __init__(self,\n                 robot_info: RobotInfo,\n                 robot_rt_data: RobotRtData,\n                 fields: list[str] = None,\n                 file_name: str = None,\n                 file_path: str = None,\n                 record_time: bool = True,\n                 monitoring_interval: float = None):\n        \"\"\"Initialize class.\n\n        Parameters\n        ----------\n        robot_info : RobotInfo\n            Contains robot information.\n        robot_rt_data : RobotRtData object\n            Contains state of robot.\n        fields : list of strings\n            List of fields to be logged.\n        file_name: string or None\n            Log file name\n            If None, file name will be built with date/time and robot information (robot type, serial, version).\n        file_path : string or None\n            Path to save the zipped file that contains logged data + robot info in, respectively, csv and json file.\n            If not provided, file will be saved in working directory.\n        record_time : bool\n            If true, current time will also be recorded in the text file. (Time is also available in filename.)\n        monitoring_interval: float\n            Indicates rate at which state from robot is received on monitor port. Unit: seconds\n        \"\"\"\n        current_date_time = time.strftime('%Y-%m-%d-%H-%M-%S')\n\n        serial_number_or_blank = ('_serial_' + robot_info.serial) if robot_info.serial else \"\"\n\n        # Add unique name to file path.\n        if file_name:\n            self.file_name = file_name\n        else:\n            self.file_name = (f'{robot_info.model}_R{robot_info.revision}_'\n                              f'v{robot_info.version.short_version}_'\n                              f'log_{current_date_time}{serial_number_or_blank}')\n\n        self.file_path = file_path\n\n        # If fields argument is None, log all compatible fields.\n        self.fields = dict()\n        if fields is None:\n\n            if robot_info.rt_message_capable:\n                for attr in vars(robot_rt_data):\n                    if attr.startswith('rt_'):\n                        self.fields[attr] = robot_rt_data_to_real_time_monit[attr][1]\n            else:\n                # Only the following fields are available if platform is not rt monitoring capable.\n                self.fields = {\n                    'rt_target_joint_pos': robot_rt_data_to_real_time_monit['rt_target_joint_pos'][1],\n                    'rt_target_cart_pos': robot_rt_data_to_real_time_monit['rt_target_cart_pos'][1]\n                }\n        else:\n            for field in fields:\n                for key, val in robot_rt_data_to_real_time_monit.items():\n                    if (isinstance(field, str) and field.lower() == val[1].lower()) or field == val[0]:\n                        self.fields[key] = val[1]\n                        break\n\n        # Set attributes.\n        self.command_queue: queue.Queue = queue.Queue()\n        self.element_width = 10\n        self.timestamp_element_width = 15\n        self.done_logging = False\n        self.logging_commands = True\n        self.expanded_fields: list = []\n        self.data_dict: dict = dict()  # Key: timestamp, Value: List of all corresponding robot_rt_data values\n        self.robot_trajectories = RobotTrajectories()\n\n        # Write robot information.\n        # Maybe robot information could be stored as a RobotInfo object in robot_trajectories?\n        self.robot_trajectories.robot_context.robot_information.append(dict())\n        for attr in ['model', 'revision', 'version']:\n            self.robot_trajectories.robot_context.robot_information[0][attr] = f'{getattr(robot_info, attr)}'\n        if robot_info.serial is not None:\n            self.robot_trajectories.robot_context.robot_information[0]['serial_number'] = f'{robot_info.serial}'\n        if record_time:\n            self.robot_trajectories.robot_context.robot_information[0]['time_recorded'] = f'{current_date_time}'\n        if monitoring_interval:\n            self.robot_trajectories.robot_context.robot_information[0]['monitoring_interval'] = f'{monitoring_interval}'\n\n        # Write headers for logged data\n        self.write_field_and_element_headers(robot_info, robot_rt_data)\n\n    def get_timestamp_data(self, robot_rt_data: RobotRtData, field):\n        \"\"\" Return timestamp data object associated with the specific field (or None).\n\n        Parameters\n        ----------\n        robot_rt_data : RobotRtData object\n            Current state of robot to get timestamp_data from\n        field : String\n            Name of the field to get timestamp_data for.\n\n        \"\"\"\n        if field == 'rt_accelerometer':\n            index = 5  # For now, only index 5 supported (joint 5's accelerometer)\n            accel_dict = getattr(robot_rt_data, field)\n            if index not in accel_dict:\n                return None\n            field_attr = accel_dict[index]\n        else:\n            field_attr = getattr(robot_rt_data, field)\n        return field_attr\n\n    def _build_io_fields(self, prefix: str, io_type: str, count: int) -> list[str]:\n        \"\"\"Build a list of digital IO field names\n\n        Parameters\n        ----------\n        prefix : str\n            IO bank prefix (ex: 'ioModule')\n        io_type : str\n            IO type ('Input' or 'Output')\n        count : int\n            Number of IOs of this type in this bank\n\n        Returns\n        -------\n        list[str]\n            _description_\n        \"\"\"\n        fields = []\n        for idx in range(count):\n            fields.append(f'{prefix}{io_type}_{idx + 1}')\n        return fields\n\n    def write_field_and_element_headers(self, robot_info: RobotInfo, robot_rt_data: RobotRtData):\n        \"\"\"Write the full field name and element name in each column.\n\n        Parameters\n        ----------\n        robot_info : RobotInfo\n            Information about the robot, such as model name and number of joints.\n        robot_rt_data : RobotRtData object\n            Contains state of robot.\n        \"\"\"\n\n        def assemble_with_prefix(field, names):\n            return [field + '_' + str(x) for x in names]\n\n        # Write full name for each field.\n        for key, value in self.fields.items():\n            if (key.endswith('joint_pos') or key.endswith('joint_vel') or key.endswith('joint_torq')):\n                # Write field name followed by joint number. For example: \"TargetJointPos_1\".\n                self.expanded_fields.extend(assemble_with_prefix(value, range(robot_info.num_joints)))\n            elif key.endswith('cart_pos') or key.endswith('wrf') or key.endswith('trf'):\n                if robot_info.num_joints == 4:\n                    self.expanded_fields.extend(assemble_with_prefix(value, ['X', 'Y', 'Z', 'Gamma']))\n                else:\n                    self.expanded_fields.extend(assemble_with_prefix(value, ['X', 'Y', 'Z', 'Alpha', 'Beta', 'Gamma']))\n            elif key.endswith('cart_vel'):\n                if robot_info.num_joints == 4:\n                    self.expanded_fields.extend(assemble_with_prefix(value, ['X_Dot', 'Y_Dot', 'Z_Dot', 'Omega_Z']))\n                else:\n                    self.expanded_fields.extend(\n                        assemble_with_prefix(value, ['X_Dot', 'Y_Dot', 'Z_Dot', 'Omega_X', 'Omega_Y', 'Omega_Z']))\n            elif key.endswith('rt_accelerometer'):\n                self.expanded_fields.extend(assemble_with_prefix(value, ['X', 'Y', 'Z']))\n            elif key.endswith('conf_turn'):\n                self.expanded_fields.append(value)\n            elif key.endswith('conf'):\n                self.expanded_fields.extend(assemble_with_prefix(value, ['Shoulder', 'Elbow', 'Wrist']))\n            elif key.endswith('checkpoint'):\n                self.expanded_fields.append(value)\n            elif key.endswith('rt_effective_time_scaling'):\n                self.expanded_fields.append(value)\n            elif key.endswith('rt_vm'):\n                columns = ['Baseboard', 'Psu', 'SafeMcu']\n                columns += range(robot_info.num_joints)\n                self.expanded_fields.extend(assemble_with_prefix(value, columns))\n            elif key.endswith('rt_current'):\n                columns = ['Baseboard']\n                self.expanded_fields.extend(assemble_with_prefix(value, columns))\n            elif key.endswith('rt_external_tool_status'):\n                self.expanded_fields.extend(\n                    assemble_with_prefix(value, ['SimModel', 'PhysicalModel', 'Present', 'Homed', 'Error']))\n            elif key.endswith('rt_valve_state'):\n                self.expanded_fields.extend(assemble_with_prefix(value, ['valve1', 'valve2']))\n            elif key.endswith('rt_gripper_state'):\n                self.expanded_fields.extend(\n                    assemble_with_prefix(value, ['Holding', 'TargetReached', 'Closed', 'Opened']))\n            elif key.endswith('rt_gripper_force'):\n                self.expanded_fields.extend(assemble_with_prefix(value, ['%']))\n            elif key.endswith('rt_gripper_pos'):\n                self.expanded_fields.extend(assemble_with_prefix(value, ['mm']))\n            elif key.endswith('rt_io_module_status'):\n                self.expanded_fields.extend(assemble_with_prefix(value, ['BankId', 'Present', 'SimMode', 'Error']))\n            elif key.endswith('rt_vacuum_state'):\n                self.expanded_fields.extend(assemble_with_prefix(value, ['VacuumOn', 'PurgeOn', 'Holding']))\n            elif key.endswith('rt_vacuum_pressure'):\n                self.expanded_fields.extend(assemble_with_prefix(value, ['kPa']))\n            elif key.endswith('rt_io_module_outputs'):\n                nb_outputs = len(robot_rt_data.rt_io_module_outputs.data)\n                if nb_outputs != 0:\n                    self.expanded_fields.extend(self._build_io_fields('IoModule', 'Output', nb_outputs))\n            elif key.endswith('rt_io_module_inputs'):\n                nb_inputs = len(robot_rt_data.rt_io_module_inputs.data)\n                if nb_inputs != 0:\n                    self.expanded_fields.extend(self._build_io_fields('IoModule', 'Input', nb_inputs))\n            elif key.endswith('rt_sig_gen_status'):\n                self.expanded_fields.extend(assemble_with_prefix(value, ['BankId', 'Present', 'SimMode', 'Error']))\n            elif key.endswith('rt_sig_gen_outputs'):\n                nb_outputs = len(robot_rt_data.rt_sig_gen_outputs.data)\n                if nb_outputs != 0:\n                    self.expanded_fields.extend(self._build_io_fields('SigGen', 'Output', nb_outputs))\n            elif key.endswith('rt_sig_gen_inputs'):\n                nb_inputs = len(robot_rt_data.rt_sig_gen_inputs.data)\n                if nb_inputs != 0:\n                    self.expanded_fields.extend(self._build_io_fields('SigGen', 'Input', nb_inputs))\n            else:\n                raise ValueError(f'Missing formatting for field: {key}')\n\n    def write_fields(self, timestamp, robot_rt_data: RobotRtData):\n        \"\"\"Write fields to file.\n\n        Parameters\n        ----------\n        timestamp : numeric\n            The timestamp of the current data.\n        robot_rt_data : RobotRtData object\n            This object contains the current robot state.\n\n        \"\"\"\n        if self.done_logging:\n            return\n\n        # First write the timestamp\n        formatted_tim = f'{timestamp:{self.timestamp_element_width}}'\n        self.data_dict[formatted_tim] = []\n        for field in self.fields:\n            # For each field, write each value with appropriate spacing.\n            ts_data = self.get_timestamp_data(robot_rt_data, field)\n            if ts_data is None:\n                continue\n            self.data_dict[formatted_tim].extend([f'{x:{self.element_width}}' for x in ts_data.data])\n\n    def stop_logging_commands(self):\n        \"\"\"Stops saving sent commands to log\"\"\"\n        self.logging_commands = False\n\n    def end_log(self, ignore_checkpoints=True):\n        \"\"\" Write all accumulated sent commands and close file.\n\n        Return\n        --------\n\n        string\n            Filename where logged info can be found\n        \"\"\"\n\n        self.done_logging = True\n\n        self.robot_trajectories.robot_df_hist.output_dfs.append(\n            pd.DataFrame.from_dict(self.data_dict, orient='index', columns=self.expanded_fields))\n\n        # Write all sent commands.\n        while not self.command_queue.empty():\n            command = self.command_queue.get()\n            if ignore_checkpoints and command.startswith('SetCheckpoint'):\n                continue\n            self.robot_trajectories.robot_context.sent_commands.append(command)\n\n        self.robot_trajectories.to_file(self.file_name, file_path=self.file_path)\n\n        if self.file_path:\n            return PurePath.joinpath(PurePath(self.file_path), self.file_name)\n        else:\n            return PurePath(self.file_name)",
+    "span": [
+      63,
+      364
+    ],
+    "start_byte": 3358,
+    "end_byte": 17353,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/_robot_trajectory_logger.py",
+    "name": "_RobotTrajectoryLogger"
+  }
+]

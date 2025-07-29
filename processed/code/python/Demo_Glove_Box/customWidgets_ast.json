@@ -1,0 +1,115 @@
+[
+  {
+    "snippet": "from PyQt5.QtWidgets import QFrame, QPushButton, QGridLayout, QWidget, QLabel",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 77,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "from PyQt5.QtGui import QPixmap",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 78,
+    "end_byte": 109,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "from PyQt5.QtCore import QRect, Qt",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 110,
+    "end_byte": 144,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "import os.path",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 145,
+    "end_byte": 159,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "class CustomToggleButton(QPushButton):\n    def __init__(self, parent=None):\n        super(CustomToggleButton, self).__init__(parent)\n        self.setCheckable(True)\n        self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        self.setFixedSize(95, 120)\n        self.clicked.connect(self._on_pressed_col_change)\n\n    def _on_pressed_col_change(self):\n        if self.isChecked():\n            self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(0,255,0,255); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")\n        else:\n            self.setStyleSheet(\"margin: 1px; padding: 7px; background-color:rgba(125,125,125,100); color: black; border-style: solid; border-radius: 3px; border-width: 0.5px; border-color: black;\")",
+    "span": [
+      7,
+      19
+    ],
+    "start_byte": 162,
+    "end_byte": 1087,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "name": "CustomToggleButton"
+  },
+  {
+    "snippet": "class StatusImage(QLabel):\n    def __init__(self, parent=None):\n        super(StatusImage, self).__init__(parent=parent)\n        current_dir = os.path.dirname(os.path.realpath(__file__))\n        self.im_height = 150\n        self.pixmap_on = QPixmap(os.path.join(current_dir, 'images/vial.png'))\n        self.pixmap_on = self.pixmap_on.scaledToHeight(self.im_height)\n        self.pixmap_off = QPixmap(os.path.join(current_dir, 'images/Vial_grey.png'))\n        self.pixmap_off = self.pixmap_off.scaledToHeight(self.im_height)\n\n        self.setPixmap(self.pixmap_on)\n\n    def switch_on(self):\n        self.setPixmap(self.pixmap_on)\n\n    def switch_off(self):\n        self.setPixmap(self.pixmap_off)",
+    "span": [
+      21,
+      37
+    ],
+    "start_byte": 1089,
+    "end_byte": 1784,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "name": "StatusImage"
+  },
+  {
+    "snippet": "class RackStatus(QWidget):\n    def __init__(self, parent=None, *args, **kwargs):\n        super(RackStatus, self).__init__(parent=parent, *args, **kwargs)\n        self.grid = QGridLayout()\n        self.rack_list = []\n        for i in range(6):\n            self.rack_list.append(StatusImage())\n\n        positions = [(i, j) for i in range(2) for j in range(3)]\n\n        for i in range(6):\n            self.grid.addWidget(self.rack_list[i], *positions[i], alignment=Qt.AlignCenter)\n        self.setLayout(self.grid)\n\n    def turn_vial_off(self, pos):\n        self.rack_list[pos].switch_off()\n\n    def turn_vial_on(self, pos):\n        self.rack_list[pos].switch_on()",
+    "span": [
+      40,
+      58
+    ],
+    "start_byte": 1787,
+    "end_byte": 2448,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "name": "RackStatus"
+  },
+  {
+    "snippet": "class CentStatus(QWidget):\n    def __init__(self, parent=None, *args, **kwargs):\n        super(CentStatus, self).__init__(parent=parent, *args, **kwargs)\n        self.frame = QFrame(parent)\n        self.frame.setGeometry(QRect(150, 120, 400, 400))\n        self.framebg = QLabel(parent=self.frame)\n        current_dir = os.path.dirname(os.path.realpath(__file__))\n        self.bgpath = os.path.join(current_dir, 'images/Centrifuge_Positions.png')\n        self.bgpixmap = QPixmap(self.bgpath)\n        self.bgpixmap = self.bgpixmap.scaled(400, 400)\n        self.framebg.setPixmap(self.bgpixmap)\n\n        self.led_on_path = os.path.join(current_dir, 'images/ring_light.png')\n        self.led_off_path = os.path.join(current_dir, 'images/ring_light_grey.png')\n        self.led_on_pm = QPixmap(self.led_on_path)\n        self.led_on_pm = self.led_on_pm.scaled(30, 30)\n        self.led_off_pm = QPixmap(self.led_off_path)\n        self.led_off_pm = self.led_off_pm.scaled(30, 30)\n        self.led_pos_list = [(50, 100), (185, 25), (320, 100), (320, 250), (185, 325), (50, 250)]\n\n        self.led_list = []\n        self.led_state = [False]*6\n        for i in range(6):\n            self.led_list.append(QLabel(self.frame))\n            self.led_list[i].setStyleSheet(\"background-color: transparent\")\n            self.led_list[i].setPixmap(self.led_off_pm)\n            self.led_list[i].setGeometry(QRect(*self.led_pos_list[i], 50, 50))\n\n    def toggle_led(self, pos):\n        if not self.led_state[pos]:\n            self.led_list[pos].setPixmap(self.led_on_pm)\n            self.led_state[pos] = True\n        else:\n            self.led_list[pos].setPixmap(self.led_off_pm)\n            self.led_state[pos] = False\n\n    def turn_vial_on(self, pos):\n        self.led_list[pos].setPixmap(self.led_on_pm)\n\n    def turn_vial_off(self, pos):\n        self.led_list[pos].setPixmap(self.led_off_pm)",
+    "span": [
+      60,
+      100
+    ],
+    "start_byte": 2450,
+    "end_byte": 4324,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "name": "CentStatus"
+  },
+  {
+    "snippet": "class RackButtons(QWidget):\n    def __init__(self, parent=None, *args, **kwargs):\n        super(RackButtons, self).__init__(parent=parent, *args, **kwargs)\n        self.grid = QGridLayout()\n        self.button_list = []\n        for i in range(6):\n            self.button_list.append(CustomToggleButton(f\"Vial {i+1}\"))\n\n        positions = [(i, j) for i in range(2) for j in range(3)]\n\n        for i in range(6):\n            self.grid.addWidget(self.button_list[i], *positions[i])\n        self.setLayout(self.grid)\n\n    def disableButtons(self):\n        for b in self.button_list:\n            b.setEnabled(False)\n\n    def enableButtons(self):\n        for b in self.button_list:\n            b.setEnabled(True)",
+    "span": [
+      102,
+      122
+    ],
+    "start_byte": 4326,
+    "end_byte": 5033,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/customWidgets.py",
+    "name": "RackButtons"
+  }
+]

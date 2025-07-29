@@ -1,0 +1,51 @@
+[
+  {
+    "snippet": "from PyQt5 import QtCore, QtGui, QtWidgets",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 309,
+    "end_byte": 351,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/ApplicationWindow.py"
+  },
+  {
+    "snippet": "class Ui_ApplicationWindow(object):\n    def setupUi(self, ApplicationWindow):\n        ApplicationWindow.setObjectName(\"ApplicationWindow\")\n        ApplicationWindow.resize(1920, 1080)\n        self.centralwidget = QtWidgets.QWidget(ApplicationWindow)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.videoPlayer = VideoPlayer(self.centralwidget)\n        self.videoPlayer.setGeometry(QtCore.QRect(400, 10, 1024, 768))\n        self.videoPlayer.setObjectName(\"videoPlayer\")\n        self.comboCameraSelect = QtWidgets.QComboBox(self.videoPlayer)\n        self.comboCameraSelect.setGeometry(QtCore.QRect(10, 10, 111, 22))\n        self.comboCameraSelect.setEditable(False)\n        self.comboCameraSelect.setMaxVisibleItems(2)\n        self.comboCameraSelect.setObjectName(\"comboCameraSelect\")\n        self.comboCameraSelect.addItem(\"\")\n        self.comboCameraSelect.addItem(\"\")\n        self.autoButton = AutoButton(self.centralwidget)\n        self.autoButton.setGeometry(QtCore.QRect(145, 350, 111, 51))\n        self.autoButton.setObjectName(\"autoButton\")\n        self.buttonPickSample = QtWidgets.QPushButton(self.centralwidget)\n        self.buttonPickSample.setGeometry(QtCore.QRect(580, 810, 181, 81))\n        self.buttonPickSample.setObjectName(\"buttonPickSample\")\n        self.buttonRetSample = QtWidgets.QPushButton(self.centralwidget)\n        self.buttonRetSample.setGeometry(QtCore.QRect(1070, 810, 181, 81))\n        self.buttonRetSample.setObjectName(\"buttonRetSample\")\n        self.labelJoystick = QtWidgets.QLabel(self.centralwidget)\n        self.labelJoystick.setGeometry(QtCore.QRect(1620, 170, 161, 61))\n        self.labelJoystick.setAlignment(QtCore.Qt.AlignCenter)\n        self.labelJoystick.setObjectName(\"labelJoystick\")\n        self.labelX = QtWidgets.QLabel(self.centralwidget)\n        self.labelX.setGeometry(QtCore.QRect(1620, 259, 81, 21))\n        font = QtGui.QFont()\n        font.setPointSize(12)\n        self.labelX.setFont(font)\n        self.labelX.setObjectName(\"labelX\")\n        self.labelY = QtWidgets.QLabel(self.centralwidget)\n        self.labelY.setGeometry(QtCore.QRect(1620, 290, 81, 20))\n        font = QtGui.QFont()\n        font.setPointSize(12)\n        self.labelY.setFont(font)\n        self.labelY.setObjectName(\"labelY\")\n        self.lcdNumberX = QtWidgets.QLCDNumber(self.centralwidget)\n        self.lcdNumberX.setGeometry(QtCore.QRect(1710, 260, 61, 23))\n        self.lcdNumberX.setObjectName(\"lcdNumberX\")\n        self.lcdNumberY = QtWidgets.QLCDNumber(self.centralwidget)\n        self.lcdNumberY.setGeometry(QtCore.QRect(1710, 290, 61, 23))\n        self.lcdNumberY.setObjectName(\"lcdNumberY\")\n        self.labelLogo = QtWidgets.QLabel(self.centralwidget)\n        self.labelLogo.setGeometry(QtCore.QRect(60, 40, 281, 281))\n        self.labelLogo.setObjectName(\"labelLogo\")\n        ApplicationWindow.setCentralWidget(self.centralwidget)\n        self.menubar = QtWidgets.QMenuBar(ApplicationWindow)\n        self.menubar.setGeometry(QtCore.QRect(0, 0, 1920, 21))\n        self.menubar.setObjectName(\"menubar\")\n        ApplicationWindow.setMenuBar(self.menubar)\n        self.statusbar = QtWidgets.QStatusBar(ApplicationWindow)\n        self.statusbar.setObjectName(\"statusbar\")\n        ApplicationWindow.setStatusBar(self.statusbar)\n\n        self.retranslateUi(ApplicationWindow)\n        self.comboCameraSelect.setCurrentIndex(0)\n        QtCore.QMetaObject.connectSlotsByName(ApplicationWindow)\n\n    def retranslateUi(self, ApplicationWindow):\n        _translate = QtCore.QCoreApplication.translate\n        ApplicationWindow.setWindowTitle(_translate(\"ApplicationWindow\", \"Micro Manipulation\"))\n        self.comboCameraSelect.setItemText(0, _translate(\"ApplicationWindow\", \"Camera1\"))\n        self.comboCameraSelect.setItemText(1, _translate(\"ApplicationWindow\", \"Camera2\"))\n        self.buttonPickSample.setText(_translate(\"ApplicationWindow\", \"Pick a Sample\"))\n        self.buttonRetSample.setText(_translate(\"ApplicationWindow\", \"Return the Sample\"))\n        self.labelJoystick.setText(_translate(\"ApplicationWindow\", \"Joystick not active\"))\n        self.labelX.setText(_translate(\"ApplicationWindow\", \"x position:\"))\n        self.labelY.setText(_translate(\"ApplicationWindow\", \"y position:\"))\n        self.labelLogo.setText(_translate(\"ApplicationWindow\", \"Image\"))",
+    "span": [
+      14,
+      87
+    ],
+    "start_byte": 354,
+    "end_byte": 4674,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/ApplicationWindow.py",
+    "name": "Ui_ApplicationWindow"
+  },
+  {
+    "snippet": "from frontend.VideoPlayer import VideoPlayer",
+    "span": [
+      88,
+      88
+    ],
+    "start_byte": 4675,
+    "end_byte": 4719,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/ApplicationWindow.py"
+  },
+  {
+    "snippet": "from frontend.customWidgets import AutoButton",
+    "span": [
+      89,
+      89
+    ],
+    "start_byte": 4720,
+    "end_byte": 4765,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/ApplicationWindow.py"
+  }
+]

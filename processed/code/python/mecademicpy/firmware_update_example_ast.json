@@ -1,0 +1,75 @@
+[
+  {
+    "snippet": "import argparse",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 200,
+    "end_byte": 215,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_example.py"
+  },
+  {
+    "snippet": "import logging",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 216,
+    "end_byte": 230,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_example.py"
+  },
+  {
+    "snippet": "import pathlib",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 231,
+    "end_byte": 245,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_example.py"
+  },
+  {
+    "snippet": "import mecademicpy.robot as mdr",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 247,
+    "end_byte": 278,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_example.py"
+  },
+  {
+    "snippet": "import mecademicpy.tools as tools",
+    "span": [
+      14,
+      14
+    ],
+    "start_byte": 279,
+    "end_byte": 312,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_example.py"
+  },
+  {
+    "snippet": "def firmware_update_example():\n    \"\"\" Example for updating Mecademic robot firmware with Python code \"\"\"\n    # Minimal command-line parsing to collect IP address of the robot to update and\n    # firmware file to install\n    parser = argparse.ArgumentParser(description='Update Mecademic robot firmware.')\n    parser.add_argument('--firmware',\n                        dest='firmware_file_path',\n                        type=str,\n                        help='Path to the firmware update file to install.')\n    parser.add_argument('--ip',\n                        dest='robot_ip',\n                        type=str,\n                        default='192.168.0.100',\n                        help='IP address of the robot to install the firmware on. Default is 192.168.0.100.')\n\n    args = parser.parse_args()\n\n    # Use tool to setup default console and file logger\n    tools.SetDefaultLogger(logging.INFO, f'{pathlib.Path(__file__).stem}.log')\n\n    # Validate that the provided firmware file exists\n    if not args.firmware_file_path:\n        raise ValueError(f'Firmware file path was not found (use --firmware command-line option)')\n    if not pathlib.Path(args.firmware_file_path).is_file():\n        raise FileNotFoundError(f'Firmware file {args.firmware_file_path} was not found')\n\n    # (use \"with\" block to ensure proper disconnection at end of block)\n    with mdr.Robot() as robot:\n        try:\n            print(f'Starting to install firmware file {args.firmware_file_path} on robot {args.robot_ip}')\n            # Start the firmware update\n            robot.Connect(args.robot_ip)\n            robot.UpdateRobot(args.firmware_file_path)\n            print(f'Successfully installed firmware file {args.firmware_file_path} on robot {args.robot_ip}')\n        #pylint: disable=broad-exception-caught\n        except Exception as e:\n            # Print error if firmware update failed\n            print(f'Update failed: {e}')\n            exit(-1)",
+    "span": [
+      17,
+      55
+    ],
+    "start_byte": 315,
+    "end_byte": 2257,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_example.py",
+    "name": "firmware_update_example"
+  }
+]

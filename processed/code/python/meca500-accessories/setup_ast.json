@@ -1,0 +1,179 @@
+[
+  {
+    "snippet": "import sys",
+    "span": [
+      22,
+      22
+    ],
+    "start_byte": 652,
+    "end_byte": 662,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py"
+  },
+  {
+    "snippet": "import os",
+    "span": [
+      23,
+      23
+    ],
+    "start_byte": 663,
+    "end_byte": 672,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py"
+  },
+  {
+    "snippet": "import subprocess",
+    "span": [
+      24,
+      24
+    ],
+    "start_byte": 673,
+    "end_byte": 690,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py"
+  },
+  {
+    "snippet": "import importlib.util",
+    "span": [
+      25,
+      25
+    ],
+    "start_byte": 691,
+    "end_byte": 712,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py"
+  },
+  {
+    "snippet": "import argparse",
+    "span": [
+      26,
+      26
+    ],
+    "start_byte": 713,
+    "end_byte": 728,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py"
+  },
+  {
+    "snippet": "def check_python_version():\n    \"\"\"Check if Python version is compatible\"\"\"\n    if sys.version_info < (3, 6):\n        print(\"ERROR: Python 3.6 or higher is required\")\n        return False\n    print(f\"✓ Python version: {sys.version}\")\n    return True\n\n",
+    "span": [
+      28,
+      34
+    ],
+    "start_byte": 730,
+    "end_byte": 981,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py",
+    "name": "check_python_version"
+  },
+  {
+    "snippet": "f check_robodk_installation():\n    \"\"\"Check if RoboDK is installed and accessible\"\"\"\n    try:\n        # Try to import RoboDK API\n        import robodk.robolink as rl\n        import robodk.robomath as rm\n        \n        print(\"✓ RoboDK API is available\")\n        \n        # Try to connect to RoboDK\n        try:\n            RDK = rl.Robolink()\n            if RDK.Valid():\n                print(\"✓ RoboDK software is running and accessible\")\n                return True\n            else:\n                print(\"⚠ RoboDK software is not running\")\n                print(\"  Please start RoboDK and try again\")\n                return False\n        except Exception as e:\n            print(f\"⚠ Cannot connect to RoboDK: {e}\")\n            return False\n            \n    except ImportError:\n        print(\"✗ RoboDK API not found\")\n        print(\"  Install with: pip install robodk\")\n        return False\n\ndef instal",
+    "span": [
+      36,
+      62
+    ],
+    "start_byte": 983,
+    "end_byte": 1889,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py",
+    "name": "eck_robodk_installation()"
+  },
+  {
+    "snippet": "dependencies():\n    \"\"\"Install required Python packages\"\"\"\n    print(\"Installing Python dependencies...\")\n    \n    try:\n        # Check if requirements.txt exists\n        if os.path.exists(\"requirements.txt\"):\n            subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", \"-r\", \"requirements.txt\"])\n            print(\"✓ Dependencies installed successfully\")\n            return True\n        else:\n            # Install basic RoboDK package\n            subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", \"robodk\"])\n            print(\"✓ RoboDK package installed\")\n            return True\n    except subprocess.CalledProcessError as e:\n        print(f\"✗ Failed to install dependencies: {e}\")\n        return False\n\ndef create_sampl",
+    "span": [
+      64,
+      81
+    ],
+    "start_byte": 1891,
+    "end_byte": 2642,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py",
+    "name": "ndencies():\n    \"\"\"I"
+  },
+  {
+    "snippet": "workspace():\n    \"\"\"Create a sample RoboDK workspace with Meca500\"\"\"\n    try:\n        import robodk.robolink as rl\n        import robodk.robomath as rm\n        \n        print(\"Creating sample workspace...\")\n        \n        RDK = rl.Robolink()\n        \n        if not RDK.Valid():\n            print(\"✗ Cannot connect to RoboDK\")\n            return False\n        \n        # Clear existing workspace\n        RDK.CloseStation()\n        \n        # Create new station\n        station = RDK.AddStation(\"Meca500_Sample_Workspace\")\n        \n        # Add Meca500 robot from library\n        print(\"  Adding Meca500 robot...\")\n        robot_file = RDK.getParam(\"PATH_LIBRARY\") + \"/Mecademic-Meca500-R3.robot\"\n        robot = RDK.AddFile(robot_file)\n        \n        if robot.Valid():\n            robot.setName(\"Meca500\")\n            print(\"  ✓ Meca500 robot added\")\n        else:\n            print(\"  ⚠ Could not add Meca500 robot from library\")\n            print(\"    Please add Meca500 manually from RoboDK library\")\n        \n        # Add sample targets\n        print(\"  Adding sample targets...\")\n        \n        # Home position\n        home_target = RDK.AddTarget(\"Home\")\n        home_joints = [0, 0, 0, 0, 0, 0]\n        home_target.setJoints(home_joints)\n        \n        # Pick position\n        pick_target = RDK.AddTarget(\"Pick\")\n        pick_pose = rm.transl(300, 100, 200)\n        pick_target.setPose(pick_pose)\n        \n        # Place position  \n        place_target = RDK.AddTarget(\"Place\")\n        place_pose = rm.transl(300, -100, 200)\n        place_target.setPose(place_pose)\n        \n        print(\"  ✓ Sample targets created\")\n        \n        # Save station\n        station_file = os.path.join(os.getcwd(), \"Meca500_Sample.rdk\")\n        RDK.Save(station_file)\n        print(f\"  ✓ Workspace saved as: {station_file}\")\n        \n        return True\n        \n    except Exception as e:\n        print(f\"✗ Failed to create workspace: {e}\")\n        return False\n\ndef validate_configuration()",
+    "span": [
+      83,
+      144
+    ],
+    "start_byte": 2644,
+    "end_byte": 4638,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py",
+    "name": "space():\n    \"\"\"Create "
+  },
+  {
+    "snippet": "    \"\"\"Validate configuration files\"\"\"\n    print(\"Validating configuration...\")\n    \n    try:\n        # Check if config template exists\n        if os.path.exists(\"config_template.py\"):\n            print(\"  ✓ Configuration template found\")\n        else:\n            print(\"  ⚠ Configuration template not found\")\n            return False\n        \n        # Try to import and validate config\n        if os.path.exists(\"config.py\"):\n            print(\"  ✓ Configuration file found\")\n            \n            # Import config module\n            spec = importlib.util.spec_from_file_location(\"config\", \"config.py\")\n            config = importlib.util.module_from_spec(spec)\n            spec.loader.exec_module(config)\n            \n            # Run validation if available\n            if hasattr(config, 'validate_config'):\n                errors = config.validate_config()\n                if errors:\n                    print(\"  ✗ Configuration validation failed:\")\n                    for error in errors:\n                        print(f\"    - {error}\")\n                    return False\n                else:\n                    print(\"  ✓ Configuration validation passed\")\n            else:\n                print(\"  ⚠ No validation function in config\")\n        else:\n            print(\"  ⚠ No config.py found\")\n            print(\"    Copy config_template.py to config.py and customize\")\n        \n        return True\n        \n    except Exception as e:\n        print(f\"  ✗ Configuration validation error: {e}\")\n        return False\n\ndef check_example_files():\n    \"\"\"Check if e",
+    "span": [
+      146,
+      187
+    ],
+    "start_byte": 4640,
+    "end_byte": 6212,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py",
+    "name": "\"\"\"Validate configurat"
+  },
+  {
+    "snippet": "mple files are present\"\"\"\n    print(\"Checking example files...\")\n    \n    files_to_check = [\n        \"example_robodk_script.py\",\n        \"requirements.txt\",\n        \"config_template.py\",\n        \"README.md\"\n    ]\n    \n    all_present = True\n    for file_name in files_to_check:\n        if os.path.exists(file_name):\n            print(f\"  ✓ {file_name}\")\n        else:\n            print(f\"  ✗ {file_name} - Missing\")\n            all_present = False\n    \n    return all_present\n\ndef run_system_check():\n    \"\"\"Run complete syst",
+    "span": [
+      189,
+      208
+    ],
+    "start_byte": 6214,
+    "end_byte": 6739,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py",
+    "name": " files are present\""
+  },
+  {
+    "snippet": " check\"\"\"\n    print(\"RoboDK Meca500 Setup - System Check\")\n    print(\"=\" * 40)\n    \n    checks = [\n        (\"Python Version\", check_python_version),\n        (\"RoboDK Installation\", check_robodk_installation),\n        (\"Example Files\", check_example_files),\n        (\"Configuration\", validate_configuration)\n    ]\n    \n    results = {}\n    for check_name, check_func in checks:\n        print(f\"\\n{check_name}:\")\n        results[check_name] = check_func()\n    \n    print(\"\\n\" + \"=\" * 40)\n    print(\"SYSTEM CHECK SUMMARY:\")\n    \n    all_passed = True\n    for check_name, result in results.items():\n        status = \"PASS\" if result else \"FAIL\"\n        print(f\"  {check_name}: {status}\")\n        if not result:\n            all_passed = False\n    \n    if all_passed:\n        print(\"\\n✓ All checks passed! System is ready for RoboDK programming.\")\n    else:\n        print(\"\\n⚠ Some checks failed. Please address the issues above.\")\n    \n    return all_passed\n\ndef show_usage():\n    \"\"\"Show usage instructions\"\"\"\n",
+    "span": [
+      210,
+      242
+    ],
+    "start_byte": 6741,
+    "end_byte": 7747,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py",
+    "name": "ck\"\"\"\n    print("
+  },
+  {
+    "snippet": "  print(\"\"\"\nRoboDK Meca500 Setup Instructions:\n=================================\n\n1. System Check:\n   python setup.py --check-install\n\n2. Install Dependencies:\n   python setup.py --install-deps\n\n3. Create Sample Workspace:\n   python setup.py --create-workspace\n\n4. Validate Configuration:\n   python setup.py --validate-config\n\n5. Run Example:\n   python example_robodk_script.py\n\nFor more information, see README.md\n\"\"\")\n\ndef main():\n    \"\"\"Main setup function\"\"\"\n    parser",
+    "span": [
+      244,
+      266
+    ],
+    "start_byte": 7749,
+    "end_byte": 8222,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py",
+    "name": "int(\"\"\"\nRo"
+  },
+  {
+    "snippet": " argparse.ArgumentParser(description=\"RoboDK Meca500 Setup Script\")\n    parser.add_argument(\"--check-install\", action=\"store_true\", \n                       help=\"Check RoboDK installation and system\")\n    parser.add_argument(\"--install-deps\", action=\"store_true\",\n                       help=\"Install Python dependencies\")\n    parser.add_argument(\"--create-workspace\", action=\"store_true\",\n                       help=\"Create sample RoboDK workspace\")\n    parser.add_argument(\"--validate-config\", action=\"store_true\",\n                       help=\"Validate configuration files\")\n    parser.add_argument(\"--all\", action=\"store_true\",\n                       help=\"Run all setup steps\")\n    \n    args = parser.parse_args()\n    \n    # If no arguments provided, show usage\n    if not any(vars(args).values()):\n        show_usage()\n        return\n    \n    success = True\n    \n    if args.check_install or args.all:\n        success &= run_system_check()\n    \n    if args.install_deps or args.all:\n        print(\"\\nInstalling Dependencies:\")\n        success &= install_dependencies()\n    \n    if args.create_workspace or args.all:\n        print(\"\\nCreating Sample Workspace:\")\n        success &= create_sample_workspace()\n    \n    if args.validate_config or args.all:\n        print(\"\\nValidating Configuration:\")\n        success &= validate_configuration()\n    \n    if success:\n        print(\"\\n✓ Setup completed successfully!\")\n        print(\"You can now run: python example_robodk_script.py\")\n    else:\n        print(\"\\n⚠ Setup completed with some issues.\")\n        print(\"Please check the error messages above.\")\n\nif __name__ == \"__main__\":\n    main()",
+    "span": [
+      268,
+      311
+    ],
+    "start_byte": 8224,
+    "end_byte": 9888,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/simulations/robodk-setup/setup.py",
+    "name": "pars"
+  }
+]

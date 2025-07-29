@@ -1,0 +1,175 @@
+[
+  {
+    "snippet": "import MainUI",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 13,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "from PyQt5 import QtWidgets, QtGui",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 14,
+    "end_byte": 48,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "from PyQt5.QtCore import QObject, QThread, pyqtSignal",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 49,
+    "end_byte": 102,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 103,
+    "end_byte": 125,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "import joystick",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 126,
+    "end_byte": 141,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "import parsdict",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 142,
+    "end_byte": 157,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "from functools import partial",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 158,
+    "end_byte": 187,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "import robot",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 189,
+    "end_byte": 201,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "import MOXAE1212 as mx",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 202,
+    "end_byte": 224,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py"
+  },
+  {
+    "snippet": "class Application(QtWidgets.QMainWindow, MainUI.Ui_MainWindow):\n    def __init__(self, *args, **kwargs):\n        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)\n        self.setupUi(self)\n        self.setFixedSize(1114, 730)\n\n        # Display UI setup\n        self.setWindowTitle(\"Mecademic Robot\")\n        self.setWindowIcon(QtGui.QIcon(\"robot_icon.png\"))\n        self.tcpPose.set_label(['x', 'y', 'z', 'alpha', 'beta', 'gamma'])\n        self.jointPose.set_label(['J1', 'J2', 'J3', 'J4', 'J5', 'J6'])\n        self.disableUI()\n        self.errorLabel.setStyleSheet(\"background-color:rgb(200,200,200)\")\n\n        # Build backend\n        self.robot = robot.Robot()\n        self.moxa = mx.MoxaE1212()\n        self.monitorThread = QThread()\n        self.monitorWorker = RobotMonitoring(self.robot)\n        self.moxaThread = QThread()\n        self.moxaWorker = Moxa_monitoring(self.moxa)\n        self.jogMode = None\n        self.jogVelocity = None\n        self.jointp = None\n        self.tcpp = None\n        self.moxa_state = None\n\n        # Connect Buttons\n        self.pushButtonConnect.clicked.connect(self.on_connect)\n        self.pushButtonDisconnect.clicked.connect(self.on_disconnect)\n        self.pushButtonUnpause.clicked.connect(self.on_unpause)\n        self.pushButtonActivate.clicked.connect(self.on_activate)\n        self.pushButtonHome.clicked.connect(self.on_home)\n        self.pushButtonReset.clicked.connect(self.on_reset_error)\n        self.pushButtonTest.clicked.connect(self.on_get_robot_state)\n        # self.pushButtonTest.clicked.connect(self.on_test_move)\n        self.pushButtonStart.clicked.connect(self.on_play)\n        self.pushButtonGenerate.clicked.connect(self.on_generate_script)\n\n        self.jogWindow.delta.connect(self.on_jog_button)\n        self.jogWindow.mode.connect(self.on_get_jog_mode)\n        self.jogWindow.vel.connect(self.on_get_jog_velocity)\n        self.jogWindow.joymode.clicked.connect(self.on_joy_mode)\n\n        self.teachWindow.but1.clicked.connect(self.on_send_command)\n        self.teachWindow.but2.clicked.connect(self.on_insert_movejoints)\n        self.teachWindow.but3.clicked.connect(self.on_insert_movepose)\n        self.teachWindow.but4.clicked.connect(self.on_insert_movelin)\n\n        self.moxaWidget.out_0.clicked.connect(lambda ignore, out=0: self.on_click_output(out))\n        self.moxaWidget.out_1.clicked.connect(lambda ignore, out=1: self.on_click_output(out))\n        self.moxaWidget.out_2.clicked.connect(lambda ignore, out=2: self.on_click_output(out))\n        self.moxaWidget.out_3.clicked.connect(lambda ignore, out=3: self.on_click_output(out))\n        self.moxaWidget.out_4.clicked.connect(lambda ignore, out=4: self.on_click_output(out))\n        self.moxaWidget.out_5.clicked.connect(lambda ignore, out=5: self.on_click_output(out))\n        self.moxaWidget.out_6.clicked.connect(lambda ignore, out=6: self.on_click_output(out))\n        self.moxaWidget.out_7.clicked.connect(lambda ignore, out=7: self.on_click_output(out))\n\n        # Connect Monitoring\n        self.monitorWorker.joints.connect(self.updateJointPose)\n        self.monitorWorker.pose.connect(self.updateTCPPose)\n        self.monitorWorker.error_state.connect(self.updateErrorState)\n\n    def closeEvent(self, event):\n        self.monitorWorker.dcFlag()\n        self.moxaWorker.dcFlag()\n        event.accept()\n\n    def on_connect(self):\n        try:\n            self.robot.Connect()\n        except:\n            error_dialog = QtWidgets.QErrorMessage(self)\n            error_dialog.setWindowTitle(\"Connection Error\")\n            error_dialog.showMessage(\"Could not connect to the robot\")\n            return\n        if self.useMoxa.isChecked():\n            r = self.moxa.connect(self.moxaIP.text())\n            if not r:\n                error_dialog = QtWidgets.QErrorMessage(self)\n                error_dialog.setWindowTitle(\"Connection Error\")\n                error_dialog.showMessage(\"Could not connect to the moxa\")\n                self.robot.Disconnect()\n                return\n        self.pushButtonConnect.setStyleSheet(\"background-color:rgb(0,255,0)\")\n        sleep(0.25)\n        self.enableUI()\n\n        # Start Monitoring\n        if not self.monitorThread.isRunning():\n            self.monitorWorker.moveToThread(self.monitorThread)\n            self.monitorThread.started.connect(self.monitorWorker.run)\n            self.monitorWorker.finished.connect(self.monitorThread.quit)\n            self.monitorWorker.finished.connect(self.monitorWorker.deleteLater)\n            self.monitorThread.finished.connect(self.monitorThread.deleteLater)\n            self.monitorThread.start()\n        else:\n            print(\"Thread already running\")\n            self.monitorWorker.dcPause()\n        if self.useMoxa.isChecked():\n            if not self.moxaThread.isRunning():\n                self.moxaWorker.moveToThread(self.moxaThread)\n                self.moxaThread.started.connect(self.moxaWorker.run)\n                self.moxaWorker.finished.connect(self.moxaThread.quit)\n                self.moxaWorker.finished.connect(self.moxaWorker.deleteLater)\n                self.moxaThread.finished.connect(self.moxaThread.deleteLater)\n                self.moxaWorker.moxa_state.connect(self.updateMoxa)\n                self.moxaThread.start()\n            else:\n                self.moxaWorker.pFlag()\n\n    def on_disconnect(self):\n        try:\n            self.robot.Disconnect()\n        except:\n            print(\"Error\")\n        self.pushButtonConnect.setStyleSheet(\"background-color:rgb(127,127,127)\")\n        self.monitorWorker.dcPause()\n        if self.useMoxa.isChecked():\n            self.moxaWorker.pFlag()\n        self.disableUI()\n\n    def on_activate(self):\n        self.robot.ActivateRobot()\n\n    def on_home(self):\n        self.robot.Home()\n\n    def on_unpause(self):\n        self.robot.ResumeMotion()\n\n    def on_reset_error(self):\n        self.robot.ResetError()\n\n    def on_get_robot_state(self):\n        print(self.robot.GetRobotState().error_status)\n\n    def updateJointPose(self, joints):\n        self.jointPose.update(joints)\n        self.jointp = joints\n\n    def updateTCPPose(self, pose):\n        self.tcpPose.update(pose)\n        self.tcpp = pose\n\n    def updateErrorState(self, state):\n        if state:\n            self.errorLabel.setStyleSheet(\"background-color:rgb(255,0,0)\")\n            self.errorLabel.setText(\"Error\")\n        else:\n            self.errorLabel.setStyleSheet(\"background-color:rgb(0,255,0)\")\n            self.errorLabel.setText(\"No Error\")\n\n    def updateMoxa(self, state):\n        self.moxa_state = state\n        self.moxaWidget.update_input(state)\n\n    def on_click_output(self, out):\n        self.moxaWorker.pFlag()\n        if out == 0:\n            if self.moxaWidget.out_0.isChecked():\n                self.moxa.setsingleoutput(0, True)\n            else:\n                self.moxa.setsingleoutput(0, False)\n        if out == 1:\n            if self.moxaWidget.out_1.isChecked():\n                self.moxa.setsingleoutput(1, True)\n            else:\n                self.moxa.setsingleoutput(1, False)\n        if out == 2:\n            if self.moxaWidget.out_2.isChecked():\n                self.moxa.setsingleoutput(2, True)\n            else:\n                self.moxa.setsingleoutput(2, False)\n        if out == 3:\n            if self.moxaWidget.out_3.isChecked():\n                self.moxa.setsingleoutput(3, True)\n            else:\n                self.moxa.setsingleoutput(3, False)\n        if out == 4:\n            if self.moxaWidget.out_4.isChecked():\n                self.moxa.setsingleoutput(4, True)\n            else:\n                self.moxa.setsingleoutput(4, False)\n        if out == 5:\n            if self.moxaWidget.out_5.isChecked():\n                self.moxa.setsingleoutput(5, True)\n            else:\n                self.moxa.setsingleoutput(5, False)\n        if out == 6:\n            if self.moxaWidget.out_6.isChecked():\n                self.moxa.setsingleoutput(6, True)\n            else:\n                self.moxa.setsingleoutput(6, False)\n        if out == 7:\n            if self.moxaWidget.out_7.isChecked():\n                self.moxa.setsingleoutput(7, True)\n            else:\n                self.moxa.setsingleoutput(7, False)\n        self.moxaWorker.pFlag()\n\n    def on_play(self):\n        self.disableUI()\n        if self.jogWindow.joymode.isChecked():\n            self.joyWorker.stoptrig()\n            self.jogWindow.joymode.setChecked(False)\n        self.jogWindow.jog.setChecked(False)\n        self.interpreterThread = QThread()\n        text = self.teachWindow.textf.toPlainText()\n        self.liveInterpreter = Interpreter(self.robot, self.moxa, text)\n        self.liveInterpreter.moveToThread(self.interpreterThread)\n        self.interpreterThread.started.connect(self.liveInterpreter.run)\n        self.interpreterThread.finished.connect(self.enableUI)\n        self.liveInterpreter.finished.connect(self.interpreterThread.quit)\n        self.liveInterpreter.finished.connect(self.liveInterpreter.deleteLater)\n        self.interpreterThread.finished.connect(self.interpreterThread.deleteLater)\n        self.interpreterThread.start()\n\n    def on_test_move(self):\n        self.robot.MovePose(200, 0, 300, 0, 90, 0)\n        self.robot.MovePose(200, 100, 300, 0, 90, 0)\n        self.robot.MovePose(200, 100, 100, 0, 90, 0)\n        self.robot.MovePose(200, -100, 100, 0, 90, 0)\n        self.robot.MovePose(200, -100, 300, 0, 90, 0)\n        self.robot.MovePose(200, 0, 300, 0, 90, 0)\n\n    def on_jog_button(self, data):\n        if self.jogMode is None:\n            print('Select jog mode')\n        elif self.jogVelocity is None:\n            print('Select a velocity')\n        else:\n            vel_scale = self.jogVelocity / 100.0\n            if self.jogMode == 'Joints':\n                joint_vel = [150, 150, 180, 300, 300, 500]\n                data_vel = [d * vel_scale for d in data]\n                data_temp = [joint_vel[i] * data_vel[i] for i in range(6)]\n                self.robot.MoveJointsVel(data_temp[0], data_temp[1], data_temp[2], data_temp[3], data_temp[4],\n                                         data_temp[5])\n            if self.jogMode == 'WRF':\n                joint_vel = [500, 500, 500, 150, 150, 150]\n                data_vel = [d * vel_scale for d in data]\n                data_temp = [joint_vel[i] * data_vel[i] for i in range(6)]\n                self.robot.MoveLinVelWRF(data_temp[0], data_temp[1], data_temp[2], data_temp[3], data_temp[4],\n                                         data_temp[5])\n            if self.jogMode == 'TRF':\n                joint_vel = [500, 500, 500, 150, 150, 150]\n                data_vel = [d * vel_scale for d in data]\n                data_temp = [joint_vel[i] * data_vel[i] for i in range(6)]\n                self.robot.MoveLinVelTRF(data_temp[0], data_temp[1], data_temp[2], data_temp[3], data_temp[4],\n                                         data_temp[5])\n\n    def on_get_jog_velocity(self, value):\n        self.jogVelocity = value\n\n    def on_get_jog_mode(self, mode):\n        self.jogMode = mode\n\n    def on_joy_mode(self):\n        if self.jogWindow.joymode.isChecked():\n            self.joystick = joystick.MecaJoy()\n            if not self.joystick.checkdriver():\n                return\n            if not self.joystick.checkplugged():\n                return\n            self.joystick.getcaps()\n            self.joyThread = QThread()\n            self.joyWorker = Joystick_monitoring(self.joystick)\n            self.joyWorker.moveToThread(self.joyThread)\n            self.joyThread.started.connect(self.joyWorker.run)\n            self.joyWorker.joy_data.connect(self.on_get_joy)\n            self.joyWorker.finished.connect(self.joyThread.quit)\n            self.joyWorker.finished.connect(self.joyWorker.deleteLater)\n            self.joyThread.finished.connect(self.joyThread.deleteLater)\n            self.joyThread.start()\n\n        else:\n            self.joyWorker.stoptrig()\n\n    def on_get_joy(self, data):\n        if self.jogMode is None:\n            print('Select jog mode')\n        elif self.jogVelocity is None:\n            print('Select a velocity')\n        else:\n            vel_scale = self.jogVelocity/100\n            if self.jogMode == 'Joints':\n                if not data[3] and not data[4]:\n                    joint_vel = [150, 150, 180, 300, 300, 500]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i] * data_vel[i] for i in range(3)]\n                    self.robot.MoveJointsVel(data_temp[0], data_temp[1], data_temp[2], 0, 0, 0)\n                else:\n                    joint_vel = [150, 150, 180, 300, 300, 500]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i+3] * data_vel[i] for i in range(3)]\n                    self.robot.MoveJointsVel(0, 0, 0, data_temp[0], data_temp[1], data_temp[2])\n            if self.jogMode == 'WRF':\n                if not data[3] and not data[4]:\n                    joint_vel = [500, 500, 500, 150, 150, 150]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i] * data_vel[i] for i in range(3)]\n                    self.robot.MoveLinVelWRF(data_temp[0], data_temp[1], data_temp[2], 0, 0, 0)\n                else:\n                    joint_vel = [500, 500, 500, 150, 150, 150]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i + 3] * data_vel[i] for i in range(3)]\n                    self.robot.MoveLinVelWRF(0, 0, 0, data_temp[0], data_temp[1], data_temp[2])\n            if self.jogMode == 'TRF':\n                if not data[3] and not data[4]:\n                    joint_vel = [500, 500, 500, 150, 150, 150]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i] * data_vel[i] for i in range(3)]\n                    self.robot.MoveLinVelTRF(data_temp[0], data_temp[1], data_temp[2], 0, 0, 0)\n                else:\n                    joint_vel = [500, 500, 500, 150, 150, 150]\n                    data_vel = [data[0] * vel_scale, data[1] * vel_scale, data[2] * vel_scale]\n                    data_temp = [joint_vel[i+3] * data_vel[i] for i in range(3)]\n                    self.robot.MoveLinVelTRF(0, 0, 0, data_temp[0], data_temp[1], data_temp[2])\n\n\n    def on_send_command(self):\n        command = self.teachWindow.linef.text()\n        self.robot.SendCustomCommand(command)\n\n    def on_insert_movejoints(self):\n        command = \"MoveJoints(\" + str(self.jointp[0]) + ', ' + str(self.jointp[1]) + ', ' + str(\n            self.jointp[2]) + ', ' + str(self.jointp[3]) + ', ' + str(self.jointp[4]) + ', ' + str(self.jointp[5]) + ')'\n        self.teachWindow.textf.insertPlainText(command + '\\n')\n\n    def on_insert_movelin(self):\n        command = \"MoveLin(\" + str(self.tcpp[0]) + ', ' + str(self.tcpp[1]) + ', ' + str(self.tcpp[2]) + ', ' + str(\n            self.tcpp[3]) + ', ' + str(self.tcpp[4]) + ', ' + str(self.tcpp[5]) + ')'\n        self.teachWindow.textf.insertPlainText(command + '\\n')\n\n    def on_insert_movepose(self):\n        command = \"MovePose(\" + str(self.tcpp[0]) + ', ' + str(self.tcpp[1]) + ', ' + str(self.tcpp[2]) + ', ' + str(\n            self.tcpp[3]) + ', ' + str(self.tcpp[4]) + ', ' + str(self.tcpp[5]) + ')'\n        self.teachWindow.textf.insertPlainText(command + '\\n')\n\n    def disableUI(self):\n        self.jointPose.setEnabled(False)\n        self.tcpPose.setEnabled(False)\n        self.jogWindow.setEnabled(False)\n        self.teachWindow.setEnabled(False)\n        self.pushButtonDisconnect.setEnabled(False)\n        self.pushButtonActivate.setEnabled(False)\n        self.pushButtonHome.setEnabled(False)\n        self.moxaWidget.setEnabled(False)\n        self.errorLabel.setStyleSheet(\"background-color:rgb(200,200,200)\")\n\n    def enableUI(self):\n        self.jointPose.setEnabled(True)\n        self.tcpPose.setEnabled(True)\n        self.jogWindow.setEnabled(True)\n        self.teachWindow.setEnabled(True)\n        self.pushButtonDisconnect.setEnabled(True)\n        self.pushButtonActivate.setEnabled(True)\n        self.pushButtonHome.setEnabled(True)\n        if self.useMoxa.isChecked():\n            self.moxaWidget.setEnabled(True)\n        if self.robot.GetRobotState().error_status:\n            self.errorLabel.setStyleSheet(\"background-color:rgb(255,0,0)\")\n            self.errorLabel.setText(\"Error\")\n        else:\n            self.errorLabel.setStyleSheet(\"background-color:rgb(0,255,0)\")\n            self.errorLabel.setText(\"No Error\")\n\n    def on_generate_script(self):\n        file = open('generated_script.py', 'w+')\n        file.write('import robot\\n\\n')\n        file.write('r = robot.Robot()\\n')\n        file.write('r.Connect()\\n')\n        file.write('r.ActivateRobot()\\n')\n        file.write('r.Home()\\n')\n        file.write('print(r.WaitHomed())\\n')\n\n        mod_text = self.teachWindow.textf.toPlainText()\n        rep = parsdict.gen_script\n        for i, j in rep.items():\n            mod_text = mod_text.replace(i, j)\n        file.write(mod_text+'\\n')\n\n\n        file.write('r.Disconnect()')\n        file.close()",
+    "span": [
+      13,
+      398
+    ],
+    "start_byte": 227,
+    "end_byte": 17551,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "name": "Application"
+  },
+  {
+    "snippet": "class RobotMonitoring(QObject):\n    finished = pyqtSignal()\n    joints = pyqtSignal(list)\n    pose = pyqtSignal(list)\n    error_state = pyqtSignal(bool)\n\n    def __init__(self, robot):\n        super().__init__()\n        self.robot = robot\n        self.jointpos = [0, 0, 0, 0, 0, 0]\n        self.connectedFlag = True\n        self.pauseDC = False\n\n    def run(self):\n        prev_error_state = self.robot.GetRobotState().error_status\n        while self.connectedFlag:\n            while self.pauseDC:\n                pass\n            jpose = self.robot.GetJoints()\n            tcppose = self.robot.GetPose()\n            self.joints.emit(jpose)\n            self.pose.emit(tcppose)\n            new_error_state = self.robot.GetRobotState().error_status\n            if new_error_state is not prev_error_state:\n                self.error_state.emit(new_error_state)\n                prev_error_state = new_error_state\n            sleep(0.1)\n        self.finished.emit()\n\n    def dcFlag(self):\n        self.connectedFlag = False\n        self.pauseDC = False\n\n    def dcPause(self):\n        if self.pauseDC:\n            self.pauseDC = False\n        else:\n            self.pauseDC = True",
+    "span": [
+      403,
+      440
+    ],
+    "start_byte": 17572,
+    "end_byte": 18747,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "name": "RobotMonitoring"
+  },
+  {
+    "snippet": "class Interpreter(QObject):\n    finished = pyqtSignal()\n\n    def __init__(self, robot, moxa, text):\n        super().__init__()\n        self.robot = robot\n        self.moxa = moxa\n        self.text = text\n\n    def run(self):\n        mod_text = self.text\n        rep = parsdict.live_rep\n        mox = parsdict.moxadict\n        for i, j in rep.items():\n            mod_text = mod_text.replace(i, j)\n        for i, j in mox.items():\n            mod_text = mod_text.replace(i, j)\n        try:\n            exec(mod_text)\n        except:\n            print(\"Error\")\n        self.finished.emit()",
+    "span": [
+      443,
+      464
+    ],
+    "start_byte": 18750,
+    "end_byte": 19336,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "name": "Interpreter"
+  },
+  {
+    "snippet": "class Moxa_monitoring(QObject):\n    finished = pyqtSignal()\n    moxa_state = pyqtSignal(list)\n\n    def __init__(self, moxa):\n        super().__init__()\n        self.moxa = moxa\n        self.connectFlag = True\n        self.pauseFlag = False\n\n    def run(self):\n        while self.connectFlag:\n            state = self.moxa.readallinputs()\n            self.moxa_state.emit(state)\n            while self.pauseFlag:\n                pass\n            sleep(0.2)\n        self.finished.emit()\n\n    def dcFlag(self):\n        self.connectFlag = False\n        self.pauseFlag = False\n\n    def pFlag(self):\n        if self.pauseFlag:\n            self.pauseFlag = False\n        else:\n            self.pauseFlag = True",
+    "span": [
+      467,
+      494
+    ],
+    "start_byte": 19339,
+    "end_byte": 20042,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "name": "Moxa_monitoring"
+  },
+  {
+    "snippet": "class Joystick_monitoring(QObject):\n    finished = pyqtSignal()\n    joy_data = pyqtSignal(list)\n    def __init__(self, joy):\n        super().__init__()\n        self.joy = joy\n        self.stopFlag = True\n\n    def run(self):\n        while self.stopFlag:\n            data = self.joy.getinfo()\n            self.joy_data.emit(data)\n            sleep(0.05)\n        self.finished.emit()\n\n    def stoptrig(self):\n        self.stopFlag = False",
+    "span": [
+      496,
+      512
+    ],
+    "start_byte": 20044,
+    "end_byte": 20479,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/PythonUI/UIApp.py",
+    "name": "Joystick_monitoring"
+  }
+]

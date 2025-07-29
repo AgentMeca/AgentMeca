@@ -1,0 +1,38 @@
+[
+  {
+    "snippet": "import React from 'react'",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 25,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/StatusBar/StatusLed/StatusLed.js"
+  },
+  {
+    "snippet": "import styles from './StatusLed.module.css'",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 26,
+    "end_byte": 69,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/StatusBar/StatusLed/StatusLed.js"
+  },
+  {
+    "snippet": "export default function StatusLed(props) {\n    return (\n        <div className={`${styles.led} ${styles[props.bgcolor]}`}></ div>\n    )\n}",
+    "span": [
+      4,
+      8
+    ],
+    "start_byte": 71,
+    "end_byte": 208,
+    "node_type": "export_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/StatusBar/StatusLed/StatusLed.js"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "total_files": 122,
+  "processed_files": 105,
+  "total_units": 827,
+  "by_language": {
+    "python": {
+      "files": 89,
+      "units": 736
+    },
+    "csharp": {
+      "files": 2,
+      "units": 14
+    },
+    "javascript": {
+      "files": 11,
+      "units": 42
+    },
+    "c": {
+      "files": 3,
+      "units": 35
+    }
+  }
+}

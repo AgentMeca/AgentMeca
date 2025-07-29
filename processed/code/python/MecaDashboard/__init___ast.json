@@ -1,0 +1,50 @@
+[
+  {
+    "snippet": "from flask import Flask",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 23,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/api/app/__init__.py"
+  },
+  {
+    "snippet": "from mecademicpy.robot import Robot",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 24,
+    "end_byte": 59,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/api/app/__init__.py"
+  },
+  {
+    "snippet": "import logging",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 60,
+    "end_byte": 74,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/api/app/__init__.py"
+  },
+  {
+    "snippet": "from app import routes",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 201,
+    "end_byte": 223,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/api/app/__init__.py"
+  }
+]

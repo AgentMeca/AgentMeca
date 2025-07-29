@@ -1,0 +1,15 @@
+[
+  {
+    "snippet": "class RobotStatusCodeInfo:\n\n    def __init__(self, code, name, is_error, is_resettable):\n        \"\"\"This class contains information bout a robot status codes above (ex: MX_ST_BUFFER_FULL)\n\n        Parameters\n        ----------\n        code : integer\n            The integer value (ex: 1001)\n        name : string\n            The code name (ex: \"MX_ST_BUFFER_FULL\"\n        is_error : bool\n            True if this is an error code\n        is_resettable : bool\n            True if this is error code can be reset\n        \"\"\"\n        self.code = code\n        self.name = name\n        self.is_error = is_error\n        self.is_resettable = is_resettable",
+    "span": [
+      645,
+      664
+    ],
+    "start_byte": 45405,
+    "end_byte": 46053,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/mx_robot_def_legacy.py",
+    "name": "RobotStatusCodeInfo"
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "snippet": "import socket",
+    "span": [
+      18,
+      18
+    ],
+    "start_byte": 439,
+    "end_byte": 452,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/netft_sensor.py"
+  },
+  {
+    "snippet": "import struct",
+    "span": [
+      19,
+      19
+    ],
+    "start_byte": 453,
+    "end_byte": 466,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/netft_sensor.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      20,
+      20
+    ],
+    "start_byte": 467,
+    "end_byte": 478,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/netft_sensor.py"
+  },
+  {
+    "snippet": "import threading",
+    "span": [
+      21,
+      21
+    ],
+    "start_byte": 479,
+    "end_byte": 495,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/netft_sensor.py"
+  },
+  {
+    "snippet": "from typing import List, Tuple, Optional",
+    "span": [
+      22,
+      22
+    ],
+    "start_byte": 496,
+    "end_byte": 536,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/netft_sensor.py"
+  },
+  {
+    "snippet": "class NetFTSensor:\n    \"\"\"\n    ATI NetFT Sensor interface class for UDP communication.\n    \n    Provides methods for connecting to ATI Force/Torque sensors,\n    streaming real-time data, and performing sensor operations.\n    \"\"\"\n    \n    def __init__(self, sensor_ip: str, sensor_port: int = 49152, timeout: float = 1.0):\n        \"\"\"\n        Initialize NetFT sensor connection.\n        \n        Args:\n            sensor_ip (str): IP address of the ATI sensor\n            sensor_port (int): UDP port for sensor communication (default: 49152)\n            timeout (float): Socket timeout in seconds (default: 1.0)\n        \"\"\"\n        self.sensor_ip = sensor_ip\n        self.sensor_port = sensor_port\n        self.timeout = timeout\n        \n        # Socket for UDP communication\n        self.socket = None\n        \n        # Data streaming control\n        self.streaming = False\n        self.stream_thread = None\n        \n        # Force/torque data storage\n        self.current_data = [0.0] * 6  # [Fx, Fy, Fz, Tx, Ty, Tz]\n        self.data_lock = threading.Lock()\n        \n        # Sensor configuration\n        self.sample_rate = 1000  # Default 1 kHz\n        self.bias_vector = [0.0] * 6\n        \n        # Data conversion factors (sensor specific)\n        self.force_scale = 1.0  # Scale factor for forces (N)\n        self.torque_scale = 1.0  # Scale factor for torques (Nm)\n        \n    def connect(self) -> bool:\n        \"\"\"\n        Establish UDP connection to the sensor.\n        \n        Returns:\n            bool: True if connection successful, False otherwise\n        \"\"\"\n        try:\n            # Create UDP socket\n            self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n            self.socket.settimeout(self.timeout)\n            \n            # Test connection by requesting sensor information\n            if self._test_connection():\n                print(f\"Successfully connected to ATI sensor at {self.sensor_ip}:{self.sensor_port}\")\n                return True\n            else:\n                print(\"Failed to establish communication with sensor\")\n                return False\n                \n        except Exception as e:\n            print(f\"Connection error: {e}\")\n            return False\n    \n    def disconnect(self):\n        \"\"\"\n        Close the sensor connection and stop data streaming.\n        \"\"\"\n        self.stop_streaming()\n        \n        if self.socket:\n            self.socket.close()\n            self.socket = None\n            print(\"Disconnected from ATI sensor\")\n    \n    def _test_connection(self) -> bool:\n        \"\"\"\n        Test the connection by sending a status request.\n        \n        Returns:\n            bool: True if sensor responds, False otherwise\n        \"\"\"\n        try:\n            # Send status request command\n            command = self._create_command(0x0000)  # Status request\n            self.socket.sendto(command, (self.sensor_ip, self.sensor_port))\n            \n            # Wait for response\n            response, addr = self.socket.recvfrom(1024)\n            return len(response) > 0\n            \n        except socket.timeout:\n            return False\n        except Exception:\n            return False\n    \n    def start_streaming(self, sample_rate: int = 1000) -> bool:\n        \"\"\"\n        Start real-time data streaming from the sensor.\n        \n        Args:\n            sample_rate (int): Desired sample rate in Hz (default: 1000)\n            \n        Returns:\n            bool: True if streaming started successfully\n        \"\"\"\n        if self.streaming:\n            print(\"Data streaming already active\")\n            return True\n            \n        try:\n            self.sample_rate = sample_rate\n            \n            # Send start streaming command\n            command = self._create_streaming_command(sample_rate)\n            self.socket.sendto(command, (self.sensor_ip, self.sensor_port))\n            \n            # Start streaming thread\n            self.streaming = True\n            self.stream_thread = threading.Thread(target=self._stream_data)\n            self.stream_thread.daemon = True\n            self.stream_thread.start()\n            \n            print(f\"Started data streaming at {sample_rate} Hz\")\n            return True\n            \n        except Exception as e:\n            print(f\"Failed to start streaming: {e}\")\n            return False\n    \n    def stop_streaming(self):\n        \"\"\"\n        Stop real-time data streaming.\n        \"\"\"\n        if self.streaming:\n            self.streaming = False\n            \n            # Send stop streaming command\n            try:\n                command = self._create_command(0x0001)  # Stop streaming\n                self.socket.sendto(command, (self.sensor_ip, self.sensor_port))\n            except:\n                pass\n            \n            # Wait for thread to finish\n            if self.stream_thread and self.stream_thread.is_alive():\n                self.stream_thread.join(timeout=2.0)\n            \n            print(\"Stopped data streaming\")\n    \n    def _stream_data(self):\n        \"\"\"\n        Internal method for continuous data streaming.\n        Runs in separate thread to maintain real-time performance.\n        \"\"\"\n        while self.streaming:\n            try:\n                # Receive data packet\n                data, addr = self.socket.recvfrom(1024)\n                \n                # Parse force/torque data\n                force_torque = self._parse_data_packet(data)\n                \n                if force_torque:\n                    # Update current data with thread safety\n                    with self.data_lock:\n                        self.current_data = force_torque\n                        \n            except socket.timeout:\n                continue\n            except Exception as e:\n                if self.streaming:  # Only print error if still streaming\n                    print(f\"Data streaming error: {e}\")\n                break\n    \n    def get_force(self) -> List[float]:\n        \"\"\"\n        Get the current force/torque readings.\n        \n        Returns:\n            List[float]: [Fx, Fy, Fz, Tx, Ty, Tz] in N and Nm\n        \"\"\"\n        with self.data_lock:\n            # Apply bias correction\n            corrected_data = [\n                self.current_data[i] - self.bias_vector[i] \n                for i in range(6)\n            ]\n            return corrected_data.copy()\n    \n    def get_force_xyz(self) -> Tuple[float, float, float]:\n        \"\"\"\n        Get current force readings for X, Y, Z axes.\n        \n        Returns:\n            Tuple[float, float, float]: (Fx, Fy, Fz) in Newtons\n        \"\"\"\n        force_data = self.get_force()\n        return force_data[0], force_data[1], force_data[2]\n    \n    def get_torque_xyz(self) -> Tuple[float, float, float]:\n        \"\"\"\n        Get current torque readings for X, Y, Z axes.\n        \n        Returns:\n            Tuple[float, float, float]: (Tx, Ty, Tz) in Newton-meters\n        \"\"\"\n        force_data = self.get_force()\n        return force_data[3], force_data[4], force_data[5]\n    \n    def set_bias(self, samples: int = 100) -> bool:\n        \"\"\"\n        Set the current sensor readings as bias/zero reference.\n        \n        Args:\n            samples (int): Number of samples to average for bias calculation\n            \n        Returns:\n            bool: True if bias set successfully\n        \"\"\"\n        if not self.streaming:\n            print(\"Data streaming must be active to set bias\")\n            return False\n        \n        try:\n            print(f\"Collecting {samples} samples for bias calculation...\")\n            \n            # Collect samples\n            bias_samples = []\n            for i in range(samples):\n                with self.data_lock:\n                    bias_samples.append(self.current_data.copy())\n                time.sleep(0.001)  # 1ms delay between samples\n            \n            # Calculate average\n            self.bias_vector = [\n                sum(sample[i] for sample in bias_samples) / len(bias_samples)\n                for i in range(6)\n            ]\n            \n            print(\"Bias vector set successfully:\")\n            print(f\"  Forces: Fx={self.bias_vector[0]:.3f}, Fy={self.bias_vector[1]:.3f}, Fz={self.bias_vector[2]:.3f}\")\n            print(f\"  Torques: Tx={self.bias_vector[3]:.3f}, Ty={self.bias_vector[4]:.3f}, Tz={self.bias_vector[5]:.3f}\")\n            \n            return True\n            \n        except Exception as e:\n            print(f\"Failed to set bias: {e}\")\n            return False\n    \n    def clear_bias(self):\n        \"\"\"\n        Clear the current bias vector (reset to zero).\n        \"\"\"\n        self.bias_vector = [0.0] * 6\n        print(\"Bias vector cleared\")\n    \n    def _create_command(self, command_code: int) -> bytes:\n        \"\"\"\n        Create a NetFT command packet.\n        \n        Args:\n            command_code (int): Command code for the operation\n            \n        Returns:\n            bytes: Formatted command packet\n        \"\"\"\n        # NetFT command packet format: [header][command][sequence][payload]\n        header = 0x1234  # Standard NetFT header\n        sequence = 0x0001  # Sequence number\n        \n        # Pack command as binary data\n        packet = struct.pack('>HHH', header, command_code, sequence)\n        return packet\n    \n    def _create_streaming_command(self, sample_rate: int) -> bytes:\n        \"\"\"\n        Create a streaming start command with specified sample rate.\n        \n        Args:\n            sample_rate (int): Desired sample rate in Hz\n            \n        Returns:\n            bytes: Formatted streaming command\n        \"\"\"\n        # Command to start streaming with sample rate\n        header = 0x1234\n        command = 0x0002  # Start streaming command\n        sequence = 0x0001\n        rate_code = self._sample_rate_to_code(sample_rate)\n        \n        packet = struct.pack('>HHHH', header, command, sequence, rate_code)\n        return packet\n    \n    def _sample_rate_to_code(self, rate: int) -> int:\n        \"\"\"\n        Convert sample rate to NetFT rate code.\n        \n        Args:\n            rate (int): Sample rate in Hz\n            \n        Returns:\n            int: NetFT rate code\n        \"\"\"\n        rate_map = {\n            1: 0x0001,      # 1 Hz\n            10: 0x000A,     # 10 Hz\n            100: 0x0064,    # 100 Hz\n            500: 0x01F4,    # 500 Hz\n            1000: 0x03E8,   # 1000 Hz\n            2000: 0x07D0,   # 2000 Hz\n            7000: 0x1B58    # 7000 Hz\n        }\n        return rate_map.get(rate, 0x03E8)  # Default to 1000 Hz\n    \n    def _parse_data_packet(self, data: bytes) -> Optional[List[float]]:\n        \"\"\"\n        Parse a data packet from the sensor.\n        \n        Args:\n            data (bytes): Raw data packet from sensor\n            \n        Returns:\n            Optional[List[float]]: Parsed force/torque data or None if invalid\n        \"\"\"\n        try:\n            # NetFT data packet format: header + sequence + status + force/torque data\n            if len(data) < 36:  # Minimum packet size\n                return None\n            \n            # Unpack header and check validity\n            header, sequence, status = struct.unpack('>HHI', data[:8])\n            \n            if header != 0x1234:  # Invalid header\n                return None\n            \n            # Unpack force/torque data (6 int32 values)\n            force_torque_raw = struct.unpack('>6i', data[8:32])\n            \n            # Convert to physical units (sensor specific scaling)\n            force_torque = [\n                force_torque_raw[0] * self.force_scale,   # Fx\n                force_torque_raw[1] * self.force_scale,   # Fy  \n                force_torque_raw[2] * self.force_scale,   # Fz\n                force_torque_raw[3] * self.torque_scale,  # Tx\n                force_torque_raw[4] * self.torque_scale,  # Ty\n                force_torque_raw[5] * self.torque_scale   # Tz\n            ]\n            \n            return force_torque\n            \n        except Exception:\n            return None\n    \n    def get_sensor_info(self) -> dict:\n        \"\"\"\n        Get sensor information and status.\n        \n        Returns:\n            dict: Sensor information including model, serial number, etc.\n        \"\"\"\n        info = {\n            'ip_address': self.sensor_ip,\n            'port': self.sensor_port,\n            'sample_rate': self.sample_rate,\n            'streaming': self.streaming,\n            'connected': self.socket is not None,\n            'bias_set': any(abs(b) > 0.001 for b in self.bias_vector)\n        }\n        return info\n    \n    def __enter__(self):\n        \"\"\"Context manager entry.\"\"\"\n        self.connect()\n        return self\n    \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        \"\"\"Context manager exit.\"\"\"\n        self.disconnect()",
+    "span": [
+      25,
+      403
+    ],
+    "start_byte": 539,
+    "end_byte": 13357,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/netft_sensor.py",
+    "name": "NetFTSensor"
+  },
+  {
+    "snippet": "def test_sensor_connection():\n    \"\"\"Test basic sensor connection and data reading.\"\"\"\n    sensor_ip = \"192.168.1.100\"  # Replace with your sensor IP\n    \n    print(\"Testing ATI NetFT sensor connection...\")\n    \n    with NetFTSensor(sensor_ip) as sensor:\n        if sensor.connect():\n            print(\"✓ Connection successful\")\n            \n            # Start streaming\n            if sensor.start_streaming(1000):\n                print(\"✓ Data streaming started\")\n                \n                # Set bias\n                time.sleep(1)  # Allow data to stabilize\n                sensor.set_bias()\n                \n                # Read data for 5 seconds\n                print(\"\\nReading force/torque data for 5 seconds...\")\n                start_time = time.time()\n                \n                while time.time() - start_time < 5.0:\n                    force_data = sensor.get_force()\n                    print(f\"F: [{force_data[0]:6.2f}, {force_data[1]:6.2f}, {force_data[2]:6.2f}] \"\n                          f\"T: [{force_data[3]:6.3f}, {force_data[4]:6.3f}, {force_data[5]:6.3f}]\", \n                          end='\\r')\n                    time.sleep(0.1)\n                \n                print(\"\\n✓ Data reading completed\")\n                \n            else:\n                print(\"✗ Failed to start streaming\")\n        else:\n            print(\"✗ Connection failed\")\n\n\nif __na",
+    "span": [
+      407,
+      441
+    ],
+    "start_byte": 13398,
+    "end_byte": 14787,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/meca500-accessories/sensors/ati-force-torque/python/netft_sensor.py",
+    "name": "test_sensor_connection"
+  }
+]

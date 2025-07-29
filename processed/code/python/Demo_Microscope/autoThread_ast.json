@@ -1,0 +1,51 @@
+[
+  {
+    "snippet": "from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QThread",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 58,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/autoThread.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 59,
+    "end_byte": 81,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/autoThread.py"
+  },
+  {
+    "snippet": "from random import randint",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 82,
+    "end_byte": 108,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/autoThread.py"
+  },
+  {
+    "snippet": "class AutoThread(QThread):\n    finished = pyqtSignal()\n    def __init__(self, robot, tray, wrf, *args, **kwargs) -> None:\n        super().__init__(*args, **kwargs)\n        self.robot = robot\n        self.tray = tray\n        self.goFlag = True\n        self.wrf = wrf\n\n    def run(self):\n        self.robot.SetJointVel(20)\n        self.robot.SetCartLinVel(15)\n        self.robot.SetGripperForce(20)\n        self.robot.SetGripperVel(20)\n        while self.goFlag:\n            sampleIndex = randint(0, 24)\n            self._move_to_rack()\n            self.robot.SetWRF(*self.wrf)\n            self._pick_action(self.tray.positions_wrf[sampleIndex])\n            self.robot.SetWRF(0,0,0,0,0,0)\n            sleep(0.5)\n            rackPose = self.robot.GetPose()\n            self._move_from_rack()\n            self._move_to_micro()\n            sleep(5)\n            self._move_from_micro()\n            self._move_to_rack()\n            self._place_action(rackPose)\n            self._move_from_rack()\n\n        self.robot.StartOfflineProgram(42)\n        self.finished.emit()\n\n    def toggle_off(self):\n        self.goFlag = False\n\n    def _pick_action(self, position):\n        self.robot.MovePose(*position)\n        self.robot.MoveLinRelTRF(9,0,0,0,0,0)\n        self.robot.GripperClose()\n        self.robot.Delay(0.5)\n        self.robot.MoveLinRelTRF(-30,0,0,0,0,0)\n        self.robot.MoveLinRelTRF(0,0,-30,0,0,0)\n        cp5 = self.robot.SetCheckpoint(5)\n        cp5.wait()\n\n    def _place_action(self, position):\n        self.robot.MovePose(*position)\n        self.robot.MoveLinRelTRF(0,0,30,0,0,0)\n        self.robot.MoveLinRelTRF(25,0,0,0,0,0)\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLinRelTRF(-10,0,0,0,0,0)\n        cp3 = self.robot.SetCheckpoint(3)\n        cp3.wait()\n\n    def _move_to_micro(self):\n        self.robot.MovePose(34.25, -232.218, 197.534, 90, 0, 0)\n        self.robot.MovePose(34.25, -210.168, 63.534, 90, 0, 0)\n        self.robot.MovePose(34.25, -205.518, 39.334, 90, 0, 0)\n        self.robot.MoveLin(121.8, -205.518, 39.334, 90, 0, 0)\n        self.robot.MoveLin(121.8, -205.518, 42.199, 90, 0, 0)\n        cp2 = self.robot.SetCheckpoint(2)\n        cp2.wait()\n    \n    def _move_from_micro(self):\n        self.robot.MoveLin(121.8, -205.518, 39.334, 90, 0, 0)\n        self.robot.MoveLin(34.25, -205.518, 39.334, 90, 0, 0)\n        self.robot.MovePose(34.25, -210.168, 63.534, 90, 0, 0)\n        self.robot.MovePose(34.25, -232.218, 197.534, 90, 0, 0)\n        cp6 = self.robot.SetCheckpoint(6)\n        cp6.wait()\n\n\n    def _move_to_rack(self):\n        self.robot.MoveJoints(-90, 10, 0, 0, -10, 0)\n        self.robot.MoveJoints(-90, -1.431, 68.895, 0, -67.465, 0)\n        cp1 = self.robot.SetCheckpoint(1)\n        cp1.wait()\n    \n    def _move_from_rack(self):\n        self.robot.MoveJoints(-90, -1.431, 68.895, 0, -67.465, 0)\n        self.robot.MoveJoints(-90, 10, 0, 0, -10, -6)\n        cp4 = self.robot.SetCheckpoint(4)\n        cp4.wait()",
+    "span": [
+      6,
+      90
+    ],
+    "start_byte": 111,
+    "end_byte": 3100,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/autoThread.py",
+    "name": "AutoThread"
+  }
+]

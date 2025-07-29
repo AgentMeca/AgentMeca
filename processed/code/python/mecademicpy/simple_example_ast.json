@@ -1,0 +1,75 @@
+[
+  {
+    "snippet": "import logging",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 143,
+    "end_byte": 157,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/simple_example.py"
+  },
+  {
+    "snippet": "import pathlib",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 158,
+    "end_byte": 172,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/simple_example.py"
+  },
+  {
+    "snippet": "import mecademicpy.robot as mdr",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 174,
+    "end_byte": 205,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/simple_example.py"
+  },
+  {
+    "snippet": "import mecademicpy.robot_initializer as initializer",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 206,
+    "end_byte": 257,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/simple_example.py"
+  },
+  {
+    "snippet": "import mecademicpy.tools as tools",
+    "span": [
+      12,
+      12
+    ],
+    "start_byte": 258,
+    "end_byte": 291,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/simple_example.py"
+  },
+  {
+    "snippet": "def simple_example():\n    \"\"\" Simple example for connecting to Mecademic robot and moving it  \"\"\"\n    # Use tool to setup default console and file logger\n    tools.SetDefaultLogger(logging.INFO, f'{pathlib.Path(__file__).stem}.log')\n    logger = logging.getLogger(__name__)\n\n    # (use \"with\" block to ensure proper disconnection at end of block)\n    with initializer.RobotWithTools() as robot:\n        try:\n            # YOU MAY USE YOUR ROBOT IP ADDRESS HERE:\n            robot.Connect(address='192.168.0.100', disconnect_on_exception=False)\n\n            # Reset the robot configuration (joint limits, work zone, etc.)\n            #initializer.reset_robot_configuration(robot)\n\n            # Send the commands to get the robot ready for operation.\n            logger.info('Activating and homing robot...')\n            initializer.reset_sim_mode(robot)\n            initializer.reset_motion_queue(robot, activate_home=True)\n            initializer.reset_vacuum_module(robot)\n\n            # Pause execution until robot is homed.\n            robot.WaitHomed()\n            logger.info('Robot is homed and ready.')\n\n            # Send motion commands to have the robot draw out a square.\n            logger.info('Moving the robot...')\n            robot.SetCartLinVel(100)\n            robot.SetBlending(50)\n            starting_pos = [0] * robot.GetRobotInfo().num_joints  # Build array with size matching number of joints\n            robot.MoveJoints(*starting_pos)  # Move joints using the unrolled array as arguments\n            if tools.robot_model_is_meca500(robot.GetRobotInfo().robot_model):\n                robot.SetConf(1, 1, 1)\n                robot.MoveLinRelWrf(0, 50, 0, 0, 0, 0)\n                robot.MoveLinRelWrf(0, 0, 50, 0, 0, 0)\n                robot.MoveLinRelWrf(0, -50, 0, 0, 0, 0)\n                robot.MoveLinRelWrf(0, 0, -50, 0, 0, 0)\n            elif robot.GetRobotInfo().robot_model == mdr.MxRobotModel.MX_ROBOT_MODEL_MCA250_R1:\n                robot.SetConf(1, 1, 1)\n                robot.MoveLinRelWrf(0, 30, 0, 0, 0, 0)\n                robot.MoveLinRelWrf(0, 0, 30, 0, 0, 0)\n                robot.MoveLinRelWrf(0, -30, 0, 0, 0, 0)\n                robot.MoveLinRelWrf(0, 0, -30, 0, 0, 0)\n            elif robot.GetRobotInfo().robot_model == mdr.MxRobotModel.MX_ROBOT_MODEL_MCA1000_R1:\n                robot.SetConf(1, 1, 1)\n                robot.MoveLinRelWrf(0, 50, 0, 0, 0, 0)\n                robot.MoveLinRelWrf(0, 0, 50, 0, 0, 0)\n                robot.MoveLinRelWrf(0, -50, 0, 0, 0, 0)\n                robot.MoveLinRelWrf(0, 0, -50, 0, 0, 0)\n            elif robot.GetRobotInfo().robot_model == mdr.MxRobotModel.MX_ROBOT_MODEL_MCS500_R1:\n                robot.MoveLinRelWrf(-50, -50, -20, 0)\n                robot.MoveLinRelWrf(-50, 50, -20, 0)\n                robot.MoveLinRelWrf(50, 50, 20, 0)\n                robot.MoveLinRelWrf(50, -50, 20, 0)\n            else:\n                raise mdr.MecademicException(\n                    f'This example script does not support this robot model ({robot.GetRobotInfo().robot_model})')\n            logger.info('Commands for drawing a square sent. Robot should now be moving.')\n\n            # Wait until checkpoint is reached. Without this wait, the script would immediately\n            # reach the DeactivateRobot and Disconnect command, which stops the motion.\n            logger.info('Waiting for robot to finish moving...')\n            robot.WaitIdle(60)\n            logger.info('Robot finished drawing square.')\n\n        # Error management example\n        except mdr.InterruptException as exception:\n            logger.error(f'Robot operation was interrupted: {exception}...')\n        except mdr.CommunicationError as exception:\n            logger.error(f'Failed to connect to the robot: {exception}...')\n        except mdr.DisconnectError as exception:\n            logger.error(f'Disconnected from the robot: {exception}...')\n        except mdr.MecademicNonFatalException as exception:\n            logger.error(f'Robot exception occurred: {exception}...')\n        except KeyboardInterrupt:\n            logger.warning('Control-C pressed, quitting')\n            pass\n\n        # Deactivate the robot.\n        if robot.IsConnected():\n            # Attempt to clear error if robot is in error.\n            if robot.GetStatusRobot().error_status:\n                logger.info('Robot has encountered an error, attempting to clear...')\n                robot.ResetError()\n                robot.ResumeMotion()\n            robot.DeactivateRobot()\n            logger.info('Robot is deactivated.')\n\n    # At the end of the \"with\" block, robot is automatically disconnected\n    logger.info('Now disconnected from the robot.')",
+    "span": [
+      15,
+      104
+    ],
+    "start_byte": 294,
+    "end_byte": 4978,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/simple_example.py",
+    "name": "simple_example"
+  }
+]

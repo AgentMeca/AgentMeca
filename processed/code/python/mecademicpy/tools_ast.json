@@ -1,0 +1,404 @@
+[
+  {
+    "snippet": "import logging",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 130,
+    "end_byte": 144,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "import os",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 145,
+    "end_byte": 154,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "import pathlib",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 155,
+    "end_byte": 169,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "import platform",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 170,
+    "end_byte": 185,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "import re",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 186,
+    "end_byte": 195,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "import socket",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 196,
+    "end_byte": 209,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "import subprocess",
+    "span": [
+      12,
+      12
+    ],
+    "start_byte": 210,
+    "end_byte": 227,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "import sys",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 228,
+    "end_byte": 238,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      14,
+      14
+    ],
+    "start_byte": 239,
+    "end_byte": 250,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "import traceback",
+    "span": [
+      15,
+      15
+    ],
+    "start_byte": 251,
+    "end_byte": 267,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "from datetime import datetime",
+    "span": [
+      16,
+      16
+    ],
+    "start_byte": 268,
+    "end_byte": 297,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "from enum import IntEnum",
+    "span": [
+      17,
+      17
+    ],
+    "start_byte": 298,
+    "end_byte": 322,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "from typing import Callable, Optional",
+    "span": [
+      18,
+      18
+    ],
+    "start_byte": 323,
+    "end_byte": 360,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "from .mx_robot_def import *",
+    "span": [
+      32,
+      32
+    ],
+    "start_byte": 690,
+    "end_byte": 717,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py"
+  },
+  {
+    "snippet": "class MxTraceFormatter(logging.Formatter):\n\n    def format(self, record):\n        try:\n            timestamp = datetime.fromtimestamp(record.created).strftime('%Y-%m-%d %H:%M:%S')\n        # pylint: disable=broad-exception-caught\n        except Exception:\n            # Note: This happen when quitting\n            timestamp = \"\"\n        prefix = f\"{timestamp} [{record.levelname}]\"\n        if record.levelno >= logging.ERROR:\n            prefix = f\"{COLOR_RED}{prefix}\"\n        elif record.levelno >= logging.WARNING:\n            prefix = f\"{COLOR_YELLOW}{prefix}\"\n        return f\"{prefix}: {record.msg}{COLOR_RESET}\"",
+    "span": [
+      35,
+      49
+    ],
+    "start_byte": 720,
+    "end_byte": 1337,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "MxTraceFormatter"
+  },
+  {
+    "snippet": "def SetDefaultLogger(console_level=logging.INFO, filename: str = \"\", file_level=logging.INFO):\n    \"\"\"Utility function that prepares a default console logger and optionally a file logger\n\n    Parameters\n    ----------\n    console_level : optional\n        Logging level to use on the console, by default logging.INFO\n    filename : str, optional\n        Log file name (path), by default \"\"\n    file_level : optional\n        Logging level to use in the file (if filename is not empty), by default logging.INFO\n    \"\"\"\n    handlers: list[logging.StreamHandler | logging.FileHandler] = []\n    formatter = MxTraceFormatter()\n    console_handler = logging.StreamHandler()\n    console_handler.setFormatter(formatter)\n    handlers.append(console_handler)\n\n    if filename != \"\":\n        file_handler = logging.FileHandler(filename=filename)\n        file_handler.setFormatter(formatter)\n        file_handler.setLevel(file_level)\n        handlers.append(file_handler)\n\n    logging.basicConfig(level=console_level, handlers=handlers)",
+    "span": [
+      53,
+      77
+    ],
+    "start_byte": 1370,
+    "end_byte": 2392,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "SetDefaultLogger"
+  },
+  {
+    "snippet": "def shorten_stack_trace_file_path(trace_line):\n    \"\"\"Replaces the file path in a call trace line with the filename, removing quotes.\n\n  Args:\n    trace_line: The call trace line string.\n\n  Returns:\n    The call trace line with the file path replaced by the filename, without quotes.\n  \"\"\"\n\n    # Find the index of \"File \"\n    file_index = trace_line.find(\"File \")\n    if file_index == -1:\n        return trace_line\n\n    # Extract the path portion with quotes\n    match = re.search(r'File \"(.*?)\",', trace_line)\n    if not match:\n        return trace_line\n\n    path = match.group(1)  # Extract the captured path without quotes\n    filename = os.path.basename(path)\n\n    # Replace the path with the filename\n    return trace_line.replace(match.group(0), f\"File {filename},\")",
+    "span": [
+      80,
+      104
+    ],
+    "start_byte": 2395,
+    "end_byte": 3168,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "shorten_stack_trace_file_path"
+  },
+  {
+    "snippet": "def format_stack(exception: Optional[Exception] = None,\n                 from_str: Optional[str] = None,\n                 included=False,\n                 format_callback: Optional[Callable[[str], str]] = None) -> str:\n    \"\"\"Format the part of the call stack starting from the specified file name\n    (i.e. avoid showing all parent functions in the call stack while we're interested in the problem within child code)\n\n    Args:\n        exception (Optional[Exception]): Exception to format partial call stack for.\n                                         The current call stack is used if None.\n        from_str (Optional[str]):   File path or string to search in the call stack.\n                                    The stack will be formatted starting from this file/string.\n                                    The whole stack is formatted if None.\n        included (bool, optional): Include from_str in the trace (else start with next). Defaults to False.\n        format_callback (Callable): Callback to customize the formatted call stack, called for each formatted line.\n\n    Returns:\n        str: A string that contains the call stack of the provided exception (or current call stack),\n             starting from from_str (or just after) if necessary.\n    \"\"\"\n    # Get the call stack from the exception\n    if exception:\n        # Get the exception call stack\n        stack = traceback.format_tb(exception.__traceback__)\n    else:\n        # Get the current call stack\n        stack = traceback.format_stack()\n\n    trimmed_called_stack: list[str] = []\n    found_file = False\n    found_next_file = False\n    skip_last = False\n    if from_str:\n        # Start formatting the call stack from the specified file\n        from_str = pathlib.Path(from_str).stem\n    else:\n        # Start formatting the call stack from the main python file (avoid system stuff that precedes)\n        from_str = pathlib.Path(sys.argv[0]).stem\n        if exception is None:\n            # Also skip the last call stack item (this function)\n            skip_last = True\n\n    for item in stack:\n        if from_str in item:\n            found_file = True\n            found_next_file = False\n\n        if found_next_file or (included and found_file):\n            formatted_line = shorten_stack_trace_file_path(item)\n            if format_callback is not None:\n                formatted_line = format_callback(formatted_line)\n            trimmed_called_stack.append(formatted_line)\n        found_next_file |= found_file\n\n    if skip_last:\n        trimmed_called_stack = trimmed_called_stack[:-1]\n\n    # Return the stack as a string\n    return ''.join(trimmed_called_stack)",
+    "span": [
+      107,
+      165
+    ],
+    "start_byte": 3171,
+    "end_byte": 5814,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "format_stack"
+  },
+  {
+    "snippet": "def string_to_numbers(input_string: str) -> list:\n    \"\"\"Convert comma-separated floats in string form to relevant type.\n\n    Parameters\n    ----------\n    input_string : string\n        Comma-separated floats values encoded as a string.\n\n    Returns\n    -------\n    list of numbers\n        Returns converted list of floats or integers, depending on nature of element in 'input_string'.\n\"\"\"\n\n    return [(float(x) if ('.' in x or 'nan' in x.lower()) else int(x)) for x in input_string.split(',')]",
+    "span": [
+      168,
+      182
+    ],
+    "start_byte": 5817,
+    "end_byte": 6312,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "string_to_numbers"
+  },
+  {
+    "snippet": "def args_to_string(arg_list: list) -> str:\n    \"\"\"Convert a list of arguments into a string, taking care of converting IntEnum arguments into their\n       numeric value rather than their text value\n\n    Parameters\n    ----------\n    arg_list : list\n        List of arguments (int, float, string, IntEnum...)\n\n    Returns\n    -------\n    str\n        The arguments formatted, ready to be sent to the robot\n    \"\"\"\n    str_arglist = []\n    for arg in arg_list:\n        if isinstance(arg, IntEnum):\n            str_arglist.append(str(arg.value))\n        else:\n            str_arglist.append(str(arg))\n    return ','.join([x for x in str_arglist])",
+    "span": [
+      185,
+      205
+    ],
+    "start_byte": 6315,
+    "end_byte": 6957,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "args_to_string"
+  },
+  {
+    "snippet": "def ping_robot(ip_address: str, timeout: int = 90, count: int = 1):\n    \"\"\"Ping the specified IP address, retrying until timeout\n\n    Parameters\n    ----------\n    ip_address : str\n        IP address to ping\n    timeout : int, optional\n        Maximum time to retry ping if no response, by default 90\n    count : int, optional\n        Number of successful ping to perform before returning\n\n    Raises\n    ------\n    TimeoutError\n        Error raised when no reply from specified IP address after specified timeout\n    \"\"\"\n    logger = logging.getLogger(__name__)\n    logger.info(f'Attempting to ping {ip_address} for {timeout} seconds')\n    timeout_time = time.monotonic() + timeout\n    ping_success = 0\n    while True:\n        if _ping(ip_address):\n            ping_success += 1\n            logger.info(f'Ping {ip_address} successfully')\n            if ping_success >= count:\n                break\n        if time.monotonic() > timeout_time:\n            error_msg = f'Timeout while waiting to ping robot: {ip_address}'\n            logger.error(error_msg)\n            raise TimeoutError(error_msg)\n\n    logger.info(f'Successfully ping {ip_address}')",
+    "span": [
+      208,
+      240
+    ],
+    "start_byte": 6960,
+    "end_byte": 8109,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "ping_robot"
+  },
+  {
+    "snippet": "def _ping(ip_address: str) -> bool:\n    \"\"\"Ping the specified IP address (one attempt only)\n\n    Parameters\n    ----------\n    ip_address : str\n        IP address to ping\n\n    Returns\n    -------\n    bool\n        True if got successful ping reply, False otherwise\n    \"\"\"\n    logger = logging.getLogger(__name__)\n    if platform.system() == 'Windows':\n        ping_command = ['ping', '-n', '1', ip_address]\n    else:\n        ping_command = ['ping', '-c', '1', ip_address]\n    try:\n        command_result = subprocess.run(ping_command, capture_output=True, shell=False, check=False)\n        stdout = command_result.stdout.decode(\"utf-8\")\n    except subprocess.CalledProcessError as exc:\n        logger.info(f\"Error running command:'{ping_command}',  error: '{exc}'\")\n        return False\n    if stdout:\n        stdout = str(stdout).replace(\"\\\\n\", \"\\n\\t\").replace(\"\\\\t\", \"\\t\")\n        logger.debug(stdout)\n        success_ping = f\"Reply from {ip_address}: bytes=\"\n        if stdout.find(success_ping) != -1:\n            return True\n    return False",
+    "span": [
+      243,
+      273
+    ],
+    "start_byte": 8112,
+    "end_byte": 9158,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "_ping"
+  },
+  {
+    "snippet": "def socket_connect_loop(address: str, port: int, timeout: float = 1.0) -> socket.socket:\n    \"\"\"Function that retry connecting a socket to remote IP/Port until it succeeds or until timeout\n\n    Args:\n        address (str): Remote address (IP or host name) to connect to\n        port (int): Remote port to connect to\n        timeout (float, optional): Maximum time retrying the connection. Defaults to 1.0.\n\n    Raises:\n        TimeoutError: Timeout trying to establish the connection\n        ConnectionError: Failure to establish the connection for reason other than a timeout\n                         (generally means that remote side is explicitly refusing the connection)\n\n    Returns:\n        socket.socket: The connected socket\n    \"\"\"\n    start_time = time.monotonic()\n    loop_timeout = 0.1\n    success = False\n    try:\n        while True:\n            # Create socket and attempt connection.\n            new_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n            new_socket.settimeout(loop_timeout)\n            try:\n                new_socket.connect((address, port))\n                success = True\n                return new_socket\n            except (socket.timeout, TimeoutError) as exception:\n                if (time.monotonic() - start_time) < timeout:\n                    new_socket.close()\n                    continue\n                else:\n                    raise TimeoutError(f'Unable to connect to {address}:{port} after {timeout}s, exception: {exception}'\n                                       ) from exception\n            except (ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError) as exception:\n                if (time.monotonic() - start_time) < timeout:\n                    time.sleep(loop_timeout)\n                else:\n                    error_message = f'Unable to connect to {address}:{port}, exception: {exception}'\n                    raise ConnectionError(error_message) from exception\n    finally:\n        if not success:\n            new_socket.close()",
+    "span": [
+      276,
+      319
+    ],
+    "start_byte": 9161,
+    "end_byte": 11183,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "socket_connect_loop"
+  },
+  {
+    "snippet": "def interruptable_sleep(timeout: float, condition_callback: Callable[[float], bool] = None):\n    \"\"\"Similar to time.sleep but can be interrupted\n\n    Args:\n        timeout (float): Timeout to wait for\n        condition_callback (Callable[[float], bool], optional): Callback function that will receive the elapsed time\n            and return True to interrupt this sleep. Defaults to None.\n    \"\"\"\n    start_time = time.time()\n    while True:\n        elapsed = time.time() - start_time\n        if elapsed > timeout:\n            break\n        if condition_callback is not None:\n            stop = condition_callback(elapsed)\n            if stop:\n                break\n        time.sleep(0.1)  # Sleep in short intervals to allow interruption",
+    "span": [
+      322,
+      339
+    ],
+    "start_byte": 11186,
+    "end_byte": 11925,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "interruptable_sleep"
+  },
+  {
+    "snippet": "def robot_operation_mode_to_string(robot_operation_mode: MxRobotOperationMode) -> str:\n    \"\"\"Returns a human-readable string that represents the specified robot operation mode\"\"\"\n    if robot_operation_mode == MxRobotOperationMode.MX_ROBOT_OPERATION_MODE_LOCKED:\n        return \"Locked\"\n    if robot_operation_mode == MxRobotOperationMode.MX_ROBOT_OPERATION_MODE_AUTO:\n        return \"Automatic\"\n    if robot_operation_mode == MxRobotOperationMode.MX_ROBOT_OPERATION_MODE_MANUAL:\n        return \"Manual\"\n    return \"Invalid\"",
+    "span": [
+      342,
+      350
+    ],
+    "start_byte": 11928,
+    "end_byte": 12453,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "robot_operation_mode_to_string"
+  },
+  {
+    "snippet": "def robot_model_is_meca500(robot_model: MxRobotModel):\n    \"\"\"Tells if the specified robot model is a Meca500 robot (any revision)\"\"\"\n    return (robot_model == MxRobotModel.MX_ROBOT_MODEL_M500_R1 or robot_model == MxRobotModel.MX_ROBOT_MODEL_M500_R2\n            or robot_model == MxRobotModel.MX_ROBOT_MODEL_M500_R3 or robot_model == MxRobotModel.MX_ROBOT_MODEL_M500_R4)",
+    "span": [
+      353,
+      356
+    ],
+    "start_byte": 12456,
+    "end_byte": 12827,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "robot_model_is_meca500"
+  },
+  {
+    "snippet": "def robot_model_is_mcs500(robot_model: MxRobotModel):\n    \"\"\"Tells if the specified robot model is a Mcs500 robot (any revision)\"\"\"\n    return robot_model == MxRobotModel.MX_ROBOT_MODEL_MCS500_R1",
+    "span": [
+      359,
+      361
+    ],
+    "start_byte": 12830,
+    "end_byte": 13025,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "robot_model_is_mcs500"
+  },
+  {
+    "snippet": "def robot_model_is_mg2(robot_model: MxRobotModel):\n    \"\"\"Tells if the specified robot model is a Mecademic 2nd generation robot (Mcs500, ...)\"\"\"\n    return (robot_model == MxRobotModel.MX_ROBOT_MODEL_MCA1000_R1\n            or robot_model == MxRobotModel.MX_ROBOT_MODEL_MCA250_R1\n            or robot_model == MxRobotModel.MX_ROBOT_MODEL_MCS500_R1)",
+    "span": [
+      364,
+      368
+    ],
+    "start_byte": 13028,
+    "end_byte": 13376,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "robot_model_is_mg2"
+  },
+  {
+    "snippet": "def robot_model_support_eoat(robot_model: MxRobotModel):\n    \"\"\"Tells if the specified robot model support eoat (Meca500, ...)\"\"\"\n\n    return (robot_model == MxRobotModel.MX_ROBOT_MODEL_M500_R1 or robot_model == MxRobotModel.MX_ROBOT_MODEL_M500_R2\n            or robot_model == MxRobotModel.MX_ROBOT_MODEL_M500_R3 or robot_model == MxRobotModel.MX_ROBOT_MODEL_M500_R4)",
+    "span": [
+      371,
+      375
+    ],
+    "start_byte": 13379,
+    "end_byte": 13747,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "robot_model_support_eoat"
+  },
+  {
+    "snippet": "def robot_collision_group_robot_idx_to_string(robot_idx: MxCollisionGroupRobotIdx) -> str:\n    \"\"\"Returns a human-readable string that represents the collision index within group 'robot' \"\"\"\n    if robot_idx == MxCollisionGroupRobotIdx.MX_COLLISION_GROUP_ROBOT_BASE:\n        return 'Base'\n    if robot_idx == MxCollisionGroupRobotIdx.MX_COLLISION_GROUP_ROBOT_LINK_1:\n        return 'Link-1'\n    if robot_idx == MxCollisionGroupRobotIdx.MX_COLLISION_GROUP_ROBOT_LINK_2:\n        return 'Link-2'\n    if robot_idx == MxCollisionGroupRobotIdx.MX_COLLISION_GROUP_ROBOT_LINK_3:\n        return 'Link-3'\n    if robot_idx == MxCollisionGroupRobotIdx.MX_COLLISION_GROUP_ROBOT_LINK_4:\n        return 'Link-4'\n    if robot_idx == MxCollisionGroupRobotIdx.MX_COLLISION_GROUP_ROBOT_LINK_5:\n        return 'Link-5'\n    if robot_idx == MxCollisionGroupRobotIdx.MX_COLLISION_GROUP_ROBOT_LINK_6:\n        return 'Link-6'\n    return 'Invalid'",
+    "span": [
+      378,
+      394
+    ],
+    "start_byte": 13750,
+    "end_byte": 14671,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "robot_collision_group_robot_idx_to_string"
+  },
+  {
+    "snippet": "def robot_collision_group_tool_idx_to_string(tool_idx: MxCollisionGroupToolIdx) -> str:\n    \"\"\"Returns a human-readable string that represents the collision index within group 'tool' \"\"\"\n    if tool_idx == MxCollisionGroupToolIdx.MX_COLLISION_GROUP_TOOL_SPHERE:\n        return 'Tool Sphere'\n    if tool_idx == MxCollisionGroupToolIdx.MX_COLLISION_GROUP_TOOL_MPM500:\n        return 'MPM500'\n    if tool_idx == MxCollisionGroupToolIdx.MX_COLLISION_GROUP_TOOL_MVK01:\n        return 'MVK01'\n    return 'Invalid'",
+    "span": [
+      397,
+      405
+    ],
+    "start_byte": 14674,
+    "end_byte": 15181,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "robot_collision_group_tool_idx_to_string"
+  },
+  {
+    "snippet": "def robot_collision_group_to_string(collision_group: MxCollisionGroup, index: Optional[int] = 0) -> str:\n    \"\"\"Returns a human-readable string that represents the collision group\"\"\"\n    if collision_group == MxCollisionGroup.MX_COLLISION_GROUP_ROBOT:\n        if index is not None:\n            return f'{robot_collision_group_robot_idx_to_string(index)}'\n        else:\n            return 'Robot'\n    if collision_group == MxCollisionGroup.MX_COLLISION_GROUP_FCP:\n        return 'Flange center point'\n    if collision_group == MxCollisionGroup.MX_COLLISION_GROUP_TOOL:\n        if index is not None:\n            return f'{robot_collision_group_tool_idx_to_string(index)}'\n        else:\n            return 'Tool'\n    if collision_group == MxCollisionGroup.MX_COLLISION_GROUP_ENV_OBJ:\n        return f'Object #{0 if index is None else index}'\n    if collision_group == MxCollisionGroup.MX_COLLISION_GROUP_WORK_ZONE:\n        return 'Work Zone'\n    return 'Invalid'",
+    "span": [
+      408,
+      426
+    ],
+    "start_byte": 15184,
+    "end_byte": 16143,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/tools.py",
+    "name": "robot_collision_group_to_string"
+  }
+]

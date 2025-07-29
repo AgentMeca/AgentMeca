@@ -1,0 +1,76 @@
+[
+  {
+    "snippet": "from pmclib import system_commands as sys",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 41,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "from pmclib import xbot_commands as bot",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 74,
+    "end_byte": 113,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "from pmclib import pmc_types",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 147,
+    "end_byte": 175,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 208,
+    "end_byte": 219,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py"
+  },
+  {
+    "snippet": "class PlanarMotorMove():\n    def __init__(self, bot_id, xpos: float, ypos: float, vel: float = 1.0, acc: float = 10.0, ending_speed: float = 0) -> None:\n        self.bot_id = bot_id\n        self.xpos = xpos\n        self.ypos = ypos\n        self.vel = vel\n        self.acc = acc\n        self.end_speed = ending_speed",
+    "span": [
+      8,
+      15
+    ],
+    "start_byte": 222,
+    "end_byte": 537,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "name": "PlanarMotorMove"
+  },
+  {
+    "snippet": "class MecaPlanar():\n    def __init__(self) -> None:\n        self.is_connected = False\n\n    def connect(self, auto_connect: bool = True, ip: str = '192.168.10.100') -> bool:\n        if auto_connect:\n            connection_state = sys.auto_search_and_connect_to_pmc()\n            self.is_connected = connection_state\n            return connection_state\n        else:\n            connection_state = sys.connect_to_specific_pmc(ip)\n            self.is_connected = connection_state\n            return connection_state\n\n    def initialize(self, timeout: float = 10.0):\n        if not sys.is_master():\n            sys.gain_mastership()\n        bot.activate_xbots()\n        maxTime = time.time() + timeout\n        while sys.get_pmc_status() is not pmc_types.PMCSTATUS.PMC_FULLCTRL:\n            time.sleep(0.5)\n            if time.time() > maxTime:\n                raise TimeoutError(\"PMC Activation timeout\")\n\n    def activate_bots(self, timeout: float = 10.0):\n        bot.activate_xbots()\n        maxTime = time.time() + timeout\n        while sys.get_pmc_status() is not pmc_types.PMCSTATUS.PMC_FULLCTRL:\n            time.sleep(0.5)\n            if time.time() > maxTime:\n                raise TimeoutError(\"PMC Activation timeout\")\n\n    def deactivate_bots(self, timeout: float = 10.0):\n        bot.deactivate_xbots()\n        maxTime = time.time() + timeout\n        while sys.get_pmc_status() is not pmc_types.PMCSTATUS.PMC_INACTIVE:\n            time.sleep(0.5)\n            if time.time() > maxTime:\n                raise TimeoutError(\"PMC Deactivation timeout\")\n\n    def get_pmc_status(self) -> pmc_types.PMCSTATUS:\n        return sys.get_pmc_status()\n\n    def get_xbot_ids(self) -> list[int]:\n        status = bot.get_all_xbot_info(\n            pmc_types.ALLXBOTSFEEDBACKOPTION(0))\n        ids = []\n        for state in status:\n            ids.append(state.xbot_id)\n        return ids\n\n    def get_num_xbots(self) -> int:\n        return len(bot.get_all_xbot_info(pmc_types.ALLXBOTSFEEDBACKOPTION(0)))\n\n    def get_xbots_state(self) -> dict:\n        status = bot.get_all_xbot_info(\n            pmc_types.ALLXBOTSFEEDBACKOPTION(0))\n        states = {}\n        for stat in status:\n            states[stat.xbot_id] = stat.xbot_state\n        return states\n\n    def get_xbots_pos(self) -> dict:\n        status = bot.get_all_xbot_info(\n            pmc_types.ALLXBOTSFEEDBACKOPTION(0))\n        pos = {}\n        for stat in status:\n            pos[stat.xbot_id] = (stat.x_pos, stat.y_pos)\n\n    def send_rotation(self, id: int) -> None:\n        bot.rotary_motion_timed_spin(1, id, 0, 52.36, 25.0, 7.0)\n\n    def send_single_linear_command(self, xbot_id: int, xpos: float, ypos: float, vel: float = 1.0, acc: float = 10.0) -> None:\n        bot.linear_motion_si(1, xbot_id, pmc_types.POSITIONMODE(0),\n                             pmc_types.LINEARPATHTYPE(0), xpos, ypos, 0.0, vel, acc)\n\n    def send_multi_linear_commands(self, moves: list[PlanarMotorMove]) -> None:\n        for move in moves:\n            bot.linear_motion_si(1, move.bot_id, pmc_types.POSITIONMODE(0), pmc_types.LINEARPATHTYPE(0), move.xpos,\n                                 move.ypos, move.end_speed, move.vel, move.acc)\n\n    def send_auto_move_command(self, num_bot: int, xbot_ids: list[int], x_pos: list[float], y_pos: list[float]) -> None:\n        bot.auto_driving_motion_si(\n            num_bot, pmc_types.ASYNCOPTIONS.MOVEALL, xbot_ids, x_pos, y_pos)\n\n    def wait_move_done(self, bot_id: int, timeout: float = 10.0) -> pmc_types.XBOTSTATE:\n        while bot.get_xbot_status(xbot_id=bot_id).xbot_state is not pmc_types.XBOTSTATE.XBOT_IDLE:\n            if bot.get_xbot_status(xbot_id=bot_id).xbot_state == pmc_types.XBOTSTATE.XBOT_OBSTACLE_DETECTED:\n                return pmc_types.XBOTSTATE.XBOT_OBSTACLE_DETECTED\n            time.sleep(0.5)\n        return pmc_types.XBOTSTATE.XBOT_IDLE\n\n    def wait_multiple_move_done(self, bot_list, timeout: float = 10) -> None:\n        for bot in bot_list:\n            self.wait_move_done(bot, timeout)\n\n    def define_stereotype(self,\n                          mover_type: pmc_types.XBOTTYPE,\n                          id: int,\n                          payload: float = 0,\n                          size_pos_x: float = 0,\n                          size_neg_x: float = 0,\n                          size_pos_y: float = 0,\n                          size_neg_y: float = 0,\n                          perf_level: int = 0,\n                          cg_x: float = 0,\n                          cg_y: float = 0,\n                          cg_z: float = 0,\n                          emerg_d_acc: float = 20) -> None:\n        mover_data = pmc_types.MoverStereotypeData(perf_level,\n                                                   payload,\n                                                   size_pos_x,\n                                                   size_neg_x,\n                                                   size_pos_y,\n                                                   size_neg_y,\n                                                   cg_x,\n                                                   cg_y,\n                                                   cg_z,\n                                                   emerg_d_acc)\n        bot.define_mover_stereotype(mover_type,\n                                    id,\n                                    mover_data)\n\n    def assign_stereotype(self, bot_id: int, ster_id: int) -> None:\n        bot.assign_stereotype_to_mover(\n            bot_id, ster_id, pmc_types.ASSIGNSTEREOTYPEOPTION(0))\n\n    def start_macro(self, macro_id: int, xbot_id) -> None:\n        bot.run_motion_macro(1, macro_id, xbot_id)",
+    "span": [
+      18,
+      146
+    ],
+    "start_byte": 540,
+    "end_byte": 6174,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/src/MecaPlanar.py",
+    "name": "MecaPlanar"
+  }
+]

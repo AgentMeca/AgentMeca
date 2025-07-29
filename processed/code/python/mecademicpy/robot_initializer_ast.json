@@ -1,0 +1,464 @@
+[
+  {
+    "snippet": "from copy import deepcopy",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 221,
+    "end_byte": 246,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py"
+  },
+  {
+    "snippet": "from typing import Optional, Tuple, Union",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 247,
+    "end_byte": 288,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py"
+  },
+  {
+    "snippet": "from .mx_robot_def import *",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 290,
+    "end_byte": 317,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py"
+  },
+  {
+    "snippet": "from .robot import Robot",
+    "span": [
+      12,
+      12
+    ],
+    "start_byte": 318,
+    "end_byte": 342,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py"
+  },
+  {
+    "snippet": "from .robot_classes import *",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 343,
+    "end_byte": 371,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py"
+  },
+  {
+    "snippet": "from .tools import *",
+    "span": [
+      14,
+      14
+    ],
+    "start_byte": 372,
+    "end_byte": 392,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py"
+  },
+  {
+    "snippet": "class DirtyFlags():\n\n    def __init__(self):\n        self._dirty = True\n        self._sent_commands = {}\n\n    def set_dirty(self):\n        self._dirty = True\n\n    def clear_dirty(self):\n        self._dirty = False\n        self._sent_commands = {}\n\n    def is_dirty(self, cmd_name: str) -> bool:\n        return self._dirty or cmd_name in self._sent_commands\n\n    def add_sent_command(self, cmd_name: str):\n        self._sent_commands[cmd_name] = True",
+    "span": [
+      17,
+      34
+    ],
+    "start_byte": 395,
+    "end_byte": 844,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "DirtyFlags"
+  },
+  {
+    "snippet": "class MotionQueueParams:\n    \"\"\" This class regroups all motion queue parameters \"\"\"\n\n    def __init__(self):\n        self.torque_limits_severity = MxEventSeverity.MX_EVENT_SEVERITY_WARNING\n        self.torque_limits_mode = MxTorqueLimitsMode.MX_TORQUE_LIMITS_DETECT_SKIP_ACCEL\n        self.torque_limits = [100] * 6\n        self.auto_conf = True\n        self.auto_conf_turn = True\n        self.blending = 100\n        self.cart_acc = 50\n        self.cart_ang_vel = 150\n        self.cart_lin_vel = 400\n        self.joint_acc = 50\n        self.joint_vel_limit = 100\n        self.joint_vel = 50\n        self.move_mode = MxMoveMode.MX_MOVE_MODE_VELOCITY\n        self.move_duration_severity = MxEventSeverity.MX_EVENT_SEVERITY_WARNING\n        self.move_duration = 3.0\n        self.vel_timeout = 0.1\n        self.trf = [0, 0, 0, 0, 0, 0]\n        self.wrf = [0, 0, 0, 0, 0, 0]\n        self.payload = [0, 0, 0, 0]\n\n        self.gripper_force = 40\n        self.gripper_vel = 50\n        self.gripper_range = [0, 0]\n\n        self.move_jump_height = [MX_MOVE_JUMP_DEFAULT_HEIGHT_MM, MX_MOVE_JUMP_DEFAULT_HEIGHT_MM, 0, 102]\n        self.move_jump_approach_vel = [10, 1, 10, 1]\n\n        self.monitoring_interval = 1.0 / 60.0\n        self.real_time_monitoring = ['TargetJointPos', 'TargetCartPos']\n\n    def __eq__(self, other):\n        \"\"\"Comparison of each motion queue parameter (note: We could use a dataclass instead)\"\"\"\n        for field in self.__dict__:\n            self_attr = getattr(self, field)\n            other_attr = getattr(other, field)\n            if other_attr is None:\n                return False\n            if isinstance(self_attr, list):\n                for idx, attr in enumerate(self_attr):\n                    if attr != other_attr[idx]:\n                        return False\n            elif self_attr != other_attr:\n                return False\n        return True",
+    "span": [
+      37,
+      84
+    ],
+    "start_byte": 847,
+    "end_byte": 2723,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "MotionQueueParams"
+  },
+  {
+    "snippet": "class RobotWithTools(Robot):\n    \"\"\"This class is derived from the Robot class and adds some more utility methods that can be useful to manage\n       a robot.\n       Among other things, it has helper methods used to initialize the robot in a well-known state.\n    \"\"\"\n\n    def __init__(self):\n        super().__init__()\n        # Dirty flags for various robot settings to know when they need to be reset\n        self._dirty_flags = DirtyFlags()\n        self._prev_motion_queue_params = None\n\n    # pylint: disable=invalid-name\n    def HasIoModule(self):\n        \"\"\" Tells if the IO module is connected/detected \"\"\"\n        return self.GetRtIoStatus(MxIoBankId.MX_IO_BANK_ID_IO_MODULE).present\n\n    def ActivateRobot(self):\n        \"\"\"Overload of ActivateRobot to set as \"dirty\" all motion-queue related settings\n            (which get reset on the robot upon activation and thus may no more match previously requested settings)\n        \"\"\"\n        # Robot activation clears motion queue parameters -> Consider dirty and set all again on next test setup\n        with self._main_lock:\n            self._dirty_flags.set_dirty()\n        return super().ActivateRobot()\n\n    def DeactivateRobot(self):\n        \"\"\"Overload of DeactivateRobot to set as \"dirty\" all motion-queue related settings\n            (which get reset on the robot upon activation and thus may no more match previously requested settings)\n        \"\"\"\n        # Robot deactivation clears motion queue parameters -> Consider dirty and set all again on next test setup\n        with self._main_lock:\n            self._dirty_flags.set_dirty()\n        return super().DeactivateRobot()\n\n    def _set_activated(self, activated: bool):\n        \"\"\"Overload of _set_activated to set as \"dirty\" all motion-queue related settings\n            (which get reset on the robot upon activation and thus may no more match previously requested settings)\n        \"\"\"\n        if not activated and self._robot_status.activation_state:\n            with self._main_lock:\n                self._dirty_flags.set_dirty()\n        return super()._set_activated(activated)\n\n    def ActivateAndHome(self):\n        \"\"\"Overload of ActivateAndHome to set as \"dirty\" all motion-queue related settings\n            (which get reset on the robot upon activation and thus may no more match previously requested settings)\n        \"\"\"\n        with self._main_lock:\n            self._dirty_flags.set_dirty()\n        super().ActivateAndHome()\n\n    def Disconnect(self):\n        \"\"\"Overload of Disconnect to set as \"dirty\" all motion-queue related settings\"\"\"\n        with self._main_lock:\n            self._dirty_flags.set_dirty()\n        return super().Disconnect()\n\n    def _send_command(self, command: str, args: Optional[Union[str, list, tuple]] = None):\n        \"\"\" Here we catch some commands sent to the robot to detect is robot's settings are dirty and need to be\n            reset before running the next test \"\"\"\n        with self._main_lock:\n            # Make sure that command and args are split\n            command, args = self._split_command_args(command, args)\n            if command.lower() == 'setconf':\n                # Setting conf also disables auto-conf\n                self._dirty_flags.add_sent_command('SetAutoConf')\n            elif command.lower() == 'setconfturn':\n                # Setting conf also disables auto-conf\n                self._dirty_flags.add_sent_command('SetAutoConfTurn')\n            self._dirty_flags.add_sent_command(command)\n            super()._send_command(command, args)\n\n    def _set_robot_operation_mode(self, robot_operation_mode: MxRobotOperationMode):\n        \"\"\"Update the \"robot_operation_mode\" from robot safety status\n\n        Parameters\n        ----------\n        robot_operation_mode : MxRobotOperationMode\n            New robot operation mode to set in robot state\n        \"\"\"\n        super()._set_robot_operation_mode(robot_operation_mode)\n        if robot_operation_mode == MxRobotOperationMode.MX_ROBOT_OPERATION_MODE_MANUAL:\n            # Operation mode change to \"manual\" will influence the time scaling\n            self._dirty_flags.add_sent_command('SetTimeScaling')\n\n    def set_dirty_if_params_changed(self, motion_queue_params: MotionQueueParams):\n        if (self._prev_motion_queue_params is None or self._prev_motion_queue_params != motion_queue_params):\n            self._dirty_flags.set_dirty()\n\n    def clear_dirty_flags(self, motion_queue_params: Optional[MotionQueueParams] = None) -> bool:\n        \"\"\"Caller by test suite after it finished settings robot's initial state. From this moment, we'll be monitoring\n           which commands are sent to the robot and mark them as 'dirty' so we set again with default value when\n           starting next test case.\"\"\"\n        with self._main_lock:\n            if motion_queue_params:\n                self._prev_motion_queue_params = deepcopy(motion_queue_params)\n            return self._dirty_flags.clear_dirty()\n\n    def is_cmd_dirty(self, cmd_name: str) -> bool:\n        \"\"\"Tells if the specified command is 'dirty' (i.e. has been sent to robot since last test setup)\n\n        Parameters\n        ----------\n        cmd_name : str\n            Name of the command to check if dirty\n        \"\"\"\n        with self._main_lock:\n            return self._dirty_flags.is_dirty(cmd_name)\n\n    def set_if_dirty(self, cmd_name: str, *args: Tuple[any]):\n        \"\"\"Send the specified robot command, but only if 'dirt', i.e. if the robot does not already have this value\n\n        Parameters\n        ----------\n        cmd_name : str\n            Name of the \"Set\" command to send\n        *args :\n            Command-specific arguments\n        \"\"\"\n        with self._main_lock:\n            if not self.is_cmd_dirty(cmd_name):\n                # This command is not \"dirty\", meaning the last time it was sent was during previous test setup,\n                # so we don't need to send it again, robot is already configured with desired value.\n                return\n\n        func = getattr(self, cmd_name)\n        if func:\n            func(*args)\n        else:\n            args_string = \",\".join([str(arg) for arg in args])\n            cmd_string = f'cmd_name({args_string})'\n            self.SendCustomCommand(cmd_string)",
+    "span": [
+      87,
+      219
+    ],
+    "start_byte": 2726,
+    "end_byte": 8978,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "RobotWithTools"
+  },
+  {
+    "snippet": "def get_joint_limits_cfg(robot: RobotWithTools) -> bool:\n    \"\"\" Get joint limits configuration (enabled or not)\n    \"\"\"\n    # Check if joint limits are currently enabled\n    event = robot.SendCustomCommand('GetJointLimitsCfg()',\n                                    expected_responses=[MxRobotStatusCode.MX_ST_GET_JOINT_LIMITS_CFG])\n    wait_result = event.wait(timeout=2)\n    return int(wait_result.data) != 0",
+    "span": [
+      228,
+      235
+    ],
+    "start_byte": 9162,
+    "end_byte": 9572,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "get_joint_limits_cfg"
+  },
+  {
+    "snippet": "def set_joint_limits_cfg(robot: RobotWithTools, set_enable=False):\n    \"\"\" Set enable/disable joint limits (deactivating the robot if necessary to apply the configuration change)\n\n    Parameters\n    ----------\n    set_enable : bool,\n        Enable joint limits or not by default False\n    \"\"\"\n\n    if set_enable != get_joint_limits_cfg(robot):\n        # Need to deactivate robot to disable joint limits\n        deactivate_robot(robot)\n        # Enable/disable joint limits\n        robot.SetJointLimitsCfg(set_enable)",
+    "span": [
+      238,
+      251
+    ],
+    "start_byte": 9575,
+    "end_byte": 10091,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "set_joint_limits_cfg"
+  },
+  {
+    "snippet": "def get_joint_limits(robot: RobotWithTools, joint: int, use_model: bool = False) -> tuple[float]:\n    \"\"\"Get current joint limits for selected joint.\n\n    Parameters\n    ----------\n    joint : int\n        joint number to get limits\n    use_model : bool\n        return model limits (else effective joint limits)\n\n    Returns\n    -------\n    tuple[float]\n        low limit, high limit\n    \"\"\"\n\n    # Check if joint limits is already set\n    wait_result = robot.SendCustomCommand(\n        f'GetModelJointLimits({joint})' if use_model else f'GetJointLimits({joint})',\n        expected_responses=[MxRobotStatusCode.MX_ST_GET_MODEL_JOINT_LIMITS, MxRobotStatusCode.MX_ST_GET_JOINT_LIMITS],\n        timeout=2)\n    # reply >> [2090][joint, low_limit, high_limit]\n    limits = [float(x) for x in wait_result.data.split(',')]\n    return limits[1], limits[2]",
+    "span": [
+      254,
+      277
+    ],
+    "start_byte": 10094,
+    "end_byte": 10940,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "get_joint_limits"
+  },
+  {
+    "snippet": "def get_all_joint_limits(robot: RobotWithTools, use_model: bool = False) -> dict[int, tuple[float]]:\n    \"\"\" Get limits for each robot joint\n\n    Parameters\n    ----------\n    use_model : bool\n        return model limits\n\n    Returns\n    -------\n        dict {joint, [low_limit, high_limit]}\n    \"\"\"\n    limits = {}\n    for joint in range(1, robot.GetRobotInfo().num_joints + 1):\n        limits[joint] = get_joint_limits(robot, joint=joint, use_model=use_model)\n\n    return limits",
+    "span": [
+      280,
+      296
+    ],
+    "start_byte": 10943,
+    "end_byte": 11423,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "get_all_joint_limits"
+  },
+  {
+    "snippet": "def _set_joint_limits(robot: RobotWithTools, joint: int, low_limit: float, high_limit: float):\n    \"\"\" Set limits on selected joint (deactivating the robot if necessary to apply the configuration change)\n\n    Parameters\n    ----------\n    joint : int\n        joint number where to set the limit\n    low_limit : float\n        lower joint limit\n    high_limit : float\n        higher joint limit\n    \"\"\"\n\n    # Need to deactivate robot to disable joint limits\n    deactivate_robot(robot)\n\n    # Set joint limits for selected joint\n    robot.SetJointLimits(joint, low_limit, high_limit)",
+    "span": [
+      299,
+      316
+    ],
+    "start_byte": 11426,
+    "end_byte": 12008,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "_set_joint_limits"
+  },
+  {
+    "snippet": "def _enable_joint_limits_for_ext_tool(robot: RobotWithTools, move_to_safe_position=False):\n    \"\"\"This function configures appropriate joint limits depending on the detected external tool, as described\n        in documentation for public method reset_joint_limits below\n\n    Args:\n        robot (RobotWithTools):                 Robot to configure joint limits for\n        move_to_safe_position (bool, optional): If True and robot is outside the limits, this function will attempt\n                                                to move it inside the limits (using recovery mode) before enabling\n                                                the limits.\n                                                Defaults to False.\n    \"\"\"\n\n    if not robot.GetRobotInfo().supports_ext_tool:\n        set_joint_limits_cfg(robot, set_enable=False)\n        return\n\n    # Enable joint limits when external tool is connected (avoid collisions and cable stress)\n    if not robot.GetRtExtToolStatus().is_physical_tool_present():\n        set_joint_limits_cfg(robot, set_enable=False)\n    else:\n        # Get robot model limits\n        expected_joint_limits = get_all_joint_limits(robot, use_model=True)\n\n        # Override limits to protect external tool\n        if robot.GetRtExtToolStatus().is_gripper(physical=True):\n            # limits to preserve gripper cable\n            expected_joint_limits[6] = (-200, 200)\n        elif robot.GetRtExtToolStatus().is_pneumatic_module(physical=True):\n            # limits to avoid pneumatic module collision with j4\n            expected_joint_limits[5] = (-100, 100)\n\n        # Limits are not yet enabled, set the limits\n        set_limits = not get_joint_limits_cfg(robot)\n        if not set_limits:\n            # limits are already enabled, check if they match with expected values\n            for joint, limits in expected_joint_limits.items():\n                if (limits[0], limits[1]) != get_joint_limits(robot, joint=joint):\n                    set_limits = True\n\n        if move_to_safe_position:\n            # Check if all joint are within limits\n            cur_joint_pos = robot.GetRtTargetJointPos()\n            for limits, pos in zip(expected_joint_limits.items(), cur_joint_pos):\n                if not limits[1][0] + 5 <= float(pos) <= limits[1][1] - 5:\n                    # We're outside the limits. Let's activate and move the robot\n                    if not robot.GetStatusRobot().activation_state:\n                        reset_sim_mode(robot)\n                        configure_recovery_mode(robot, True)\n                        robot.ActivateRobot()\n                        robot.WaitActivated()\n\n                    target_pos = [0] * robot.GetRobotInfo().num_joints\n                    robot.MoveJoints(*target_pos)\n                    robot.WaitIdle()\n                    break\n\n        # limits must be set\n        if set_limits:\n            for joint, limits in expected_joint_limits.items():\n                _set_joint_limits(robot, joint=joint, low_limit=limits[0], high_limit=limits[1])\n\n            set_joint_limits_cfg(robot, set_enable=True)",
+    "span": [
+      319,
+      380
+    ],
+    "start_byte": 12011,
+    "end_byte": 15110,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "_enable_joint_limits_for_ext_tool"
+  },
+  {
+    "snippet": "def reset_joint_limits(robot: RobotWithTools):\n    \"\"\" This function attempts to determine appropriate joint limits to apply according to type of external tool\n        connected to the robot.\n\n        *** WARNING ***\n        There is no warranty that the chosen joint limits are appropriate for your physical setup.\n        The cable length or other constraints on your robot may cause different joint limits requirements.\n        Please use this method only if your situation is covered by one of the cases below.\n\n        This function handles only the following cases (write your own function if your situation differs)\n        - For Meca500 with a MPM500 pneumatic module, a limit will be set to avoid collision with the joint 4\n        - For Meca500 with a MEGP-25E or MEGP-25LS gripper, joint 6 will be limited to +/- 180 degrees to avoid\n          damaging the cable.\n        - Otherwise, joint limits are disabled\n    \"\"\"\n    # Enable joint limits if physical external tool is connected\n    _enable_joint_limits_for_ext_tool(robot)",
+    "span": [
+      383,
+      399
+    ],
+    "start_byte": 15113,
+    "end_byte": 16152,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_joint_limits"
+  },
+  {
+    "snippet": "def reset_work_zone_limits(robot: RobotWithTools):\n    \"\"\"This function reverts work zone limits to defaults.\n    \"\"\"\n    # Check if already set\n    expected_cfg = [\n        MxEventSeverity.MX_EVENT_SEVERITY_ERROR, MxWorkZoneMode.MX_WORK_ZONE_MODE_ROBOT_AND_TOOL_IN_WORK_ZONE\n    ]\n    expected_limits = [-10000, -10000, -10000, 10000, 10000, 10000]\n\n    # Check work zone limits configuration\n    response = robot.SendCustomCommand('GetWorkZoneCfg()',\n                                       expected_responses=[MxRobotStatusCode.MX_ST_GET_WORK_ZONE_CFG],\n                                       timeout=2)\n    current_work_zone_limits_cfg = string_to_numbers(response.data)\n    need_to_set_cfg = current_work_zone_limits_cfg != expected_cfg\n    # Check work zone limits\n    response = robot.SendCustomCommand('GetWorkZoneLimits()',\n                                       expected_responses=[MxRobotStatusCode.MX_ST_GET_WORK_ZONE_LIMITS],\n                                       timeout=2)\n    current_work_zone_limits = string_to_numbers(response.data)\n    need_to_set_limits = current_work_zone_limits != expected_limits\n\n    if not need_to_set_cfg and not need_to_set_limits:\n        # Nothing to set\n        return\n\n    # Need to deactivate robot to change work zone limits\n    deactivate_robot(robot)\n\n    if need_to_set_limits:\n        # Disable work zone limits x_min: float, y_min: float, z_min: float, x_max: float, y_max: float, z_max: float):\n        robot.SetWorkZoneLimits(*expected_limits)\n\n    if need_to_set_cfg:\n        robot.SetWorkZoneCfg(*expected_cfg)",
+    "span": [
+      402,
+      436
+    ],
+    "start_byte": 16155,
+    "end_byte": 17725,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_work_zone_limits"
+  },
+  {
+    "snippet": "def reset_collision_cfg(robot: RobotWithTools):\n    \"\"\"This function reverts collision configurations to defaults.\n    \"\"\"\n    expected_severity = MxEventSeverity.MX_EVENT_SEVERITY_ERROR\n\n    # Check if already set\n    expected_tool_sphere = [0, 0, 0, 0]\n    expected_collision_cfg = [expected_severity]\n\n    # Check collision configuration\n    response = robot.SendCustomCommand('GetCollisionCfg()',\n                                       expected_responses=[MxRobotStatusCode.MX_ST_GET_COLLISION_CFG],\n                                       timeout=2)\n    current_collision_cfg = string_to_numbers(response.data)\n    need_to_set_collision_cfg = current_collision_cfg != expected_collision_cfg\n\n    # Check tool sphere\n    response = robot.SendCustomCommand('GetToolSphere()',\n                                       expected_responses=[MxRobotStatusCode.MX_ST_GET_TOOL_SPHERE],\n                                       timeout=2)\n    current_tool_sphere = string_to_numbers(response.data)\n    need_to_set_tool_sphere = current_tool_sphere != expected_tool_sphere\n\n    if not need_to_set_tool_sphere and not need_to_set_collision_cfg:\n        # Nothing to set\n        return\n\n    # Need to deactivate robot to change work zone limits\n    deactivate_robot(robot)\n\n    if need_to_set_tool_sphere:\n        robot.SetToolSphere(*expected_tool_sphere)\n\n    if need_to_set_collision_cfg:\n        robot.SetCollisionCfg(*expected_collision_cfg)",
+    "span": [
+      439,
+      473
+    ],
+    "start_byte": 17728,
+    "end_byte": 19161,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_collision_cfg"
+  },
+  {
+    "snippet": "def reset_pstop2_cfg(robot: RobotWithTools):\n    \"\"\"This function reverts PStop2 configuration to defaults.\n    \"\"\"\n    expected_severity = [MxEventSeverity.MX_EVENT_SEVERITY_CLEAR_MOTION]\n\n    # Check PStop2 configuration\n    response = robot.SendCustomCommand('GetPStop2Cfg()',\n                                       expected_responses=[MxRobotStatusCode.MX_ST_GET_PSTOP2_CFG],\n                                       timeout=2)\n    current_severity = string_to_numbers(response.data)\n    need_to_set_cfg = expected_severity != current_severity\n\n    if not need_to_set_cfg:\n        return\n\n    # Need to deactivate robot to change PStop2 config\n    deactivate_robot(robot)\n\n    # Set default config\n    robot.SetPStop2Cfg(expected_severity[0])",
+    "span": [
+      476,
+      495
+    ],
+    "start_byte": 19164,
+    "end_byte": 19908,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_pstop2_cfg"
+  },
+  {
+    "snippet": "def reset_sim_mode_cfg(robot: RobotWithTools):\n    \"\"\"This function reverts simulation mode configuration to defaults.\n    \"\"\"\n    expected_sim_mode_cfg = [MxRobotSimulationMode.MX_SIM_MODE_REAL_TIME]\n\n    if not robot.GetRobotInfo().version.is_at_least(11, 1, 2):\n        # Not supported on this robot version\n        return\n\n    # Check current configuration\n    response = robot.SendCustomCommand('GetSimModeCfg()',\n                                       expected_responses=[MxRobotStatusCode.MX_ST_GET_SIM_MODE_CFG],\n                                       timeout=2)\n    current_sim_mode_cfg = string_to_numbers(response.data)\n    need_to_set_cfg = expected_sim_mode_cfg != current_sim_mode_cfg\n\n    if not need_to_set_cfg:\n        return\n\n    # Set default config\n    robot.SetSimModeCfg(expected_sim_mode_cfg[0])",
+    "span": [
+      498,
+      518
+    ],
+    "start_byte": 19911,
+    "end_byte": 20729,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_sim_mode_cfg"
+  },
+  {
+    "snippet": "def reset_vacuum_grip(robot: RobotWithTools):\n    \"\"\"This function release vacuum from the io module (without purging) and restores default purge duration \"\"\"\n    if (robot.HasIoModule()\n            or robot.GetRtIoStatus(MxIoBankId.MX_IO_BANK_ID_IO_MODULE).sim_mode) and robot.GetRtVacuumState().vacuum_on:\n        robot.SetVacuumPurgeDuration_Immediate(0)  # No purge, just stop vacuum\n        event = robot.GetInterruptableEvent([MxRobotStatusCode.MX_ST_RT_VACUUM_STATE])\n        robot.VacuumRelease_Immediate()\n        event.wait(timeout=0.1)\n        robot.SetVacuumPurgeDuration_Immediate(-1)  # Restore default duration",
+    "span": [
+      521,
+      529
+    ],
+    "start_byte": 20732,
+    "end_byte": 21357,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_vacuum_grip"
+  },
+  {
+    "snippet": "def reset_vacuum_grip_parameters(robot: RobotWithTools):\n    \"\"\"This function restores default vacuum gripper parameters (thresholds and purge duration)\"\"\"\n    if robot.HasIoModule() or robot.GetRtIoStatus(MxIoBankId.MX_IO_BANK_ID_IO_MODULE).sim_mode:\n        robot.SetVacuumThreshold_Immediate(0, 0)  # Restore default thresholds\n        robot.SetVacuumPurgeDuration_Immediate(-1)  # Restore default duration",
+    "span": [
+      532,
+      536
+    ],
+    "start_byte": 21360,
+    "end_byte": 21769,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_vacuum_grip_parameters"
+  },
+  {
+    "snippet": "def _reset_io_sim_bank(robot: RobotWithTools, bank_id: MxIoBankId):\n    \"\"\"This function clears IO simulation mode for specified IO module\"\"\"\n    robot.SetIoSim(bank_id, False)\n    robot.WaitIoSimDisabled(bank_id)",
+    "span": [
+      539,
+      542
+    ],
+    "start_byte": 21772,
+    "end_byte": 21985,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "_reset_io_sim_bank"
+  },
+  {
+    "snippet": "def reset_io_sim(robot: RobotWithTools):\n    \"\"\"This function clears IO simulation mode\"\"\"\n    if not robot.GetRobotInfo().supports_io_module:\n        return\n    if robot.GetStatusRobot().simulation_mode != MxRobotSimulationMode.MX_SIM_MODE_DISABLED:\n        # No point trying to change IO sim, the whole robot is in SIM mode\n        return\n    if robot.GetRtIoStatus(MxIoBankId.MX_IO_BANK_ID_IO_MODULE).sim_mode:\n        _reset_io_sim_bank(robot, MxIoBankId.MX_IO_BANK_ID_IO_MODULE)",
+    "span": [
+      545,
+      553
+    ],
+    "start_byte": 21988,
+    "end_byte": 22471,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_io_sim"
+  },
+  {
+    "snippet": "def _reset_digital_outputs_bank(robot: RobotWithTools, bank_id: MxIoBankId):\n    \"\"\"This function clears all digital outputs for specified bank\"\"\"\n\n    # Check if already cleared\n    curr_output_states = robot.GetRtOutputState(bank_id).data\n    nb_outputs = len(curr_output_states)\n    cleared_outputs = [0] * nb_outputs\n    if curr_output_states == cleared_outputs:\n        return\n\n    # Make sure all outputs are set to 0\n    robot.SetOutputState_Immediate(bank_id, *cleared_outputs)",
+    "span": [
+      556,
+      567
+    ],
+    "start_byte": 22474,
+    "end_byte": 22959,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "_reset_digital_outputs_bank"
+  },
+  {
+    "snippet": "def _wait_outputs_cleared(robot: RobotWithTools):\n    \"\"\"Wait until all digital outputs have been cleared\"\"\"\n    io_module_outputs = robot.GetRtOutputState(MxIoBankId.MX_IO_BANK_ID_IO_MODULE).data\n    io_module_outputs_cleared = [0] * len(io_module_outputs)\n\n    start_wait = time.monotonic()\n    while io_module_outputs != io_module_outputs_cleared:\n        if time.monotonic() - start_wait > 2:\n            raise TimeoutError(f'Timeout waiting for digital outputs to be cleared (io_module={io_module_outputs})')\n        # Wait a bit, or until new output values are received\n        event = robot.GetInterruptableEvent([MxRobotStatusCode.MX_ST_RT_OUTPUT_STATE])\n        try:\n            event.wait(timeout=0.01)\n        except TimeoutException:\n            pass\n        # Check if now cleared\n        io_module_outputs = robot.GetRtOutputState(MxIoBankId.MX_IO_BANK_ID_IO_MODULE).data",
+    "span": [
+      570,
+      586
+    ],
+    "start_byte": 22962,
+    "end_byte": 23847,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "_wait_outputs_cleared"
+  },
+  {
+    "snippet": "def reset_digital_outputs(robot: RobotWithTools):\n    \"\"\"This function clears all digital outputs for all banks\"\"\"\n    if robot.HasIoModule():\n        _reset_digital_outputs_bank(robot, MxIoBankId.MX_IO_BANK_ID_IO_MODULE)\n        _wait_outputs_cleared(robot)",
+    "span": [
+      589,
+      593
+    ],
+    "start_byte": 23850,
+    "end_byte": 24108,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_digital_outputs"
+  },
+  {
+    "snippet": "def deactivate_robot(robot: RobotWithTools):\n    \"\"\"This function deactivates the robot, and awaits confirmation\n    \"\"\"\n    if not robot.GetStatusRobot().activation_state:\n        # Already deactivated\n        return\n    robot.DeactivateRobot()\n    robot.WaitDeactivated(timeout=10)",
+    "span": [
+      601,
+      608
+    ],
+    "start_byte": 24183,
+    "end_byte": 24466,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "deactivate_robot"
+  },
+  {
+    "snippet": "def configure_recovery_mode(robot: RobotWithTools, recovery_mode: bool):\n    \"\"\"Enable or disable recovery mode on the robot\"\"\"\n    is_dirty = robot.is_cmd_dirty('SetRecoveryMode')\n    if robot.GetStatusRobot().recovery_mode == recovery_mode and not is_dirty:\n        # Already configured correctly\n        return\n\n    robot.SetRecoveryMode(recovery_mode)\n    robot.WaitRecoveryMode(recovery_mode)",
+    "span": [
+      611,
+      619
+    ],
+    "start_byte": 24469,
+    "end_byte": 24866,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "configure_recovery_mode"
+  },
+  {
+    "snippet": "def reset_sim_mode(robot: RobotWithTools):\n    \"\"\"Disables the robot simulation mode if not already done\n       (including deactivating the robot if necessary)\n    \"\"\"\n    if robot.GetStatusRobot().simulation_mode == MxRobotSimulationMode.MX_SIM_MODE_DISABLED:\n        # Already cleared\n        return\n\n    if robot.GetStatusRobot().activation_state:\n        deactivate_robot(robot)\n    robot.DeactivateSim()\n    robot.WaitSimDeactivated(timeout=2)",
+    "span": [
+      622,
+      633
+    ],
+    "start_byte": 24869,
+    "end_byte": 25317,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_sim_mode"
+  },
+  {
+    "snippet": "def reset_error(robot: RobotWithTools):\n    \"\"\"Synchronously reset robot error (if robot is in error state).\n\n    Args:\n        robot (RobotWithTools): Robot to reset error for\n\n    Raises\n        ------\n        TimeoutException\n            Raised if the robot does not report error being cleared in a reasonable time\n        InterruptException\n            Raised if waiting becomes irrelevant (disconnected from the robot for example)\n    \"\"\"\n    if not robot.GetStatusRobot().error_status:\n        # No error to clear\n        return\n    robot.ResetError()\n    robot.WaitErrorReset(timeout=5)",
+    "span": [
+      636,
+      653
+    ],
+    "start_byte": 25320,
+    "end_byte": 25913,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_error"
+  },
+  {
+    "snippet": "def clear_motion(robot: RobotWithTools, then_resume=False):\n    \"\"\"This function clears robot's motion queue, and optionally resumes motion,\n       then awaits confirmation\n\n    Parameters\n    ----------\n    then_resume : bool, optional\n        Resume motion after clearing motion queue, by default False\n    \"\"\"\n    if robot.GetStatusRobot().error_status:\n        return\n    if not robot.GetStatusRobot().homing_state:\n        return\n    robot.ClearMotion()\n    robot.WaitMotionCleared(timeout=5)\n    robot.WaitMotionPaused(timeout=2)\n    if then_resume:\n        robot.ResumeMotion()\n        robot.WaitMotionResumed(timeout=2)",
+    "span": [
+      656,
+      674
+    ],
+    "start_byte": 25916,
+    "end_byte": 26543,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "clear_motion"
+  },
+  {
+    "snippet": "def resume_motion(robot: RobotWithTools):\n    \"\"\"Resumes robot's motion queue (if it's in run state) and awaits confirmation\"\"\"\n    if robot.GetStatusRobot().error_status:\n        # Can't clear pause in error state\n        return\n    if not robot.GetStatusRobot().pause_motion_status:\n        # Robot is not paused\n        return\n    if not robot.GetStatusRobot().homing_state:\n        # Robot is not homed -> Can't be resumed\n        return\n    robot.ResumeMotion()\n    robot.WaitMotionResumed(timeout=2)",
+    "span": [
+      677,
+      689
+    ],
+    "start_byte": 26546,
+    "end_byte": 27051,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "resume_motion"
+  },
+  {
+    "snippet": "def reset_robot_configuration(robot: RobotWithTools):\n    \"\"\"This function resets robot configuration to default state ***\n    \"\"\"\n    reset_error(robot)\n    reset_sim_mode(robot)\n    reset_joint_limits(robot)\n    reset_work_zone_limits(robot)\n    reset_collision_cfg(robot)\n    reset_pstop2_cfg(robot)\n    reset_sim_mode_cfg(robot)",
+    "span": [
+      697,
+      706
+    ],
+    "start_byte": 27137,
+    "end_byte": 27469,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_robot_configuration"
+  },
+  {
+    "snippet": "def reset_motion_queue(robot: RobotWithTools, params: MotionQueueParams = None, activate_home=False):\n    \"\"\"This function resets robot's motion queue to default values\n\n    Args:\n        robot (RobotWithTools):                 Robot to reset motion queue for\n        params (MotionQueueParams, optional):   Motion queue parameters to apply.\n                                                Default values from MotionQueueParams are used if None.\n                                                Defaults to None.\n        activate_home (bool, optional): True  -> Activate and home the robot if not already done\n                                        False -> Don't change robot status (do nothing if not activated and homed)\n                                        Defaults to False.\n    \"\"\"\n    if robot.GetRobotInfo().supports_time_scaling:\n        robot.set_if_dirty('SetTimeScaling', 100)\n\n    if activate_home and not robot.GetStatusRobot().homing_state:\n        robot.ActivateAndHome()\n        robot.WaitHomed()\n\n    if robot.GetStatusRobot().homing_state:\n        if params is None:\n            params = MotionQueueParams()\n        robot.set_dirty_if_params_changed(params)\n\n        reset_error(robot)\n\n        clear_motion(robot, then_resume=True)\n\n        if robot.GetRobotInfo().supports_torque_limits:\n            robot.set_if_dirty('SetTorqueLimitsCfg', params.torque_limits_severity, params.torque_limits_mode)\n            num_joints = robot.GetRobotInfo().num_joints\n            if len(params.torque_limits) == num_joints:\n                robot.set_if_dirty('SetTorqueLimits', *params.torque_limits)\n            else:\n                robot.set_if_dirty('SetTorqueLimits', *params.torque_limits[:num_joints])\n        robot.set_if_dirty('SetAutoConf', params.auto_conf)\n        if robot.GetRobotInfo().supports_conf_turn:\n            robot.set_if_dirty('SetAutoConfTurn', params.auto_conf_turn)\n        robot.set_if_dirty('SetBlending', params.blending)\n        robot.set_if_dirty('SetCartAcc', params.cart_acc)\n        robot.set_if_dirty('SetCartAngVel', params.cart_ang_vel)\n        robot.set_if_dirty('SetCartLinVel', params.cart_lin_vel)\n        robot.set_if_dirty('SetJointAcc', params.joint_acc)\n        if robot.GetRobotInfo().supports_joint_vel_limit:\n            robot.set_if_dirty('SetJointVelLimit', params.joint_vel_limit)\n        robot.set_if_dirty('SetJointVel', params.joint_vel)\n        if robot.GetRobotInfo().supports_move_duration:\n            robot.set_if_dirty('SetMoveMode', params.move_mode)\n            robot.set_if_dirty('SetMoveDurationCfg', params.move_duration_severity)\n            robot.set_if_dirty('SetMoveDuration', params.move_duration)\n        robot.set_if_dirty('SetVelTimeout', params.vel_timeout)\n        robot.set_if_dirty('SetTrf', *params.trf)\n        robot.set_if_dirty('SetWrf', *params.wrf)\n        if robot.GetRobotInfo().version.is_at_least(9, 3):\n            robot.set_if_dirty('SetPayload', *params.payload)\n        # eoat initialization\n        if robot_model_support_eoat(robot.GetRobotInfo().robot_model):\n            robot.set_if_dirty('SetGripperForce', params.gripper_force)\n            robot.set_if_dirty('SetGripperVel', params.gripper_vel)\n            if robot.GetRobotInfo().gripper_pos_ctrl_capable:\n                robot.set_if_dirty('SetGripperRange', *params.gripper_range)\n        if robot.GetRobotInfo().num_joints == 4:\n            robot.set_if_dirty('SetMoveJumpHeight', *params.move_jump_height)\n            robot.set_if_dirty('SetMoveJumpApproachVel', *params.move_jump_approach_vel)\n\n        # Restore default real-time monitoring events\n        robot.set_if_dirty('SetMonitoringInterval', params.monitoring_interval)\n        if robot.GetRobotInfo().version.is_at_least(9, 3):\n            robot.set_if_dirty('SetRealTimeMonitoring', *params.real_time_monitoring)\n\n        # Now that we've set all motion-queue parameters,\n        robot.clear_dirty_flags(params)",
+    "span": [
+      712,
+      783
+    ],
+    "start_byte": 27593,
+    "end_byte": 31534,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_motion_queue"
+  },
+  {
+    "snippet": "def reset_vacuum_module(robot: RobotWithTools):\n    \"\"\"Reset the MVK01 vacuum module states (does nothing if not present)\"\"\"\n    reset_vacuum_grip(robot)\n    reset_vacuum_grip_parameters(robot)\n    reset_io_sim(robot)\n    reset_digital_outputs(robot)",
+    "span": [
+      786,
+      791
+    ],
+    "start_byte": 31537,
+    "end_byte": 31787,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_initializer.py",
+    "name": "reset_vacuum_module"
+  }
+]

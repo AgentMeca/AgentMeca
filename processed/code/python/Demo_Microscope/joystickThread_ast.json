@@ -1,0 +1,51 @@
+[
+  {
+    "snippet": "from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QThread",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 58,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystickThread.py"
+  },
+  {
+    "snippet": "from . import joystick",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 59,
+    "end_byte": 81,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystickThread.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 82,
+    "end_byte": 104,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystickThread.py"
+  },
+  {
+    "snippet": "class JoystickThread(QThread):\n    def __init__(self, robot, lcd_list, *args, **kwargs) -> None:\n        super().__init__(*args, **kwargs)\n        self.robot = robot\n        self.robotInitPos = self.robot.GetPose()\n        self.runFlag = True\n        self.joystick = joystick.MecaJoy()\n        self.maxOffset = (5,5)\n        self.lcdList = lcd_list\n\n    def run(self) -> None:\n        commandToSend = [0,0,0,0,0,0]\n        while self.runFlag:\n            joyData = self.joystick.getinfo()\n            joyData[1] = -joyData[1]\n            robotPose = self.robot.GetPose()\n            poseOffset = [x1 - x2 for (x1, x2) in zip(robotPose, self.robotInitPos)]\n            self.lcdList[0].display(poseOffset[0])\n            self.lcdList[1].display(poseOffset[1])\n            for i in range(2):\n                if joyData[i] == 0:\n                    commandToSend[i] = joyData[i]\n                elif joyData[i] > 0:\n                    if poseOffset[i] <= 0:\n                        commandToSend[i] = joyData[i]\n                    elif poseOffset[i] > 0:\n                        if abs(poseOffset[i]) > self.maxOffset[i]:\n                            commandToSend[i] = 0\n                        else:\n                            commandToSend[i] = joyData[i]\n                elif joyData[i] < 0:\n                    if poseOffset[i] >= 0:\n                        commandToSend[i] = joyData[i]\n                    elif poseOffset[i] < 0:\n                        if abs(poseOffset[i]) > self.maxOffset[i]:\n                            commandToSend[i] = 0\n                        else:\n                            commandToSend[i] = joyData[i]\n                    \n\n            self.robot.MoveLinVelWRF(*commandToSend)\n            sleep(0.01)\n        \n        self.lcdList[0].display(0)\n        self.lcdList[1].display(0)\n\n    def stop_running(self):\n        self.runFlag = False",
+    "span": [
+      7,
+      54
+    ],
+    "start_byte": 108,
+    "end_byte": 1982,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystickThread.py",
+    "name": "JoystickThread"
+  }
+]

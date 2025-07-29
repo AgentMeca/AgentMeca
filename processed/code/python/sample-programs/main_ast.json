@@ -1,0 +1,86 @@
+[
+  {
+    "snippet": "from mecademicpy.robot import Robot",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 35,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/main.py"
+  },
+  {
+    "snippet": "from zaber_motion import Library",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 36,
+    "end_byte": 68,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/main.py"
+  },
+  {
+    "snippet": "from zaber_motion import DeviceDbSourceType",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 69,
+    "end_byte": 112,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/main.py"
+  },
+  {
+    "snippet": "from zaber_motion.ascii import Connection",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 113,
+    "end_byte": 154,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/main.py"
+  },
+  {
+    "snippet": "from zaber_motion import Units",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 155,
+    "end_byte": 185,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/main.py"
+  },
+  {
+    "snippet": "from moveFunctions import *",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 186,
+    "end_byte": 213,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/main.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 214,
+    "end_byte": 236,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/Python/ZaberProbing/main.py"
+  }
+]

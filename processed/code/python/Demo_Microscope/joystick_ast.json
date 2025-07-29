@@ -1,0 +1,90 @@
+[
+  {
+    "snippet": "import ctypes",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 142,
+    "end_byte": 155,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystick.py"
+  },
+  {
+    "snippet": "from ctypes.wintypes import WORD, UINT, DWORD",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 156,
+    "end_byte": 201,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystick.py"
+  },
+  {
+    "snippet": "from ctypes.wintypes import WCHAR as TCHAR",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 202,
+    "end_byte": 244,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystick.py"
+  },
+  {
+    "snippet": "class JOYCAPS(ctypes.Structure):\n    _fields_ = [\n        ('wMid', WORD),\n        ('wPid', WORD),\n        ('szPname', TCHAR * MAXPNAMELEN),\n        ('wXmin', UINT),\n        ('wXmax', UINT),\n        ('wYmin', UINT),\n        ('wYmax', UINT),\n        ('wZmin', UINT),\n        ('wZmax', UINT),\n        ('wNumButtons', UINT),\n        ('wPeriodMin', UINT),\n        ('wPeriodMax', UINT),\n        ('wRmin', UINT),\n        ('wRmax', UINT),\n        ('wUmin', UINT),\n        ('wUmax', UINT),\n        ('wVmin', UINT),\n        ('wVmax', UINT),\n        ('wCaps', UINT),\n        ('wMaxAxes', UINT),\n        ('wNumAxes', UINT),\n        ('wMaxButtons', UINT),\n        ('szRegKey', TCHAR * MAXPNAMELEN),\n        ('szOEMVxD', TCHAR * MAX_JOYSTICKOEMVXDNAME),\n    ]",
+    "span": [
+      39,
+      65
+    ],
+    "start_byte": 985,
+    "end_byte": 1730,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystick.py",
+    "name": "JOYCAPS"
+  },
+  {
+    "snippet": "class JOYINFO(ctypes.Structure):\n    _fields_ = [\n        ('wXpos', UINT),\n        ('wYpos', UINT),\n        ('wZpos', UINT),\n        ('wButtons', UINT),\n    ]",
+    "span": [
+      67,
+      73
+    ],
+    "start_byte": 1732,
+    "end_byte": 1890,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystick.py",
+    "name": "JOYINFO"
+  },
+  {
+    "snippet": "class JOYINFOEX(ctypes.Structure):\n    _fields_ = [\n        ('dwSize', DWORD),\n        ('dwFlags', DWORD),\n        ('dwXpos', DWORD),\n        ('dwYpos', DWORD),\n        ('dwZpos', DWORD),\n        ('dwRpos', DWORD),\n        ('dwUpos', DWORD),\n        ('dwVpos', DWORD),\n        ('dwButtons', DWORD),\n        ('dwButtonNumber', DWORD),\n        ('dwPOV', DWORD),\n        ('dwReserved1', DWORD),\n        ('dwReserved2', DWORD),\n    ]",
+    "span": [
+      75,
+      90
+    ],
+    "start_byte": 1892,
+    "end_byte": 2321,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystick.py",
+    "name": "JOYINFOEX"
+  },
+  {
+    "snippet": "class MecaJoy():\n    def __init__(self):\n        # Define structures\n        self._joyid = 0\n        self._info = JOYINFO()\n        self._pinfo = ctypes.pointer(self._info)\n        self._caps = JOYCAPS()\n        self._pcaps = ctypes.pointer(self._caps)\n        self._info = JOYINFO()\n        self._infoex = JOYINFOEX()\n        self._pinfoex = ctypes.pointer(self._infoex)\n        self._infoex.dwSize = ctypes.sizeof(JOYINFOEX)\n        self._infoex.dwFlags = JOY_RETURNX | JOY_RETURNY | JOY_RETURNZ | JOY_RETURNBUTTONS\n\n    def checkdriver(self):\n        num_devs = joyGetNumDevs()\n        if num_devs == 0:\n            print(\"Driver not loaded\")\n            return False\n        return True\n\n    def checkplugged(self):\n        if joyGetPos(self._joyid, self._pinfo) != 0:\n            print(\"Joystick not plugged in\")\n            return False\n        return True\n\n    def getcaps(self):\n        test = joyGetDevCaps(self._joyid, self._pcaps, ctypes.sizeof(JOYCAPS))\n        if test != 0:\n            print(\"Failed to load capability\")\n            return False\n        return True\n\n    def getinfo(self):\n        joyGetPosEx(self._joyid, self._pinfoex)\n        data = [round((self._infoex.dwXpos-32767.5)/32767.5, 2), round((self._infoex.dwYpos-32767.5)/32767.5, 2), round((self._infoex.dwZpos-32767.5)/32767.5, 2), None, None]\n        for b in range(self._caps.wNumButtons):\n            data[b+3] = 0 != (1 << b) & self._infoex.dwButtons\n        return data",
+    "span": [
+      92,
+      131
+    ],
+    "start_byte": 2323,
+    "end_byte": 3780,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/backend/joystick.py",
+    "name": "MecaJoy"
+  }
+]

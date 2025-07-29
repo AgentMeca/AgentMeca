@@ -1,0 +1,27 @@
+[
+  {
+    "snippet": "from PyQt5 import QtCore, QtGui, QtWidgets",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 306,
+    "end_byte": 348,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/ProgressWindow.py"
+  },
+  {
+    "snippet": "class Ui_MainWindow(object):\n    def setupUi(self, MainWindow):\n        MainWindow.setObjectName(\"MainWindow\")\n        MainWindow.resize(588, 300)\n        self.centralwidget = QtWidgets.QWidget(MainWindow)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)\n        self.progressBar.setGeometry(QtCore.QRect(130, 140, 331, 23))\n        self.progressBar.setProperty(\"value\", 24)\n        self.progressBar.setObjectName(\"progressBar\")\n        self.label = QtWidgets.QLabel(self.centralwidget)\n        self.label.setGeometry(QtCore.QRect(90, 60, 401, 51))\n        font = QtGui.QFont()\n        font.setPointSize(22)\n        self.label.setFont(font)\n        self.label.setAlignment(QtCore.Qt.AlignCenter)\n        self.label.setObjectName(\"label\")\n        MainWindow.setCentralWidget(self.centralwidget)\n        self.menubar = QtWidgets.QMenuBar(MainWindow)\n        self.menubar.setGeometry(QtCore.QRect(0, 0, 588, 21))\n        self.menubar.setObjectName(\"menubar\")\n        MainWindow.setMenuBar(self.menubar)\n        self.statusbar = QtWidgets.QStatusBar(MainWindow)\n        self.statusbar.setObjectName(\"statusbar\")\n        MainWindow.setStatusBar(self.statusbar)\n\n        self.retranslateUi(MainWindow)\n        QtCore.QMetaObject.connectSlotsByName(MainWindow)\n\n    def retranslateUi(self, MainWindow):\n        _translate = QtCore.QCoreApplication.translate\n        MainWindow.setWindowTitle(_translate(\"MainWindow\", \"Progress Window\"))\n        self.label.setText(_translate(\"MainWindow\", \"Centrifuging Samples\"))",
+    "span": [
+      14,
+      46
+    ],
+    "start_byte": 351,
+    "end_byte": 1936,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/frontend/ProgressWindow.py",
+    "name": "Ui_MainWindow"
+  }
+]

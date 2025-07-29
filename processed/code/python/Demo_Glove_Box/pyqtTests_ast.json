@@ -1,0 +1,39 @@
+[
+  {
+    "snippet": "from frontend.customWidgets import RackStatus, StatusImage, CustomToggleButton",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 78,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/tests/pyqtTests.py"
+  },
+  {
+    "snippet": "from PyQt5.QtWidgets import QApplication, QGridLayout, QLabel, QPushButton, QWidget",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 79,
+    "end_byte": 162,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/tests/pyqtTests.py"
+  },
+  {
+    "snippet": "class Apptest(QWidget):\n    def __init__(self) -> None:\n        super().__init__()\n        self.initUI()\n\n    def initUI(self):\n        self.grid = QGridLayout()\n        self.setLayout(self.grid)\n        self.rs = RackStatus()\n        self.button = CustomToggleButton()\n        self.test_flag = True\n\n        self.grid.addWidget(self.rs)\n        self.grid.addWidget(self.button)\n\n        self.button.clicked.connect(self.on_pressed)\n\n    def on_pressed(self):\n        if self.test_flag:\n            self.rs.rack_list[0].switch_off()\n            self.test_flag = False\n        else:\n            self.rs.rack_list[0].switch_on()\n            self.test_flag = True",
+    "span": [
+      4,
+      27
+    ],
+    "start_byte": 164,
+    "end_byte": 824,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/tests/pyqtTests.py",
+    "name": "Apptest"
+  }
+]

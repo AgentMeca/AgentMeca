@@ -1,0 +1,50 @@
+[
+  {
+    "snippet": "import React from 'react'",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 25,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/CardHolder/AddRobotDialog/AddRobotDialog.js"
+  },
+  {
+    "snippet": "import styles from './AddRobotDialog.module.css'",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 26,
+    "end_byte": 74,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/CardHolder/AddRobotDialog/AddRobotDialog.js"
+  },
+  {
+    "snippet": "import { useState } from 'react'",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 75,
+    "end_byte": 107,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/CardHolder/AddRobotDialog/AddRobotDialog.js"
+  },
+  {
+    "snippet": "export default function AddRobotDialog(props) {\n    const [inputName, setInputName] = useState('Meca500')\n    const [inputIp, setInputIp] = useState('192.168.0.100')\n\n\n    return (\n        <div className={styles.dialogbox}>\n            <h1 className={styles.title}>Add a robot</h1>\n            <div className={styles.userinput}>\n                <label htmlFor='ipadd'>Robot Name: </label>\n                <input type='text' name='name' id='robotname' value={inputName} onInput={e => setInputName(e.target.value)}></input><br></br>\n            </div>\n            <div className={styles.userinput}>\n                <label htmlFor='ipadd'>IP Address: </label>\n                <input type='text' name='ipadd' id='ipadd' value={inputIp} onInput={e => setInputIp(e.target.value)}></input><br></br>\n            </div>\n            <div>\n                <button className={styles.dialogbutton} onClick={() => props.createRobotHandle(inputName, inputIp)}>Add robot</button>\n                <button className={styles.dialogbutton} onClick={props.closeDialogHandle}>Cancel</button>\n            </div>\n\n        </div>\n    )\n}",
+    "span": [
+      5,
+      28
+    ],
+    "start_byte": 109,
+    "end_byte": 1221,
+    "node_type": "export_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/CardHolder/AddRobotDialog/AddRobotDialog.js"
+  }
+]

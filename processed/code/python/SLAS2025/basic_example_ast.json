@@ -1,0 +1,76 @@
+[
+  {
+    "snippet": "from pmclib import system_commands as sys",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 73,
+    "end_byte": 114,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/Python Library/basic_example.py"
+  },
+  {
+    "snippet": "from pmclib import xbot_commands as bot",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 147,
+    "end_byte": 186,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/Python Library/basic_example.py"
+  },
+  {
+    "snippet": "from pmclib import pmc_types",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 220,
+    "end_byte": 248,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/Python Library/basic_example.py"
+  },
+  {
+    "snippet": "import time",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 281,
+    "end_byte": 292,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/Python Library/basic_example.py"
+  },
+  {
+    "snippet": "def sample_motions(input_id):\n    bot.linear_motion_si(xbot_id=input_id, target_x=0.18, target_y=0.06,\n                         max_speed=1.0, max_accel=10.0)\n    bot.linear_motion_si(xbot_id=input_id, target_x=0.18, target_y=0.18,\n                         max_speed=1.0, max_accel=10.0)\n    bot.linear_motion_si(xbot_id=input_id, target_x=0.06, target_y=0.18,\n                         max_speed=1.0, max_accel=10.0)\n    bot.linear_motion_si(xbot_id=input_id, target_x=0.06, target_y=0.06,\n                         max_speed=1.0, max_accel=10.0)",
+    "span": [
+      54,
+      62
+    ],
+    "start_byte": 1867,
+    "end_byte": 2412,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/Python Library/basic_example.py",
+    "name": "sample_motions"
+  },
+  {
+    "snippet": "def wait_for_xbot_done(xid):\n    while bot.get_xbot_status(xbot_id=xid).xbot_state is not pmc_types.XbotState.XBOT_IDLE:\n        time.sleep(0.5)",
+    "span": [
+      73,
+      75
+    ],
+    "start_byte": 2676,
+    "end_byte": 2820,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/SLAS2025/Python Library/basic_example.py",
+    "name": "wait_for_xbot_done"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "snippet": "from forceFunctions import FindSurface, MoveThread, ClickDetection",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 66,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/main.py"
+  },
+  {
+    "snippet": "from mecademicpy.robot import Robot",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 67,
+    "end_byte": 102,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/main.py"
+  },
+  {
+    "snippet": "from NetFT import Sensor",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 103,
+    "end_byte": 127,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/main.py"
+  },
+  {
+    "snippet": "from queue import Queue",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 128,
+    "end_byte": 151,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/main.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 152,
+    "end_byte": 174,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/RAMInsertion/main.py"
+  }
+]

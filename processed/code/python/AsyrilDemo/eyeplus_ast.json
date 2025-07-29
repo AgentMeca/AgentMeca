@@ -1,0 +1,27 @@
+[
+  {
+    "snippet": "import socket",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 13,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py"
+  },
+  {
+    "snippet": "class EyePlusClient:\n\n    def __init__(self):\n        self.__connection = None\n        self.termination = \"\\n\"\n\n    def connect(self, ipaddress, port):\n        self.ipaddress = ipaddress\n        self.__connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n        self.__connection.connect((self.ipaddress, port))\n\n    def disconnect(self):\n        self.__connection.close()\n        self.__connection = None\n\n    def stop_production(self):\n        command = \"stop production\"\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response\n\n    def start_production(self, recipe):\n        command = \"start production \" + str(recipe)\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response\n\n    def get_part(self):\n        command = \"get_part\"\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response\n\n    def force_take_image(self):\n        command = \"force_take_image\"\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response\n\n    def prepare_part(self):\n        command = \"prepare_part\"\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response\n\n    def can_take_image(self, value):\n        command = \"can_take_image \" + str(value).lower()\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response\n\n    def set_parameter(self, parameter):\n        command = \"set_parameter \" + str(parameter)\n        self.__send_raw__(command)\n        response = self.__receive_raw__()\n        return response\n\n    def __send_raw__(self, command):\n        self.__connection.send(\n            bytes(f'{command}{self.termination}', encoding=\"ascii\"))\n\n    def __receive_raw__(self):\n        response = self.__connection.recv(4096).decode(\"ascii\")\n        return response\n\n    @staticmethod\n    def extract_status(response):\n        status = int(response[:3])\n        return status\n\n    @staticmethod\n    def extract_position(response: str):\n        split_response = response.split(' ')\n        x = float(split_response[1][2:])\n        y = float(split_response[2][2:])\n        rz = float(split_response[3][3:])\n        return [x, y, rz]",
+    "span": [
+      4,
+      80
+    ],
+    "start_byte": 16,
+    "end_byte": 2298,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/AsyrilDemo/eyeplus.py",
+    "name": "EyePlusClient"
+  }
+]

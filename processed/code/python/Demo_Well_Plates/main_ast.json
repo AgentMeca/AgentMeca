@@ -1,0 +1,234 @@
+[
+  {
+    "snippet": "from mecademicpy.robot import Robot",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 35,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 36,
+    "end_byte": 58,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py"
+  },
+  {
+    "snippet": "def pick1(robot):\n    robot.MovePose(188.3713,24.6400,94.7630,0.0000,90.0000,0.0000)\n    robot.MoveLin(188.3713,24.6400,79.7630,0.0000,90.0000,0.0000)\n    robot.GripperClose\n    robot.Delay(1)\n    robot.MoveLinRelWRF(0,0,30,0,0,0)",
+    "span": [
+      5,
+      10
+    ],
+    "start_byte": 61,
+    "end_byte": 291,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "pick1"
+  },
+  {
+    "snippet": "def place1(robot):\n    robot.MovePose(175.3589,137.8812,94.5631,-89.9999,-0.0003,90.0000)\n    robot.MoveLin(175.3589,137.8812,79.5631,-89.9999,-0.0003,90.0000)\n    robot.GripperOpen\n    robot.Delay(1)\n    robot.MoveLinRelWRF(0,0,30,0,0,0)",
+    "span": [
+      12,
+      17
+    ],
+    "start_byte": 293,
+    "end_byte": 531,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "place1"
+  },
+  {
+    "snippet": "def pick2(robot):\n    robot.MovePose(195.6913,-137.8000,90.9030,-0.0000,90.0000,0.0000)\n    robot.MoveLin(195.6913,-137.8000,75.9030,-0.0000,90.0000,0.0000)\n    robot.GripperClose\n    robot.Delay(2)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)",
+    "span": [
+      19,
+      24
+    ],
+    "start_byte": 533,
+    "end_byte": 769,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "pick2"
+  },
+  {
+    "snippet": "def place2(robot):\n    robot.MovePose(121.6163,187.5200,91.8830,0.0000,90.0000,0.0000)\n    robot.MoveLin(121.6163,187.5200,76.8830,0.0000,90.0000,0.0000)\n    robot.GripperOpen\n    robot.Delay(2)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)",
+    "span": [
+      26,
+      31
+    ],
+    "start_byte": 771,
+    "end_byte": 1003,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "place2"
+  },
+  {
+    "snippet": "def pick_back1(robot):\n    robot.MovePose(175.3589,137.8812,94.5631,-89.9999,-0.0003,90.0000)\n    robot.MoveLin(175.3589,137.8812,79.5631,-89.9999,-0.0003,90.0000)\n    robot.GripperClose\n    robot.Delay(1)\n    robot.MoveLinRelWRF(0,0,30,0,0,0)",
+    "span": [
+      33,
+      38
+    ],
+    "start_byte": 1005,
+    "end_byte": 1248,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "pick_back1"
+  },
+  {
+    "snippet": "def place_back1(robot):\n    robot.MovePose(188.3713,24.6400,94.7630,0.0000,90.0000,0.0000)\n    robot.MoveLin(188.3713,24.6400,79.7630,0.0000,90.0000,0.0000)\n    robot.GripperOpen\n    robot.Delay(1)\n    robot.MoveLinRelWRF(0,0,30,0,0,0)",
+    "span": [
+      40,
+      45
+    ],
+    "start_byte": 1250,
+    "end_byte": 1485,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "place_back1"
+  },
+  {
+    "snippet": "def pick_back2(robot):\n    robot.MovePose(121.6163,187.5200,91.8830,0.0000,90.0000,0.0000)\n    robot.MoveLin(121.6163,187.5200,76.8830,0.0000,90.0000,0.0000)\n    robot.GripperClose\n    robot.Delay(2)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)",
+    "span": [
+      47,
+      52
+    ],
+    "start_byte": 1487,
+    "end_byte": 1724,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "pick_back2"
+  },
+  {
+    "snippet": "def place_back2(robot):\n    robot.MovePose(195.6913,-137.8000,90.9030,-0.0000,90.0000,0.0000)\n    robot.MoveLin(195.6913,-137.8000,75.9030,-0.0000,90.0000,0.0000)\n    robot.GripperOpen\n    robot.Delay(2)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)\n    robot.MoveJoints(90,0,0,0,0,0)",
+    "span": [
+      54,
+      60
+    ],
+    "start_byte": 1726,
+    "end_byte": 2002,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "place_back2"
+  },
+  {
+    "snippet": "def pick_cover1(robot):\n    robot.MoveJoints(0,0,0,0,90,0)\n    robot.MovePose(214.0700,-23.8950,51.9300,180.0000,0.0000,180.0000)\n    robot.MoveLin(214.0700,-23.8950,46.9300,180.0000,0.0000,180.0000)\n    robot.MoveLinRelWRF(0,0,-0.75,0,0,0)\n    robot.Delay(0.5)\n    robot.MoveLinRelWRF(0,0,30,0,0,0)",
+    "span": [
+      62,
+      68
+    ],
+    "start_byte": 2004,
+    "end_byte": 2303,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "pick_cover1"
+  },
+  {
+    "snippet": "def pick_cover2(robot):\n    robot.MovePose(202.9425,138.5550,57.9300,-180.0000,-0.0000,90.0000)\n    robot.MoveLin(202.9425,138.5550,47.2600,180.0000,-0.0000,90.0000)\n    robot.MoveLinRelWRF(0,0,-0.75,0,0,0)\n    robot.Delay(0.5)\n    robot.MoveLinRelWRF(0,0,30,0,0,0)",
+    "span": [
+      70,
+      75
+    ],
+    "start_byte": 2305,
+    "end_byte": 2570,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "pick_cover2"
+  },
+  {
+    "snippet": "def place_cover(robot):\n    robot.MovePose(30.5054,-186.1501,92.3399,170.7854,-9.8911,-90.1511)\n    robot.MoveLin(30.5054,-186.1501,62.3399,170.7854,-9.8911,-90.1511)\n    robot.MoveLinRelTRF(0,0,0,0,0,-10)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)",
+    "span": [
+      77,
+      81
+    ],
+    "start_byte": 2572,
+    "end_byte": 2815,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "place_cover"
+  },
+  {
+    "snippet": "def pick_back_cover(robot):\n    robot.MovePose(32.3727,-179.0600,70.2686,170.7854,-9.8911,-90.1511)\n    robot.MoveLin(32.3727,-179.0600,60.2686,170.7854,-9.8911,-90.1511)\n    robot.MoveLinRelTRF(0,0,0.75,0,0,0)\n    robot.Delay(0.5)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)",
+    "span": [
+      83,
+      88
+    ],
+    "start_byte": 2817,
+    "end_byte": 3086,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "pick_back_cover"
+  },
+  {
+    "snippet": "def push_corner1(robot):\n    # y\n    robot.MovePose(210.9000,-106.6150,52.2000,-180.0000,-0.0000,-180.0000)\n    robot.MovePose(210.9000,-106.6150,42.2000,-180.0000,-0.0000,-180.0000)\n    robot.MoveLin(210.9000,-101.6150,42.2000,-180.0000,-0.0000,-180.0000)\n    robot.MoveLinRelWRF(0,-10,0,0,0,0)\n    robot.MoveLinRelWRF(0,0,30,0,0,0)\n    # x\n    robot.MovePose(155.0550,-21.6900,49.4000,-180.0000,-0.0000,-180.0000)\n    robot.MovePose(155.0550,-21.6900,39.4000,-180.0000,-0.0000,-180.0000)\n    robot.MoveLin(158.0550,-21.6900,39.4000,-180.0000,-0.0000,-180.0000)\n    robot.MoveLinRelWRF(-10,0,0,0,0,0)\n    robot.MoveLinRelWRF(0,0,30,0,0,0)",
+    "span": [
+      90,
+      102
+    ],
+    "start_byte": 3088,
+    "end_byte": 3727,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "push_corner1"
+  },
+  {
+    "snippet": "def place_back_cover1(robot):\n    robot.MovePose(209.4450,-25.9775,67.6125,-180.0000,-0.0000,-180.0000)\n    robot.MoveLin(209.4450,-25.9775,49.6125,-180.0000,-0.0000,-180.0000)\n    robot.MoveLinRelTRF(0,0,0,0,0,10)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)",
+    "span": [
+      104,
+      108
+    ],
+    "start_byte": 3729,
+    "end_byte": 3981,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "place_back_cover1"
+  },
+  {
+    "snippet": "def push_corner2(robot):\n    # x\n    robot.MovePose(120.2075,138.5550,48.5100,180.0000,0.0000,90.0000)\n    robot.MoveLin(120.2075,138.5550,38.5100,180.0000,0.0000,90.0000)\n    robot.MoveLin(126.6075,138.5550,38.5100,180.0000,0.0000,90.0000)\n    robot.MoveLinRelWRF(-10,0,0,0,0,0)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)\n    # y\n    robot.MovePose(202.9425,75.7150,48.6250,180.0000,0.0000,90.0000)\n    robot.MoveLin(202.9425,75.7150,38.6250,180.0000,0.0000,90.0000)\n    robot.MoveLin(202.9425,81.0150,38.6250,180.0000,0.0000,90.0000)\n    robot.MoveLinRelWRF(0,-10,0,0,0,0)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)",
+    "span": [
+      110,
+      122
+    ],
+    "start_byte": 3983,
+    "end_byte": 4590,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "push_corner2"
+  },
+  {
+    "snippet": "def place_back_cover2(robot):\n    robot.MovePose(201.9025,134.4050,64.6075,180.0000,-0.0000,90.0000)\n    robot.MoveLin(201.9025,134.4050,49.6075,180.0000,-0.0000,90.0000)\n    robot.MoveLinRelWRF(0,0,0,0,0,10)\n    robot.MoveLinRelWRF(0,0,40,0,0,0)",
+    "span": [
+      124,
+      128
+    ],
+    "start_byte": 4592,
+    "end_byte": 4838,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Well_Plates/main.py",
+    "name": "place_back_cover2"
+  }
+]

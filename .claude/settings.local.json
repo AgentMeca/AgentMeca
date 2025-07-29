@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(gh repo fork:*)",
+      "Bash(git clone:*)",
+      "Bash(gh repo create:*)",
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(git init:*)",
+      "Bash(gh repo list:*)",
+      "Bash(rm:*)",
+      "Bash(git submodule add:*)",
+      "Bash(git submodule:*)",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git config:*)",
+      "Bash(git commit:*)",
+      "Bash(true)",
+      "Bash(ls:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(mv:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(rm:*)",
+      "Bash(grep:*)"
+    ],
+    "deny": []
+  }
+}

@@ -1,0 +1,174 @@
+[
+  {
+    "snippet": "from PyQt5 import QtWidgets",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 27,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "from PyQt5.QtCore import QCoreApplication, QObject, QThread, pyqtSignal",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 28,
+    "end_byte": 99,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "from PyQt5.QtGui import QPixmap",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 100,
+    "end_byte": 131,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "from backend.backend import MainRack, Centrifuge",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 132,
+    "end_byte": 180,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "from frontend import customWidgets, MainWindow, SetupWindow, ProgressWindow",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 181,
+    "end_byte": 256,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "from mecademicpy.robot import CommunicationError, Robot",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 257,
+    "end_byte": 312,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "import os",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 313,
+    "end_byte": 322,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "import re",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 323,
+    "end_byte": 332,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "import numpy as np",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 333,
+    "end_byte": 351,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "from time import sleep",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 352,
+    "end_byte": 374,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py"
+  },
+  {
+    "snippet": "class SetupWindow(QtWidgets.QMainWindow, SetupWindow.Ui_MainWindow):\n    def __init__(self, rack, centrifuge, *args, **kwargs):\n        self.rack = rack\n        self.centrifuge = centrifuge\n        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)\n        self.setupUi(self)\n\n        self.pushButton.clicked.connect(self.save_position)\n        self.defaul_pick = [[57.7950,186.1550,80.7050,-0.0000,-0.0000,-90.0000],\n                            [25.9600,186.1550,80.7050,-0.0000,0.0000,-90.0000], \n                            [-6.2800,186.1550,80.7050,-0.0000,0.0000,-90.0000], \n                            [58.4135,236.8031,81.7342,0.0000,-0.1620,90.0000], \n                            [26.9986,238.5881,81.6454,-0.0000,-0.1620,90.0000], \n                            [-4.9963,237.1381,81.5549,-0.0000,-0.1620,90.0000]]\n        self.defaul_place = [[256.7045,21.9299,87.1742,46.7246,-20.3339,71.8831],\n                            [278.0817,-13.5350,87.2791,0.0000,-50.0000,0.0000],\n                            [258.6920,-48.0219,86.2246,-44.8992,-24.8455,-67.5270],\n                            [217.0611,-48.6621,84.6120,-44.2944,22.9473,66.5995],\n                            [196.4375,-14.0050,84.0717,-1.0921,49.9949,0.8365],\n                            [217.4994,22.6281,84.6470,45.5804,23.3668,-67.3643]]\n\n        self.pushButtonAllPosition.clicked.connect(self._save_defaults)\n\n\n    def save_position(self):\n        if self.cent_pos_1.text():\n            pos = self._text_to_list(self.cent_pos_1.text())\n            self.centrifuge.update_position(0, pos)\n            pick_dir = self.pick_dir_1.currentText()\n            print(pick_dir)\n            self.rack.rack_pick_dir[0] = True if pick_dir == 'Regular' else False\n\n        if self.cent_pos_2.text():\n            pos = self._text_to_list(self.cent_pos_2.text())\n            self.centrifuge.update_position(1, pos)\n            pick_dir = self.pick_dir_2.currentText()\n            print(pick_dir)\n            self.rack.rack_pick_dir[1] = True if pick_dir == 'Regular' else False\n\n        if self.cent_pos_3.text():\n            pos = self._text_to_list(self.cent_pos_3.text())\n            self.centrifuge.update_position(2, pos)\n            pick_dir = self.pick_dir_3.currentText()\n            self.rack.rack_pick_dir[2] = True if pick_dir == 'Regular' else False\n\n        if self.cent_pos_4.text():\n            pos = self._text_to_list(self.cent_pos_4.text())\n            self.centrifuge.update_position(3, pos)\n            pick_dir = self.pick_dir_4.currentText()\n            self.rack.rack_pick_dir[3] = True if pick_dir == 'Regular' else False\n\n        if self.cent_pos_5.text():\n            pos = self._text_to_list(self.cent_pos_5.text())\n            self.centrifuge.update_position(4, pos)\n            pick_dir = self.pick_dir_5.currentText()\n            self.rack.rack_pick_dir[4] = True if pick_dir == 'Regular' else False\n\n        if self.cent_pos_6.text():\n            pos = self._text_to_list(self.cent_pos_6.text())\n            self.centrifuge.update_position(5, pos)\n            pick_dir = self.pick_dir_6.currentText()\n            self.rack.rack_pick_dir[5] = True if pick_dir == 'Regular' else False\n\n        if self.rack_pos_1.text():\n            pos = self._text_to_list(self.rack_pos_1.text())\n            self.rack.update_position(0, pos)\n            pick_dir = self.pick_dir_1.currentText()\n            self.rack.rack_pick_dir[0] = True if pick_dir == 'Regular' else False\n\n        if self.rack_pos_2.text():\n            pos = self._text_to_list(self.rack_pos_2.text())\n            self.rack.update_position(1, pos)\n            pick_dir = self.pick_dir_2.currentText()\n            self.rack.rack_pick_dir[1] = True if pick_dir == 'Regular' else False\n            \n        if self.rack_pos_3.text():\n            pos = self._text_to_list(self.rack_pos_3.text())\n            self.rack.update_position(2, pos)\n            pick_dir = self.pick_dir_3.currentText()\n            self.rack.rack_pick_dir[2] = True if pick_dir == 'Regular' else False\n\n        if self.rack_pos_4.text():\n            pos = self._text_to_list(self.rack_pos_4.text())\n            self.rack.update_position(3, pos)\n            pick_dir = self.pick_dir_4.currentText()\n            self.rack.rack_pick_dir[3] = True if pick_dir == 'Regular' else False\n\n        if self.rack_pos_5.text():\n            pos = self._text_to_list(self.rack_pos_5.text())\n            self.rack.update_position(4, pos)\n            pick_dir = self.pick_dir_5.currentText()\n            self.rack.rack_pick_dir[4] = True if pick_dir == 'Regular' else False\n\n        if self.rack_pos_6.text():\n            pos = self._text_to_list(self.rack_pos_6.text())\n            self.rack.update_position(5, pos)\n            pick_dir = self.pick_dir_6.currentText()\n            self.rack.rack_pick_dir[5] = True if pick_dir == 'Regular' else False\n\n    \n    def _save_defaults(self):\n        for i, pos in enumerate(self.defaul_pick):\n            self.rack.update_position(i, pos)\n        \n        for i, pos in enumerate(self.defaul_place):\n            self.centrifuge.update_position(i, pos)\n\n        self.rack.rack_pick_dir[0] = False\n        self.rack.rack_pick_dir[1] = False\n        self.rack.rack_pick_dir[2] = False\n\n\n    def _text_to_list(self, text):\n        text = re.sub('[()]', '', text)\n        text_split = text.split(',')\n        num_list = [float(i) for i in text_split]\n        return num_list",
+    "span": [
+      12,
+      128
+    ],
+    "start_byte": 376,
+    "end_byte": 5795,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py",
+    "name": "SetupWindow"
+  },
+  {
+    "snippet": "class ProgressWindowApp(QtWidgets.QMainWindow, ProgressWindow.Ui_MainWindow):\n    def __init__(self, rack, centrifuge, *args, **kwargs):\n        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)\n        self.setupUi(self)\n        self.progressBar.setValue(0)\n        self.label.setText(\"Starting the centrifuge\")\n        self.move(346, 250)\n        \n\n    def start_progress(self):\n        self.progressBar.setValue(0)\n        self.label.setText(\"Starting the centrifuge\")\n        QCoreApplication.processEvents()\n        sleep(5)\n        self.label.setText(\"Processing Samples\")\n        for i in range(100):\n            self.progressBar.setValue(i+1)\n            sleep(0.1)\n            QCoreApplication.processEvents()\n\n    def unload_cent(self):\n        self.label.setText(\"Unloading Vials\")\n        QCoreApplication.processEvents()\n\n    def close_window(self):\n        self.close()",
+    "span": [
+      131,
+      156
+    ],
+    "start_byte": 5806,
+    "end_byte": 6693,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py",
+    "name": "ProgressWindowApp"
+  },
+  {
+    "snippet": "class Application(QtWidgets.QMainWindow, MainWindow.Ui_MainWindow):\n    def __init__(self, *args, **kwargs):\n        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)\n        self.setupUi(self)\n\n        ### Frontend setup ###\n        \n        self.setStyleSheet(\"background-color:white\")\n\n        current_dir = os.path.dirname(os.path.realpath(__file__))\n        parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))\n        pixmap_logo = QPixmap(os.path.join(parent_dir, 'frontend/images/mecademic-logo.png'))\n        pixmap_logo = pixmap_logo.scaledToWidth(400)\n        self.logo.setPixmap(pixmap_logo)\n        self.buttonAutoMode.setCheckable(True)\n        self.buttonCentrifuge.setEnabled(False)\n\n        ### Backend setup ###\n        self.robot = Robot()\n        self.rack = MainRack(6)\n        self.centrifuge = Centrifuge(6)\n        self.autoThread = None\n        self.autoWorker = None\n\n        ### Setup Window Setup ###\n        self.setup_window = SetupWindow(self.rack, self.centrifuge)\n\n        self.actionSetup.triggered.connect(self.open_setup)\n\n        ### Progress Window Setup ###\n        self.progress_window = ProgressWindowApp(self.rack, self.centrifuge)\n\n        ### Button connections ###\n\n        self.LoadButton.clicked.connect(self.load_centrifuge)\n        self.RackSelection.button_list[0].clicked.connect(lambda: self.toggle_select_vial(0))\n        self.RackSelection.button_list[1].clicked.connect(lambda: self.toggle_select_vial(1))\n        self.RackSelection.button_list[2].clicked.connect(lambda: self.toggle_select_vial(2))\n        self.RackSelection.button_list[3].clicked.connect(lambda: self.toggle_select_vial(3))\n        self.RackSelection.button_list[4].clicked.connect(lambda: self.toggle_select_vial(4))\n        self.RackSelection.button_list[5].clicked.connect(lambda: self.toggle_select_vial(5))\n\n        self.buttonCentrifuge.clicked.connect(self.start_centrifuge)\n        self.buttonRobot.clicked.connect(self.connect_to_robot)\n        self.buttonAutoMode.clicked.connect(self.buttonAutoFunction)\n\n\n    def open_setup(self):\n        self.setup_window.show()\n\n    def open_progress(self):\n        self.progress_window.show()\n        self.progress_window.start_progress()\n\n    def unload_window(self):\n        self.progress_window.unload_cent()\n\n    def toggle_select_vial(self, n):\n        self.rack.vial_selected[n] = not self.rack.vial_selected[n]\n\n    def connect_to_robot(self):\n        if not self.robot.IsConnected():\n            try:\n                self.robot.Connect()\n                self.robot.ActivateAndHome()\n                self.robot.WaitHomed()\n                self.buttonRobot.setStyleSheet(\"background-color:rgba(0,255,0,255)\")\n            except CommunicationError as e:\n                print(e)\n        else:\n            self.robot.Disconnect()\n            self.buttonRobot.setStyleSheet(\"background-color:rgba(0,0,0,125)\")\n\n    def load_centrifuge(self):\n        # Check centrifuge status\n        if not self.centrifuge.cent_status:\n            msgbox = QtWidgets.QMessageBox()\n            msgbox.setIcon(QtWidgets.QMessageBox.Information)\n            msgbox.setText(\"Centrifuge is not ready to be loaded.\")\n            msgbox.setWindowTitle(\"Centrifuge Warning\")\n            msgbox.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)\n\n            msgbox.exec()\n            return\n\n        if True in self.centrifuge.rack_status:\n            msgbox = QtWidgets.QMessageBox()\n            msgbox.setIcon(QtWidgets.QMessageBox.Information)\n            msgbox.setText(\"There are still vials in the centrifuge.\")\n            msgbox.setWindowTitle(\"Centrifuge Warning\")\n            msgbox.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)\n\n            msgbox.exec()\n            return\n        # Check selected vials status\n        if not (True in self.rack.vial_selected):\n            msgbox = QtWidgets.QMessageBox()\n            msgbox.setIcon(QtWidgets.QMessageBox.Information)\n            msgbox.setText(\"Please select one or multiple vials before loading.\")\n            msgbox.setWindowTitle(\"Rack Warning\")\n            msgbox.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)\n\n            msgbox.exec()\n            return\n        \n        # Disable all buttons during loading\n        self.LoadButton.setEnabled(False)\n        self.buttonAutoMode.setEnabled(False)\n        self.buttonCentrifuge.setEnabled(False)\n        self.buttonRobot.setEnabled(False)\n        self.RackSelection.disableButtons()\n        QCoreApplication.processEvents()\n\n        # Load them in the centrifuge\n        self.robot.SetJointVel(40)\n        self.robot.SetCartLinVel(30)\n        self.robot.GripperOpen()\n\n        for i, st in enumerate(self.rack.vial_selected):\n            if st:\n                self.robot.MoveJoints(90, 0, 0, 0, 0, 0)\n                self.RackStatusDisplay.turn_vial_off(i)\n                # Picking\n                pick_point = self.rack.rack_position[i]\n                if self.rack.rack_pick_dir[i]:\n                    self.pick_reg(pick_point)\n                else:\n                    self.pick_front(pick_point)\n\n                self.robot.MoveJoints(0, 0, 0, 0, 45, 0)\n\n                place_point = self.centrifuge.rack_position[i]\n                if self.rack.rack_pick_dir[i]:\n                    self.place_reg(place_point)\n                else:\n                    self.place_front(place_point)\n                \n                # UI stuff\n                cp = self.robot.SetCheckpoint(50)\n                cp.wait()\n                self.RackSelection.button_list[i].setChecked(False)\n                self.RackSelection.button_list[i]._on_pressed_col_change()\n                self.RackSelection.button_list[i].setEnabled(False)\n                self.CentStatusDisplay.toggle_led(i)\n                QCoreApplication.processEvents()\n\n        self.robot.MoveJoints(0, 0, 0, 0, 0, 0)\n        self.buttonCentrifuge.setEnabled(True)\n\n\n    def pick_reg(self, point):\n        self.robot.SetTRF(49, 0, 14, 0, -90, 0)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(-16, 0, 30, 0, 0, 0)\n        self.robot.MovePose(-16, 0, 0, 0, 0, 0)      # Approach, modify this depending on the orientation\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)        # Pick\n        self.robot.GripperClose()\n        self.robot.Delay(1)\n        self.robot.MoveLin(0, 0, 120, 0, 0, 0)\n\n\n    def pick_front(self, point):\n        self.robot.SetTRF(30, 0, 17, -180, 0, -180)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 20, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperClose()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 100, 0, 0, 0)\n\n    def place_reg(self, point):\n        self.robot.SetTRF(49, 0, 14, 0, -90, 0)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 80, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(-30, 0, 0, 0, 0, 0)\n\n    def place_front(self, point):\n        self.robot.SetTRF(30, 0, 17, -180, 0, -180)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 80, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 80, 0, 0 ,0)\n\n    def ret_pick_front(self, point):\n        self.robot.SetTRF(30, 0, 17, -180, 0, -180)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 80, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperClose()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 80, 0, 0 ,0)\n\n    def ret_pick_reg(self, point):\n        self.robot.SetTRF(49, 0, 14, 0, -90, 0)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(-30, 0, 0, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperClose()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 80, 0, 0, 0)\n\n    def ret_place_front(self, point):\n        self.robot.SetTRF(30, 0, 17, -180, 0, -180)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 100, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 20, 0, 0, 0)\n\n    def ret_place_reg(self, point):\n        self.robot.SetTRF(49, 0, 14, 0, -90, 0)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 120, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)        # Pick\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(-16, 0, 0, 0, 0, 0)      # Approach, modify this depending on the orientation\n        self.robot.MoveLin(-16, 0, 30, 0, 0, 0)\n\n    def start_centrifuge(self):\n        self.buttonCentrifuge.setEnabled(False)\n        self.open_progress()\n        sleep(2)\n        self.unload_window()\n\n        ### Place back the vials ###\n        self.robot.SetJointVel(40)\n        self.robot.SetCartLinVel(25)\n        self.robot.GripperOpen()\n        \n        for i, st in enumerate(self.rack.vial_selected):\n            if st:\n                self.robot.MoveJoints(0, 0, 0, 0, 0, 0)\n                pick_point = self.centrifuge.rack_position[i]\n                if self.rack.rack_pick_dir[i]:\n                    self.ret_pick_reg(pick_point)\n                else:\n                    self.ret_pick_front(pick_point)\n\n                self.robot.MoveJoints(0, 0, 0, 0, 45, 0)\n\n                place_point = self.rack.rack_position[i]\n                if self.rack.rack_pick_dir[i]:\n                    self.ret_place_reg(place_point)\n                else:\n                    self.ret_place_front(place_point)\n\n                cp = self.robot.SetCheckpoint(42)\n                cp.wait()\n                self.RackSelection.button_list[i].setEnabled(True)\n                self.RackSelection.button_list[i].setChecked(False)\n                self.RackStatusDisplay.turn_vial_on(i)\n                self.rack.vial_selected[i] = False\n                self.CentStatusDisplay.toggle_led(i)\n                QCoreApplication.processEvents()\n\n        self.robot.MoveJoints(90, 0, 0, 0, 0, 0)\n        self.centrifuge.cent_status = True\n        self.progress_window.close_window()\n        self.buttonAutoMode.setEnabled(True)\n        self.buttonRobot.setEnabled(True)\n        self.LoadButton.setEnabled(True)\n        self.RackSelection.enableButtons()\n\n\n    def startAutoMode(self):\n        self.RackSelection.disableButtons()\n        self.buttonRobot.setEnabled(False)\n        self.buttonCentrifuge.setEnabled(False)\n        self.LoadButton.setEnabled(False)\n        self.autoThread = QThread()\n        self.autoWorker = AutoModeWorker(self.robot, self.rack, self.centrifuge)\n        self.autoWorker.moveToThread(self.autoThread)\n        self.autoThread.started.connect(self.autoWorker.run)\n        self.autoWorker.finished.connect(self.autoThread.quit)\n        self.autoWorker.finished.connect(self.autoWorker.deleteLater)\n        self.autoWorker.finished.connect(self.RackSelection.enableButtons)\n        self.autoWorker.finished.connect(lambda: self.buttonRobot.setEnabled(True))\n        self.autoWorker.finished.connect(lambda: self.buttonCentrifuge.setEnabled(True))\n        self.autoWorker.finished.connect(lambda: self.LoadButton.setEnabled(True))\n        self.autoThread.finished.connect(self.autoThread.deleteLater)\n\n        self.autoThread.start()\n\n    def buttonAutoFunction(self):\n        if self.buttonAutoMode.isChecked():\n            self.startAutoMode()\n        else:\n            self.autoWorker.toggleFinish()\n\n\n    def closeEvent(self, event):\n        self.robot.Disconnect()\n        super().closeEvent(event)\n\n\n    ### Test functions ###\n    def print_data(self):\n        print(self.centrifuge.rack_position[0])",
+    "span": [
+      159,
+      463
+    ],
+    "start_byte": 6696,
+    "end_byte": 18578,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py",
+    "name": "Application"
+  },
+  {
+    "snippet": "class AutoModeWorker(QObject):\n    finished = pyqtSignal()\n\n    def __init__(self, robot, rack, cent):\n        super().__init__()\n        self.robot = robot\n        self.rack = rack\n        self.cent = cent\n\n\n    def run(self):\n        self.goFlag = True\n        self.robot.SetJointVel(40)\n        self.robot.SetCartLinVel(25)\n        while(self.goFlag):\n            for rack_pos, pick_dir, cent_pos in zip(self.rack.rack_position, self.rack.rack_pick_dir, self.cent.rack_position):\n                # Pick from the rack\n                self.robot.MoveJoints(90, 0, 0, 0, 0, 0)\n                if pick_dir:\n                    self.pick_reg(rack_pos)\n                else:\n                    self.pick_front(rack_pos)\n\n                self.robot.MoveJoints(0, 0, 0, 0, 45, 0)\n\n                # Drop in the centrifuge\n                if pick_dir:\n                    self.place_reg(cent_pos)\n                else:\n                    self.place_front(cent_pos)\n\n            # Wait a bit\n            cp = self.robot.SetCheckpoint(82)\n            cp.wait()\n            self.robot.MoveJoints(0, 0, 0, 0, 0, 0)\n            cp = self.robot.SetCheckpoint(82)\n            cp.wait()\n            sleep(3)\n\n            for rack_pos, pick_dir, cent_pos in zip(self.rack.rack_position, self.rack.rack_pick_dir, self.cent.rack_position):\n                # Pick from centrifuge\n                self.robot.MoveJoints(0, 0, 0, 0, 45, 0)\n                if pick_dir:\n                    self.ret_pick_reg(cent_pos)\n                else:\n                    self.ret_pick_front(cent_pos)\n                # Place back in rack\n                self.robot.MoveJoints(0, 0, 0, 0, 45, 0)\n\n                if pick_dir:\n                    self.ret_place_reg(rack_pos)\n                else:\n                    self.ret_place_front(rack_pos)\n                \n            \n            cp = self.robot.SetCheckpoint(82)\n            cp.wait()\n            self.robot.MoveJoints(0, 0, 0, 0, 0, 0)\n\n        self.finished.emit()\n\n\n    def toggleFinish(self):\n        self.goFlag = False\n\n\n    def pick_reg(self, point):\n        self.robot.SetTRF(49, 0, 14, 0, -90, 0)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(-16, 0, 30, 0, 0, 0)\n        self.robot.MovePose(-16, 0, 0, 0, 0, 0)      # Approach, modify this depending on the orientation\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)        # Pick\n        self.robot.GripperClose()\n        self.robot.Delay(1)\n        self.robot.MoveLin(0, 0, 120, 0, 0, 0)\n\n\n    def pick_front(self, point):\n        self.robot.SetTRF(30, 0, 17, -180, 0, -180)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 20, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperClose()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 100, 0, 0, 0)\n\n    def place_reg(self, point):\n        self.robot.SetTRF(49, 0, 14, 0, -90, 0)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 80, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(-30, 0, 0, 0, 0, 0)\n\n    def place_front(self, point):\n        self.robot.SetTRF(30, 0, 17, -180, 0, -180)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 80, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 80, 0, 0 ,0)\n\n    def ret_pick_front(self, point):\n        self.robot.SetTRF(30, 0, 17, -180, 0, -180)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 80, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperClose()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 80, 0, 0 ,0)\n\n    def ret_pick_reg(self, point):\n        self.robot.SetTRF(49, 0, 14, 0, -90, 0)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(-30, 0, 0, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperClose()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 80, 0, 0, 0)\n\n    def ret_place_front(self, point):\n        self.robot.SetTRF(30, 0, 17, -180, 0, -180)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 100, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(0, 0, 20, 0, 0, 0)\n\n    def ret_place_reg(self, point):\n        self.robot.SetTRF(49, 0, 14, 0, -90, 0)\n        self.robot.SetWRF(*point)\n        self.robot.MovePose(0, 0, 120, 0, 0, 0)\n        self.robot.MoveLin(0, 0, 0, 0, 0, 0)        # Pick\n        self.robot.GripperOpen()\n        self.robot.Delay(0.5)\n        self.robot.MoveLin(-16, 0, 0, 0, 0, 0)      # Approach, modify this depending on the orientation\n        self.robot.MoveLin(-16, 0, 30, 0, 0, 0)",
+    "span": [
+      466,
+      605
+    ],
+    "start_byte": 18581,
+    "end_byte": 23451,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Glove_Box/Application/mainApp.py",
+    "name": "AutoModeWorker"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "snippet": "import React from 'react';",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 26,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/index.js"
+  },
+  {
+    "snippet": "import ReactDOM from 'react-dom/client';",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 27,
+    "end_byte": 67,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/index.js"
+  },
+  {
+    "snippet": "import './index.css';",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 68,
+    "end_byte": 89,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/index.js"
+  },
+  {
+    "snippet": "import App from './App';",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 90,
+    "end_byte": 114,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/index.js"
+  },
+  {
+    "snippet": "import reportWebVitals from './reportWebVitals';",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 115,
+    "end_byte": 163,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/index.js"
+  }
+]

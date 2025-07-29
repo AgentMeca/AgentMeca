@@ -1,0 +1,50 @@
+[
+  {
+    "snippet": "import React, { useState, useEffect, useRef } from 'react'",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 58,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/StatusBar/StatusBar.js"
+  },
+  {
+    "snippet": "import StatusLed from './StatusLed/StatusLed'",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 59,
+    "end_byte": 104,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/StatusBar/StatusBar.js"
+  },
+  {
+    "snippet": "import styles from './StatusBar.module.css'",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 105,
+    "end_byte": 148,
+    "node_type": "import_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/StatusBar/StatusBar.js"
+  },
+  {
+    "snippet": "export default function StatusBar(props) {\n    const [robotState, setRobotState] = useState({\n        \"Connection\": false,\n        \"Activated\": false,\n        \"Homed\": false,\n        \"Error\": false,\n    })\n    const isMounted = useRef(false)\n\n    useEffect(() => {\n        if (isMounted.current) {\n\n            setRobotState({\n                ...robotState,\n                \"Connection\": !robotState[\"Connection\"]\n            })\n        } else {\n            isMounted.current = true\n        }\n\n    }, [props.buttonState])\n\n\n    var connectioncolor = robotState.Connection ? 'ledgreen' : 'ledgrey'\n\n    return (\n        <div className={styles.StatusBar}>\n            <div>\n                <div className={styles.labels}><span className={styles.label}>Connection</span><StatusLed bgcolor={props.robotState.Connection ? 'ledgreen' : 'ledgrey'} /></div>\n                <div className={styles.labels}><span className={styles.label}>Activated</span><StatusLed bgcolor={props.robotState.Activated ? 'ledgreen' : 'ledgrey'} /></div>\n            </div>\n            <div>\n                <div className={styles.labels}><span className={styles.label}>Homed</span><StatusLed bgcolor={props.robotState.Homed ? 'ledgreen' : 'ledgrey'} /></div>\n                <div className={styles.labels}><span className={styles.label}>Error</span><StatusLed bgcolor={props.robotState.Error ? 'ledred' : 'ledgrey'} /></div>\n            </div>\n        </div>\n    )\n}",
+    "span": [
+      5,
+      42
+    ],
+    "start_byte": 150,
+    "end_byte": 1588,
+    "node_type": "export_statement",
+    "language": "javascript",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/MecaDashboard/src/components/StatusBar/StatusBar.js"
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "snippet": "from PyQt5.QtWidgets import QPushButton",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 39,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/customWidgets.py"
+  },
+  {
+    "snippet": "class AutoButton(QPushButton):\n    def __init__(self, args, *kwargs):\n        super().__init__(args, *kwargs)\n        self.setCheckable(True)\n        self.setStyleSheet(\"background-color : lightgray\")\n        self.setText(\"AutoMode\")\n\n        self.clicked.connect(self.on_toggle)\n    \n    def on_toggle(self):\n        if self.isChecked():\n            self.setStyleSheet(\"background-color : green\")\n        else:\n            self.setStyleSheet(\"background-color : lightgray\")\n    \n    def on_disable(self):\n        pass\n\n    def on_enable(self):\n        pass",
+    "span": [
+      4,
+      23
+    ],
+    "start_byte": 42,
+    "end_byte": 599,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/customWidgets.py",
+    "name": "AutoButton"
+  },
+  {
+    "snippet": "class CustomToggle(QPushButton):\n    def __init__(self, args, *kwargs):\n        super().__init__(args, *kwargs)\n        self.setCheckable(True)\n        self.setStyleSheet(\"background-color : lightgray\")\n\n    def on_toggle(self):\n        if self.isChecked:\n            pass\n        else:\n            pass\n    \n    def on_disable(self):\n        pass\n\n    def on_enable(self):\n        pass",
+    "span": [
+      25,
+      41
+    ],
+    "start_byte": 601,
+    "end_byte": 987,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/customWidgets.py",
+    "name": "CustomToggle"
+  }
+]

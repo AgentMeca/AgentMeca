@@ -1,0 +1,112 @@
+[
+  {
+    "snippet": "from PyQt5 import QtGui",
+    "span": [
+      1,
+      1
+    ],
+    "start_byte": 0,
+    "end_byte": 23,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/VideoPlayer.py"
+  },
+  {
+    "snippet": "from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QVBoxLayout",
+    "span": [
+      2,
+      2
+    ],
+    "start_byte": 24,
+    "end_byte": 94,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/VideoPlayer.py"
+  },
+  {
+    "snippet": "from PyQt5.QtGui import QPixmap",
+    "span": [
+      3,
+      3
+    ],
+    "start_byte": 95,
+    "end_byte": 126,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/VideoPlayer.py"
+  },
+  {
+    "snippet": "import sys",
+    "span": [
+      4,
+      4
+    ],
+    "start_byte": 127,
+    "end_byte": 137,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/VideoPlayer.py"
+  },
+  {
+    "snippet": "import cv2",
+    "span": [
+      5,
+      5
+    ],
+    "start_byte": 138,
+    "end_byte": 148,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/VideoPlayer.py"
+  },
+  {
+    "snippet": "from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QThread",
+    "span": [
+      6,
+      6
+    ],
+    "start_byte": 149,
+    "end_byte": 207,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/VideoPlayer.py"
+  },
+  {
+    "snippet": "import numpy as np",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 208,
+    "end_byte": 226,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/VideoPlayer.py"
+  },
+  {
+    "snippet": "class VideoThread(QThread):\n    change_pixmap_signal = pyqtSignal(np.ndarray)\n\n    def run(self):\n        # capture from web cam\n        self.cap = cv2.VideoCapture(0)\n        while True:\n            ret, cv_img = self.cap.read()\n            if ret:\n                self.change_pixmap_signal.emit(cv_img)\n\n    def change_capture(self, value):\n        self.cap = cv2.VideoCapture(value)",
+    "span": [
+      10,
+      22
+    ],
+    "start_byte": 229,
+    "end_byte": 614,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/VideoPlayer.py",
+    "name": "VideoThread"
+  },
+  {
+    "snippet": "class VideoPlayer(QWidget):\n    def __init__(self, args, *kwargs):\n        super().__init__(args, *kwargs)\n        self.disply_width = 1024\n        self.display_height = 768\n        self.cameraIndex = 0\n        # create the label that holds the image\n        self.image_label = QLabel(self)\n        self.image_label.resize(self.disply_width, self.display_height)\n\n        # create the video capture thread\n        self.thread = VideoThread()\n        # connect its signal to the update_image slot\n        self.thread.change_pixmap_signal.connect(self.update_image)\n        # start the thread\n        self.thread.start()\n    \n    def change_capture(self, value):\n        self.cameraIndex = value\n        self.thread.change_capture(value)\n\n\n\n    @pyqtSlot(np.ndarray)\n    def update_image(self, cv_img):\n        \"\"\"Updates the image_label with a new opencv image\"\"\"\n        qt_img = self.convert_cv_qt(cv_img)\n        self.image_label.setPixmap(qt_img)\n    \n    def convert_cv_qt(self, cv_img):\n        \"\"\"Convert from an opencv image to QPixmap\"\"\"\n        rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)\n        h, w, ch = rgb_image.shape\n        bytes_per_line = ch * w\n        convert_to_Qt_format = QtGui.QImage(rgb_image.data, w, h, bytes_per_line, QtGui.QImage.Format_RGB888)\n        p = convert_to_Qt_format.scaled(self.disply_width, self.display_height, Qt.KeepAspectRatio)\n        return QPixmap.fromImage(p)",
+    "span": [
+      25,
+      61
+    ],
+    "start_byte": 617,
+    "end_byte": 2035,
+    "node_type": "class_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/Demo_Microscope/frontend/VideoPlayer.py",
+    "name": "VideoPlayer"
+  }
+]

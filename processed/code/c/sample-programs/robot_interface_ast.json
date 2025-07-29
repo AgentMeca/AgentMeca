@@ -1,0 +1,244 @@
+[
+  {
+    "snippet": "#include \"robot_interface.h\"\n",
+    "span": [
+      1,
+      2
+    ],
+    "start_byte": 0,
+    "end_byte": 29,
+    "node_type": "preproc_include",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c"
+  },
+  {
+    "snippet": "#include \"stdio.h\"\n",
+    "span": [
+      3,
+      4
+    ],
+    "start_byte": 30,
+    "end_byte": 49,
+    "node_type": "preproc_include",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c"
+  },
+  {
+    "snippet": "#include \"stdlib.h\"\n",
+    "span": [
+      4,
+      5
+    ],
+    "start_byte": 49,
+    "end_byte": 69,
+    "node_type": "preproc_include",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c"
+  },
+  {
+    "snippet": "#include \"string.h\"\n",
+    "span": [
+      5,
+      6
+    ],
+    "start_byte": 69,
+    "end_byte": 89,
+    "node_type": "preproc_include",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c"
+  },
+  {
+    "snippet": "static const char *CONTROL_PORT = \"10000\";",
+    "span": [
+      8,
+      8
+    ],
+    "start_byte": 127,
+    "end_byte": 169,
+    "node_type": "declaration",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c"
+  },
+  {
+    "snippet": "int extract_code(const char *message)\n{\n    int code = 0;\n    char *first_bracket = NULL;\n    char *second_bracket = NULL;\n    do\n    {\n        first_bracket = strchr(message, '[');\n        second_bracket = strchr(message, ']');\n        if ((int)(second_bracket - first_bracket) == 5)\n        {\n            code = 1000 * (first_bracket[1]-'0') + \n                   100 * (first_bracket[2]-'0') + \n                   10 * (first_bracket[3]-'0') + \n                   1 * (first_bracket[4]-'0');\n            break;\n        }\n        message = second_bracket + 1;\n    } while (first_bracket != NULL && second_bracket != NULL);\n    \n    return code;\n}",
+    "span": [
+      22,
+      43
+    ],
+    "start_byte": 703,
+    "end_byte": 1351,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "extract_code"
+  },
+  {
+    "snippet": "int connect_robot(char* address, Meca500 *robot)\n{\n    robot->connected_ = 0;\n    int result = tcpip_connect(address, CONTROL_PORT, &(robot->robot_connection_));\n    if (result == 0)\n    {\n        robot->connected_ = 1;\n    }\n    return result;\n}",
+    "span": [
+      47,
+      56
+    ],
+    "start_byte": 1436,
+    "end_byte": 1682,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "connect_robot"
+  },
+  {
+    "snippet": "int disconnect_robot(Meca500 *robot)\n{\n    EXIT_ON_ROBOT_NOT_CONNECTED(robot->connected_);\n    tcpip_disconnect(&(robot->robot_connection_));\n    robot->connected_ = 0;\n    return 0;\n}",
+    "span": [
+      60,
+      66
+    ],
+    "start_byte": 1767,
+    "end_byte": 1951,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "disconnect_robot"
+  },
+  {
+    "snippet": "int wait_for_return_code(int code, Meca500 *robot)\n{\n    EXIT_ON_ROBOT_NOT_CONNECTED(robot->connected_);\n    \n    char buffer[1024];\n    int received_code = 0;\n    \n    while (received_code != code)\n    {\n        memset(buffer, 0, sizeof(buffer));\n        int result = tcpip_receive(buffer, sizeof(buffer) - 1, &(robot->robot_connection_));\n        \n        if (result <= 0)\n        {\n            return -1; // Network error or connection closed\n        }\n        \n        received_code = extract_code(buffer);\n        \n        // Check for error codes (1000-2000 range)\n        if (received_code >= 1000 && received_code < 2000)\n        {\n            printf(\"Error code received: %d\\r\\n\", received_code);\n            return 1; // Error code received\n        }\n    }\n    \n    return 0; // Success\n}",
+    "span": [
+      70,
+      98
+    ],
+    "start_byte": 2036,
+    "end_byte": 2834,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "wait_for_return_code"
+  },
+  {
+    "snippet": "int wait_for_EOB(Meca500 *robot)\n{\n    return wait_for_return_code(3004, robot); // EOB code is 3004\n}",
+    "span": [
+      102,
+      105
+    ],
+    "start_byte": 2919,
+    "end_byte": 3021,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "wait_for_EOB"
+  },
+  {
+    "snippet": "int activate_robot(Meca500 *robot)\n{\n    EXIT_ON_ROBOT_NOT_CONNECTED(robot->connected_);\n    \n    const char* command = \"ActivateRobot\\r\\n\";\n    int result = tcpip_send(command, strlen(command), &(robot->robot_connection_));\n    if (result != 0)\n    {\n        return -1;\n    }\n    \n    return wait_for_return_code(3001, robot); // Wait for robot activated\n}",
+    "span": [
+      109,
+      121
+    ],
+    "start_byte": 3106,
+    "end_byte": 3463,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "activate_robot"
+  },
+  {
+    "snippet": "int deactivate_robot(Meca500 *robot)\n{\n    EXIT_ON_ROBOT_NOT_CONNECTED(robot->connected_);\n    \n    const char* command = \"DeactivateRobot\\r\\n\";\n    int result = tcpip_send(command, strlen(command), &(robot->robot_connection_));\n    if (result != 0)\n    {\n        return -1;\n    }\n    \n    return wait_for_return_code(3002, robot); // Wait for robot deactivated\n}",
+    "span": [
+      125,
+      137
+    ],
+    "start_byte": 3548,
+    "end_byte": 3911,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "deactivate_robot"
+  },
+  {
+    "snippet": "int activate_sim(Meca500 *robot)\n{\n    EXIT_ON_ROBOT_NOT_CONNECTED(robot->connected_);\n    \n    const char* command = \"ActivateSim\\r\\n\";\n    int result = tcpip_send(command, strlen(command), &(robot->robot_connection_));\n    if (result != 0)\n    {\n        return -1;\n    }\n    \n    return wait_for_return_code(3056, robot); // Wait for sim activated\n}",
+    "span": [
+      141,
+      153
+    ],
+    "start_byte": 3996,
+    "end_byte": 4347,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "activate_sim"
+  },
+  {
+    "snippet": "int deactivate_sim(Meca500 *robot)\n{\n    EXIT_ON_ROBOT_NOT_CONNECTED(robot->connected_);\n    \n    const char* command = \"DeactivateSim\\r\\n\";\n    int result = tcpip_send(command, strlen(command), &(robot->robot_connection_));\n    if (result != 0)\n    {\n        return -1;\n    }\n    \n    return wait_for_return_code(3057, robot); // Wait for sim deactivated\n}",
+    "span": [
+      157,
+      169
+    ],
+    "start_byte": 4432,
+    "end_byte": 4789,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "deactivate_sim"
+  },
+  {
+    "snippet": "int home(Meca500 *robot)\n{\n    EXIT_ON_ROBOT_NOT_CONNECTED(robot->connected_);\n    \n    const char* command = \"Home\\r\\n\";\n    int result = tcpip_send(command, strlen(command), &(robot->robot_connection_));\n    if (result != 0)\n    {\n        return -1;\n    }\n    \n    return wait_for_return_code(3003, robot); // Wait for homing done\n}",
+    "span": [
+      173,
+      185
+    ],
+    "start_byte": 4874,
+    "end_byte": 5208,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "home"
+  },
+  {
+    "snippet": "int movejoints(Meca500 *robot, float joints[6])\n{\n    EXIT_ON_ROBOT_NOT_CONNECTED(robot->connected_);\n    \n    char command[256];\n    snprintf(command, sizeof(command), \"MoveJoints(%.3f,%.3f,%.3f,%.3f,%.3f,%.3f)\\r\\n\",\n             joints[0], joints[1], joints[2], joints[3], joints[4], joints[5]);\n    \n    return tcpip_send(command, strlen(command), &(robot->robot_connection_));\n}",
+    "span": [
+      189,
+      198
+    ],
+    "start_byte": 5293,
+    "end_byte": 5675,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "movejoints"
+  },
+  {
+    "snippet": "int movepose(Meca500 *robot, float euler[6])\n{\n    EXIT_ON_ROBOT_NOT_CONNECTED(robot->connected_);\n    \n    char command[256];\n    snprintf(command, sizeof(command), \"MovePose(%.3f,%.3f,%.3f,%.3f,%.3f,%.3f)\\r\\n\",\n             euler[0], euler[1], euler[2], euler[3], euler[4], euler[5]);\n    \n    return tcpip_send(command, strlen(command), &(robot->robot_connection_));\n}",
+    "span": [
+      202,
+      211
+    ],
+    "start_byte": 5760,
+    "end_byte": 6131,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "movepose"
+  },
+  {
+    "snippet": "int movetozero(Meca500 *robot)\n{\n    float zero_joints[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};\n    return movejoints(robot, zero_joints);\n}",
+    "span": [
+      215,
+      219
+    ],
+    "start_byte": 6216,
+    "end_byte": 6352,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "movetozero"
+  },
+  {
+    "snippet": "int movetoshipping(Meca500 *robot)\n{\n    float shipping_joints[6] = {0.0, -60.0, 60.0, 0.0, 0.0, 0.0};\n    return movejoints(robot, shipping_joints);\n}",
+    "span": [
+      223,
+      227
+    ],
+    "start_byte": 6437,
+    "end_byte": 6588,
+    "node_type": "function_definition",
+    "language": "c",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/sample-programs/C/basic-tcp-communication/robot_interface.c",
+    "name": "movetoshipping"
+  }
+]

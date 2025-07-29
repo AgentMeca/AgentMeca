@@ -1,0 +1,79 @@
+[
+  {
+    "snippet": "from mecademicpy.robot_sidecar_classes import register_nested_function, unregister_nested_function",
+    "span": [
+      7,
+      7
+    ],
+    "start_byte": 273,
+    "end_byte": 371,
+    "node_type": "import_from_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_global_functions.py"
+  },
+  {
+    "snippet": "def _get_global(attr_name: str) -> any:\n    \"\"\" This helper function is used to get an attribute from the global namespace of the calling function \"\"\"\n    return globals()[attr_name] if attr_name in globals() else None",
+    "span": [
+      10,
+      12
+    ],
+    "start_byte": 374,
+    "end_byte": 592,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_global_functions.py",
+    "name": "_get_global"
+  },
+  {
+    "snippet": "def _set_global(attr_name: str, attr_val: any):\n    \"\"\" This helper function is used to set an attribute from the global namespace of the calling function \"\"\"\n    globals()[attr_name] = attr_val",
+    "span": [
+      15,
+      17
+    ],
+    "start_byte": 595,
+    "end_byte": 789,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_global_functions.py",
+    "name": "_set_global"
+  },
+  {
+    "snippet": "def _del_global(attr_name: str):\n    \"\"\" This helper function is used to delete an attribute from the global namespace of the calling function \"\"\"\n    del globals()[attr_name]",
+    "span": [
+      20,
+      22
+    ],
+    "start_byte": 792,
+    "end_byte": 967,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_global_functions.py",
+    "name": "_del_global"
+  },
+  {
+    "snippet": "def attach_global_function(function: callable, function_name: str):\n    \"\"\"Attach a function to the global namespace defined in this file, and which script files will import in their\n       own namespace in order to be able to call these functions directly.\n\n    Args:\n        function (callable): The function to register\n        function_name (str): Name of the function to export in the namespace\n    \"\"\"\n\n    # Add the function name to the global namespace (scope this file or any file importing * from this file)\n    # nested under prefix if appropriate.\n    # We do that by calling helper register_nested_function and passing the appropriate callbacks (_get_global and\n    # _set_global) so it sets the attribute in our namespace\n    # This helper supports nested functions (with one or multiple prefixes)\n    register_nested_function(function_full_name=function_name,\n                             get_parent_attr=_get_global,\n                             set_parent_attr=_set_global,\n                             function=function)",
+    "span": [
+      25,
+      42
+    ],
+    "start_byte": 970,
+    "end_byte": 2008,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_global_functions.py",
+    "name": "attach_global_function"
+  },
+  {
+    "snippet": "def detach_global_function(function_name: str):\n    \"\"\" Detach a function previously registered with attach_global_function\"\"\"\n    # Use the helper unregister_nested_function to which we pass appropriate callbacks to get/delete from our\n    # namespace (_get_global and _del_global).\n    # This helper supports nested functions (with one or multiple prefixes)\n    unregister_nested_function(function_full_name=function_name,\n                               get_parent_attr=_get_global,\n                               del_parent_attr=_del_global)",
+    "span": [
+      45,
+      52
+    ],
+    "start_byte": 2011,
+    "end_byte": 2555,
+    "node_type": "function_definition",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/mecademicpy/robot_global_functions.py",
+    "name": "detach_global_function"
+  }
+]

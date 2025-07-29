@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:support.mecademic.com)",
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:robodk.com)",
+      "WebFetch(domain:github.com)"
+    ],
+    "deny": []
+  }
+}

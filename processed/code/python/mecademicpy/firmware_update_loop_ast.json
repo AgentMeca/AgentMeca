@@ -1,0 +1,62 @@
+[
+  {
+    "snippet": "import argparse",
+    "span": [
+      9,
+      9
+    ],
+    "start_byte": 354,
+    "end_byte": 369,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py"
+  },
+  {
+    "snippet": "import logging",
+    "span": [
+      10,
+      10
+    ],
+    "start_byte": 370,
+    "end_byte": 384,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py"
+  },
+  {
+    "snippet": "import pathlib",
+    "span": [
+      11,
+      11
+    ],
+    "start_byte": 385,
+    "end_byte": 399,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py"
+  },
+  {
+    "snippet": "import mecademicpy.robot as mdr",
+    "span": [
+      13,
+      13
+    ],
+    "start_byte": 401,
+    "end_byte": 432,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py"
+  },
+  {
+    "snippet": "import mecademicpy.tools as tools",
+    "span": [
+      14,
+      14
+    ],
+    "start_byte": 433,
+    "end_byte": 466,
+    "node_type": "import_statement",
+    "language": "python",
+    "file_path": "/mnt/d/OneDrive/OneDrive - purdue.edu/Documents/Work/Mecademic/AgentMeca/repos/mecademicpy/examples/firmware_update_loop.py"
+  }
+]
