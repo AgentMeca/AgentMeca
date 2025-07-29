@@ -42,15 +42,23 @@ This repository contains a comprehensive collection of Mecademic robotics projec
 - **chunk_quality_validator.py** - Quality validation and reporting for semantic chunks
 - **processed/** - Directory containing all processed semantic chunks and metadata
 
+### Vector Database System
+- **vector_database.py** - Main ChromaDB interface with dual embedding models
+- **ingest_chunks.py** - Batch ingestion pipeline for semantic chunks
+- **vector_db_manager.py** - CLI management tool for database operations
+- **vector_db_config.yaml** - Configuration file for embeddings and database settings
+
 ## RAG (Retrieval-Augmented Generation) System
 
 ### Overview
 
-This repository includes a production-ready RAG system that processes Mecademic's entire codebase and documentation into semantically meaningful chunks optimized for AI-powered search and analysis. The system provides:
+This repository includes a production-ready RAG system that processes Mecademic's entire codebase and documentation into semantically meaningful chunks with full vector database capabilities. The system provides:
 
 - **Semantic Code Analysis**: Method-level granularity with function signatures, docstrings, and type information
 - **Document Processing**: PDF manuals converted to token-optimized semantic chunks
 - **Multi-language Support**: Python, JavaScript, C, and C# code processing
+- **Vector Database**: ChromaDB with dual embedding models (BGE-M3 for docs, StarCoder2-15B for code)
+- **Semantic Search**: High-performance similarity search across all content types
 - **Quality Validation**: Comprehensive chunk quality reporting and metrics
 - **Structured Metadata**: Hash-based IDs, symbol names, qualified names, and location tracking
 
@@ -60,7 +68,7 @@ This repository includes a production-ready RAG system that processes Mecademic'
 ✅ **Code Chunks**: 2,216 chunks across 4 programming languages  
 ✅ **Document Chunks**: 23 semantic chunks from PDF manuals  
 ✅ **Quality Validated**: 91.30% token range compliance for documents  
-🔄 **Next Phase**: Vector database integration (in progress)
+✅ **Vector Database**: Complete ChromaDB implementation with dual embedding models
 
 ### Processed Content Structure
 
@@ -97,6 +105,27 @@ Each semantic chunk includes:
 Each project directory contains its own README with specific setup and usage instructions.
 
 ### RAG System Usage
+
+#### Vector Database Operations
+
+1. **Setup and Ingestion**:
+   ```bash
+   python vector_db_manager.py health        # Check system status
+   python vector_db_manager.py ingest        # Ingest all chunks
+   python vector_db_manager.py stats         # View database statistics
+   ```
+
+2. **Search Operations**:
+   ```bash
+   python vector_db_manager.py search "robot connection examples"
+   python vector_db_manager.py search "gripper control" --limit 10
+   ```
+
+3. **Database Management**:
+   ```bash
+   python vector_db_manager.py backup        # Create backup
+   python vector_db_manager.py reset         # Reset database
+   ```
 
 #### Running the Semantic Processing Pipeline
 
@@ -137,6 +166,7 @@ Each project directory contains its own README with specific setup and usage ins
 - **Semantic Chunks**: JSONL format in `processed/semantic_chunks/`
 - **Processing Reports**: JSON and text summaries in `processed/semantic_chunks/`
 - **Quality Reports**: `chunk_quality_report.json` and `.txt`
+- **Vector Database**: ChromaDB collection in `chroma_db/`
 
 #### Chunk Format Example
 
@@ -165,27 +195,31 @@ When working on individual projects:
 3. Commit to this repository
 4. For upstream contributions, create pull requests to the original repositories in the AgentMeca organization
 
-## Next Steps: Vector Database Integration
+## Vector Database Architecture
 
-The RAG system is currently in the vector database integration phase. Planned components include:
-
-### 🔄 In Progress
-- **Vector Database Setup**: ChromaDB or Pinecone integration for semantic chunk storage
-- **Embedding Generation**: Generate embeddings for all 2,239 semantic chunks
-- **Similarity Search**: Implement semantic search across code and documentation
-- **Query Interface**: Build API endpoints for RAG-powered queries
-
-### 🎯 Upcoming Features
-- **Contextual Code Search**: "Find examples of robot connection handling"
-- **Cross-Reference Analysis**: Link related functions across different projects
-- **Documentation Q&A**: Answer questions using both code and manual references
-- **Code Generation Assistance**: RAG-augmented code suggestions and examples
+### 🎯 Implementation Complete
+- **ChromaDB Integration**: Production-ready vector database with persistent storage
+- **Dual Embedding Models**: BGE-M3 for documents, StarCoder2-15B for code
+- **Content-Type Routing**: Automatic model selection based on content type
+- **Batch Processing**: Efficient ingestion with progress tracking and error handling
+- **CLI Management**: Complete command-line interface for all operations
 
 ### 📊 Technical Specifications
-- **Chunk Count**: 2,239 ready for embedding
+- **Database**: ChromaDB with persistent local storage
+- **Embedding Models**: 
+  - BGE-M3 (1024-dim) for 23 document chunks
+  - StarCoder2-15B (1536-dim) for 2,216 code chunks
+- **Search Performance**: Sub-second similarity search across all content
+- **Metadata Rich**: Function signatures, docstrings, and semantic relationships
 - **Languages Supported**: Python, JavaScript, C, C#
 - **Document Coverage**: All Mecademic manuals and programming guides
-- **Metadata Rich**: Function signatures, docstrings, and semantic relationships
+
+### 🚀 Available Features
+- **Semantic Search**: High-performance similarity search with configurable results
+- **Content Filtering**: Search within specific content types (code vs documents)
+- **Metadata Queries**: Search by language, file type, or semantic properties
+- **Database Management**: Backup, restore, reset, and health monitoring
+- **Statistics**: Comprehensive database metrics and collection information
 
 ## Organization
 

@@ -1,0 +1,37 @@
+database:
+  type: "chromadb"
+  path: "./vector_db"
+  persist_directory: true
+  collection_name: "mecademic_chunks"
+
+embeddings:
+  # BGE-M3 for document chunks
+  document_model:
+    name: "BAAI/bge-m3"
+    batch_size: 32
+    device: "auto"  # auto/cpu/cuda
+  
+  # StarCoder2-15B for code chunks  
+  code_model:
+    name: "bigcode/starcoder2-15b"
+    batch_size: 16  # Smaller batch for larger model
+    device: "auto"  # auto/cpu/cuda
+    trust_remote_code: true
+
+ingestion:
+  source_directory: "./processed/semantic_chunks"
+  validate_chunks: true
+  skip_duplicates: true
+  progress_reporting: true
+  
+  # Content type routing
+  document_extensions: [".pdf", ".txt", ".md", ".html"]
+  code_extensions: [".py", ".js", ".c", ".cpp", ".cs", ".java"]
+
+search:
+  default_limit: 10
+  similarity_threshold: 0.7
+  
+storage:
+  backup_directory: "./vector_db/backups"
+  log_directory: "./vector_db/logs"
