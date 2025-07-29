@@ -1,26 +1,18 @@
 Chunk Ingestion Report
 ==============================
 
-Processing Time: 1226.8 seconds
+Processing Time: 506.4 seconds
 Files Processed: 107
 Chunks Loaded: 2239
-Chunks Ingested: 0
+Chunks Ingested: 1461
 Chunks Skipped: 478
-Success Rate: 0.00%
+Success Rate: 65.25%
 
 Content Type Distribution:
   code: 1738
   document: 23
 
-Errors (18):
-  - Error processing batch 1: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  - Error processing batch 2: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  - Error processing batch 3: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  - Error processing batch 4: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  - Error processing batch 5: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  - Error processing batch 6: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  - Error processing batch 7: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  - Error processing batch 8: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  - Error processing batch 9: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  - Error processing batch 10: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'
-  ... and 8 more errors
+Errors (3):
+  - Error processing batch 4: Inconsistent dimensions in provided embeddings
+  - Error processing batch 14: Inconsistent dimensions in provided embeddings
+  - Error processing batch 15: Inconsistent dimensions in provided embeddings

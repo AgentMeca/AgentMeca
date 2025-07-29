@@ -5,16 +5,16 @@ database:
   collection_name: "mecademic_chunks"
 
 embeddings:
-  # BGE-M3 for all chunks (unified model for better consistency)
+  # BGE-M3 for document chunks (manuals, PDFs, general text)
   document_model:
     name: "BAAI/bge-m3"
     batch_size: 32
     device: "cpu"  # cpu/cuda
   
-  # Use same model for code to avoid compatibility issues
+  # CodeBERT for code chunks (Python, C#, JavaScript, etc.)
   code_model:
-    name: "BAAI/bge-m3"
-    batch_size: 16
+    name: "microsoft/codebert-base"
+    batch_size: 32
     device: "cpu"  # cpu/cuda
 
 ingestion:
@@ -29,7 +29,7 @@ ingestion:
 
 search:
   default_limit: 10
-  similarity_threshold: 0.7
+  similarity_threshold: 0.05
   
 storage:
   backup_directory: "./vector_db/backups"

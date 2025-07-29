@@ -1,32 +1,17 @@
 {
-  "processing_time_seconds": 1226.8060235977173,
+  "processing_time_seconds": 506.3929982185364,
   "files_processed": 107,
   "chunks_loaded": 2239,
   "chunks_skipped": 478,
-  "chunks_ingested": 0,
+  "chunks_ingested": 1461,
   "content_type_distribution": {
     "code": 1738,
     "document": 23
   },
   "errors": [
-    "Error processing batch 1: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 2: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 3: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 4: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 5: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 6: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 7: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 8: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 9: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 10: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 11: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 12: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 13: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 14: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 15: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 16: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 17: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'",
-    "Error processing batch 18: [Errno 5] Input/output error: '/home/sagan/.cache/huggingface/hub/models--bigcode--starcoder2-15b/refs/main'"
+    "Error processing batch 4: Inconsistent dimensions in provided embeddings",
+    "Error processing batch 14: Inconsistent dimensions in provided embeddings",
+    "Error processing batch 15: Inconsistent dimensions in provided embeddings"
   ],
-  "success_rate": 0.0
+  "success_rate": 0.6525234479678428
 }

@@ -87,16 +87,17 @@ class VectorDatabase:
     
     @property 
     def code_model(self) -> SentenceTransformer:
-        """Lazy-load StarCoder2-15B model for code embeddings."""
+        """Lazy-load code embedding model."""
         if self._code_model is None:
-            self.logger.info("Loading StarCoder2-15B model for code embeddings...")
             model_config = self.config['embeddings']['code_model']
+            model_name = model_config['name']
+            self.logger.info(f"Loading {model_name} model for code embeddings...")
             self._code_model = SentenceTransformer(
-                model_config['name'],
+                model_name,
                 device=model_config.get('device', 'auto'),
                 trust_remote_code=model_config.get('trust_remote_code', False)
             )
-            self.logger.info(f"StarCoder2-15B model loaded on device: {self._code_model.device}")
+            self.logger.info(f"{model_name} model loaded on device: {self._code_model.device}")
         return self._code_model
     
     def initialize_database(self) -> None:
@@ -268,11 +269,15 @@ class VectorDatabase:
         sanitized = {}
         
         for key, value in metadata.items():
-            # Convert to string if not JSON serializable
-            if isinstance(value, (str, int, float, bool)):
+            # ChromaDB only accepts str, int, float, bool, or None
+            if isinstance(value, (str, int, float, bool)) or value is None:
                 sanitized[key] = value
-            elif isinstance(value, list) and all(isinstance(x, (str, int, float)) for x in value):
-                sanitized[key] = value
+            elif isinstance(value, list):
+                # Convert lists to comma-separated strings
+                if all(isinstance(x, (str, int, float)) for x in value):
+                    sanitized[key] = ','.join(map(str, value))
+                else:
+                    sanitized[key] = str(value)
             else:
                 sanitized[key] = str(value)
         
@@ -330,7 +335,9 @@ class VectorDatabase:
             results['distances'][0]
         )):
             # Convert distance to similarity score
-            similarity = 1 - distance
+            # ChromaDB uses squared Euclidean distance, convert to similarity [0,1]
+            # For normalized embeddings: similarity ≈ 1 / (1 + distance)
+            similarity = 1 / (1 + distance)
             
             if similarity >= similarity_threshold:
                 result = {
